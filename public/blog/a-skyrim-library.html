@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-171719946-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-171719946-1');
+	</script>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>A Skyrim Library \ Blog \ Oliver Norred</title>
+	
+	<link rel="stylesheet" href="../css/normalize.css">
+	<link rel="stylesheet" href="../css/stylesheet.css">
+	<link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+
+
+</head>
+<body>
+<div class="container">
+	<header class="header"></header>
+	<div class="content">
+		<div class="blogheadernote"><a href="index.html">&larr; back to the archives 🥬</a></div>
+		<div class="blogpost"><h1 id="a-skyrim-library">A Skyrim Library</h1>
+<h2 id="oliver-norred-22-december-2020">Oliver Norred, 22 December 2020</h2>
+<p>Finally finished.</p>
+<p>The Skyrim Library project has content from every book in Skyrim. I wrote none of it. <a href="https://rileysamuelhuston.com">Riley</a> and I got it all from an ugly<sup><a href="#footnote1">1</a></sup> source and prettified<sup><a href="#footnote2">2</a></sup> it.</p>
+<p>Looking back, I should have put a <a href="https://gist.github.com/drdrang/705071">curly-quote–maker</a> in my <a href="https://olivernorred.com/misc">html puker</a>, which we used. I’m sorry I didn’t do that, Riley.</p>
+<p>It’s not completely done until we implement <span class="special-christmas-mode-indicator">Christmas Mode</span>, but I urge you to <a href="https://skyrimbooksproj.web.app">check it out</a>. Send me an email if you’d change something—it’s a lot to think about for just Riley and a dud!</p>
+<div class="footnotes">
+
+<ol>
+<li><a href="https://www.imperial-library.info/">The Imperial Library</a>, a community-driven, super extensive site. <a href="https://www.imperial-library.info/users/lady-n">Lady N</a>, whoever you are, <em>props</em>.</li>
+<li>   Changed straight quotes to curly, “smart” quotes, made headers big. </li>
+</ol>
+</div></div>
+		<div class="nextpostlink"><a href="" style="float: left;">&larr; newer</a> <a href="" style="float: right;">older &rarr;</a></div>
+		<br>
+		<br>
+		<form onsubmit="postComment(); return false;" id="commentform">
+			<label for="commentername">name:</label><input type="text" id="commentername" autocomplete="off">
+			<label for="commentbox">comment:</label>
+			<textarea name="commentbox" id="commentbox" cols="50" rows="4"></textarea>
+			<input type="submit" value="post comment">
+		</form>
+
+		<div id="commentsection"></div>
+		
+	</div>
+		
+</div>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+<script>const page = "blog";</script>
+<script src="../js/htmlinjector.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="../js/posts.js"></script>
+<script src="../js/posttitlelinks.js"></script>
+<script src="../js/blogposts.js"></script>
+</body>
+</html>

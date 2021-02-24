@@ -1,0 +1,168 @@
+body {
+	/* background-image: url("../images/noise.png"); */
+}
+.content {
+	font-family: var(--bodyfont);
+	max-width: 1200px;
+	overflow: hidden;
+	margin-bottom: -4rem;
+}
+
+.words {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0 1rem;
+	place-items: center;
+}
+.words div {
+	width: 100%;
+}
+#leftwords {
+	animation: slideinfromright 1.5s steps(18) forwards;
+}
+#openingwords {
+	animation: slideinfromright 2s steps(20) forwards,
+		splitshadow 0.5s 2.1s steps(5) forwards;
+}
+@keyframes slideinfromright {
+	from {
+		transform: translate(50vw, 0);
+		background-position: 0;
+	}
+	to {
+		transform: translate(0, 0);
+		background-position: -100%;
+	}
+}
+@keyframes splitshadow {
+	from {
+	}
+	to {
+		font-variation-settings: "wght" 900;
+	}
+}
+h1 {
+	font-family: var(--headerfont);
+	font-style: italic;
+	font-weight: 800;
+	font-size: 4rem;
+	margin: 0;
+}
+.introtext {
+	font-size: 4rem;
+	font-variation-settings: "wght" 200;
+	text-align: center;
+}
+@keyframes weightripple {
+	0% {
+		font-variation-settings: "wght" 200;
+	}
+	30% {
+		font-variation-settings: "wght" 900;
+	}
+	60% {
+		font-variation-settings: "wght" 200;
+	}
+	80% {
+		font-variation-settings: "wght" 300;
+	}
+	100% {
+		font-variation-settings: "wght" 200;
+	}
+}
+
+img {
+	width: 100%;
+}
+.preloader {
+	width: 0;
+	height: 0;
+}
+#uglycontainer {
+	width: 100%;
+	margin: auto;
+	background-image: url("../images/uglywithbg_lowres2.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	clip-path: circle(55%);
+	animation: enhance 2s 1.5s steps(2) forwards, wiggle 1s 4s steps(1) infinite;
+}
+#uglycontainer::after {
+	content: "";
+	display: block;
+	padding-bottom: 95%;
+}
+#uglycontainer:hover {
+	/* animation: enhance .5s linear forwards; */
+}
+@keyframes degrade {
+	0% {
+		background-image: url("../images/uglywithbg.svg");
+	}
+	33% {
+		background-image: url("../images/uglywithbg_lowres0.png");
+	}
+	66% {
+		background-image: url("../images/uglywithbg_lowres1.png");
+	}
+	100% {
+		background-image: url("../images/uglywithbg_lowres2.png");
+	}
+}
+@keyframes enhance {
+	0% {
+		background-image: url("../images/uglywithbg_lowres2.png");
+	}
+	33% {
+		background-image: url("../images/uglywithbg_lowres1.png");
+	}
+	66% {
+		background-image: url("../images/uglywithbg_lowres0.png");
+	}
+	100% {
+		background-image: url("../images/uglywithbg.svg");
+	}
+}
+@keyframes wiggle {
+	0% {
+		transform: rotate(-1.2deg);
+	}
+	50% {
+		transform: rotate(0.2deg);
+	}
+}
+
+hr {
+	border: none;
+	height: 1px;
+	background: var(--mildfgcolor);
+	margin: 4rem 0;
+}
+
+#description {
+	text-align: center;
+	animation: fadeindescription 1s 2.5s steps(3) forwards;
+	opacity: .4;
+}
+@keyframes fadeindescription {
+	from {
+		opacity: .4;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.words {
+		grid-template-columns: 1fr;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.words {
+		grid-template-columns: 1fr;
+	}
+	.introtext {
+		font-size: 2.5rem;
+	}
+}

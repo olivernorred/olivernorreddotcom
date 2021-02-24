@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-171719946-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-171719946-1');
+	</script>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="My blog! ... wim hof is a sting op">
+	<title>Blog \ Oliver Norred</title>
+	
+	<link rel="stylesheet" href="../css/normalize.css">
+	<link rel="stylesheet" href="../css/stylesheet.css">
+	<link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+</head>
+<body>
+<div class="container">
+	<header class="header"></header>
+	<div class="content">
+		<div id="postlinkssearch">
+			<input type="text" class="searchbox" placeholder=" " name="filterposts"></input>
+			<label for="filterposts" class="inputlowerlabel">Filter by title</label>
+		</div>
+		<div id="postlinkscontainer"></div>
+	</div>
+
+	
+</div>
+
+<script>
+	const page = "blog";
+	window.addEventListener("load", ()=> {
+		if (window.location.href === "https://olivernorred.com/blog") {
+			console.log("redirected yummy")
+			window.location.replace("https://olivernorred.com/blog/");
+		}
+	})
+</script>
+<script src="../js/htmlinjector.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="../js/posts.js"></script>
+<script src="../js/posttitlelinks.js"></script>
+
+
+
+
+</body>
+</html>

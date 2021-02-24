@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-171719946-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-171719946-1');
+	</script>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Wim Hof is a sting op!">
+	<title>Oliver Norred</title>
+	
+	<link rel="stylesheet" href="../css/normalize.css">
+	<link rel="stylesheet" href="../css/stylesheet.css">
+	<link rel="stylesheet" href="../css/wordfinderstylesheet.css">
+	<link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+</head>
+<body>
+<div class="container">
+
+	<header class="header"></header>
+	<div class="content">
+		<div>
+			<div>Searching random letters for an instance of any of the following words:</div>
+			
+			<ul id="listofwords"></ul>
+			
+			<input type="text" id="customwordsbox" placeholder=" "></input>
+			<div class="inputlowerlabel">custom (>4 chars is slow)</div>
+		</div>
+		<div id="tobottombutton" style="margin-bottom: .5rem;"><button onclick="window.scrollTo(0, document.body.scrollHeight)">To bottom</button> <button onclick="regenerateButton()" id="regenbutton">Regenerate</button></div>
+
+		<div id="combinedstringcontainer"></div>
+		<p id="stringlength"></p>
+		<p><button onclick="window.scrollTo(0,0)">Back to top</button></p>
+		<p class="playfairfont">Tanks 🎳 for visiting!</p>
+	</div>
+		
+</div>
+<script>const page = "whatev";</script>
+<script src="../js/selectors.js"></script>
+<script src="../js/htmlinjector.js"></script>
+<script src="js/wordsearch.js"></script>
+
+</body>
+</html>

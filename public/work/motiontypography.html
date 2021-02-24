@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Oliver Norred has a blog on his website, and he says Wim Hof baby!" />
+	<title>Motion Typography \ Oliver Norred</title>
+
+	<link rel="stylesheet" href="../css/normalize.css" />
+	<link rel="stylesheet" href="../css/stylesheet.css" />
+	<link rel="stylesheet" href="../css/workstyles.css" />
+	<link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon" />
+</head>
+
+<body>
+	<div class="container">
+
+		<header class="header"></header>
+
+		<div class="content portfolio">
+
+			<h1>A vector solution</h1>
+			<p>Rob Stenson’s Python library <a href="https://coldtype.goodhertz.com/">Coldtype</a> inspires me. Its animation tools are extremely powerful, but, as Stenson <a href="https://coldtype.goodhertz.com/about.html#why-not-html-css-javascript">writes</a>,</p>
+			<blockquote>I always found it awkward to program animations in JS, since I never found a good way to run a headless browser when I needed to rasterize frames for an animation.</blockquote>
+			<p>Coldtype isn’t intended for headers or logos on a website; rather, for animations in videos.</p>
+
+			<h2>Enter the opentype.js library</h2>
+			<p>This library takes a font and a string and returns an SVG Path object I can muck around with in JavaScript.</p>
+			<p>I mucked around enough that others can now use a script I wrote to define a function for their own animations.</p>
+			<p><a href="https://github.com/olivernorred/svgglyphanimate">Check out the repository</a>!</p>
+
+			<svg id="svgcontainer" style="background: linear-gradient(to top, #033dff, #50a4ff);" version="1.1" baseProfile="full" viewbox="0 0 860 560" xmlns="http://www.w3.org/2000/svg"></svg>
+			<script src="https://cdn.jsdelivr.net/npm/opentype.js@latest/dist/opentype.min.js"></script>
+			<script src="../js/typeanimator.js"></script>
+
+		</div>
+	</div>
+	<script>const page = "portfolio";</script>
+	<script src="../js/htmlinjector.js"></script>
+</body>
+
+</html>

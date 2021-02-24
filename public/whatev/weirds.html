@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>weirds</title>
+	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+	<style>
+		@font-face {
+			font-family: "DM Mono";
+			src: url("fonts/DMMono-Regular.ttf");
+		}
+		body {
+			font-family: "dm mono", serif;
+			font-size: 18px;
+			padding: 1rem;
+			background: conic-gradient(cornsilk, beige, wheat, cornsilk);
+		}
+		a {
+			color: teal;
+			text-shadow: 2px 2px white;
+			font-size: 2rem;
+		}
+		.weirdproj {
+			border: 2rem ridge teal;
+			padding: 10px;
+			width: fit-content;
+			display: inline-block;
+			padding: 1rem;
+			margin: 1rem;
+			animation: wiggle 1s ease-in-out infinite alternate;
+			background: white;
+		}
+		.weirdproj:hover {
+			transform: scale(1.5, 1.5);
+			border-color: green;
+		}
+		.weirdproj:nth-child(even) {
+			animation-delay: .5s;
+		}
+		@keyframes wiggle {
+			from{transform: translateY(0rem);}
+			to{transform: translateY(-.5rem);}
+		}
+
+		canvas{
+			width: 600px;
+			max-width: 100%;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<a href="whatev.html">&larr; back 2 it</a>
+	<br>
+	<div id="weirdprojects">
+		<div class="weirdproj" id="colorellipses">
+			<canvas id="canvaselem" width="1000" height="1000" ></canvas>
+			<label for="hueshift">hue shift</label>
+			<input type="range" value="0" id="hueshift" min="0" max="36" onchange="hueshiftamount = this.value">
+			<script>
+				var ctx = document.getElementById("canvaselem").getContext("2d");
+				var c;
+				var d;
+				var rot;
+				var color;
+				var listofellipses = new Array();
+				
+				function getColor(){ 
+					let colorgotten = "hsl(" + document.querySelector("#hueshift").value + 10 * Math.random() + ',' +
+					(100 + 70 * Math.random()) + '%,' + 
+					( + 100 * Math.random()) + '%)';
+					return colorgotten;
+				}
+				function draw() {
+					ctx.clearRect(0, 0, 1200, 1200);
+					for(let i = 0; i<listofellipses.length; i++) {
+						ctx.strokeStyle = listofellipses[i].color;
+						// ctx.strokeStyle = getColor();
+						ctx.beginPath();
+						ctx.ellipse(500, 500, listofellipses[i].w, listofellipses[i].h, listofellipses[i].rot, 0, 2*Math.PI);
+						ctx.stroke();
+					}
+				}
+				setInterval(function() {
+					c = Math.random()*100;
+					d = Math.random()*100;
+					rot = Math.random()*Math.PI;
+					// color = colorArray[Math.floor(Math.random()*colorArray.length)];
+					color = getColor();
+					for(let i = 0; i<listofellipses.length; i++) {
+						if(listofellipses[i].w > 400) {
+							listofellipses.splice(i, 1);
+							// listofellipses.push({w: c, h: d, rot: rot, color: color});
+						}
+						listofellipses[i].w += 1;
+						listofellipses[i].h += 1;
+					}
+					// listofellipses.shift();
+					listofellipses.push({w: c, h: d, rot: rot, color: color});
+					draw();
+				}, 1000/60);
+	
+				ctx.fillRect(0,0,1000, 1000);
+			</script>
+		</div>
+	
+	
+		<div class="weirdproj" id="stereoscopic">
+			<canvas id="stereoscopiccanvas" width="800" height="600"></canvas>
+	
+			<div id="inputs" style="display: none;">
+				<input type="textarea" name="" id="original">
+				<input type="range" min="0" max="360" value="0" class="slider" id="hslider">
+				<input type="range" min="0" max="360" value="0" class="slider" id="vslider">
+			</div>
+	
+			<script type="text/javascript">
+			//TURN THE BOX INTO AN ARRAY
+	
+				var stereoctx=document.getElementById("stereoscopiccanvas").getContext("2d");
+				var WIDTH = 800;
+				var HEIGHT = 600;
+				console.log(WIDTH);
+				console.log(HEIGHT);
+				console.log(3+1*4);
+				var xzero = WIDTH/2;
+				var yzero = HEIGHT/2;
+				var a = 0;
+	
+				//CUBE
+				var points = [
+					//front
+					{x:-100,y:-100,z:-100}, {x:-100,y: 100,z:-100},  {x: 100,y:-100,z:-100},
+					{x:-100,y: 100,z:-100}, {x: 100,y: 100,z:-100},  {x: 100,y:-100,z:-100},
+					//left
+					{x:-100,y: 100,z:-100}, {x:-100,y:-100,z:-100},  {x:-100,y:-100,z: 100},
+					{x:-100,y:-100,z: 100}, {x:-100,y: 100,z: 100},  {x:-100,y: 100,z:-100},
+					//back
+					{x:-100,y:-100,z: 100}, {x:-100,y: 100,z: 100},  {x: 100,y: 100,z: 100},
+					{x: 100,y: 100,z: 100}, {x: 100,y:-100,z: 100},  {x:-100,y:-100,z: 100},
+					//right
+					{x: 100,y: 100,z: 100}, {x: 100,y: 100,z:-100},  {x: 100,y:-100,z:-100},
+					{x: 100,y:-100,z:-100}, {x: 100,y:-100,z: 100},  {x: 100,y: 100,z: 100},
+					//bottom
+					{x: 100,y:-100,z:-100}, {x:-100,y:-100,z:-100},  {x:-100,y:-100,z: 100},
+					{x:-100,y:-100,z: 100}, {x: 100,y:-100,z: 100},  {x: 100,y:-100,z:-100},
+					//top
+					{x:-100,y: 100,z:-100}, {x:-100,y: 100,z: 100},  {x: 100,y: 100,z: 100},
+					{x: 100,y: 100,z: 100}, {x: 100,y: 100,z:-100},  {x:-100,y: 100,z:-100},
+	
+				];
+	
+				// TRIANGULAR PRISM
+				// var points = [
+				// 	{x:-100,y:-100,z:-100}, {x: 100,y:-100,z:-100}, {x:   0,y:  50,z:-100},
+				// 	{x:-100,y:-100,z: 100}, {x: 100,y:-100,z: 100}, {x:   0,y:  50,z: 100},
+				// 	{x:-100,y:-100,z:-100}, {x:-100,y:-100,z: 100}, {x:-100,y:-100,z:-100},
+				// 	{x: 100,y:-100,z:-100}, {x: 100,y:-100,z: 100}, {x: 100,y:-100,z:-100},
+				// 	{x:   0,y:  50,z:-100}, {x:   0,y:  50,z: 100}, {x:   0,y:  50,z:-100},
+				// ]
+	
+				
+	
+				var x1 = [];
+				var z1 = [];
+				var y1 = [];
+				for (var i = 0; i < points.length; i++) {
+					x1.push(points[i].x);
+					z1.push(points[i].z);
+					y1.push(points[i].y);
+				}
+	
+	
+				//prep for rotating
+	
+				var htheta = 0;
+				var vtheta = 0;
+	
+				document.getElementById("hslider").oninput = function(){
+					htheta = this.value*(Math.PI/180);
+				}
+				document.getElementById("vslider").oninput = function(){
+					vtheta = this.value*(Math.PI/180);
+				}
+	
+	
+				//mouse drag
+				var holding = false;
+				var mousex;
+				var mousey;
+				var canvas = document.getElementById("stereoscopiccanvas");
+	
+				function getMousePos(e) {
+					return {
+						x: e.clientX,
+						y: e.clientY
+					}
+				}
+				canvas.addEventListener("mousedown", function(e){
+					holding = true;
+					console.log(holding);
+					mousex = getMousePos(e).x;
+					mousey = getMousePos(e).y;
+				});
+				canvas.addEventListener("mousemove", function(e){
+					if(holding) {
+						htheta += (getMousePos(e).x - mousex)/5000;
+						vtheta += -(getMousePos(e).y - mousey)/5000;
+					}
+				});
+				canvas.addEventListener("mouseup", function(e){
+					holding = false;
+					console.log(holding);
+					mousex = getMousePos(e).x;
+					mousey = getMousePos(e).y;
+				});
+				canvas.addEventListener("mouseout", function(){
+					holding=false;
+				});
+	
+				//rotation math
+				function hrotate() {
+					for (var i = 0; i < points.length; i++) {
+						//just for horizontal rotation
+						points[i].x = x1[i]*Math.cos(htheta) - z1[i]*Math.sin(htheta);
+						points[i].z = z1[i]*Math.cos(htheta) + x1[i]*Math.sin(htheta);
+					}
+				}
+	
+				function vrotate() {
+					for (var i = 0; i < points.length; i++) {
+						points[i].y = y1[i]*Math.cos(vtheta) - (z1[i]*Math.cos(htheta) + x1[i]*Math.sin(htheta))*Math.sin(vtheta);
+						points[i].z = (z1[i]*Math.cos(htheta) + x1[i]*Math.sin(htheta))*Math.cos(vtheta) + y1[i]*Math.sin(vtheta);
+					}
+				}
+	
+	
+	
+				//updates projection and actually draws the lines
+				var focalLength = 600;
+				var scale;
+				var dev = 7;
+	
+				function update() {
+					stereoctx.clearRect(0, 0, WIDTH, HEIGHT);
+					// stereoctx.fillRect(xzero-5, yzero-5, 10, 10);
+					vtheta+=0.01;
+					htheta+=0.015;
+					stereoctx.lineWidth = 1.5;
+					stereoctx.globalAlpha = 0.5;
+	
+					for (var i = 0; i < points.length; i+=3) {
+						
+						stereoctx.beginPath();
+						scale = focalLength/(points[i].z+focalLength);
+						stereoctx.moveTo(xzero+points[i].x*scale-dev*scale, yzero-points[i].y*scale);
+	
+						scale = focalLength/(points[i+1].z+focalLength);
+						stereoctx.lineTo(xzero+points[i+1].x*scale-dev*scale, yzero-points[i+1].y*scale);
+	
+						scale = focalLength/(points[i+2].z+focalLength);
+						stereoctx.lineTo(xzero+points[i+2].x*scale-dev*scale, yzero-points[i+2].y*scale);
+	
+						stereoctx.closePath();
+						stereoctx.strokeStyle="red";
+						stereoctx.stroke();
+	
+						stereoctx.beginPath();
+						scale = focalLength/(points[i].z+focalLength);
+						stereoctx.moveTo(xzero+points[i].x*scale+dev*scale, yzero-points[i].y*scale);
+	
+						scale = focalLength/(points[i+1].z+focalLength);
+						stereoctx.lineTo(xzero+points[i+1].x*scale+dev*scale, yzero-points[i+1].y*scale);
+	
+						scale = focalLength/(points[i+2].z+focalLength);
+						stereoctx.lineTo(xzero+points[i+2].x*scale+dev*scale, yzero-points[i+2].y*scale);
+	
+						stereoctx.closePath();
+						stereoctx.strokeStyle="cyan";
+						stereoctx.stroke();
+					}
+	
+					hrotate();
+					vrotate();
+	
+					window.requestAnimationFrame(update);
+				}
+				window.requestAnimationFrame(update);
+	
+				
+			</script>
+		</div>
+	</div>
+
+	
+</body>
+</html>

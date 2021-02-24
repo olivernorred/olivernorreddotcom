@@ -1,0 +1,165 @@
+* {
+	font-weight: normal;
+	margin: 0;padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	--workred: #fddfdf;
+	--workyellow: #fcf7de;
+	--workgreen: #defde0;
+	--workblue: #def3fd;
+	--workpurple: #f0defd;
+
+
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+
+
+.content {
+	font-family: "Literata", serif;
+	max-width: var(--bigwidth);
+	margin-top: 0;
+}
+
+video {
+	width: 100%;
+	margin-bottom: 1rem;
+	font-size: 0;
+	display: block;
+}
+
+
+#portfoliogrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+}
+
+
+.workitem:nth-child(1) {--themecolor: var(--workred);}
+.workitem:nth-child(2) {--themecolor: var(--workyellow);}
+.workitem:nth-child(3) {--themecolor: var(--workblue);}
+.workitem:nth-child(4) {--themecolor: var(--workgreen);}
+.workitem:nth-child(5) {--themecolor: var(--workpurple);}
+
+.workitem {
+	padding: 0;
+	line-height: 1.5;
+	position: relative;
+	top: 0;
+	transition: .1s;
+}
+.workitem a:first-child {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:  100%;
+	height: 100%;
+}
+.workitem:hover {
+	top: -2px;
+}
+.workitem:hover img{
+	box-shadow: 0 0 .5rem var(--translucent);
+}
+.workitem .subcard {
+	border-radius: .5rem;;
+	margin-top: .5rem;
+	display: grid;
+	width: fit-content;
+	padding: 0 .5rem;
+}
+
+
+
+.workitem img, .workitem svg {
+	width: 100%;
+	display: block;
+	margin: auto;
+	padding: .5rem;
+	border-radius: .5rem;
+	border: 1px solid var(--fgcolor);
+}
+.workitem h1 {
+	font-family: var(--headerfont);
+	font-size: 2rem;
+	line-height: 1;
+	margin: 0;
+}
+.workitem p {
+	line-height: 1.3;
+}
+@media only screen and (max-width: 800px) {
+	#portfoliogrid {
+		grid-template-columns: 1fr;
+	}
+}
+@media only screen and (max-width: 400px) {
+	.workitem h1 {
+		font-size: 3rem;
+	}
+}
+
+
+
+/* PORTFOLIO STYLES */
+
+img {
+	width: 100%;
+}
+
+.content.portfolio {
+	--smallwidth: 500px;
+}
+.content.portfolio * {
+	max-width: 700px;
+}
+.content.portfolio h1, .content.portfolio h2, .content.portfolio p, .content.portfolio blockquote {
+	margin: .5rem 0;
+	padding: 0 .5rem;
+}
+.content.portfolio h1, .content.portfolio h2 {
+	font-family: var(--headerfont);
+	margin: 1rem 0;
+	line-height: 1;
+}
+.content.portfolio h1 {
+	font-size: 2rem;
+}
+.content.portfolio h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+.content.portfolio blockquote {
+	line-height: 1.5;
+	padding-left: .5rem;
+	border-left: 1px solid var(--fgcolor);
+}
+.content.portfolio p.caption {
+	font-style: italic;
+	margin-top: -1rem;
+}
+
+.content.portfolio img, .content.portfolio svg, .content.portfolio iframe {
+	border: 1px solid var(--fgcolor);
+	display: block;
+	margin: 1rem 0;
+	padding: .5rem;
+	border-radius: .5rem;
+}
+.content.portfolio iframe {
+	width: 100%;
+	height: 350px;
+	font-size: 0;
+}
+
+.content.portfolio hr {
+	border: none;
+	background: var(--fgcolor);
+	height: 1px;
+	margin: 6rem auto;
+	width: 80%;
+}

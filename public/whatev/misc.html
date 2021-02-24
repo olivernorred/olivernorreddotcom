@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-171719946-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-171719946-1');
+	</script>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Miscellaneous projects">
+	<title>Misc \ Oliver Norred</title>
+
+	<link rel="stylesheet" href="../css/normalize.css">
+	<link rel="stylesheet" href="../css/stylesheet.css">
+	<link rel="stylesheet" href="../css/wordfinderstylesheet.css">
+	<link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+</head>
+<body>
+<div class="container">
+	<div class="header"></div>
+
+	<div class="content">
+		
+		<div class="project blogpost unfolded">
+			<h1>Paragraphs, etc. to HTML puker</h1>
+			<h2>August 2020</h2>
+			<div class="postbody">
+				<div id="inlineconverter">
+					<div>For blog posts or something, paste in text and it’ll puke out HTML-friendly code.</div>
+					<br>
+					<textarea name="richtext" id="richtext"></textarea>
+
+					<p class="playfairfont">Result:</p>
+					<div id="resultcontainer" class="codeblock"></div>
+					<br>
+					<button class="codeblock submitbutton" id="copybutton">Copy output</button>
+					<p><button class="codeblock" onclick="window.scrollTo(0,0)">Back to top</button></p>
+					<script src="js/converter.js"></script>				
+				</div>
+			</div>
+		</div>
+		<div class="project blogpost unfolded">
+			<h1>JavaScript localStorage notepad</h1>
+			<h2>December 2020</h2>
+			<div class="postbody">
+				<p>This is possibly the most advanced <code>localStorage</code> notepad ever made. There are bugs in some of the deletion processes.</p>
+				<p><a href="localstoragenotepad/index.html">Check it out.</a></p>
+			</div>
+		</div>
+
+	</div>
+		
+</div>
+<script>const page = "whatev";</script>
+<script src="../js/htmlinjector.js"></script>
+
+</body>
+</html>

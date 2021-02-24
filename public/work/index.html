@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Oliver Norred portfolio of design work samples." />
+	<title>Work \ Oliver Norred</title>
+
+	<link rel="stylesheet" href="../css/normalize.css" />
+	<link rel="stylesheet" href="../css/stylesheet.css" />
+	<link rel="stylesheet" href="../css/workstyles.css" />
+	<link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon" />
+</head>
+
+<body>
+	<div class="container">
+		<header class="header"></header>
+		<div class="content">
+			<div id="portfoliogrid">
+				<div class="workitem">
+					<a href="schoolwork.html"></a>
+					<img src="../images/work/school/furiouspaper/furious1.jpg" alt="Schoolwork: a photo of paper" />
+					<div class="subcard">
+						<h1>Schoolwork</h1>
+						<p>Work done studying design at the University of Washington</p>
+					</div>
+				</div>
+				<div class="workitem">
+					<a href="logosandbranding.html"></a>
+					<img src="../images/work/logos/withsmall_redsmall.png" alt="The Fordham University Hot Notes Logo" />
+					<div class="subcard">
+						<h1>Logos and Branding</h1>
+						<p>Graphics work I&rsquo;ve done for others</p>
+					</div>
+				</div>
+				<div class="workitem">
+					<a href="generativeart.html"></a>
+					<img src="../images/work/generativeart/sprinkling.png" alt="Randomly generated circle art">
+					<div class="subcard">
+						<h1>Generative Art</h1>
+						<p>Experiments with p5.js</p>
+					</div>
+				</div>
+				
+				<div class="workitem">
+					<a href="skyrimlibrary.html"></a>
+					<img src="../images/work/skyirmlib/herbalistsguide.PNG" alt="Skyrim Library" />
+					<div class="subcard">
+						<h1>Skyrim Library</h1>
+						<p>A reading experience for hundreds of texts from Bethesda’s <i>Skyrim</i></p>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<script>
+		const page = "work";
+		window.addEventListener("load", ()=> {
+			if (window.location.href === "https://olivernorred.com/work") {
+				console.log("redirected yummy")
+				window.location.replace("https://olivernorred.com/work/");
+			}
+		})
+	</script>
+	<script src="../js/htmlinjector.js"></script>
+</body>
+
+</html>
