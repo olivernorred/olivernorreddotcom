@@ -240,6 +240,10 @@ p {
 	vertical-align: super;
 }
 
+#postlinkscontainer h1 {
+	font-size: 1.75rem;
+}
+
 
 #postlinkssearch {
 	height: 2rem;
