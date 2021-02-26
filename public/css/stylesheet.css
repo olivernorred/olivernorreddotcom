@@ -132,7 +132,6 @@ a:active {
 	opacity: 1;
 	text-decoration: underline;
 	text-decoration-color: var(--fgcolor);
-
 }
 .sublinks .active {
 	color: var(--fgcolor);
