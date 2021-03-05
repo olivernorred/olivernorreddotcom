@@ -22,7 +22,10 @@
 	font-style: italic;
 	src: url("../fonts/Literata-Italic-VariableFont_opsz\,wght.ttf");
 }
-
+*{
+	margin: 0;padding: 0;
+	box-sizing: border-box;
+}
 :root {
 	font-size: 18px;
 }
@@ -37,10 +40,6 @@
 }
 ::-webkit-scrollbar-thumb:hover {
 	background: var(--fgtranslucent);
-}
-*{
-	margin: 0;padding: 0;
-	box-sizing: border-box;
 }
 
 body {
