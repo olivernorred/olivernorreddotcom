@@ -101,10 +101,14 @@ a:active {
 	box-sizing: border-box;
 	margin: 0 .7rem;
 }
-
-
-
-
+.skip-link {
+	position: absolute;
+	top: -4rem;
+	z-index: 100;
+}
+.skip-link:focus {
+	top: 0;
+}
 
 
 

@@ -4,7 +4,7 @@
 
 *Wow, these marquees are legit.*
 
-When’s the last time you heard that? On the web, `marquee`s have gotten a bad rap for, like, ten years. It’s been [deprecated](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/marquee) for at least as long as I’ve been making web stuff.
+When’s the last time you heard that? On the web, `<marquee>` has gotten a bad rap for, like, ten years. It’s been [deprecated](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/marquee) for at least as long as I’ve been making web stuff.
 
 But the truth is, I like them. I like how they pull me away from the sanitized corporate easing functions that [Google and Twitter pound into our skulls](https://material.io/design/motion/understanding-motion.html#principles). I like to stare at them and I like to wait for the text to come around a second time.
 

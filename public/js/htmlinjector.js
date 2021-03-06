@@ -95,7 +95,7 @@ let whatevlink = `<a href='../whatev/index.html'>${whatevname}</a>`
 
 if (typeof page !== 'undefined') {
 	if(page == 'index') {
-		indexlink = `<a id="logocontainer" class="active" href="">${Olist[0]}</a>`;
+		indexlink = `<a id="logocontainer" class="active" href="index.html">${Olist[0]}</a>`;
 		bloglink = `<a href='blog/index.html'>Blog</a>`
 		worklink = `<a href='work/index.html'>Work</a>`
 		whatevlink = `<a href='whatev/index.html'>${whatevname}</a>`
@@ -128,10 +128,10 @@ if (typeof page !== 'undefined') {
 
 
 const headerinjection = 
-`<div class="sitemap">
+`<nav class="sitemap">
 	<div id="indexlinkcontainer">${indexlink}</div>
 	<div class="sublinks">[${bloglink}; ${worklink}; ${whatevlink}]</div>
-</div>`;
+</nav>`;
 
 document.getElementsByClassName("header")[0].innerHTML = headerinjection;
 
