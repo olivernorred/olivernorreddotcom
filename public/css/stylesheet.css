@@ -33,7 +33,7 @@
 	width: .5rem;
 }
 ::-webkit-scrollbar-track {
-	background: none;
+	background: var(--bgcolor);
 }
 ::-webkit-scrollbar-thumb {
 	background: var(--fgcolor);
