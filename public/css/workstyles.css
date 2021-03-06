@@ -18,7 +18,7 @@ body {
 
 
 
-.content {
+#content {
 	font-family: "Literata", serif;
 	max-width: var(--bigwidth);
 	margin-top: 0;
@@ -111,52 +111,52 @@ img {
 	width: 100%;
 }
 
-.content.portfolio {
+.portfolio {
 	--smallwidth: 500px;
 }
-.content.portfolio * {
+.portfolio * {
 	max-width: 700px;
 }
-.content.portfolio h1, .content.portfolio h2, .content.portfolio p, .content.portfolio blockquote {
+.portfolio h1, .portfolio h2, .portfolio p, .portfolio blockquote {
 	margin: .5rem 0;
 	padding: 0 .5rem;
 }
-.content.portfolio h1, .content.portfolio h2 {
+.portfolio h1, .portfolio h2 {
 	font-family: var(--headerfont);
 	margin: 1rem 0;
 	line-height: 1;
 }
-.content.portfolio h1 {
+.portfolio h1 {
 	font-size: 2rem;
 }
-.content.portfolio h2 {
+.portfolio h2 {
 	font-size: 1.5rem;
 	margin-top: 1.5rem;
 }
-.content.portfolio blockquote {
+.portfolio blockquote {
 	line-height: 1.5;
 	padding-left: .5rem;
 	border-left: 1px solid var(--fgcolor);
 }
-.content.portfolio p.caption {
+.portfolio p.caption {
 	font-style: italic;
 	margin-top: -1rem;
 }
 
-.content.portfolio img, .content.portfolio svg, .content.portfolio iframe {
+.portfolio img, .portfolio svg, .portfolio iframe {
 	border: 1px solid var(--fgcolor);
 	display: block;
 	margin: 1rem 0;
 	padding: .5rem;
 	border-radius: .5rem;
 }
-.content.portfolio iframe {
+.portfolio iframe {
 	width: 100%;
 	height: 350px;
 	font-size: 0;
 }
 
-.content.portfolio hr {
+.portfolio hr {
 	border: none;
 	background: var(--fgcolor);
 	height: 1px;

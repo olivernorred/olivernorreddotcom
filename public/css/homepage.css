@@ -1,7 +1,7 @@
 body {
 	/* background-image: url("../images/noise.png"); */
 }
-.content {
+#content {
 	font-family: var(--bodyfont);
 	max-width: 1200px;
 	overflow: hidden;
