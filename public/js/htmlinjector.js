@@ -1,6 +1,7 @@
 const Olist = 
 [`<svg id="o-vector-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 viewBox="0 0 903 903" style="enable-background:new 0 0 903 903;" xml:space="preserve">
+<title>Back to homepage</title>
 <path d="M463.8,902.2c-5.7,0-11.3-0.1-17-0.3c-65.4-2.3-128-16.9-186.2-43.5c-57.3-26.2-107.4-62.6-148.8-108.2
 C34.2,664.7-4.7,555.3,2.3,442.3c7-113.9,56.4-222,139-304.5c40.2-40.1,86.3-72.3,137.1-95.5C332.1,17.7,388.7,4.2,446.6,2.1
 c59.9-2.2,118.7,8.6,174.6,31.9c52.6,22,100.3,54.2,141.8,95.7c82.7,82.8,132,194.3,138.9,314.1c3.6,62.3-5.4,122.7-26.7,179.7
@@ -13,6 +14,7 @@ C524.8,315.9,493.3,301.8,461.4,301.8z"/>
 
 `<svg id="o-vector-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
+<title>Back to homepage</title>
 <g>
 <path d="M500.1,996.7c-68-6.6-133.9-25.5-196-51.9c-59.6-25.5-112.9-56.6-158.7-94.9c-45.4-38-80.9-81.7-105.8-136
    C14.1,658.1,1.1,592.8,1.1,517.7c0-74.7,13-154.9,38.6-231.6c24.8-74.3,60.4-141.4,105.8-191.5c45.7-50.7,99.1-81.1,158.7-89.8
@@ -26,6 +28,7 @@ viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="
 
 `<svg id="o-vector-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
+<title>Back to homepage</title>
 <g>
 	<path d="M501.2,992.4c-70.7-7.7-140.6-19.2-207.5-40.9c-66.5-21.6-130.1-53.5-179.2-99.6c-50.9-46.9-82.8-104.5-97.4-164.3
 		C1.2,622.9,3.5,560.3,12.3,497.2C21.7,434,37,371.7,65.2,307.1c26.1-59.6,64.2-117.1,114-164C227.4,97,283.2,65.1,337.8,44
@@ -39,6 +42,7 @@ viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="
 
 `<svg id="o-vector-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
+<title>Back to homepage</title>
 <g>
 <path d="M501.6,992.2c-78.8-6-155.5-26.2-224.7-66.2c-67.6-38.3-125.1-91.8-169.9-143c-45.6-52.7-75.7-97.2-90.8-138.8
    c-15.9-43.9-14.4-87.6,1-150.7C32.5,431.5,60.6,353.8,97.3,281c35-69.6,76.1-126.9,121-164.8c44.2-37.9,90-58.2,137.3-75.6
@@ -52,6 +56,7 @@ viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="
 
 `<svg id="o-vector-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
+<title>Back to homepage</title>
 <path d="M967.4,500.4c11.5,73.2,22.7,144,27.7,208c4.8,62.2,3.5,115.2-10.6,158.2c-14.1,43.4-40.9,74.5-84.6,95.6
 c-45.4,21.9-107.4,32-184.7,32.1c-77.1-0.1-164.6-10.2-254.7-32.1c-86.3-21.1-171-52.2-244.5-95.6c-73-43-131.2-96-168.2-158.2
 c-38.2-64-51.9-134.9-40.3-208c11.5-73.2,47.6-144,101.9-208c52.6-62.2,119.8-115.2,193-158.2C376.1,90.8,452,59.6,522.8,38.6
