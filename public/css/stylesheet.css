@@ -189,11 +189,10 @@ input[type="checkbox"] {
 #content {
 	max-width: var(--bigwidth);
 	margin: 0 auto;
-	margin-bottom: 0;
 }
 
 p {
-	margin-bottom: .5rem;
+	margin: .5rem 0;
 	line-height: 1.5;
 }
 
