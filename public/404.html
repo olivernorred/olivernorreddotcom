@@ -11,18 +11,17 @@
 	<link rel="shortcut icon" href="https://olivernorred.com/images/favicon.png" type="image/x-icon">
 </head>
 <body>
-<div class="container">
-	<a href="#content" class="skip-link">Skip to content</a>
+<div id="container">
+	<a href="#content" id="skip-link">Skip to content</a>
 
-	<header class="header"></header>
+	<header id="header"></header>
 	<main id="content">
-		<div>404: page not found.</div>
-		<div id="funthing">page is <br> not found <br> at all! <br> apologies!</div>
+		<div style="font-family: var(--displayfont); font-size: 4rem; text-align: center; font-style: italic; font-weight: bold">404: page not found.</div>
+		<div id="funthing">page is <br> not found! <br> apologies!</div>
 		<style>
 			#funthing {
 				width: fit-content; margin: 2rem auto; text-align: center;
 				animation: spinaroundfun 5s steps(20) infinite;
-				transform-origin: top left;
 			}
 			@keyframes spinaroundfun {
 				from {transform: rotate(0deg);}
