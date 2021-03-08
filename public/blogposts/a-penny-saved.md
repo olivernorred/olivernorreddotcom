@@ -14,7 +14,7 @@ There was a hole in Aseprite’s scheme, though: despite being a paid software, 
 
 <blockquote>
 
-### To compile Aseprite you will need:
+**To compile Aseprite you will need:**
 
 <ul>
 

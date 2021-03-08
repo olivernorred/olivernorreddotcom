@@ -1,3 +1,5 @@
+// NEXT AND PREVIOUS LINKS
+
 const prevlink = document.querySelectorAll(".nextpostlink a")[0];
 const nextlink = document.querySelectorAll(".nextpostlink a")[1];
 const currentarticle = location.href.substr(location.href.lastIndexOf('/') + 1);
@@ -21,6 +23,7 @@ else {
 
 
 
+// IMAGE SRCING
 for (let i = 0; i < document.querySelectorAll("img").length; i++) {
 	const element = document.querySelectorAll("img")[i];
 	element.setAttribute("src", `../${element.getAttribute("src")}`);
@@ -29,7 +32,7 @@ for (let i = 0; i < document.querySelectorAll("img").length; i++) {
 
 
 
-// comments
+// COMMENT SECTION
 const commentbox = document.querySelector("#commentbox");
 const namebox = document.querySelector("#commentername");
 const commentsection = document.querySelector("#commentsection");

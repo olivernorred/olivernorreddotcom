@@ -20,12 +20,31 @@
 	<link rel="stylesheet" href="../css/stylesheet.css">
 	<link rel="stylesheet" href="../css/wordfinderstylesheet.css">
 	<link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+
+
+
+	<style>
+		.badinput {
+			border-color: red !important;
+		}
+		.badinputsubmitted {
+			animation: shiver .2s linear;
+		}
+		@keyframes shiver {
+			0% {transform: translate(0,0);}
+			30% {transform: translate(-1rem, 0)}
+			60% {transform: translate(1rem, 0);}
+			90% {transform: translate(-.5rem, 0)}
+			100% {transform: translate(0,0);}
+		}
+	</style>
 </head>
 <body>
-<div class="container">
+<div id="container">
 
-	<header class="header"></header>
-	<div class="content">
+	<a href="#content" id="skip-link">Skip to content</a>
+	<header id="header"></header>
+	<div id="content">
 		<div>
 			<div>Searching random letters for an instance of any of the following words:</div>
 			

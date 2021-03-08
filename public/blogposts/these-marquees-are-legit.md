@@ -1,8 +1,8 @@
 # These marquees are legit
-
 ## Oliver Norred, 5 March 2021
 
-*Wow, these marquees are legit.*
+
+*Wow, these marquees look great.*
 
 When’s the last time you heard that? On the web, `<marquee>` has gotten a bad rap for, like, ten years. It’s been [deprecated](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/marquee) for at least as long as I’ve been making web stuff.
 
@@ -10,7 +10,7 @@ But the truth is, I like them. I like how they pull me away from the sanitized c
 
 <marquee>DOESN’T THIS MAKE YOU YEARN FOR DAYS GONE BY?</marquee>
 
-The loudest moans and groans lament that `marquee`s are “literally unreadable for a period of time” and “next to impossible to print.” I hear you. [So I made a JavaScript + SVG web component called `legit-marquee`.](https://github.com/olivernorred/legit-marquees)
+The loudest moans and groans lament that `<marquee>`s are “literally unreadable for a period of time” and “next to impossible to print.” I hear you. [So I made a JavaScript + SVG web component called `legit-marquee`.](https://github.com/olivernorred/legit-marquees)
 
 These things are legit. The accessibility concerns dissolve because the text is always visible, and you’re in full control of the animation. With a bit of hacking, you can even make it animate with the scroll position.
 
@@ -23,7 +23,8 @@ I sort of see the web going more retro right now and for the next year or so. I�
 
 <style>
 	.legit-marquee {
-		font-family: var(--headerfont);
+		font-family: var(--displayfont);
+		fill: var(--fgcolor);
 	}
 </style>
 

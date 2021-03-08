@@ -1,5 +1,4 @@
 # Real kinetic type with JavaScript
-
 ## Oliver Norred, 24 December 2020
 
 I can wiggle around these SVG points with JavaScript. The [opentype.js](https://github.com/opentypejs/opentype.js) library helped convert the text from a font file to SVG.

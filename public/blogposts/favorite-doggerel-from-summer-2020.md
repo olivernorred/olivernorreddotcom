@@ -3,7 +3,7 @@
 
 <br>
 
-### 3/17/20
+**3/17/20**
 Why are your strings so short and thin?\
 And why do you play so ‘neath the din\
 Of a battle fought hard against the sick and sin\
@@ -11,7 +11,7 @@ For 400Hz max, 40Hz min?
 
 <br>
 
-### 5/4/20
+**5/4/20**
 Think of the wants you want the most:\
 Think of successes that you can boast;\
 Think of the water, the wind, the coast;\
@@ -22,7 +22,7 @@ Now, only those you can sow!
 
 <br>
 
-### 5/10/20
+**5/10/20**
 A son defines a mother,\
 As mother guides her son.\
 To wish for any other\
@@ -34,7 +34,7 @@ Her love’s already won.
 
 <br>
 
-### 6/11/20
+**6/11/20**
 To take a work\
 And make it fly\
 Is quite the perk\
@@ -46,7 +46,7 @@ Fell from the sky!
 
 <br>
 
-### 8/7/20
+**8/7/20**
 Been saying\
 This for years.\
 Fries are thin,\
@@ -57,7 +57,7 @@ What’s to like?
 
 <br>
 
-### 8/14/20
+**8/14/20**
 New places, new people, everything’s new.\
 I’d live here; it feels like I already do.\
 When you’re with a family that is yours to choose,\
@@ -65,7 +65,7 @@ Life becomes fresh, and the world renews.
 
 <br>
 
-### 8/14/20
+**8/14/20**
 The early bird gets the worm, they say,\
 But is it worth the bleary, red eyes?\
 I’d pass up the worm almost any day,\

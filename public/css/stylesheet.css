@@ -52,18 +52,19 @@ body {
 	--translucent: rgba(0,0,0,0.1);
 	--bgimage: url("");
 	
-	--headerfont: degular-display;
-	--smallheadingfont: degular-text;
-	--monofont: "DM Mono";
-	--bodyfont: "Literata";
+	--displayfont: degular-display, sans-serif;
+	--headerfont: degular, sans-serif;
+	--smallheadingfont: degular-text, sans-serif;
+	--monofont: "DM Mono", monospace;
+	--bodyfont: "Literata", serif;
 
-	--bigwidth: 900px;
+	--bigwidth: 1000px;
 
-	font-family: var(--monofont), monospace;
 	margin: 0;
+	color: var(--fgcolor);
 	background-color: var(--bgcolor);
 	background-attachment: fixed;
-	color: var(--fgcolor);
+	font-family: var(--monofont), monospace;
 }
 body.darkmode {
 	--fgcolor: #fff;
@@ -76,15 +77,14 @@ body.darkmode {
 	--bgimage: url("");
 }
 
-p {
-	font-variation-settings: "opsz" 10;
-}
+
+/* General text rules */
 
 a {
+	margin: -.1rem -.3rem;
+	padding: .1rem .3rem;
 	color: var(--acolor);
 	text-decoration: none;
-	padding: .1rem .3rem;
-	margin: -.1rem -.3rem;
 }
 a:hover {
 	text-decoration: underline;
@@ -97,16 +97,15 @@ a:active {
 
 
 
-.container {
-	box-sizing: border-box;
+#container {
 	margin: 0 .7rem;
 }
-.skip-link {
+#skip-link {
 	position: absolute;
 	top: -4rem;
 	z-index: 100;
 }
-.skip-link:focus {
+#skip-link:focus {
 	top: 0;
 }
 
@@ -116,20 +115,19 @@ a:active {
 
 
 
-/* Header */
+/* HEADER */
 
-.header {
-	max-width: var(--bigwidth);
+#header {
+	display: block;
 	margin: 0 auto;
 	padding: 1rem 0;
-	display: block;
+	max-width: var(--bigwidth);
 }
 .sitemap {
 	padding: 0;
-	font-size: 4rem;
-	font-family: var(--headerfont), sans-serif;
-	/* vertical-align: bottom; */
+	font-family: var(--displayfont), sans-serif;
 	text-align: center;
+	font-size: 4rem;
 }
 .sublinks a:hover {
 	opacity: 1;
@@ -163,12 +161,12 @@ body.darkmode canvas {
 	filter: invert(100%);
 }
 
-.darkmodecontainer {
+#darkmodecontainer {
 	position: absolute;
 	top: 10px;
 	right: 10px;
 }
-.darkmodecontainer label {
+#darkmodecontainer label {
 	color: var(--fgtranslucent);
 }
 input[type="checkbox"] {
@@ -189,13 +187,13 @@ input[type="checkbox"] {
 
 /* content ------------------------------------------------------------------------------------------------------------------*/
 #content {
+	max-width: var(--bigwidth);
 	margin: 0 auto;
 	margin-bottom: 0;
-	max-width: var(--bigwidth);
 }
 
 p {
-	margin: .5rem 0;
+	margin-bottom: .5rem;
 	line-height: 1.5;
 }
 
@@ -206,31 +204,27 @@ p {
 /* blog post links */
 #postlinkscontainer {
 	display: grid;
-	gap: 1rem;
 	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
 }
 #postlinkscontainer.searched {
 	grid-template-columns: 1fr;
 }
-	#postlinkscontainer.searched div {
-		max-width: 533px;
-	}
 #postlinkscontainer div {
 	position: relative;
-	padding: .1rem 1rem;
-	margin: 0;
-	font-family: var(--bodyfont), serif;
 	height: 300px;
-	box-sizing: border-box;
+	margin: 0;
+	padding: .1rem .9rem;
 	border: 1px solid var(--fgcolor);
 	border-radius: .5rem;
 	overflow: hidden;
+	font-family: var(--bodyfont), serif;
 	transition: transform .1s, box-shadow .1s;
 }
 #postlinkscontainer div:first-child {
-	padding-top: 1rem;
-	box-sizing: border-box;
 	grid-column: 1 / -2;
+	max-width: none;
+	padding-top: 1rem;
 }
 #postlinkscontainer div:first-child::before {
 	content: "\2726new!\2726  ";
@@ -242,69 +236,40 @@ p {
 	font-size: 1rem;
 	vertical-align: super;
 }
+#postlinkscontainer.searched div {
+	max-width: 533px;
+}
 
 #postlinkscontainer h1 {
-	font-size: 1.75rem;
+	font-size: 1.6rem;
 }
 
 
-#postlinkssearch {
-	height: 2rem;
-	margin: 0;
-	margin-bottom: .4rem;
-	width: fit-content;
-}
-#postlinkssearch .searchbox {
-	border-width: 0 0 2px 0;
-}
-
-
-/* sliding input label */
 
 input[type="text"], #richtext {
 	width: 16rem;
-	outline: none;
 	border-width: 0 0 2px 0;
 	border-style: solid;
-	border-color: var(--fgcolor);
-	background: none;
-	color: var(--fgcolor);
 	border-radius: 0;
-	font-size: 100%;
-}
-#richtext {
-	border-width: 2px;
-	width: 100%;
-	height: 8rem;
-	box-sizing: border-box;
+	border-color: var(--fgcolor);
+	outline: none;
+	color: var(--fgcolor);
 	background: none;
-	text-overflow: ellipsis;
 }
+
 .inputlowerlabel {
 	display: block;
-	pointer-events: none;
 	opacity: .5;
-	transition: transform .15s, opacity .15s;
 	transform-origin: left;
 	transform: translate(0,-1.3rem);
+	pointer-events: none;
+	transition: transform .15s, opacity .15s;
 }
 input:not(:placeholder-shown) + .inputlowerlabel, input:focus + .inputlowerlabel {
 	opacity: 1;
 	transform: translate(0,0) scale(.7, .7);
 }
-.badinput {
-	border-color: red !important;
-}
-.badinputsubmitted {
-	animation: shiver .2s linear;
-}
-@keyframes shiver {
-	0% {transform: translate(0,0);}
-	30% {transform: translate(-1rem, 0)}
-	60% {transform: translate(1rem, 0);}
-	90% {transform: translate(-.5rem, 0)}
-	100% {transform: translate(0,0);}
-}
+
 
 @media only screen and (max-width: 800px) {
 	#postlinkscontainer {
@@ -328,60 +293,74 @@ input:not(:placeholder-shown) + .inputlowerlabel, input:focus + .inputlowerlabel
 /* BLOGPOSTS */
 
 .blogpost {
-	font-family: var(--bodyfont), sans-serif;
-	line-height: 1.5;
+	max-width: 650px;
+	margin: 1rem 0;
+	padding: .5rem 1rem;
 	border-width: 1px;
 	border-style: solid;
 	border-color: var(--fgcolor);
 	border-radius: .5rem;
-	padding: .5rem 1rem;
-	margin: 1rem 0;
+	font-family: var(--bodyfont), sans-serif;
 	font-variant-numeric: oldstyle-nums;
 	font-variation-settings: "wght" 400;
-	max-width: 700px;
+	line-height: 1.5;
 }
 
 
 .blogpost h1 {
+	margin: .5rem 0;
+	padding: 0;
 	font-family: var(--headerfont), var(--bodyfont), sans-serif;
 	font-size: 2rem;
 	font-weight: normal;
 	line-height: 1;
-	margin: 0;
-	padding: .5rem 0;
 }
 .blogpost h1:focus:not(:focus-visible) {
 	outline: none;
 }
 
 .blogpost h2 {
+	margin: .5rem 0;
+	padding: 0;
+	color: var(--fgtranslucent);
 	font-weight: normal;
 	font-size: 1rem;
-	color: var(--fgtranslucent);
-	padding: 0;
-	margin: .5rem 0;
 }
 .blogpost h3 {
-	font-size: 1rem;
+	float: right;
+	margin: .5rem .2rem .5rem .1rem; padding: .2rem;
+	border-radius: .5rem;
+	color: var(--fgcolor);
+	background: var(--altbgcolor);
+	font-family: var(--monofont);
+	font-size: .75rem;
 	font-weight: normal;
-	margin: 0; padding:0;
+	cursor: pointer;
+}
+.blogpost h3:hover {
+	opacity: .8;
+}
+
+p {
+	font-variation-settings: "opsz" 10;
+}
+p strong {
+	font-weight: normal;
 	font-variation-settings: "wght" 700;
 }
-.postbody {
-	margin: 1rem 0 0 0;
-}
+
+
 .blogpost blockquote {
-	padding: .5rem 1rem;
-	margin: 1rem 0;
 	position: relative;
+	margin: 1rem 0;
+	padding: .5rem 1rem;
 	border-radius: .5rem;
 	background: var(--translucent);
 }
 .blogpost img{
-	width: 100%;
 	display: block;
+	width: 100%;
 	margin: auto;
-	box-sizing: border-box;
 	font-style: italic;
 }
 .smallcaps {
@@ -392,17 +371,17 @@ code {
 }
 
 .footnotes {
+	position: relative;
 	margin: 2rem 1rem 0 1rem;
 	padding: 1rem;
 	font-size: .75rem;
-	position: relative;
 }
 .footnotes::before {
 	content: "";
 	position: absolute;
-	left: 0;top: 0;
-	height: 1px;
+	left: 0; top: 0;
 	width: 33%;
+	height: 1px;
 	border-top: 1px solid var(--fgcolor);
 }
 .footnotes li {
@@ -419,27 +398,25 @@ code {
 /* COMMENTS */
 
 #commentform {
-	margin-top: 4rem;
-	max-width: 700px;
 	display: block;
+	max-width: 650px;
+	margin-top: 4rem;
+	font-variation-settings: "opsz" 10;
 }
 #commentform textarea, #commentform input[type="text"] {
-	font-family: "Literata", serif;
-	color: var(--fgcolor);
-	border: none;
-	border: 1px solid var(--fgcolor);
-	background: var(--bgcolor);
-	resize: vertical;
 	width: 100%;
 	margin: .25rem 0;
 	padding: .4rem .25rem;
+	border: 1px solid var(--translucent);
+	border-radius: .5rem;
+	resize: vertical;
+	color: var(--fgcolor);
+	background: var(--bgcolor);
 	box-shadow: 2px 2px 4px var(--translucent) inset;
+	font-family: "Literata", serif;
 }
 body.darkmode #commentform textarea, body.darkmode #commentform input[type="text"] {
 	box-shadow: -2px -2px 4px var(--translucent) inset;
-}
-#commentform input[type="text"] {
-	max-width: 400px;
 }
 #commentform textarea {
 	line-height: 1.3;
@@ -453,34 +430,34 @@ body.darkmode #commentform textarea, body.darkmode #commentform input[type="text
 }
 
 #commentform input[type="submit"] {
-	color: var(--fgcolor);
+	position: relative; top:0; left:0;
 	display: block;
 	width: 100%;
-	margin: auto;
-	padding: .5rem;
+	padding: .5rem 1rem;
+	border: 1px solid var(--translucent);
+	border-radius: .5rem;
 	outline: none;
+	color: var(--fgcolor);
 	background: var(--bgcolor);
-	border: 1px solid var(--fgcolor);
 	box-shadow: 2px 2px var(--fgcolor);
-	position: relative; top:0;left:0;
 	transition: .05s;
 }
 #commentform input[type="submit"]:active {
-	box-shadow: 0 0 var(--fgcolor);
 	top: 2px; left: 2px;
+	box-shadow: 0 0 var(--fgcolor);
 }
 
 /* comment section */
 #commentsection {
-	margin: 2rem 0;
 	width: 100%;
+	margin: 2rem 0;
 }
 #commentsection .comment {
-	margin: 1rem 0;
 	max-width: 400px;
+	margin: 1rem 0;
+	padding: .5rem 1rem;
 	border: 1px solid var(--fgcolor);
 	border-radius: .5rem;
-	padding: .5rem 1rem;
 }
 .comment .commentername {
 	font-family: "Literata", serif;
@@ -491,8 +468,8 @@ body.darkmode #commentform textarea, body.darkmode #commentform input[type="text
 .comment .commentdate {
 	width: fit-content;
 	margin: 0 0 0 auto;
-	font-size: .75rem;
 	opacity: .8;
+	font-size: .75rem;
 }
 
 
@@ -511,30 +488,28 @@ body.darkmode #commentform textarea, body.darkmode #commentform input[type="text
 
 
 .project {
-	border: 1px solid var(--fgcolor);
-	background: var(--altbgcolor);
 	padding: 1rem;
+	border: 1px solid var(--fgcolor);
 	border-radius: .5rem;
+	background: var(--altbgcolor);
 }
 .codeblock {
 	font-family: var(--monofont), monospace;
 }
 .project canvas {
 	display: block;
+	width: 75%;
 	margin: auto;
 	background: white;
-	width: 75%;
-
 }
 
 
-.footer {
-	/* width: fit-content; */
-	text-align: center;
+#footer {
 	max-width: var(--bigwidth);
 	margin: 1rem auto;
 	margin-top: 4rem;
 	font-size: 1rem;
+	text-align: center;
 }
 
 .blogheadernote {
@@ -554,7 +529,7 @@ body.darkmode #commentform textarea, body.darkmode #commentform input[type="text
 
 /* BREAKPOINTS ----------------------------------------------------------------------------------------------- */
 @media only screen and (min-width: 1036px) {
-	.darkmodecontainer {
+	#darkmodecontainer {
 		position: absolute;
 		top: 10px;
 		right: 10px;
@@ -565,7 +540,7 @@ body.darkmode #commentform textarea, body.darkmode #commentform input[type="text
 	img {
 		border: none;
 	}
-	.darkmodecontainer {
+	#darkmodecontainer {
 		margin-top: -.5rem;
 	}
 }
@@ -583,7 +558,7 @@ body.darkmode #commentform textarea, body.darkmode #commentform input[type="text
 		height: auto;
 		transform: none;
 	}
-	.footer {
+	#footer {
 		font-size: 4.8vw;
 	}
 }

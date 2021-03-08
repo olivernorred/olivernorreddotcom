@@ -1,6 +1,3 @@
-body {
-	/* background-image: url("../images/noise.png"); */
-}
 #content {
 	font-family: var(--bodyfont);
 	max-width: 1200px;

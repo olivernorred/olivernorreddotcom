@@ -1,4 +1,4 @@
-# How to use a Lenovo® Thinkpad™ TrackPoint™ Stick
+# How to use a Lenovo<sup>®</sup> Thinkpad™ TrackPoint™ Stick
 ## Oliver Norred, 2 August 2019
 Also called a nipple mouse. Maybe I’m just not used to it. I think what I need to do is just block myself from using the touchpad until I finally can navigate using this red devil. I got the sensitivity to a point where I like it, but even still, my pointer is wearing roller skates.
 

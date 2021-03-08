@@ -133,7 +133,7 @@ const headerinjection =
 	<div class="sublinks">[${bloglink}; ${worklink}; ${whatevlink}]</div>
 </nav>`;
 
-document.getElementsByClassName("header")[0].innerHTML = headerinjection;
+document.querySelector("#header").innerHTML = headerinjection;
 
 
 function toggleSublinks() {
@@ -147,14 +147,14 @@ function toggleSublinks() {
 
 //darkmode injection
 const darkmodecontainer = 
-`<div class="darkmodecontainer">
+`<div id="darkmodecontainer">
 	<label for="darkmode">dark</label>
 	<input type="checkbox" name="mode" id="darkmode" value="darkmode">
 </div>`;
-document.querySelector(".header").innerHTML = `${document.querySelector(".header").innerHTML}${darkmodecontainer}`;
+document.querySelector("#header").innerHTML = `${document.querySelector("#header").innerHTML}${darkmodecontainer}`;
 
-let footer = document.createElement("div");
-footer.classList.add("footer");
+let footer = document.createElement("footer");
+footer.id = "footer";
 footer.innerHTML = 
 `<a href="mailto:norredoliver@gmail.com">email:</a><br>
 norredoliver@gmail.com<br>
@@ -165,7 +165,7 @@ norredoliver@gmail.com<br>
 <a href="https://twitter.com/olivernorred">Twitter</a><br>
 <a href="https://www.youtube.com/c/OliverNorred">YouTube</a>`
 
-document.querySelector(".container").appendChild(footer);
+document.querySelector("#container").appendChild(footer);
 
 if(document.querySelector(".footnotes")) {
 	
