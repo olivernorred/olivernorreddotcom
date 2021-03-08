@@ -82,14 +82,16 @@ function updateComments() {
 		if(item) {
 			commentsection.innerHTML +=
 			`<div class="comment" id="comment${item.id}">
-				<div class="commentername"></div>
+				<div class="commentinfo">
+					<p class="commentername"></p>
+					<p class="commentdate"></p>
+				</div>
 				<p class="commentcontent"></p>
-				<div class="commentdate"></div>
 			</div>`
 			const currcomment = document.querySelector(`#comment${item.id}`);
 			currcomment.querySelectorAll(".commentername")[0].innerText = item.name;
 			currcomment.querySelectorAll(".commentcontent")[0].innerText = item.content;
-			currcomment.querySelectorAll(".commentdate")[0].innerText = item.date;
+			currcomment.querySelectorAll(".commentdate")[0].innerText = item.date.split(",")[0];
 		}
 	}
 }
