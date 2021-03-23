@@ -11,7 +11,7 @@ Unfortunately, their home will become my piano, and their living quarters are un
 
 But man, does it sound bad. Some of the keys stick, and it’s not tuned to any temperament I’ve ever heard. The cheapest tuning company charges, like, a hundred bucks. Frick. How much is this tuning hammer I found online? Twenty? Deal!
 
-Worth every penny. Not only is it way easier than the greedy piano-tuning-business&ndash;running bloggers make you think, I also gained a way deeper understanding of the piano in the process. I recommend that every pianist learn to tune.
+Worth every penny. Not only is it way easier than the greedy piano-tuning-business&ndash;running bloggers make you think, I also gain a way deeper understanding of the instrument in the process. Fantastic.
 
 ![My makeshift rubber band jack solution](images/nicephotos/rubberbandjack.png)
 
