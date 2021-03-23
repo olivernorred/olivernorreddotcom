@@ -352,7 +352,7 @@ p strong {
 
 .blogpost p.caption {
 	font-style: italic;
-	margin-top: -2rem;
+	margin-top: -1rem;
 }
 .blogpost p.caption::before {
 	content: "\2191  ";
