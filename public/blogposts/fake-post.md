@@ -4,4 +4,4 @@
 
 This is a fake post!
 
-This is also one of those posts where the content doesn't matter. It's just about testing my new github push workflow :).
+This is also one of those posts where the content doesn't matter. It's just about testing my new github push workflow :). One two three.
