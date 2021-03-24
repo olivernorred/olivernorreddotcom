@@ -1,4 +1,4 @@
-# Fake photos
+# Fake post
 
 ## Oliver Norred, 24 March 2021
 
