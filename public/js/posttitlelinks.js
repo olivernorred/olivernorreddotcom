@@ -15,7 +15,12 @@ if(document.querySelector("#postlinkscontainer")) {
 			.then(response => response.text())
 			.then(text => {
 				// convert to HTML from markdown, change links to spans for "tab" users.
-				container.innerHTML += marked(text).replaceAll("<a", "<span").replaceAll("</a", "</span").replaceAll(`src="`, `src="../`);
+				container.innerHTML += marked(text)
+					.replaceAll("<a", "<span")
+					.replaceAll("</a", "</span")
+					.replaceAll(`src="`, `src="../`)
+					.replaceAll(`<img`, `<img style="display: none"`)
+					.replaceAll(`<p class="caption"`, `<p class="caption" style="display:none"`);
 				// split off first line (title) and linkify
 				container.querySelectorAll("h1")[0].innerHTML = `<a href="${trimFileExtension(posts[i])}.html">${container.querySelectorAll("h1")[0].innerHTML}</a>`;
 

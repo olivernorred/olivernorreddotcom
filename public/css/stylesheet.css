@@ -59,6 +59,7 @@ body {
 	--bodyfont: "Literata", serif;
 
 	--bigwidth: 1000px;
+	--mainradius: .5rem;
 
 	margin: 0;
 	color: var(--fgcolor);
@@ -213,9 +214,9 @@ p {
 	position: relative;
 	height: 300px;
 	margin: 0;
-	padding: .1rem .9rem;
+	padding: .1rem .7rem;
 	border: 1px solid var(--fgcolor);
-	border-radius: .5rem;
+	border-radius: var(--mainradius);
 	overflow: hidden;
 	font-family: var(--bodyfont), serif;
 	transition: transform .1s, box-shadow .1s;
@@ -298,9 +299,9 @@ input:not(:placeholder-shown) + .inputlowerlabel, input:focus + .inputlowerlabel
 
 .blogpost {
 	margin: 1rem auto;
-	padding: .5rem 1rem;
+	padding: .5rem .7rem;
 	border: 1px solid var(--fgcolor);
-	border-radius: .5rem;
+	border-radius: var(--mainradius);
 	font-family: var(--bodyfont), sans-serif;
 	font-variant-numeric: oldstyle-nums;
 	font-variation-settings: "wght" 400, "opsz" 10;
@@ -372,6 +373,9 @@ p strong {
 	margin: 1rem auto;
 	font-style: italic;
 }
+.blogpost img:last-child {
+	margin-bottom: 0;
+}
 
 .smallcaps {
 	font-variant-caps: small-caps;
@@ -418,7 +422,7 @@ code {
 	margin: .25rem 0;
 	padding: .4rem .25rem;
 	border: 1px solid var(--translucent);
-	border-radius: .5rem;
+	border-radius: var(--mainradius);
 	resize: vertical;
 	color: var(--fgcolor);
 	background: var(--bgcolor);
@@ -445,7 +449,7 @@ body.darkmode #commentform textarea, body.darkmode #commentform input[type="text
 	width: 100%;
 	padding: .5rem 1rem;
 	border: 1px solid var(--translucent);
-	border-radius: .5rem;
+	border-radius: var(--mainradius);
 	outline: none;
 	color: var(--fgcolor);
 	background: var(--bgcolor);
@@ -467,7 +471,7 @@ body.darkmode #commentform textarea, body.darkmode #commentform input[type="text
 	margin: 1rem 0;
 	padding: .5rem;
 	border: 1px solid var(--translucent);
-	border-radius: .5rem;
+	border-radius: var(--mainradius);
 }
 .comment .commentinfo {
 	display: flex;
@@ -507,7 +511,7 @@ body.darkmode #commentform textarea, body.darkmode #commentform input[type="text
 .project {
 	padding: 1rem;
 	border: 1px solid var(--fgcolor);
-	border-radius: .5rem;
+	border-radius: var(--mainradius);
 	background: var(--altbgcolor);
 }
 .codeblock {
