@@ -353,11 +353,11 @@ p strong {
 
 .blogpost p.caption {
 	font-style: italic;
-	margin-top: -1rem;
+	margin-top: -1.3rem;
+	color: var(--fgtranslucent);
 }
 .blogpost p.caption::before {
-	content: "\2191  ";
-	font-size: 1.5rem;
+	content: "\2191     ";
 }
 
 .blogpost blockquote {
@@ -370,10 +370,10 @@ p strong {
 .blogpost img{
 	display: block;
 	width: 100%;
-	margin: 1rem auto;
+	margin: 1.5rem auto;
 	font-style: italic;
 }
-.blogpost img:last-child {
+.blogpost p:last-child img {
 	margin-bottom: 0;
 }
 

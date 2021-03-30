@@ -73,7 +73,6 @@ video {
 	margin-top: .5rem;
 	display: grid;
 	width: fit-content;
-	padding: 0 .5rem;
 }
 
 
@@ -85,10 +84,9 @@ video {
 }
 .workitem h1 {
 	font-family: var(--headerfont);
-	font-size: 2rem;
+	font-size: 1.6rem;
 	line-height: 1;
 	margin: 0;
-	margin-bottom: .25rem;
 }
 .workitem p {
 	line-height: 1.3;
@@ -96,11 +94,6 @@ video {
 @media only screen and (max-width: 800px) {
 	#portfoliogrid {
 		grid-template-columns: 1fr;
-	}
-}
-@media only screen and (max-width: 400px) {
-	.workitem h1 {
-		font-size: 3rem;
 	}
 }
 
@@ -160,6 +153,7 @@ img, video {
 }
 .portfolio .browsermockup {
 	width: 100%;
+	max-width: 100%;
 	margin: 1rem 0;
 	border: 2px solid var(--acolor);
 	position: relative;
