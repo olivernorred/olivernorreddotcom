@@ -44,14 +44,15 @@ fs.readdir(directoryPath, (err, files) => {
 		//read markdown file
 		fs.readFile(`public/blogposts/${files[i]}`, "utf8", (err, markdowndata) => {
 			if(err) console.log(err);
-			//create html file
+			//create html file and generated html from .md
 			fs.writeFile(
 				`public/blog/${trimFileExtension(files[i])}.html`,
 
 				posttemplate
 					.replace(
 						templatetext,
-						marked(markdowndata)
+						// Replace img srcs
+						marked(markdowndata).split(`img src="`).join(`img src="../`)
 					)
 					.replace(
 						"###TEMPLATE_TITLE###",

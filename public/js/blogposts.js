@@ -23,11 +23,6 @@ else {
 
 
 
-// IMAGE SRCING
-for (let i = 0; i < document.querySelectorAll("img").length; i++) {
-	const element = document.querySelectorAll("img")[i];
-	element.setAttribute("src", `../${element.getAttribute("src")}`);
-}
 
 
 
