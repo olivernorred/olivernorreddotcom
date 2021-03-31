@@ -96,6 +96,10 @@ a:active {
 	top: 1px;
 }
 
+nw {
+	white-space: nowrap;
+}
+
 
 
 #container {
