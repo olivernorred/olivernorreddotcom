@@ -351,12 +351,12 @@ p strong {
 	font-variation-settings: "wght" 700;
 }
 
-.blogpost p.caption {
+p.caption {
 	font-style: italic;
 	margin-top: -1.3rem;
 	color: var(--fgtranslucent);
 }
-.blogpost p.caption::before {
+p.caption::before {
 	content: "\2191     ";
 }
 

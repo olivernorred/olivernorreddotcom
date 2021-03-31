@@ -23,10 +23,6 @@ else {
 
 
 
-
-
-
-
 // COMMENT SECTION
 const commentbox = document.querySelector("#commentbox");
 const namebox = document.querySelector("#commentername");

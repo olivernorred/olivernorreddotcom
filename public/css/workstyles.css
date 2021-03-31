@@ -108,12 +108,11 @@ img, video {
 .portfolio {
 	--smallwidth: 500px;
 }
-.portfolio * {
-	max-width: 700px;
+.portfolio p {
+	max-width: 650px;
 }
-.portfolio h1, .portfolio h2, .portfolio p, .portfolio blockquote {
+.portfolio h1, .portfolio h2, .portfolio blockquote {
 	margin: .5rem 0;
-	padding: 0 .5rem;
 }
 .portfolio h1, .portfolio h2 {
 	font-family: var(--headerfont);
@@ -132,20 +131,14 @@ img, video {
 	padding-left: .5rem;
 	border-left: 1px solid var(--fgcolor);
 }
-.portfolio p.caption {
-	font-style: italic;
-	margin-top: -1rem;
-}
-.portfolio p.caption::before {
-	content: "\2191  ";
-	font-size: 1.5rem;
-}
+
 
 .portfolio img, .portfolio svg, .portfolio iframe, .portfolio video {
 	display: block;
-	margin: 1rem 0;
+	margin: 1.5rem 0;
 	max-width: 100%;
 }
+
 .portfolio iframe {
 	width: 100%;
 	aspect-ratio: 1 / 1;
@@ -154,7 +147,7 @@ img, video {
 .portfolio .browsermockup {
 	width: 100%;
 	max-width: 100%;
-	margin: 1rem 0;
+	margin: 1.5rem 0;
 	border: 2px solid var(--acolor);
 	position: relative;
 }
