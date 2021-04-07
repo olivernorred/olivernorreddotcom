@@ -159,11 +159,11 @@ footer.innerHTML =
 `<a href="mailto:norredoliver@gmail.com">email:</a><br>
 norredoliver@gmail.com<br>
 <br>
-<a href="https://olivernorred.com/resume">Resume</a><br>
-<a href="https://github.com/olivernorred">Github</a><br>
-<a href="https://www.instagram.com/olivernorred/">Instagram</a><br>
-<a href="https://twitter.com/olivernorred">Twitter</a><br>
-<a href="https://www.youtube.com/c/OliverNorred">YouTube</a>`
+<a href="https://olivernorred.com/resume">resume</a><br>
+<a href="https://github.com/olivernorred">github</a><br>
+<a href="https://www.instagram.com/olivernorred/">instagram</a><br>
+<a href="https://twitter.com/olivernorred">twitter</a><br>
+<a href="https://www.youtube.com/c/OliverNorred">youtube</a>`
 
 document.querySelector("#container").appendChild(footer);
 
