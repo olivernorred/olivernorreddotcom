@@ -36,6 +36,15 @@ else {
 // NAME NOWRAP e.g. "Oliver Norred, 7
 				// March 2021"
 function addWhiteSpaceBreakBlocker() {
+	document.querySelectorAll(".blogpost h1").forEach(e => {
+		let lastTwoWords = e.innerHTML.split(" ").slice(Math.max(e.innerHTML.split(" ").length - 2, 1)).join(" ")
+		e.innerHTML = e.innerHTML.replace(
+			lastTwoWords,
+			`<nw>${lastTwoWords}</nw>`
+		)
+	})
+
+
 	document.querySelectorAll(".blogpost h2").forEach(e => {
 		e.innerHTML = e.innerHTML.replace(
 			e.innerHTML.split(", ")[1],

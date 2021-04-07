@@ -111,7 +111,11 @@ img, video {
 .portfolio p {
 	max-width: 650px;
 }
+.portfolio p.caption {
+	max-width: 100%;
+}
 .portfolio h1, .portfolio h2, .portfolio blockquote {
+	max-width: 650px;
 	margin: .5rem 0;
 }
 .portfolio h1, .portfolio h2 {

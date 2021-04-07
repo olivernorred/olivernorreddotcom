@@ -357,7 +357,7 @@ p strong {
 
 p.caption {
 	font-style: italic;
-	margin-top: -1.3rem;
+	margin-top: -1rem;
 	color: var(--fgtranslucent);
 }
 p.caption::before {

@@ -112,7 +112,7 @@ if (typeof page !== 'undefined') {
 	else if(page == 'portfolio') {
 		worklink = `<a class="active" href="index.html">Work</a>`;
 		indexlink = indexlink.replace(Olist[0], Olist[1])
-		document.querySelector("#content").innerHTML += `<a href="../work/index.html">&larr; back to Work</a>`
+		document.querySelector("#content").innerHTML += `<br><a href="../work/index.html">&larr; back to Work</a>`
 	}
 	else if(page == 'whatev') {
 		indexlink = indexlink.replace(Olist[0], Olist[2])
