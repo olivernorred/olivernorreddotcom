@@ -49,12 +49,13 @@ video {
 	position: absolute;
 	display: flex;
 	gap: 1rem;
-	padding: 0 0 0 2rem;
+	--outside-spacing: 3vw;
+	padding-left: var(--outside-spacing);
 }
 #portfoliogrid::after {
 	content: " ";
 	display: block;
-	width: 1rem;
+	width: calc(var(--outside-spacing) - 1rem);
 }
 
 .workitem {
