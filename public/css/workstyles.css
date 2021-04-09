@@ -49,8 +49,12 @@ video {
 	position: absolute;
 	display: flex;
 	gap: 1rem;
-	padding: 0 0 0 1rem;
-	will-change: transform;
+	padding: 0 0 0 2rem;
+}
+#portfoliogrid::after {
+	content: " ";
+	display: block;
+	width: 1rem;
 }
 
 .workitem {
