@@ -31,25 +31,34 @@ video {
 	display: block;
 }
 
-
-#portfoliogrid {
+#content.portfolioindexcontent {
+	max-width: 100%;
+	min-height: 100vh;
+	position: relative;
+}
+#portfoliosticky {
+	position: sticky;
+	top: 0;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: hidden;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 2rem;
+	align-items: center;
+}
+#portfoliogrid {
+	position: absolute;
+	display: flex;
+	gap: 1rem;
+	padding: 0 0 0 1rem;
+	will-change: transform;
 }
 
-
-.workitem:nth-child(1) {--themecolor: var(--workred);}
-.workitem:nth-child(2) {--themecolor: var(--workyellow);}
-.workitem:nth-child(3) {--themecolor: var(--workblue);}
-.workitem:nth-child(4) {--themecolor: var(--workgreen);}
-.workitem:nth-child(5) {--themecolor: var(--workpurple);}
-
 .workitem {
-	padding: 0;
-	line-height: 1.5;
 	position: relative;
-	top: 0;
+	flex-shrink: 0;
+	width: 30rem;
+	max-width: calc(100vw - 1.6rem);
+	line-height: 1.5;
 	transition: .1s;
 }
 .workitem a:first-child {
