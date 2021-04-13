@@ -36,6 +36,7 @@ video {
 	min-height: 100vh;
 	position: relative;
 }
+
 #portfoliosticky {
 	position: sticky;
 	top: 0;
@@ -58,13 +59,14 @@ video {
 	width: calc(var(--outside-spacing) - 1rem);
 }
 
+
 .workitem {
 	position: relative;
 	flex-shrink: 0;
 	width: 30rem;
 	max-width: calc(100vw - 1.6rem);
 	line-height: 1.5;
-	transition: .1s;
+	transition: top .1s;
 }
 .workitem a:first-child {
 	position: absolute;

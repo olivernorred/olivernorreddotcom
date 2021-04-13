@@ -159,7 +159,7 @@ footer.innerHTML =
 `<a href="mailto:norredoliver@gmail.com">email:</a><br>
 norredoliver@gmail.com<br>
 <br>
-<a href="https://olivernorred.com/resume">resume</a><br>
+<a href="https://olivernorred.com/OliverNorred-Resume.pdf">resume</a><br>
 <a href="https://github.com/olivernorred">github</a><br>
 <a href="https://www.instagram.com/olivernorred/">instagram</a><br>
 <a href="https://twitter.com/olivernorred">twitter</a><br>
