@@ -1,0 +1,57 @@
+---
+layout: base.html
+titlecategory: \ Blog \
+active: blog
+---
+
+
+<div class="blogheadernote"><a href="/blog">&larr; back to the archives 🥬</a></div>
+
+
+<div class="blogpost">{{ content | safe }}</div>
+
+<div class="nextpostlink">
+{% assign posturls = collections.posts | map: "url" | reverse %}
+
+{% for post in collections.posts reversed %}
+	{% if post.url == page.url %}
+		{% assign next_i = forloop.index0 | plus: 1 %}
+		{% assign prev_i = forloop.index0 | minus: 1 %}
+
+		{% if forloop.first == false %}
+			<a href="{{ posturls[prev_i] }}" style="float: left;">&larr; newer</a>
+		{% endif %}
+
+		{% if forloop.last == false %}
+			<a href="{{ posturls[next_i] }}" style="float: right;">older &rarr;</a>
+		{% endif %}
+
+	{% endif %}
+{% endfor %}
+
+</div>
+	
+			
+			
+
+		
+		
+		
+	
+
+
+<br>
+<br>
+
+	<form onsubmit="postComment(); return false;" id="commentform">
+	<label for="commentername">name:</label><input type="text" id="commentername" autocomplete="off">
+	<label for="commentbox">comment:</label>
+	<textarea name="commentbox" id="commentbox" cols="50" rows="4"></textarea>
+	<input type="submit" value="post comment">
+</form>
+
+<div id="commentsection"></div>
+
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+<script src="/js/blogcomments.js"></script>

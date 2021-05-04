@@ -1,0 +1,156 @@
+---
+layout: base.html
+active: whatev
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Whatever!">
+	<title>Whatev \ Oliver Norred</title>
+	
+	<link rel="stylesheet" href="../css/normalize.css">
+	<link rel="stylesheet" href="../css/stylesheet.css">
+	<link rel="stylesheet" href="../css/wordfinderstylesheet.css">
+	<link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+	<style>
+		body {
+			background-image: url("../images/ginghambackground-01.png");
+		}
+	</style>
+
+<div id="container">
+
+	<a href="#content" id="skip-link">Skip to content</a>
+	<header id="header"></header>
+
+	<h1>I'm gonna put all the things i don't need but cant let go of here. It's like hoarding but for my website. Apologies.</h1>
+	<div class="continuousshadow rippletext" offset="1200 720" style="pointer-events: none; font-family: 'literata'; font-size: 10vw; font-variation-settings: 'wght' 200; font-style: italic; width: fit-content; margin: auto;">Gingham Heights</div>
+	<div style="font-size: 4rem; text-align: center;"><a href="wordsearch"><br>WORD SEARCH<br></a></div>
+	<div style="font-size: 4rem; text-align: center;"><br>...</div>
+	<div style="font-size: 4rem; text-align: center;"><a href="misc"><br>Miscellaneous<br></a></div>
+	<!-- <script src="js/continuousshadow.js"></script> -->
+	<script>
+		var ripplecontainer = document.querySelector(".rippletext");
+		var letters = ripplecontainer.innerHTML.split("");
+		ripplecontainer.innerHTML = "";
+		for (let i = 0; i < letters.length; i++) {
+			letters[i] = `<span id="${i}" style="animation: rippletext ease-in-out 4s ${-i*.5}s infinite">${letters[i]}</span>`;
+			ripplecontainer.innerHTML += letters[i];
+		}
+	</script>
+	<style>
+		@keyframes rippletext {
+			0%{font-variation-settings: 'wght' 600 ;}
+			50%{font-variation-settings: 'wght' 900 ;}
+			100%{font-variation-settings: 'wght' 600;}
+		}
+	</style>
+
+	<div>
+		     <div id="worktitle">korW</div>
+			 <style>
+				#worktitle {
+					font-family: var(--headerfont);
+					font-size: 8rem;
+					letter-spacing: 0rem;
+					/* white-space: pre; */
+					margin: auto;
+					margin-bottom: 1rem;
+					margin-top: -2rem;
+					pointer-events: none;
+
+					display: flex;
+					flex-direction: row-reverse;
+					width: fit-content;
+				}
+				#worktitle span {
+					display: inline-block;
+					animation: letterdance 0.66s steps(2) infinite alternate;
+					/* text-shadow: -4px -4px var(--bgcolor),
+						4px 4px var(--bgcolor),
+						4px -4px var(--bgcolor),
+						-4px 4px var(--bgcolor); */
+				}
+				#worktitle span:nth-child(even) {
+					/* z-index: 10; */
+					animation-direction: alternate-reverse;
+				}
+				@keyframes letterdance {
+					from {
+						transform: rotate(-10deg);
+					}
+					to {
+						transform: rotate(20deg);
+					}
+				}
+
+				@media (max-width: 516px) {
+					#worktitle {
+						font-size: 35vw;
+						letter-spacing: -2vw;
+					}
+				}
+			</style>
+	</div>
+
+
+
+	<svg id="text-container" xmlns="http://www.w3.org/2000/svg" viewBox="0 200 2000 550">
+		<path id="text-curve" d="M-.3 419.4s191 283.3 500 283.3 418.6-405.1 889.7-405.1S1999.7 495 1999.7 495" fill="none"/>
+		<text font-size="100" font-family="var(--headerfont)" font-weight="normal">
+			<textpath id="text-path" href="#text-curve" startOffset="300"><a href="photosoftype.html">type pictures type pictures type pictures</a></textpath>
+		</text>
+	</svg>
+	<div class="content">
+		<a class="enterlink" href="weirds.html">SICK SICK SICK SICK SICK SICK SICK SICK&nbsp;</a>
+		<a class="enterlink" href="weirds.html">SICK SICK SICK SICK SICK SICK SICK SICK&nbsp;</a>
+		<a class="enterlink" href="weirds.html">SICK SICK SICK SICK SICK SICK SICK SICK&nbsp;</a>
+	</div>
+
+	<style>
+		.enterlink {
+			font-size: 10rem;
+			white-space: nowrap;
+			display: inline-block;
+			animation: marquee 3s linear infinite;
+			font-family: var(--headerfont);
+			font-weight: 800;
+			font-style: italic;
+		}
+		.enterlink:nth-child(even) {
+			animation-direction: reverse;
+		}
+		.enterlink:nth-child(3n+2) {
+			color: var(--fgcolor);
+		}
+		.enterlink:nth-child(3n+1) {
+			color: var(--altbgcolor);
+		}
+		.enterlink:hover {
+			opacity: 1;
+			color: hotpink;
+		}
+		.enterlink:active {
+			text-transform: lowercase;
+		}
+		@keyframes marquee {
+			from{transform: translate(0,0)}
+			to{transform: translate(-25%, 0)}
+		}
+		.content {
+			overflow: hidden;
+			margin: auto;
+		}
+	</style>
+
+</div>
+
+</body>
+
+</html>
