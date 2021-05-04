@@ -19,7 +19,7 @@ body {
 	--acolor: #d89d00;
 	
 	--fgtranslucent: #00000040;
-	--altbg: #faeada;
+	--altbg: #fcecdc;
 
 	--headerfont: "Taters";
 	--bodyfont: "Literata";
@@ -33,13 +33,13 @@ body {
 
 	background: linear-gradient(
 		to right,
-		var(--bg) 33%,
-		var(--altbg) 33%,
-		var(--altbg) 66%,
-		var(--bg) 66%,
+		var(--bg) 40%,
+		var(--altbg) 40%,
+		var(--altbg) 60%,
+		var(--bg) 60%,
 		var(--bg) 100%
 	);
-	background-size: .4rem;
+	background-size: .6rem;
 }
 
 img {
@@ -68,6 +68,7 @@ a:hover {
 
 #recipe-header {
 	margin: auto;
+	margin-bottom: 1rem;
 	padding: 0 .8rem;
 }
 #cookbooktitle {
@@ -89,7 +90,7 @@ a:hover {
 }
 
 .recipe > p:first-child {
-	
+	margin-top: 1rem;
 }
 .recipe > p:first-child::first-letter {
 	float: left;
