@@ -90,7 +90,7 @@ a:hover {
 }
 
 .recipe > p:first-child {
-	margin-top: 1rem;
+	margin-top: 0rem;
 }
 .recipe > p:first-child::first-letter {
 	float: left;
