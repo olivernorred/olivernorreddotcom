@@ -9,7 +9,7 @@ date: 2021-05-05
 *They made a new pasta.*
 
 O, how I long to kiss the Cascatelli \
-And let long lost-sauce find me so lost in it.
+And let long-lost sauce find me so lost in it.
 
 O, how I long to toothe the new pasta, \
 Not in doggish violence but in cattish horns.

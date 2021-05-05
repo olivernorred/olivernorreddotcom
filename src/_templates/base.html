@@ -61,9 +61,9 @@
 		</header>
 	
 		<main id="content" class="
-			{% if layout == 'post.html' %}     contentforblogpost    {% endif %}
-			{% if layout == 'workitem.html' %} portfolio             {% endif %}
-			{% if page.url == '/work/' %}      portfolioindexcontent {% endif %}
+			{%- if layout == 'post.html' -%}     contentforblogpost    {%- endif -%}
+			{%- if layout == 'workitem.html' -%} portfolio             {%- endif -%}
+			{%- if page.url == '/work/' -%}      portfolioindexcontent {%- endif -%}
 		">
 			{{ content | safe }}
 			
