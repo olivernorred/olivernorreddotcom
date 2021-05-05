@@ -100,6 +100,11 @@ nw {
 	white-space: nowrap;
 }
 
+h1, h2, h3, h4, h5, h6, p, ol, ul {
+	font-weight: normal;
+	margin: 0;
+}
+
 
 
 #container {
@@ -192,8 +197,7 @@ input[type="checkbox"] {
 
 /* content ------------------------------------------------------------------------------------------------------------------*/
 #content {
-	max-width: var(--bigwidth);
-	margin: 0 auto;
+	margin: auto;
 }
 
 p {

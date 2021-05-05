@@ -6,7 +6,7 @@ date: 2021-05-03
 # How to make peace with running
 ## Oliver Norred, 3 May 2021
 
-I am still at war with running. It is cooling down; I’ve withdrawn about half my troops since the weather got warmer. But as long as my dad’s sleek Craigslist road bike is in the garage, it will not be easy to fall back in love with the joint killer that is jogging. Here’s my strategy:
+I am still at war with running. It is cooling down; I’ve withdrawn about half my troops since the weather got warmer. But as long as my dad’s sleek Craigslist road bike is in the garage, it will not be easy to fall back in love with the joint killer that is jogging. I present to you my Plan:
 
 ***Take It Easy: Two Prohibitions To Keep Running Fun***
 
