@@ -30,6 +30,9 @@ description: I'm Oliver and this is my blog :)
 	}
 	#cookbooklink h1 a {
 		text-decoration-color: black;
+		background: linear-gradient(to bottom right, #d89d00, #d8003b);
+		-webkit-background-clip: text;
+		color: transparent;
 	}
 </style>
 
@@ -38,7 +41,7 @@ description: I'm Oliver and this is my blog :)
 <div class="griditem blogpost" id="cookbooklink">
 
 
-# [Oliver&rsquo;s Cookbook Collab](/cookbook/)
+# [Cookbook Collab!](/cookbook/)
 
 </div>
 

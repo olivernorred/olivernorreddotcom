@@ -5,7 +5,7 @@ active: blog
 description: I'm Oliver and these are recipes by my friends and family :)
 ---
 
-*I asked some friends and family to share a recipe that means a lot to them. Haters will say it’s an excuse for me to play with `<ol>`s and `<ul>`s. Fans will say it’s awesome.*
+*I asked some friends and family to share a recipe they love. Haters will call it an excuse for me to play with `<ol>`s and `<ul>`s. Fans will say something like, “Now we’re cookin with gas!” or “Can’t take the heat? Get outta the kitchen!” or “Flame on!”*
 
 ##### BREAKFASTS
 
