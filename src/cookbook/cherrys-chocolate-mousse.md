@@ -18,6 +18,6 @@ To scald the milk,  heat in a pan until little bubbles form around the edge. Aft
 
 ### Directions
 
-1. Blend 2 min. on high
+1. Blend <qu>2 min.</qu> on high
 2. *Chill*
 3. Top w/ whipping cream

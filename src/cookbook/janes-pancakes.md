@@ -6,7 +6,7 @@ title: Jane’s Pancakes
 
 # Pancakes
 
-We usually make them with half buttermilk half regular milk.
+*We usually make them with half buttermilk half regular milk.*
 
 ### dry:
 
@@ -28,5 +28,6 @@ We usually make them with half buttermilk half regular milk.
 **&uarr; beat.**
 \
 \
-Fold wet into dry.
-Mix with wooden spoon.
+**Fold wet into dry.**
+
+**Mix with wooden spoon.**

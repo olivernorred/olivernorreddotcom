@@ -23,7 +23,7 @@ Serves 6.
 
 ### Directions
 
-Combine, boil, reduce heat & simmer 5 minutes
+Combine, boil, reduce heat & simmer <qu>5 minutes</qu>
 
 **Garnishes**: sour cream, tor. chips, ch. cheese, sliced avocados
 

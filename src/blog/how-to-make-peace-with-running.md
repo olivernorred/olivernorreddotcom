@@ -10,7 +10,7 @@ I am still at war with running. It is cooling down; I’ve withdrawn about half 
 
 ***Take It Easy: Two Prohibitions To Keep Running Fun***
 
-Running track and cross country through junior year warped my idea of a good workout. I still find myself speeding up at the beginning because I think I can maintain the same pace as high school. I cannot! My mom has suggested only breathing through my nose. Anyway, that’s *Prohibition Number One: Running Too Fast*.
+Running track and cross country through junior year of HS warped my idea of a good workout. I still find myself speeding up at the beginning because I think I can maintain the same pace as high school. I cannot! My mom has suggested only breathing through my nose. Anyway, that’s *Prohibition Number One: Running Too Fast*.
 
 Six or seven weeks ago, I watched *Breaking Away* (1979), the bikers’ bildungsroman. It made me get on the bike, and I’m hooked. I don’t want to lose biking just because I resumed running. That’s *Prohibition Number Two: Losing My Biking Habit*.
 

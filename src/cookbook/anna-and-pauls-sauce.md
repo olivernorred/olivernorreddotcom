@@ -24,6 +24,6 @@ title: Anna and Paul’s Sauce
 1. Sautee mushrooms, Italian Sausage
 2. ADD Tomatoes, Onions, Butter
 3. Let Simmer, ADD herbs, Salt, etc.
-4. After Some time, remove onions
+4. After <qu>Some time</qu>, remove onions
 5. Boil PASTA
 6. Serve

@@ -20,9 +20,9 @@ title: Oliver’s Raw Oats
 
 ### Directions
 
-1. Put oats and blueberries into a bowl and microwave for 2 minutes or until blueberries are fully melted and oats are hot.
-2. Slice whole banana onto hot oats and blueberries.
-3. Pour almond milk over hot oats and blueberries.
-4. Top with peanut butter.
+1. Put oats and blueberries into a bowl and microwave for <qu>2 minutes</qu> or until blueberries are fully melted and oats are hot
+2. Slice whole banana onto hot oats and blueberries
+3. Pour almond milk over hot oats and blueberries
+4. Top with peanut butter
 
-*And that’s it! Quick and tasty. It’s the perfect breakfast. I should know, I eat it every day.*
+*That’s it! Quick and tasty. It’s the perfect breakfast. I should know, I eat it every day.*

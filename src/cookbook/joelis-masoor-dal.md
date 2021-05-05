@@ -30,11 +30,11 @@ title: Joeli’s Masoor Dal
 
 1. Heat butter or ghee in a large pot.
 2. Sauté onions and garlic in ghee until brown.
-3. Add spices and stir for 2&ndash;3 minutes. 4. Add tomatoes and cook until they break down.
+3. Add spices and stir for <qu>2&ndash;3 minutes</qu>. 4. Add tomatoes and cook until they break down.
 5. Wash and drain lentils.
 6. Add lentils and water to pot.
-7. Let simmer for 45 minutes, stirring often. Stir in salt.
-8. Heat ½ teaspoon ghee in a small skillet and fry seeds until they pop.
+7. Let simmer for <qu>45 minutes</qu>, stirring often. Stir in salt.
+8. Heat <qu>½ teaspoon</qu> ghee in a small skillet and fry seeds until they pop.
 9. Stir fried seeds and cilantro into finished soup.
 
 **Preparation time: 1 hour**
