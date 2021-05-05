@@ -9,6 +9,7 @@
 
 ::selection {
 	color: var(--bg);
+	-webkit-text-fill-color: var(--bg);
 	background: var(--fg);
 }
 
