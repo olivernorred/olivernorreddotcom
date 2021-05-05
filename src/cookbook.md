@@ -2,6 +2,7 @@
 layout: recipe.html
 title: Cookbook \
 active: blog
+description: I'm Oliver and these are recipes by my friends and family :)
 ---
 
 *I asked some friends and family to share a recipe that means a lot to them. Haters will say it’s an excuse for me to play with `<ol>`s and `<ul>`s. Fans will say it’s awesome.*

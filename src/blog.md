@@ -2,6 +2,7 @@
 layout: base.html
 title: Blog \
 active: blog
+description: I'm Oliver and this is my blog :)
 ---
 
 <style>

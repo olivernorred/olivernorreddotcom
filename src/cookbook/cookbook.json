@@ -1,5 +1,6 @@
 {
 	"layout": "recipewithtitlecategory.html",
 	"active": "blog",
-	"tags": "recipes"
+	"tags": "recipes",
+	"description": "From the recipe collection of Oliver Norred!"
 }
