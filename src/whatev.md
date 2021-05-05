@@ -10,16 +10,15 @@ active: whatev
 	src: url('/fonts/Bizzarrini-V0_4-VF.ttf');
 }
 
-body {background-image: url("../images/ginghambackground-01.png");}
+body {background-image: url("../images/ginghambackground-02.png");}
 
 
 h1 {
 	text-align: center;
 	font-weight: normal;
 	font-family: 'Bizzarrini';
-	font-size: 12.5vw;
-	font-variation-settings: "opsz" 40, "wght" 100;
-	letter-spacing: -0.05em;
+	font-size: clamp(4rem, 12.5vw, 1000rem);
+	font-variation-settings: "opsz" 5vw, "wght" 200;
 }
 
 .whatevsection{
@@ -35,29 +34,8 @@ h1 {
 
 # Gingham Heights
 
-<script>
-	var ripplecontainer = document.querySelector('h1');
-	var letters = ripplecontainer.innerHTML.split("");
-	ripplecontainer.innerHTML = "";
-	for (let i = 0; i < letters.length; i++) {
-		letters[i] = `<span id="${i}"
-		style="
-		animation: rippletext 4s ${-i*.1}s infinite
-		">${letters[i]}</span>`;
-		ripplecontainer.innerHTML += letters[i];
-	}
-</script>
-<style>
-	@keyframes rippletext {
-		0%{font-variation-settings: 'opsz' 48, 'wght' 100;}
-		50%{font-variation-settings: 'opsz' 48, 'wght' 900;}
-		100%{font-variation-settings: 'opsz' 48, 'wght' 100;}
-	}
-</style>
-
-
 <div id="myinstagram" class="whatevsection">
-	<a href="https://www.instagram.com/olivernorred/" style="background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c); -webkit-background-clip: text; color: transparent;">this is a link to my instagram profile, on there i post sometimes song covers sometimes selfies with friends, and sometimes, when im feeling a bit cheeky, food pics! (Yum)!</a>
+	<a href="https://www.instagram.com/olivernorred/" style="background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c); -webkit-background-clip: text; color: transparent;">this is a link to my instagram profile, on there i post sometimes song covers sometimes selfies with friends, and sometimes, when im feeling a bit cheeky, food pics! (yum)!</a>
 </div>
 
 <div id="myyoutube" class="whatevsection">

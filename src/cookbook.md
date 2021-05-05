@@ -21,6 +21,9 @@ description: I'm Oliver and these are recipes by my friends and family :)
 ## Annabelle’s
 # [Banana Pancakes](/cookbook/annabelles-banana-pancakes/)
 
+## Joe’s
+# [Fried Rice Sandwich](/cookbook/joes-fried-rice-sandwich/)
+
 
 ##### ENTRÉES
 

@@ -17,6 +17,8 @@ body {
 	--bg: #fbf7f4;
 	--bg: #fff;
 	--acolor: #d89d00;
+	/* --acolor: #d8003b; */
+	/* --acolor: #fff; */
 	
 	--fgtranslucent: #00000040;
 	--altbg: #fcecdc;
@@ -57,8 +59,13 @@ strong {
 	font-variation-settings: "opsz" 10, "wght" 700;
 }
 
-a {
-	color: var(--acolor);
+.recipe a, #recipe-header a {
+	/* display: inline-block; */
+	/* width: min-content; */
+	color: #fff;
+	background: linear-gradient(to bottom right, #d89d00, #d8003b);
+	-webkit-background-clip: text;
+	color: transparent;
 	text-decoration: none;
 }
 a:hover {
