@@ -64,7 +64,8 @@ strong {
 	/* width: min-content; */
 	background: linear-gradient(to bottom right, #d89d00, #d8003b);
 	-webkit-background-clip: text;
-	color: transparent;
+	-webkit-text-fill-color: transparent;
+	color: #d89d00;
 	text-decoration: none;
 }
 a:hover, #recipe-header a:hover {
@@ -147,7 +148,7 @@ a:hover, #recipe-header a:hover {
 	letter-spacing: -0.015em;
 }
 .recipe h2 {
-	margin-top: 1rem;
+	margin-top: 2rem;
 	font-size: 1.95rem;
 	font-style: italic;
 	font-variation-settings: "opsz" 36, "wght" 200;
