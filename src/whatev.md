@@ -28,6 +28,8 @@ h1 {
 	padding: .8rem;
 	background: white;
 	font-weight: bold;
+	border: 1px solid black;
+	box-shadow: -5px 5px;
 }
 </style>
 
