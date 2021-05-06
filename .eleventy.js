@@ -24,12 +24,6 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addShortcode('excerpt', article => extractExcerpt(article))
 
 
-	// This function gets all `.md`s in /blog/ and sorts them newest to oldest
-	// eleventyConfig.addCollection("posts", function(collectionApi) {
-	// 	return collectionApi.getFilteredByGlob("**/blog/*.md").sort(function(a, b) {
-	// 		return b.date - a.date; // sort by date - descending
-	// 	})
-	// })
 	  
 	return {
 		passthroughFileCopy: true,
