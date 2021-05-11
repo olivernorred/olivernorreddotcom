@@ -15,6 +15,8 @@ const dbpath = 'posts/' + location.href.split("/blog/")[1]
 
 // creating local comments object
 let commentsobject;
+
+// accessing database
 firebase.database().ref(dbpath).on('value', snapshot => {
     const data = snapshot.val();
 	commentsobject = data;
@@ -22,21 +24,18 @@ firebase.database().ref(dbpath).on('value', snapshot => {
 	updateComments();
 });
 
-function writeCommentData(id, name, content, date) {
-	firebase.database().ref(dbpath + "/" + id).set({
-		name: name,
-		id: id,
-		content: content,
-		date: date
-	});
-}
 
 function postComment() {
 	if(commentsobject == null) {currID = 0;}
 	else {currID = commentsobject.length;}
 	let d = new Date();
 
-	writeCommentData(`${currID}`, namebox.value, commentbox.value, d.toLocaleString());
+	firebase.database().ref(dbpath + "/" + id).set({
+		name: namebox.value,
+		id: `${currID}`,
+		content: commentbox.value,
+		date: d.toLocaleString()
+	});
 
 	commentbox.value = "";
 }
@@ -49,15 +48,18 @@ function updateComments() {
 			commentsection.innerHTML +=
 			`<div class="comment" id="comment${item.id}">
 				<div class="commentinfo">
-					<p class="commentername"></p>
-					<p class="commentdate"></p>
+					<p class="commentername">${item.name}</p>
+					<p class="commentdate">${item.date.split(",")[0]}</p>
 				</div>
-				<p class="commentcontent"></p>
+				<p class="commentcontent">${item.content}</p>
 			</div>`
-			const currcomment = document.querySelector(`#comment${item.id}`);
-			currcomment.querySelectorAll(".commentername")[0].innerText = item.name;
-			currcomment.querySelectorAll(".commentcontent")[0].innerText = item.content;
-			currcomment.querySelectorAll(".commentdate")[0].innerText = item.date.split(",")[0];
 		}
 	}
 }
+
+
+setInterval(() => {
+	if(commentsection.innerHTML.length === 0) {
+		commentsection.innerHTML = "sometimes ad blockers make comments not show up. i dont have ads but for this reason you might wanna disable your ad blocker on my site!"
+	}
+}, 100);
