@@ -3,14 +3,6 @@ const commentbox = document.querySelector("#commentbox");
 const namebox = document.querySelector("#commentername");
 const commentsection = document.querySelector("#commentsection");
 
-var config = {
-	apiKey: "AIzaSyBfK03Zp7K5uPYYH1j-5MXrqFh-Z_LGPq8",
-	authDomain: "sting-op.firebaseapp.com",
-	databaseURL: "https://sting-op.firebaseio.com",
-	storageBucket: "sting-op.appspot.com"
-};
-firebase.initializeApp(config);
-
 const dbpath = 'posts/' + location.href.split("/blog/")[1]
 
 // creating local comments object
