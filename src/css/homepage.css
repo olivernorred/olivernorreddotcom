@@ -89,9 +89,6 @@ img {
 	display: block;
 	padding-bottom: 95%;
 }
-#uglycontainer:hover {
-	/* animation: enhance .5s linear forwards; */
-}
 @keyframes degrade {
 	0% {
 		background-image: url("../images/uglywithbg.svg");
@@ -139,11 +136,11 @@ hr {
 #description {
 	text-align: center;
 	animation: fadeindescription 1s 2.5s steps(3) forwards;
-	opacity: .4;
+	opacity: .7;
 }
 @keyframes fadeindescription {
 	from {
-		opacity: .4;
+		opacity: .7;
 	}
 	to {
 		opacity: 1;

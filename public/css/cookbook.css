@@ -65,6 +65,7 @@ strong {
 	/* width: min-content; */
 	background: linear-gradient(to bottom right, #d89d00, #d8003b);
 	-webkit-background-clip: text;
+	background-clip: text;
 	-webkit-text-fill-color: transparent;
 	color: #d89d00;
 	text-decoration: none;
