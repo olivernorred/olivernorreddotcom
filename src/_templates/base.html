@@ -7,6 +7,11 @@
 	<title>{{ title }} {{ titlecategory }} Oliver Norred</title>
 	<meta name="description" content="{% if description%}{{ description }}{% else %}Website of Oliver Norred: Fine, fine... I'm a web guy, and I have a personal site. Yeesh!{% endif %}">
 
+	<meta property="og:title" content="{{ title }} {{ titlecategory }} Oliver Norred">
+	<meta property="og:description" content="{% if description%}{{ description }}{% else %}Website of Oliver Norred: Fine, fine... I'm a web guy, and I have a personal site. Yeesh!{% endif %}">
+	<meta property="og:image" content="https://olivernorred.com/images/social-image.png">
+	<meta property="og:url" content="https://olivernorred.com{{ page.url }}">
+
 	<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
 
 

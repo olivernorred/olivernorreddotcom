@@ -18,6 +18,9 @@ description: I'm Oliver and these are recipes by my friends and family :)
 ## Art’s
 # [Breakfast Cookies](/cookbook/arts-breakfast-cookies/)
 
+## Andrew’s
+# [Nut Butter Nola](/cookbook/andrews-nut-butter-nola/)
+
 ## Annabelle’s
 # [Banana Pancakes](/cookbook/annabelles-banana-pancakes/)
 
@@ -29,6 +32,9 @@ description: I'm Oliver and these are recipes by my friends and family :)
 
 ## Cherry’s 
 # [Taco Soup](/cookbook/cherrys-taco-soup/)
+
+## Jon’s
+# [Elk](/cookbook/jons-elk/)
 
 ## Kate’s
 # [Shrimp Fajitas](/cookbook/kates-shrimp-fajitas/)
@@ -44,6 +50,9 @@ description: I'm Oliver and these are recipes by my friends and family :)
 
 ## Joeli’s
 # [Masoor Dal](/cookbook/joelis-masoor-dal/)
+
+## Finch’s
+# [Favorite Pasta](/cookbook/finchs-favorite-pasta/)
 
 ## Wyatt’s
 # [Chicken Parm](/cookbook/wyatts-chicken-parm)
@@ -74,3 +83,9 @@ description: I'm Oliver and these are recipes by my friends and family :)
 
 ## Cherry’s 
 # [Chocolate Mousse](/cookbook/cherrys-chocolate-mousse/)
+
+
+##### BEVERAGES
+
+## Alek’s
+# [Horchata](/cookbook/aleks-horchata/)
