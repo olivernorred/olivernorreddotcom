@@ -4,7 +4,6 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
 <url>
@@ -136,11 +135,23 @@
   <priority>0.51</priority>
 </url>
 <url>
+  <loc>https://olivernorred.com/cookbook/andrews-nut-butter-nola/</loc>
+  <priority>0.51</priority>
+</url>
+<url>
   <loc>https://olivernorred.com/cookbook/annabelles-banana-pancakes/</loc>
   <priority>0.51</priority>
 </url>
 <url>
+  <loc>https://olivernorred.com/cookbook/joes-fried-rice-sandwich/</loc>
+  <priority>0.51</priority>
+</url>
+<url>
   <loc>https://olivernorred.com/cookbook/cherrys-taco-soup/</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://olivernorred.com/cookbook/jons-elk/</loc>
   <priority>0.51</priority>
 </url>
 <url>
@@ -161,6 +172,10 @@
 </url>
 <url>
   <loc>https://olivernorred.com/cookbook/joelis-masoor-dal/</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://olivernorred.com/cookbook/finchs-favorite-pasta/</loc>
   <priority>0.51</priority>
 </url>
 <url>
@@ -192,7 +207,7 @@
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://olivernorred.com/blog</loc>
+  <loc>https://olivernorred.com/cookbook/aleks-horchata/</loc>
   <priority>0.51</priority>
 </url>
 
