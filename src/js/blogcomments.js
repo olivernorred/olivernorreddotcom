@@ -1,26 +1,31 @@
 // COMMENT SECTION
-const commentbox = document.querySelector("#commentbox");
-const namebox = document.querySelector("#commentername");
-const commentsection = document.querySelector("#commentsection");
+const commentbox = document.querySelector("#commentbox")
+const namebox = document.querySelector("#commentername")
+const commentsection = document.querySelector("#commentsection")
 
 const dbpath = 'posts/' + location.href.split("/blog/")[1]
 
 // creating local comments object
-let commentsobject;
+let commentsobject
 
 // accessing database
 firebase.database().ref(dbpath).on('value', snapshot => {
-    const data = snapshot.val();
-	commentsobject = data;
+    const data = snapshot.val()
+	if (data === null) {
+		commentsobject = []
+	}
+	else {
+		commentsobject = data
+	}
 	
 	updateComments();
 });
 
 
 function postComment() {
-	if(commentsobject == null) {currID = 0;}
-	else {currID = commentsobject.length;}
-	let d = new Date();
+	if(commentsobject === null) {currID = 0;}
+	else {currID = commentsobject.length}
+	let d = new Date()
 
 	firebase.database().ref(dbpath + "/" + id).set({
 		name: namebox.value,
@@ -29,13 +34,13 @@ function postComment() {
 		date: d.toLocaleString()
 	});
 
-	commentbox.value = "";
+	commentbox.value = ""
 }
 
 function updateComments() {
-	commentsection.innerHTML = "";
+	commentsection.innerHTML = ""
 	for (let i = commentsobject.length - 1; i >= 0; i--) {
-		const item = commentsobject[i];
+		const item = commentsobject[i]
 		if(item) {
 			commentsection.innerHTML +=
 			`<div class="comment" id="comment${item.id}">
@@ -47,6 +52,9 @@ function updateComments() {
 			</div>`
 		}
 	}
+	if(commentsobject.length === 0) {
+		commentsection.innerHTML = "there are no comments here . . . YET! 😎"
+	}
 }
 
 
@@ -54,4 +62,4 @@ setInterval(() => {
 	if(commentsection.innerHTML.length === 0) {
 		commentsection.innerHTML = "sometimes ad blockers make comments not show up. i dont have ads but for this reason you might wanna disable your ad blocker on my site!"
 	}
-}, 100);
+}, 500)
