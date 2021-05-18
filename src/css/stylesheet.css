@@ -157,6 +157,9 @@ h1, h2, h3, h4, h5, h6, p, ol, ul {
 	width: .25rem;
 	height: .25rem;
 }
+#indexlinkcontainer {
+	margin: auto;
+}
 #o-vector-logo {
 	width: 1.3em;
 }

@@ -36,6 +36,9 @@ description: I'm Oliver and these are recipes by my friends and family :)
 ## Jon’s
 # [Elk](/cookbook/jons-elk/)
 
+## Logan’s
+# [Mongolian Beef](/cookbook/logans-mongolian-beef/)
+
 ## Kate’s
 # [Shrimp Fajitas](/cookbook/kates-shrimp-fajitas/)
 
@@ -84,6 +87,8 @@ description: I'm Oliver and these are recipes by my friends and family :)
 ## Cherry’s 
 # [Chocolate Mousse](/cookbook/cherrys-chocolate-mousse/)
 
+## Rhys’
+# [Candied Pecans](/cookbook/rhys-candied-pecans/)
 
 ##### BEVERAGES
 
