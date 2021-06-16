@@ -10,7 +10,7 @@ active: whatev
 	src: url('/fonts/Bizzarrini-V0_4-VF.ttf');
 }
 
-body {background-image: url("../images/ginghambackground-02.png");}
+body {background-image: url("../images/ginghambackground-02.png"); background-size: auto; background-repeat: repeat;}
 
 
 h1 {
@@ -35,7 +35,7 @@ h1 {
 # Gingham Heights
 
 <div id="myinstagram" class="whatevsection">
-	<a href="https://www.instagram.com/olivernorred/" style="background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c); -webkit-background-clip: text; color: transparent;">this is a link to my instagram profile, on there i post sometimes song covers sometimes selfies with friends, and sometimes, when im feeling a bit cheeky, food pics! (yum)!</a>
+	<a href="https://www.instagram.com/olivernorred/" style="background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c); -webkit-background-clip: text; color: #833ab4;">this is a link to my instagram profile, on there i post sometimes song covers sometimes selfies with friends, and sometimes, when im feeling a bit cheeky, food pics! (yum)!</a>
 </div>
 
 <div id="myyoutube" class="whatevsection">

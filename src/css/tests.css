@@ -1,0 +1,32 @@
+@font-face {
+	font-family: 'Bizzarrini';
+	src: url('/fonts/Bizzarrini-V0_4-VF.ttf');
+}
+
+* {
+	margin: 0; padding: 0;
+	box-sizing: border-box;
+	font-weight: normal;
+}
+strong {
+	font-weight: bold;
+}
+
+body {
+	padding: .5rem;
+	font-size: 18px;
+}
+#header {
+	background: linear-gradient(to right, #719fd3, #5180c0);
+	display: grid;
+	place-items: center;
+	padding: 5rem 1rem;
+	border-radius: .5rem;
+	color: #fffbf0;
+}
+#header-title {
+	width: fit-content;
+	font-size: 150px;
+	font-family: 'Bizzarrini';
+	text-shadow: 0 0 20px #fffbf0;
+}

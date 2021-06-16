@@ -11,7 +11,7 @@ body {
 	--workblue: #def3fd;
 	--workpurple: #f0defd;
 
-
+	background-image: none;
 	background-attachment: fixed;
 	background-size: cover;
 }
