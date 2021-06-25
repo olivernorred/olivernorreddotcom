@@ -36,6 +36,18 @@ active: music
 		box-shadow: -5px 5px;
 	}
 
+	#streamingicons {
+		display: flex;
+		gap: 1rem;
+		max-width: clamp(200px, 20vw, 300px);
+		margin: auto;
+		margin-bottom: .75rem;
+	}
+	#streamingicons a {
+		display: block;
+		flex: 1;
+	}
+
 	#lyricstext {
 		width: 52ch;
 		overflow: hidden;
@@ -43,12 +55,27 @@ active: music
 		background: white;
 		padding: .5rem;
 		border-radius: var(--mainradius);
-		font-size: clamp(.5rem, 3vw, .8rem);
+		font-size: clamp(.5rem, 3vw, 1.5rem);
 	}
 </style>
 
 
 <img src="/images/music/hzdonutwordmark.svg" alt="Hz Donut">
+
+<section id="streamingicons">
+	<a href="https://open.spotify.com/album/3GruA171eqgZeluySO2nrl">
+		<img src="/images/music/icons/spotify.svg" alt="Hz Donut on Spotify">
+	</a>
+	<a href="https://music.youtube.com/playlist?list=OLAK5uy_lloYZ79Zr9Er3qBOpjfRJ4ney6B7gmUTo">
+		<img src="/images/music/icons/youtubemusic.svg" alt="Hz Donut on YouTube Music">
+	</a>
+	<!-- <a href="">
+		<img src="/images/music/icons/applemusiccolor.svg" alt="Hz Donut on Apple Music">
+	</a> -->
+	<a href="https://olivernorred.bandcamp.com/album/hz-donut">
+		<img src="/images/music/icons/bandcampcolor.svg" alt="Hz Donut on Bandcamp">
+	</a>
+</section>
 
 <pre id="lyricstext">
 <strong>1. Warm-Up + Overture</strong>
