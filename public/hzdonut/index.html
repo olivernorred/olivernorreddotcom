@@ -75,12 +75,16 @@
 		flex: 1;
 	}
 
+
 	#lyricstext {
-		width: 52ch;
+		white-space: pre;
 		overflow: hidden;
-		margin: auto;
-		background: var(--bgcolor);
+	}
+	#videolinks, #lyricstext {
+		width: 52ch;
+		margin: 1rem auto;
 		padding: .5rem;
+		background: var(--bgcolor);
 		border-radius: var(--mainradius);
 		font-size: clamp(.5rem, 3vw, 1.25rem);
 	}
@@ -104,8 +108,13 @@
 	</a>
 </section>
 
-<pre id="lyricstext">
-<strong>1. Warm-Up + Overture</strong>
+<section id="videolinks">
+	<p><em>VIDEOS</em></p>
+	<p><a href="https://www.youtube.com/watch?v=r5ChxcfyUJI">Warm-Up + Overture + To Be a Gosling &rarr;</a></p>
+	<p><a href="https://www.youtube.com/watch?v=sSO-b5yZpco">Music Fans Will Like This One &rarr;</a></p>
+</section>
+
+<section id="lyricstext"><strong>1. Warm-Up + Overture</strong>
 
 [ flutter flutter flutter around D major triad
 
@@ -408,7 +417,7 @@ Aa-a-a-aaaaaaaaAAAAAAAAAAAAAAAAAĄ̶͇͚̣͖̘͙̟̺̺̺̞̝̩͖̤͊̚ͅͅA̶̅
 [Oliver washed his hands on that track,
 so he fulfills his dream of sampling a
 paper towel dispenser]
-</pre>
+</section>
 			
 		</main>
 	
