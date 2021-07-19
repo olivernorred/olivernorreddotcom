@@ -19,6 +19,8 @@ module.exports = function(eleventyConfig) {
 	
 	eleventyConfig.addPassthroughCopy('./src/sitemap.xml')
 	eleventyConfig.addWatchTarget('./src/sitemap.xml')
+	
+
 
 
 	eleventyConfig.addShortcode('excerpt', article => extractExcerpt(article))

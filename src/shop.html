@@ -3,8 +3,40 @@ layout: base.html
 title: Shop \
 ---
 
+<link rel="stylesheet" href="/css/shop.css">
+
+<style>
+	#shopshelf {
+		display: grid;
+		grid-template-columns: repeat( auto-fill, minmax(250px, 1fr) );
+		gap: 1rem;
+		max-width: 1000px;
+		margin: auto;
+	}
+	.shopitem img {
+		display: block;
+		max-width: 100%;
+	}
+	.shopitem p {
+		line-height: 1;
+	}
+	.shopitemname {
+		font-family: var(--headerfont);
+		font-style: italic;
+		font-size: 1.3rem;
+	}
+</style>
+
 <section id="shopshelf">
 
-</section>
+	{% for shopitem in shop %}
+	<a href="/shop/{{ shopitem.name | slug }}/">
+		<article class="shopitem">
+			<img src="{{ shopitem.image }}">
+			<h1 class="shopitemname">{{ shopitem.name }}</h1>
+			<p class="shopitemprice">${{ shopitem.price }}</p>
+		</article>
+	</a>
+	{% endfor %}
 
-<script src="/js/shop.js"></script>
+</section>

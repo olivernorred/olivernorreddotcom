@@ -561,7 +561,7 @@ body.darkmode #commentform textarea, body.darkmode #commentform input[type="text
 
 
 #footer {
-	width: fit-content;
+	width: min-content;
 	max-width: var(--bigwidth);
 	margin: 1rem auto;
 	margin-top: 4rem;

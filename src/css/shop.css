@@ -1,0 +1,58 @@
+#shopshelf {
+	display: grid;
+	grid-template-columns: repeat( auto-fill, minmax(250px, 1fr) );
+	gap: 1rem;
+	max-width: 1000px;
+	margin: auto;
+}
+.shopitem img {
+	display: block;
+	max-width: 100%;
+}
+.shopitem p {
+	line-height: 1;
+}
+.shopitemname {
+	font-family: var(--headerfont);
+	font-style: italic;
+	font-size: 1.3rem;
+}
+
+
+.itemlisting {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+	max-width: 900px;
+	margin: auto;
+}
+.itemlisting > * {
+	flex: 1;
+	min-width: 300px;
+}
+.itemimage {
+}
+.itemimage img {
+	display: block;
+	max-width: 100%;
+}
+.itemname {
+	font-family: var(--headerfont);
+	font-style: italic;
+}
+.itemprice {
+	font-size: 1rem;
+	line-height: 1.5;
+}
+.itemdescription {
+	font-family: var(--bodyfont);
+	font-style: italic;
+	font-variation-settings: 'opsz' 10, 'wght' 400;
+}
+
+#shopform {
+	margin-top: 1rem;
+}
+#shopform > div {
+	margin-top: .5rem;
+}

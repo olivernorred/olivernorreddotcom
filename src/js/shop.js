@@ -1,27 +1,33 @@
-// var shopitems;
+// Initialize Cloud Firestore through Firebase
+firebase.initializeApp({
+	apiKey: 'AIzaSyBfK03Zp7K5uPYYH1j-5MXrqFh-Z_LGPq8',
+	authDomain: 'sting-op.firebaseapp.com',
+	projectId: 'sting-op'
+  });
+  
+const db = firebase.firestore();
 
-fetch('/js/shop.json')
-	.then(response => response.json())
-	.then(data => {
-		// shopitems = data
-		console.log(data)
-		renderShelf(data)
-	} )
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+// Add a second document with a generated ID.
 
+function submitOrder() {
+	let orderbuyer = document.querySelector("#buyer").value
+	let quantity = document.querySelector("#itemquantity").value
+	let size = document.querySelector("#itemsize").value
 
-function renderShelf(shopitems) {
-	let shelfstring = ``
-	
-	shopitems.forEach(item => {
-		shelfstring += 
-		`
-		<article class="shopitem">
-			<img src="${item.image}">
-			<p class="shopitemname">${item.name}</p>
-			<p class="shopitemprice">$${item.price}</p>
-		</article>
-		`
+	let d = new Date()
+	let docID = `${orderbuyer} - ${d.getDate()} ${MONTHS[d.getMonth()]}, ${d.getFullYear()} ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()} `
+
+	db.collection("orders").doc(docID).set({
+		buyer: orderbuyer,
+		quantity: quantity,
+		size: size,
+		date: docID.split(" - ")[1].trim()
+	})
+	.then(() => {
+		console.log("Document successfully written!");
+	})
+	.catch((error) => {
+		console.error("Error writing document: ", error);
 	});
-	console.log(shelfstring);
-	document.querySelector('#shopshelf').innerHTML = shelfstring
 }

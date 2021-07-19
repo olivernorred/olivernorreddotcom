@@ -1,0 +1,56 @@
+---
+layout: base.html
+pagination:
+    data: shop
+    size: 1
+    alias: shopitem
+permalink: "/shop/{{ shopitem.name | slug }}/"
+---
+
+
+<link rel="stylesheet" href="/css/shop.css">
+
+<article class="itemlisting">
+	<div class="itemimage">
+		<img src="{{ shopitem.image }}"></img>
+	</div>
+	<section class="iteminfo">
+		<h1 class="itemname">{{ shopitem.name }}</h1>
+		<h2 class="itemprice">${{ shopitem.price }}</h2>
+		<p class="itemdescription">{{ shopitem.description }}</p>
+
+		<form onsubmit="submitOrder(); return false;" id="shopform">
+			<div>
+				<label for="itemsize">SIZE:</label>
+				<select id="itemsize">
+					<option value="S">S</option>
+					<option value="M">M</option>
+					<option value="L">L</option>
+					<option value="XL">XL</option>
+				</select>
+			</div>
+
+			<div>
+				<label for="itemquantity">QUANTITY:</label>
+				<input type="number" id="itemquantity" size="5" value="1" min="1" max="9">
+			</div>
+
+			<div>
+				<label for="buyer">NAME:</label>
+				<input type="text" id="buyer" required>
+			</div>
+
+			<div>
+				<input type="submit" value="CHECKOUT">
+			</div>
+
+
+
+		</form>
+	</section>
+</article>
+
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+
+<script src="/js/shop.js"></script>
