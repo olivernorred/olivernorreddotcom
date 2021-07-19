@@ -41,7 +41,58 @@ permalink: "/shop/{{ shopitem.name | slug }}/"
 			</div>
 
 			<div>
-				<input type="submit" value="CHECKOUT">
+
+				<!-- Load Stripe.js on your website. -->
+				<script src="https://js.stripe.com/v3"></script>
+
+				<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+				<button
+				style="background-color: var(--bgcolor); color: var(--fgcolor); padding:8px 12px; border: 1px solid var(--fgcolor); font-size:1rem; cursor:pointer; box-shadow: 2px 2px var(--fgcolor);"
+				id="checkout-button-price_1JF1neFHuxEwl8Ly2zbD4dgp"
+				role="link"
+				type="button"
+				>
+				Checkout
+				</button>
+
+				<div id="error-message"></div>
+
+				<script>
+				(function() {
+				var stripe = Stripe('pk_live_51JF0otFHuxEwl8LyJQLb5EpiZR3KwimFUojh0TjXQwDs1jeTw9vtwQ2rWjmY2yYF1bIUfET2dNlPSNC7YUz0xgvP00JBzb6atb');
+
+				var checkoutButton = document.getElementById('checkout-button-price_1JF1neFHuxEwl8Ly2zbD4dgp');
+				checkoutButton.addEventListener('click', function () {
+					/*
+					* When the customer clicks on the button, redirect
+					* them to Checkout.
+					*/
+					stripe.redirectToCheckout({
+					lineItems: [{price: 'price_1JF1neFHuxEwl8Ly2zbD4dgp', quantity: 1}],
+					mode: 'payment',
+					/*
+					* Do not rely on the redirect to the successUrl for fulfilling
+					* purchases, customers may not always reach the success_url after
+					* a successful payment.
+					* Instead use one of the strategies described in
+					* https://stripe.com/docs/payments/checkout/fulfill-orders
+					*/
+					successUrl: 'https://olivernorred.com/shop/success/',
+					cancelUrl: 'https://olivernorred.com/shop/canceled/',
+					})
+					.then(function (result) {
+					if (result.error) {
+						/*
+						* If `redirectToCheckout` fails due to a browser or network
+						* error, display the localized error message to your customer.
+						*/
+						var displayError = document.getElementById('error-message');
+						displayError.textContent = result.error.message;
+					}
+					});
+				});
+				})();
+				</script>
 			</div>
 
 
@@ -54,3 +105,6 @@ permalink: "/shop/{{ shopitem.name | slug }}/"
 <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
 
 <script src="/js/shop.js"></script>
+
+
+
