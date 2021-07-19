@@ -36,24 +36,18 @@ permalink: "/shop/{{ shopitem.name | slug }}/"
 			</div>
 
 			<div>
-				<label for="buyer">NAME:</label>
-				<input type="text" id="buyer" required>
-			</div>
-
-			<div>
 
 				<!-- Load Stripe.js on your website. -->
 				<script src="https://js.stripe.com/v3"></script>
 
 				<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
-				<button
+				<input
 				style="background-color: var(--bgcolor); color: var(--fgcolor); padding:8px 12px; border: 1px solid var(--fgcolor); font-size:1rem; cursor:pointer; box-shadow: 2px 2px var(--fgcolor);"
 				id="checkout-button-price_1JF1neFHuxEwl8Ly2zbD4dgp"
 				role="link"
-				type="button"
+				type="submit"
+				value="CHECKOUT"
 				>
-				Checkout
-				</button>
 
 				<div id="error-message"></div>
 
