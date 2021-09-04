@@ -56,3 +56,14 @@
 #shopform > div {
 	margin-top: .5rem;
 }
+
+.checkout-button {
+	margin: 1rem 0;
+	padding:8px 12px;
+	border: 1px solid var(--fgcolor);
+	background-color: var(--bgcolor);
+	color: var(--fgcolor);
+	font-size:1rem;
+	cursor:pointer;
+	box-shadow: 2px 2px var(--fgcolor);
+}

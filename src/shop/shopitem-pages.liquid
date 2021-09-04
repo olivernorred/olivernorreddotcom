@@ -4,9 +4,16 @@ pagination:
     data: shop
     size: 1
     alias: shopitem
-permalink: "/shop/{{ shopitem.name | slug }}/"
+permalink: "/shop/{{ shopitem.id }}/"
 ---
 
+<script>
+	document.title = "{{ shopitem.name }} \\ Shop \\ Oliver Norred"
+</script>
+
+<link rel="preconnect" href="https://app.snipcart.com">
+<link rel="preconnect" href="https://cdn.snipcart.com">
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.css" />
 
 <link rel="stylesheet" href="/css/shop.css">
 
@@ -19,86 +26,27 @@ permalink: "/shop/{{ shopitem.name | slug }}/"
 		<h2 class="itemprice">${{ shopitem.price }}</h2>
 		<p class="itemdescription">{{ shopitem.description }}</p>
 
-		<form onsubmit="submitOrder(); return false;" id="shopform">
-			<div>
-				<label for="itemsize">SIZE:</label>
-				<select id="itemsize">
-					<option value="S">S</option>
-					<option value="M">M</option>
-					<option value="L">L</option>
-					<option value="XL">XL</option>
-				</select>
-			</div>
+		<button class="snipcart-add-item checkout-button"
+			data-item-id="{{ shopitem.id }}"
+			data-item-price="{{ shopitem.price }}"
+			data-item-url="/shop/{{ shopitem.id }}"
+			data-item-description="{{ shopitem.description }}"
+			data-item-image="{{ shopitem.image }}"
+			data-item-name="{{ shopitem.name }}"
+			data-item-custom1-name="Size"
+			data-item-custom1-options="S|M|L|XL">
+			CHECKOUT
+		</button>
 
-			<div>
-				<label for="itemquantity">QUANTITY:</label>
-				<input type="number" id="itemquantity" size="5" value="1" min="1" max="9">
-			</div>
-
-			<div>
-
-				<!-- Load Stripe.js on your website. -->
-				<script src="https://js.stripe.com/v3"></script>
-
-				<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
-				<input
-				style="background-color: var(--bgcolor); color: var(--fgcolor); padding:8px 12px; border: 1px solid var(--fgcolor); font-size:1rem; cursor:pointer; box-shadow: 2px 2px var(--fgcolor);"
-				id="checkout-button-price_1JF1neFHuxEwl8Ly2zbD4dgp"
-				role="link"
-				type="submit"
-				value="CHECKOUT"
-				>
-
-				<div id="error-message"></div>
-
-				<script>
-				(function() {
-				var stripe = Stripe('pk_live_51JF0otFHuxEwl8LyJQLb5EpiZR3KwimFUojh0TjXQwDs1jeTw9vtwQ2rWjmY2yYF1bIUfET2dNlPSNC7YUz0xgvP00JBzb6atb');
-
-				var checkoutButton = document.getElementById('checkout-button-price_1JF1neFHuxEwl8Ly2zbD4dgp');
-				checkoutButton.addEventListener('click', function () {
-					/*
-					* When the customer clicks on the button, redirect
-					* them to Checkout.
-					*/
-					stripe.redirectToCheckout({
-					lineItems: [{price: 'price_1JF1neFHuxEwl8Ly2zbD4dgp', quantity: 1}],
-					mode: 'payment',
-					/*
-					* Do not rely on the redirect to the successUrl for fulfilling
-					* purchases, customers may not always reach the success_url after
-					* a successful payment.
-					* Instead use one of the strategies described in
-					* https://stripe.com/docs/payments/checkout/fulfill-orders
-					*/
-					successUrl: 'https://olivernorred.com/shop/success/',
-					cancelUrl: 'https://olivernorred.com/shop/canceled/',
-					})
-					.then(function (result) {
-					if (result.error) {
-						/*
-						* If `redirectToCheckout` fails due to a browser or network
-						* error, display the localized error message to your customer.
-						*/
-						var displayError = document.getElementById('error-message');
-						displayError.textContent = result.error.message;
-					}
-					});
-				});
-				})();
-				</script>
-			</div>
-
-
-
-		</form>
 	</section>
 </article>
 
 <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
 
-<script src="/js/shop.js"></script>
+
+<script async src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></script>
+<div id="snipcart" data-config-modal-style="side" data-api-key="MjBhODQzNGEtODhmMC00MTUxLWI0ZDAtNmU3ZTZjMTJiYTk2NjM3NjYzMjA1MDM5NDAwNTcz" hidden></div>
 
 
 
