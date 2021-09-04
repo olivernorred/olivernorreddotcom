@@ -1,0 +1,44 @@
+.snipcart-modal__container * {
+	font-family: var(--monofont) !important;
+}
+.snipcart-base-button,
+.snipcart-base-button:hover,
+.snipcart-base-button:active {
+	margin: 1rem 0 !important;
+	padding:8px 12px !important;
+	border: 1px solid var(--fgcolor) !important;
+	background-color: var(--bgcolor) !important;
+	color: var(--fgcolor) !important;
+	font-size:1rem !important;
+	cursor:pointer !important;
+	box-shadow: 2px 2px var(--fgcolor) !important;
+	border-radius: 0 !important;
+	transition: transform .1s;
+}
+.snipcart-base-button:hover {
+	transform: translate(0, -2px);
+}
+
+
+.snipcart__icon {
+	color: black !important;
+}
+.snipcart-button-icon {
+	background: white !important;
+	border: 1px solid black !important;
+	color: black !important;
+}
+.snipcart__box--badge-highlight {
+	color: black !important;
+	background: var(--altbgcolor) !important;
+}
+.snipcart-form__select:hover,
+.snipcart-form__select:active,
+.snipcart-form__select:focus-within,
+.snipcart-item-quantity__quantity:hover,
+.snipcart-item-quantity__quantity:active,
+.snipcart-item-quantity__quantity:focus-within {
+	transition: none;
+	border-color: black;
+	box-shadow: none;
+}

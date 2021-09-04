@@ -60,10 +60,14 @@
 .checkout-button {
 	margin: 1rem 0;
 	padding:8px 12px;
-	border: 1px solid var(--fgcolor);
+	border: 1px solid var(--acolor);
 	background-color: var(--bgcolor);
 	color: var(--fgcolor);
 	font-size:1rem;
 	cursor:pointer;
-	box-shadow: 2px 2px var(--fgcolor);
+	box-shadow: 2px 2px var(--acolor);
+	transition: .1s;
+}
+.checkout-button:hover {
+	transform: translate(0, -2px);
 }
