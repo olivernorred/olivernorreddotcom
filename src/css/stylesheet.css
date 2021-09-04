@@ -108,8 +108,9 @@ h1, h2, h3, h4, h5, h6, p, ol, ul {
 	font-weight: normal;
 	margin: 0;
 }
-
-
+em {
+	font-style: italic;
+}
 
 #container {
 	margin: 0 .5rem;
@@ -141,7 +142,7 @@ h1, h2, h3, h4, h5, h6, p, ol, ul {
 	padding: 0;
 	font-family: var(--displayfont), sans-serif;
 	text-align: center;
-	font-size: 4rem;
+	font-size: 3.5rem;
 	line-height: 1;
 }
 .sublinks {

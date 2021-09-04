@@ -18,7 +18,10 @@
 	font-size: 1.3rem;
 }
 
-
+#backtoshop {
+	max-width: 900px;
+	margin: 1rem auto;
+}
 .itemlisting {
 	display: flex;
 	gap: 1rem;
@@ -40,14 +43,42 @@
 	font-family: var(--headerfont);
 	font-style: italic;
 }
+#price-and-button {
+	display: flex;
+	place-items: center;
+	gap: 1rem;
+	width: 95%;
+	margin-top: .5rem;
+}
 .itemprice {
-	font-size: 1rem;
+	margin-top: .5rem;
+	font-size: 1.5rem;
+	/* font-style: italic; */
 	line-height: 1.5;
+	background: linear-gradient(to bottom, var(--bgcolor) 40%, 40%, var(--altbgcolor) 80%, 80%, var(--bgcolor));
+	width: fit-content;
 }
 .itemdescription {
 	font-family: var(--bodyfont);
-	font-style: italic;
 	font-variation-settings: 'opsz' 10, 'wght' 400;
+}
+.itemdescription em {
+	font-style: normal;
+}
+.itemgallery {
+	margin-top: .5rem;
+	width: 100%;
+	display: flex;
+	gap: .25rem;
+}
+.gallerybutton {
+	cursor: zoom-in;
+	max-width: 150px;
+	margin: 0;padding: 0;
+	border:0;
+}
+.gallerybutton img {
+	width: 100%;
 }
 
 #shopform {
@@ -58,7 +89,7 @@
 }
 
 .checkout-button {
-	margin: 1rem 0;
+	margin-top: 0.5rem;
 	padding:8px 12px;
 	border: 1px solid var(--acolor);
 	background-color: var(--bgcolor);
@@ -67,6 +98,9 @@
 	cursor:pointer;
 	box-shadow: 2px 2px var(--acolor);
 	transition: .1s;
+	display: block;
+	flex-grow: 1;
+	justify-self: stretch;
 }
 .checkout-button:hover {
 	transform: translate(0, -2px);

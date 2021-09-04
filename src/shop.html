@@ -10,7 +10,12 @@ title: Shop \
 	{% for shopitem in shop %}
 	<a href="/shop/{{ shopitem.name | slug }}/">
 		<article class="shopitem">
-			<img src="{{ shopitem.image }}">
+			{%- for image in shopitem.images %}
+				{%- if forloop.first == true %}
+					{% assign firstimage = image %}
+					<img src="{{ image }}" id="item-bigimage"></img>
+				{%- endif %}
+			{%- endfor %}
 			<h1 class="shopitemname">{{ shopitem.name }}</h1>
 			<p class="shopitemprice">${{ shopitem.price }}</p>
 		</article>

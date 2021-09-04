@@ -19,6 +19,10 @@
 	transform: translate(0, -2px);
 }
 
+.snipcart-item-line__image {
+	display: block !important;
+	width: 100%;
+}
 
 .snipcart__icon {
 	color: black !important;

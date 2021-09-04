@@ -1,9 +1,9 @@
 [
 	{
 		"id": "hz-donut-short-sleeve",
-		"name": "Hz Donut Short Sleeve",
+		"name": "Hz Donut short sleeve",
 		"price": 24,
-		"image": "/images/shop/tee.jpg",
-		"description": "Screen printed by yours truly on a Gildan Heavy Cotton t-shirt. If you wear this shirt, you automatically have swag. And I don’t just mean swag to be synonymous with apparrel; I mean swag: SAUCE. DRIP. VIBES."
+		"images": ["/images/shop/tee.jpg", "/images/shop/teeinverted.jpg", "/images/shop/teecontrast.jpg"],
+		"description": "Screen printed by *yours truly* on a Gildan Heavy Cotton t-shirt. If you wear this shirt, you get instant swag. I mean SAUCE. DRIP. VIBES."
 	}
 ]

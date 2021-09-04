@@ -27,7 +27,7 @@ function postComment() {
 	else {currID = commentsobject.length}
 	let d = new Date()
 
-	firebase.database().ref(dbpath + "/" + id).set({
+	firebase.database().ref(dbpath + "/" + currID).set({
 		name: namebox.value,
 		id: `${currID}`,
 		content: commentbox.value,

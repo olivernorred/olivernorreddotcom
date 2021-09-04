@@ -50,7 +50,7 @@
 		<main id="content" class="">
 			
 <script>
-	document.title = "Hz Donut Short Sleeve \\ Shop \\ Oliver Norred"
+	document.title = "Hz Donut short sleeve \\ Shop \\ Oliver Norred"
 </script>
 
 <link rel="preconnect" href="https://app.snipcart.com">
@@ -60,26 +60,56 @@
 
 <link rel="stylesheet" href="/css/shop.css">
 
+<div id="backtoshop">
+	<a href="/shop/">&larr; back to shop</a>
+</div>
+		
+		
 <article class="itemlisting">
+
 	<div class="itemimage">
-		<img src="/images/shop/tee.jpg"></img>
+				
+				<img src="/images/shop/tee.jpg" id="item-bigimage"></img>
+		<div class="itemgallery">
+				<button class="gallerybutton" data-srcsend="/images/shop/tee.jpg">
+					<img src="/images/shop/tee.jpg"></img>
+				</button>
+				<button class="gallerybutton" data-srcsend="/images/shop/teeinverted.jpg">
+					<img src="/images/shop/teeinverted.jpg"></img>
+				</button>
+				<button class="gallerybutton" data-srcsend="/images/shop/teecontrast.jpg">
+					<img src="/images/shop/teecontrast.jpg"></img>
+				</button>
+		</div>
+		<script>
+			document.querySelectorAll(".gallerybutton").forEach(btn => {
+				btn.addEventListener("click", ()=>{
+					document.querySelector('#item-bigimage').src=btn.getAttribute('data-srcsend')
+				})
+			})
+		</script>
 	</div>
 	<section class="iteminfo">
-		<h1 class="itemname">Hz Donut Short Sleeve</h1>
-		<h2 class="itemprice">$24</h2>
-		<p class="itemdescription">Screen printed by yours truly on a Gildan Heavy Cotton t-shirt. If you wear this shirt, you automatically have swag. And I don’t just mean swag to be synonymous with apparrel; I mean swag: SAUCE. DRIP. VIBES.</p>
+		<h1 class="itemname">Hz Donut short sleeve</h1>
+		<p class="itemdescription">Screen printed by *yours truly* on a Gildan Heavy Cotton t-shirt. If you wear this shirt, you get instant swag. I mean SAUCE. DRIP. VIBES.</p>
 
-		<button class="snipcart-add-item checkout-button"
-			data-item-id="hz-donut-short-sleeve"
-			data-item-price="24"
-			data-item-url="/shop/hz-donut-short-sleeve"
-			data-item-description="Screen printed by yours truly on a Gildan Heavy Cotton t-shirt. If you wear this shirt, you automatically have swag. And I don’t just mean swag to be synonymous with apparrel; I mean swag: SAUCE. DRIP. VIBES."
-			data-item-image="/images/shop/tee.jpg"
-			data-item-name="Hz Donut Short Sleeve"
-			data-item-custom1-name="Size"
-			data-item-custom1-options="S|M|L|XL">
-			Add to basket :)
-		</button>
+		
+
+		<div id="price-and-button">
+			<button class="snipcart-add-item checkout-button"
+				data-item-id="hz-donut-short-sleeve"
+				data-item-price="24"
+				data-item-url="/shop/hz-donut-short-sleeve"
+				data-item-description="Screen printed by *yours truly* on a Gildan Heavy Cotton t-shirt. If you wear this shirt, you get instant swag. I mean SAUCE. DRIP. VIBES."
+				data-item-image="/images/shop/tee.jpg"
+				data-item-name="Hz Donut short sleeve"
+				data-item-custom1-name="Size"
+				data-item-custom1-options="S|M|L|XL">
+				Add to basket :)
+			</button>
+			<h2 class="itemprice">$24</h2>
+
+		</div>
 
 	</section>
 </article>

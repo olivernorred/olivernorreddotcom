@@ -18,26 +18,60 @@ permalink: "/shop/{{ shopitem.id }}/"
 
 <link rel="stylesheet" href="/css/shop.css">
 
+<div id="backtoshop">
+	<a href="/shop/">&larr; back to shop</a>
+</div>
+
+{%- for image in shopitem.images %}
+	{%- if forloop.first == false %}
+		{% assign firstimage = image %}
+	{%- endif %}
+{%- endfor %}
 <article class="itemlisting">
+
 	<div class="itemimage">
-		<img src="{{ shopitem.image }}"></img>
+		{%- for image in shopitem.images %}
+			{%- if forloop.first == true %}
+				{% assign firstimage = image %}
+				<img src="{{ image }}" id="item-bigimage"></img>
+			{%- endif %}
+		{%- endfor %}
+		<div class="itemgallery">
+			{%- for image in shopitem.images %}
+				<button class="gallerybutton" data-srcsend="{{ image }}">
+					<img src="{{ image }}"></img>
+				</button>
+			{%- endfor %}
+		</div>
+		<script>
+			document.querySelectorAll(".gallerybutton").forEach(btn => {
+				btn.addEventListener("click", ()=>{
+					document.querySelector('#item-bigimage').src=btn.getAttribute('data-srcsend')
+				})
+			})
+		</script>
 	</div>
 	<section class="iteminfo">
 		<h1 class="itemname">{{ shopitem.name }}</h1>
-		<h2 class="itemprice">${{ shopitem.price }}</h2>
 		<p class="itemdescription">{{ shopitem.description }}</p>
 
-		<button class="snipcart-add-item checkout-button"
-			data-item-id="{{ shopitem.id }}"
-			data-item-price="{{ shopitem.price }}"
-			data-item-url="/shop/{{ shopitem.id }}"
-			data-item-description="{{ shopitem.description }}"
-			data-item-image="{{ shopitem.image }}"
-			data-item-name="{{ shopitem.name }}"
-			data-item-custom1-name="Size"
-			data-item-custom1-options="S|M|L|XL">
-			Add to basket :)
-		</button>
+		
+
+		<div id="price-and-button">
+			<button class="snipcart-add-item checkout-button"
+				data-item-id="{{ shopitem.id }}"
+				data-item-price="{{ shopitem.price }}"
+				data-item-url="/shop/{{ shopitem.id }}"
+				data-item-description="{{ shopitem.description }}"
+				data-item-image="{{ firstimage }}"
+				data-item-name="{{ shopitem.name }}"
+				data-item-custom1-name="Size"
+				data-item-custom1-options="S|M|L|XL">
+				Add to basket :)
+			</button>
+			<h2 class="itemprice">${{ shopitem.price }}</h2>
+
+		</div>
 
 	</section>
 </article>
