@@ -76,9 +76,14 @@
 	max-width: 150px;
 	margin: 0;padding: 0;
 	border:0;
+	background: none;
+	outline: none;
 }
 .gallerybutton img {
 	width: 100%;
+}
+.gallerybutton.showing {
+	transform: scale(.9,.9);
 }
 
 #shopform {

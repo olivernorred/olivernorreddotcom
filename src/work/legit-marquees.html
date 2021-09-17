@@ -1,0 +1,74 @@
+---
+title: legit-marquees
+tags: workitems
+description: "A web component for generating stylable, screen-readable text that moves along a path"
+coverimage: "/images/work/legit-marquees/legit-marquees_cover.gif"
+date: 2020-01-03
+---
+
+<!-- Code highlighting -->
+
+<link rel="stylesheet"
+      href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/styles/base16/solarized-light.min.css">
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<h1>legit-marquees</h1>
+
+<p>An open-source web component for generating moving, highlightable, screen-reader-friendly text path animations</p>
+
+<p>You should <a href="https://github.com/olivernorred/legit-marquees">check out the GitHub repository</a> and <a href="https://www.youtube.com/watch?v=QDCzGm-SVc8">watch the video tutorial</a>!</p>
+
+
+<svg class="legit-marquee" viewBox="0 25 634 119"
+	content="Hello there!"
+	contentrepeat="1"
+	speed="4"
+	textsize="50"
+	pathd="m-20.66501,119.8335c146,-5 158,-32 231,-41c73,-9 189,44 294,45c105,1 142,-50 207.66501,-58.8335"
+
+	style="border: 1px dashed black;"
+	>
+</svg>
+
+<br>
+
+
+
+
+
+
+<pre><code class="language-html">
+&lt;svg class="legit-marquee" viewBox="0 20 634 149"
+  content="Hello there!"
+  contentrepeat="1"
+  speed="4"
+  textsize="50"
+  pathd="m-20.66501,119.8335c146,-5 158,-32 231,-41c73,-9 189,44 294,45c105,1 142,-50 207.66501,-58.8335"
+  >
+&lt;/svg>
+
+&lt;script src="https://cdn.jsdelivr.net/gh/olivernorred/legit-marquees/legit-marquees.js"></script>
+</code></pre>
+
+<p class="caption">The script at the bottom injects svg <code>text</code> objects into the svg and animates them along the specified path.</p>
+
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="VwWMrOb" data-user="olivernorred" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+	<span>See the Pen <a href="https://codepen.io/olivernorred/pen/VwWMrOb">
+	</a> by Oliver Norred (<a href="https://codepen.io/olivernorred">@olivernorred</a>)
+	on <a href="https://codepen.io">CodePen</a>.</span>
+  </p>
+  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+
+<p>Three <code>legit-marquees</code> stacked lets you style each one differently. They each have the same path and content with different amounts of leading <code>`&amp;nbsp&semi;`</code>s You may be able to do the same thing with some JavaScript trickery where you split up the words in the <code>text</code> objects, but this is the easiest way IMHO.</p>
+
+
+
+<p>I would love to see what <a href="https://github.com/olivernorred/legit-marquees">you can make with it</a>!</p>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/gh/olivernorred/legit-marquees/legit-marquees.js"></script>

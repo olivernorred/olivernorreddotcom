@@ -1,5 +1,6 @@
 ---
 title: Schoolwork
+tags: workitems
 description: "Work done studying design at the University of Washington"
 coverimage: "/images/work/school/furiouspaper/furious3.jpg"
 date: 2020-01-01

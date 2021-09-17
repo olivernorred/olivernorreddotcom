@@ -26,7 +26,7 @@ active: work
 
 {%- if forloop.index == 3 -%}
 <!-- Cookbook link -->
-
+<!-- 
 <section class="workitem">
 
 <a href="/cookbook/"></a>
@@ -39,7 +39,7 @@ A mini-site for recipes beloved to my friends and family
 
 </div>
 
-</section>
+</section> -->
 {%- endif -%}
 
 {%- endfor %}

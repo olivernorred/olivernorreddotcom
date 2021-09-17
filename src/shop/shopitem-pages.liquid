@@ -1,5 +1,6 @@
 ---
 layout: base.html
+active: music
 pagination:
     data: shop
     size: 1
@@ -23,19 +24,14 @@ permalink: "/shop/{{ shopitem.id }}/"
 </div>
 
 {%- for image in shopitem.images %}
-	{%- if forloop.first == false %}
+	{%- if forloop.first == true %}
 		{% assign firstimage = image %}
 	{%- endif %}
 {%- endfor %}
 <article class="itemlisting">
 
 	<div class="itemimage">
-		{%- for image in shopitem.images %}
-			{%- if forloop.first == true %}
-				{% assign firstimage = image %}
-				<img src="{{ image }}" id="item-bigimage"></img>
-			{%- endif %}
-		{%- endfor %}
+		<img src="{{ firstimage }}" id="item-bigimage" alt="">
 		<div class="itemgallery">
 			{%- for image in shopitem.images %}
 				<button class="gallerybutton" data-srcsend="{{ image }}">
@@ -44,9 +40,16 @@ permalink: "/shop/{{ shopitem.id }}/"
 			{%- endfor %}
 		</div>
 		<script>
-			document.querySelectorAll(".gallerybutton").forEach(btn => {
+			// SWAP MAIN IMAGE
+			const gallerybtns = document.querySelectorAll(".gallerybutton")
+			gallerybtns[0].classList.add('showing')
+			gallerybtns.forEach(btn => {
 				btn.addEventListener("click", ()=>{
 					document.querySelector('#item-bigimage').src=btn.getAttribute('data-srcsend')
+					gallerybtns.forEach(b => {
+						b.classList.remove('showing')
+					})
+					btn.classList.add('showing')
 				})
 			})
 		</script>
@@ -66,8 +69,10 @@ permalink: "/shop/{{ shopitem.id }}/"
 				data-item-image="{{ firstimage }}"
 				data-item-name="{{ shopitem.name }}"
 				data-item-custom1-name="Size"
-				data-item-custom1-options="S|M|L|XL">
-				Add to basket :)
+				data-item-custom1-options="S|M|L|XL"
+				data-item-max-quantity="1"
+				data-item-stackable="never">
+				add to basket :)
 			</button>
 			<h2 class="itemprice">${{ shopitem.price }}</h2>
 
@@ -79,7 +84,7 @@ permalink: "/shop/{{ shopitem.id }}/"
 
 
 <script async src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></script>
-<div id="snipcart" data-config-modal-style="side" data-api-key="MjBhODQzNGEtODhmMC00MTUxLWI0ZDAtNmU3ZTZjMTJiYTk2NjM3NjYzMjA1MDM5NDAwNTcz" hidden></div>
+<div id="snipcart" data-api-key="MjBhODQzNGEtODhmMC00MTUxLWI0ZDAtNmU3ZTZjMTJiYTk2NjM3NjYzMjA1MDM5NDAwNTcz" hidden></div>
 
 
 

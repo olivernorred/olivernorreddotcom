@@ -20,7 +20,7 @@ body {
 
 #content {
 	font-family: "Literata", serif;
-	max-width: var(--bigwidth);
+	max-width: 750px;
 	margin-top: 0;
 }
 
@@ -140,13 +140,15 @@ img, video {
 	--smallwidth: 500px;
 }
 .portfolio p {
-	max-width: 650px;
+	max-width: var(--smallwidth);
+	margin-top: 1.5rem;
 }
 .portfolio p.caption {
 	max-width: 100%;
+	margin-top: .5rem;
 }
 .portfolio h1, .portfolio h2, .portfolio blockquote {
-	max-width: 650px;
+	max-width: var(--smallwidth);
 	margin: .5rem 0;
 }
 .portfolio h1, .portfolio h2 {
@@ -170,7 +172,7 @@ img, video {
 
 .portfolio img, .portfolio svg, .portfolio iframe, .portfolio video {
 	display: block;
-	margin: 1.5rem 0;
+	margin-top: 2rem;
 	max-width: 100%;
 }
 

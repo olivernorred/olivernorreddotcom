@@ -1,8 +1,9 @@
 ---
 title: Generative Art
+tags: workitems
 description: "Experiments with p5.js"
 coverimage: "/images/work/generativeart/sprinkling.png"
-date: 2020-01-03
+date: 2020-01-04
 ---
 
 # Beep boop, *Processing . . .*
