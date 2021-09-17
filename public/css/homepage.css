@@ -1,0 +1,99 @@
+@font-face {
+	font-family: 'Bizzarrini';
+	src: url('/fonts/Bizzarrini-V0_4-VF.ttf');
+}
+
+body {
+	/* background-image: url('/images/homepage/organic.svg'); */
+	background-size: 100%;
+	/* animation: wavebackground 1s infinite; */
+	--bgposx: 0px;
+	--bgposy: 0px;
+	/* background-position: calc(20% + var(--bgposx)) calc(20% + var(--bgposy)); */
+}
+@keyframes wavebackground {
+	0% { background-position: -2px -2px;}
+	25% { background-position: 0px 0px;}
+	50% { background-position: 0px -2px;}
+	75% { background-position: -2px 0px;}
+	100% { background-position: -2px -2px;}
+}
+#content {
+	font-family: var(--bodyfont);
+	margin: 6rem 0;
+}
+#firstsection {
+	position: relative;
+	padding: 3.5rem;
+	max-width: 500px;
+	margin: auto;
+}
+#abouttext {
+	background: var(--bgcolor);
+	padding: .5rem;
+	border-radius: var(--mainradius);
+}
+#abouttext a {
+	font-variation-settings: 'opsz' 10, 'wght' 500;
+	font-style: italic;
+}
+#marqueetitle {
+	position: absolute;
+	top: -1rem;
+	left: -.2rem;
+	fill: var(--fgcolor);
+	font-size: 4rem;
+	font-family: var(--headerfont);
+	letter-spacing: -0.15em;
+	font-size: 4rem;
+	pointer-events: none;
+	filter: drop-shadow(2px 2px var(--bgcolor));
+}
+@media (max-width: 560px) {
+	#content {
+		margin: 2rem 0;
+	}
+	#firstsection {
+		padding: 0;
+	}
+	#marqueetitle {
+		position: static;
+	}
+}
+#backgroundwords {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+a:hover {
+	animation: freakout .5s infinite alternate;
+}
+
+.linkimage {
+	width: 100%;
+	max-width: 500px;
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	--t: translate(-50%, -50%);
+	--s: 10deg;
+	transform: var(--t);
+	animation: freakout .5s infinite;
+	z-index: -10;
+}
+a:hover + .linkimage {
+	display: block;
+}
+@keyframes freakout {
+	0%{transform: var(--t) skew(-10deg, -10deg)}
+	25%{transform: var(--t) skew(10deg, 10deg)}
+	50%{transform: var(--t) skew(-10deg, 10deg)}
+	75%{transform: var(--t) skew(10deg, -10deg)}
+	100%{transform: var(--t) skew(-10deg, -10deg)}
+}
+
+
+
