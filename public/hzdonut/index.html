@@ -96,14 +96,14 @@
 		border-radius: var(--mainradius);
 		font-size: clamp(.5rem, 3vw, 1.25rem);
 	}
-	#mfwltolink {
+	.bouncinglink {
 		animation: floatlink .5s infinite;
 	}
 	@keyframes floatlink {
 		0% {transform: translate(0,0px);}
-		25% {transform: translate(-1px, 0px)}
-		50% {transform: translate(-2px, 0px)}
-		75% {transform: translate(2px, 0px);}
+		25% {transform: translate(-1.5px, 0px)}
+		50% {transform: translate(-3px, 0px)}
+		75% {transform: translate(3px, 0px);}
 	}
 </style>
 
@@ -128,6 +128,7 @@
 <section id="videolinks">
 	<p><em>VIDEOS</em></p>
 	<p><a href="https://www.youtube.com/watch?v=r5ChxcfyUJI">Warm-Up + Overture + To Be a Gosling &rarr;</a></p>
+	<p id="ginghamheightslink" class="bouncinglink"><a href="https://www.youtube.com/watch?v=CPGLytcDSlY">Gingham Heights &rarr;</a></p>
 	<p id="mfwltolink"><a href="https://www.youtube.com/watch?v=sSO-b5yZpco">Music Fans Will Like This One &rarr;</a></p>
 </section>
 

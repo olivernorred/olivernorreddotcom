@@ -38,4 +38,4 @@ The navigation menu makes only stylistic changes to the default WordPress theme�
 
 <p class="caption">Blog posts use a narrow column width for ease of reading.</p>
 
-Accessibility is always the first thing to consider when designing a website, and GSAH’s mission only makes such a goal more important. Blog posts’ column width is narrow for a comfortable, newspaper-esque read, and the text size is large by default to accommodate vision-impaired readers.
+Accessibility is a primary consideration in every website, and GSAH’s commitment to diversity only makes it more important. The blog posts are set in a column width for a comfortable, newspaper-esque read, and the text size is large by default to accommodate vision-impaired readers.
