@@ -51,6 +51,14 @@ body {
 	--mildfgcolor: #505050;
 	--translucent: rgba(0,0,0,0.1);
 	--bgimage: ;
+
+	/* cool colors */
+		--darkblue: rgb(13, 6, 40);
+		--cream: rgb(255, 241, 208); 
+		--yellow: rgb(220, 170, 0);  
+		--red: rgb(214, 40, 57);     
+		--blue: rgb(45, 167, 212);   
+		--white: rgb(255, 255, 255);
 	
 	--displayfont: degular-display, sans-serif;
 	--headerfont: degular, sans-serif;
@@ -159,6 +167,7 @@ em {
 	animation: skewsublinks .6s infinite;
 
 }
+
 @keyframes skewsublinks {
 	0%{transform: skew(-5deg, -5deg)}
 	25%{transform: skew(5deg, 5deg)}
@@ -166,6 +175,12 @@ em {
 	75%{transform: skew(5deg, -5deg)}
 	100%{transform: skew(-5deg, -5deg)}
 }
+/* .sublinks .desnav {
+	color: var(--red);
+}
+.sublinks .musnav {
+	color: var(--yellow);
+} */
 .sublinks .active {
 	color: var(--fgcolor);
 	font-style: italic;
@@ -187,6 +202,16 @@ em {
 a #o-vector-logo path {
 	fill: var(--acolor);
 }
+
+/* #o-vector-logo.blog-O path {
+	fill: var(--acolor);
+}
+#o-vector-logo.work-O path {
+	fill: var(--red);
+}
+#o-vector-logo.mus-O path {
+	fill: var(--yellow);
+} */
 
 body.darkmode canvas {
 	filter: invert(100%);

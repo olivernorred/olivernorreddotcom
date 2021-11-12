@@ -6,8 +6,8 @@ active: work
 
 <link rel="stylesheet" href="/css/workstyles.css">
 
-<div id="portfoliosticky">
-<div id="portfoliogrid">
+
+
 
 {%- for item in collections.workitems -%}
 <section class="workitem">
@@ -43,7 +43,4 @@ A mini-site for recipes beloved to my friends and family
 {%- endif -%}
 
 {%- endfor %}
-
-</div>
-</div>
 

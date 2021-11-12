@@ -33,50 +33,11 @@ video {
 
 #content.portfolioindexcontent {
 	max-width: 100%;
+	width: fit-content;
 	min-height: 100vh;
 	position: relative;
 }
 
-#portfoliosticky {
-	position: sticky;
-	top: 0;
-	height: 100vh;
-	overflow-x: hidden;
-	overflow-y: hidden;
-	display: grid;
-	align-items: center;
-}
-#portfoliogrid {
-	display: flex;
-	gap: 1rem;
-	--outside-spacing: 3vw;
-	padding-left: var(--outside-spacing);
-}
-#portfoliogrid::after {
-	content: " ";
-	display: block;
-	width: calc(var(--outside-spacing) - 1rem);
-}
-
-@media only screen and (max-width: 800px) {
-	#portfoliogrid {
-		display: block;
-		position: static;
-		padding: 0;
-	}
-	#portfoliosticky {
-		position: static;
-		display: block;
-		height: fit-content;
-		overflow-y: auto;
-	}
-	#content.portfolioindexcontent {
-		position: static;
-	}
-	.workitem {
-		margin-top: 1.5rem;
-	}
-}
 
 
 .workitem {
@@ -84,8 +45,19 @@ video {
 	flex-shrink: 0;
 	width: 30rem;
 	max-width: min( 100% , calc(100vw - 1.6rem) );
+	margin-top: 3rem;
+	padding: .5rem;
 	line-height: 1.5;
 	transition: top .1s;
+	border: 1px solid var(--fgcolor);
+}
+.workitem:first-of-type {
+	margin-top: 1rem;
+}
+.workitem:hover {
+	top: -2px;
+	left: 2px;
+	box-shadow: -.25rem .25rem var(--fgcolor);
 }
 .workitem a:first-child {
 	position: absolute;
@@ -94,14 +66,9 @@ video {
 	width:  100%;
 	height: 100%;
 }
-.workitem:hover {
-	top: -2px;
-}
 .workitem img {
-	box-shadow: 0 0 .25rem var(--translucent);
 }
 .workitem:hover img{
-	box-shadow: 0 0 .5rem var(--translucent);
 }
 .workitem .subcard {
 	border-radius: .5rem;;
@@ -118,7 +85,8 @@ video {
 	margin: auto;
 }
 .workitem h1 {
-	font-family: var(--headerfont);
+	font-family: degular;
+	font-weight: 700;
 	font-size: 1.6rem;
 	line-height: 1;
 	margin: 0;
