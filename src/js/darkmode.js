@@ -12,6 +12,12 @@ function updateDarkMode() {
 		console.log("Cookbook page means no dark mode.")
 		document.body.classList.remove("darkmode")
 	}
+	if(window.location.href.indexOf('/music/alreadydance/') > -1) {
+		console.log("Already Dance page means no dark mode.")
+		document.body.classList.remove("darkmode")
+	}
+	// permanently remove dark mode
+	document.body.classList.remove("darkmode")
 	console.log("updated dark mode");
 }
 updateDarkMode();

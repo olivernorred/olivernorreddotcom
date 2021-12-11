@@ -13,6 +13,7 @@ active: work
 <section class="workitem">
 
 <a href="{{ item.url }}"></a>
+<div class="cardsplit">
 <img src="{{ item.data.coverimage }}">
 <div class="subcard">
 
@@ -21,6 +22,8 @@ active: work
 {{item.data.description}}
 
 </div>
+</div>
+
 
 </section>
 

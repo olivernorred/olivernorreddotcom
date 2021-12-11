@@ -22,6 +22,14 @@
 	font-style: italic;
 	src: url("/fonts/Literata-Italic-VariableFont_opsz\,wght.ttf");
 }
+@font-face {
+	font-family: "Taters Fried";
+	src: url("/fonts/Taters0.2-Fried.otf");
+}
+@font-face {
+	font-family: "Taters Baked";
+	src: url("/fonts/Taters0.2-Baked.otf");
+}
 *{
 	margin: 0; padding: 0;
 	box-sizing: border-box;
@@ -93,6 +101,10 @@ body.darkmode {
 
 /* General text rules */
 
+img {
+	max-width: 100%;
+}
+
 a {
 	margin: -.1rem -.3rem;
 	padding: .1rem .3rem;
@@ -121,7 +133,7 @@ em {
 }
 
 #container {
-	margin: 0 .5rem;
+	margin: 0;
 }
 #skip-link {
 	position: absolute;
@@ -143,48 +155,52 @@ em {
 #header {
 	display: block;
 	margin: 0 auto;
-	padding: 2rem 0;
-	max-width: var(--bigwidth);
+	margin-bottom: 0rem;
+	padding: 1rem 0;
 }
 .sitemap {
+	display: grid;
+	grid-template-columns: 1fr;
+	place-items: center;
+	gap: .5rem;
+	margin: auto;
 	padding: 0;
-	font-family: var(--displayfont), sans-serif;
+	font-family: "Taters Fried", sans-serif;
 	text-align: center;
-	font-size: 3.5rem;
+	font-size: 1rem;
 	line-height: 1;
+	
+	
 }
 .sublinks {
-	z-index: -10;
-	text-shadow: 2px 2px var(--bgcolor);
-}
-.sublinks a {
-	display: inline-block;
-}
-.sublinks a:hover {
-	opacity: 1;
-	text-decoration: underline;
-	text-decoration-color: var(--fgcolor);
-	animation: skewsublinks .6s infinite;
+	grid-row: 2;
+	place-self: center;
+	display: grid;
+	grid-template-columns: 1fr min-content 1fr min-content 1fr;
+	gap: .25rem;
+	width: min-content;
+	padding-top: .25rem;
+	font-size: 1.5rem;
+
 
 }
-
 @keyframes skewsublinks {
-	0%{transform: skew(-5deg, -5deg)}
-	25%{transform: skew(5deg, 5deg)}
-	50%{transform: skew(-5deg, 5deg)}
-	75%{transform: skew(5deg, -5deg)}
-	100%{transform: skew(-5deg, -5deg)}
+	0%   {transform: rotateY(0deg)}
+	25%  {transform: rotateY(50deg)}
+	50%  {transform: rotateY(0deg)}
+	75%  {transform: rotateY(-50deg)}
+	100% {transform: rotateY(0deg)}
 }
-/* .sublinks .desnav {
-	color: var(--red);
+.sublinks * {
+	letter-spacing: -.06em;
+	align-self: end;
 }
-.sublinks .musnav {
-	color: var(--yellow);
-} */
 .sublinks .active {
 	color: var(--fgcolor);
-	font-style: italic;
-	font-weight: 800;
+	font-family: "Taters Baked";
+	font-size: 1.1em;
+	text-decoration: underline;
+	letter-spacing: normal;
 }
 .sitemap::-webkit-scrollbar {
 	width: .25rem;
@@ -194,7 +210,9 @@ em {
 	margin: auto;
 }
 #o-vector-logo {
-	width: 1.3em;
+	padding-right: 1px;
+	width: 100%;
+	width: 3rem;
 }
 #o-vector-logo.index-O path {
 	fill: var(--fgcolor);
@@ -218,6 +236,9 @@ body.darkmode canvas {
 }
 
 #darkmodecontainer {
+	/* REMOVE DARKMODE CHECKBOX */
+	display: none;
+
 	position: absolute;
 	top: 10px;
 	right: 10px;
@@ -243,7 +264,8 @@ input[type="checkbox"] {
 
 /* content ------------------------------------------------------------------------------------------------------------------*/
 #content {
-	margin: auto;
+	margin: auto .5rem;
+	margin-top: 1.5rem;
 }
 
 p:not(:first-child) {
@@ -512,6 +534,9 @@ body.darkmode #commentform textarea, body.darkmode #commentform input[type="text
 	border: 1px solid var(--translucent);
 	border-radius: var(--mainradius);
 	outline: none;
+	font-family: var(--monofont);
+	font-size: 1rem;
+	font-weight: normal;
 	color: var(--fgcolor);
 	background: var(--bgcolor);
 	box-shadow: 2px 2px var(--fgcolor);
@@ -629,21 +654,4 @@ body.darkmode #commentform textarea, body.darkmode #commentform input[type="text
 		margin-top: -.5rem;
 	}
 }
-@media only screen and (max-width: 800px) {
 
-}
-@media only screen and (max-width: 500px) {
-	.header {
-		height: auto;
-	}
-	.sublinks {
-		font-size: 13.6vw;
-	}
-	.blogheadernote, #postlinkssearch {
-		height: auto;
-		transform: none;
-	}
-	#footer {
-		font-size: 4.8vw;
-	}
-}

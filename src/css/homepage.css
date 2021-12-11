@@ -3,63 +3,79 @@
 	src: url('/fonts/Bizzarrini-V0_4-VF.ttf');
 }
 
+
 body {
-	/* background-image: url('/images/homepage/organic.svg'); */
-	background-size: 100%;
-	/* animation: wavebackground 1s infinite; */
-	--bgposx: 0px;
-	--bgposy: 0px;
-	/* background-position: calc(20% + var(--bgposx)) calc(20% + var(--bgposy)); */
-}
-@keyframes wavebackground {
-	0% { background-position: -2px -2px;}
-	25% { background-position: 0px 0px;}
-	50% { background-position: 0px -2px;}
-	75% { background-position: -2px 0px;}
-	100% { background-position: -2px -2px;}
+	overflow-x: hidden;
+
 }
 #content {
 	font-family: var(--bodyfont);
-	margin: 6rem 0;
+	margin: 0;padding: 0;
 }
 #firstsection {
-	position: relative;
-	padding: 3.5rem;
-	max-width: 500px;
+	max-width: 100%;
 	margin: auto;
 }
 #abouttext {
 	background: var(--bgcolor);
 	padding: .5rem;
 	border-radius: var(--mainradius);
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
 }
 #abouttext a {
 	font-variation-settings: 'opsz' 10, 'wght' 500;
 	font-style: italic;
 }
 #marqueetitle {
-	position: absolute;
-	top: -1rem;
-	left: -.2rem;
-	fill: var(--fgcolor);
-	font-size: 4rem;
-	font-family: var(--headerfont);
-	letter-spacing: -0.15em;
-	font-size: 4rem;
+	fill: white;
+	font-family: "Taters Fried";
 	pointer-events: none;
-	filter: drop-shadow(2px 2px var(--bgcolor));
+	text-shadow: 1px 1px black, 2px 2px black, 3px 3px black, 4px 4px black, -1px -1px black, 1px -1px black, -1px 1px black;
 }
-@media (max-width: 560px) {
-	#content {
-		margin: 2rem 0;
-	}
-	#firstsection {
-		padding: 0;
-	}
-	#marqueetitle {
-		position: static;
-	}
+
+#secondsection {
+	max-width: 750px;
+	margin: auto;
+	padding: 0 .8rem;
 }
+
+#facewithspeech {
+	display: grid;
+	grid-template-columns: 3fr 2fr;
+}
+#facedrawn {
+	animation: spin3d 3s ease-in-out infinite alternate
+}
+@keyframes spin3d {
+	from{transform: perspective(600px) rotateY(-20deg);}
+	to{transform: perspective(600px) rotateY(20deg);}
+
+}
+#facewithspeech > *:nth-child(2) {
+	height: auto;
+	animation: wiggle .4s steps(2) infinite alternate;
+	transform-origin: center 25%;
+}
+#speechbox svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.starcontainer {
+	position: fixed;
+	z-index: -999999;
+	max-width: 5vw;
+}
+.star {
+	pointer-events: none;
+	opacity: 1;
+	animation: wiggle .2s steps(2) infinite alternate;
+}
+@keyframes wiggle {
+	from {transform: perspective(400px) rotateX(7deg) rotate(5deg)}
+	to   {transform: perspective(400px) rotateX(-14deg) rotate(-5deg)}
+}
+
 #backgroundwords {
 	position: fixed;
 	top: 0;
@@ -74,18 +90,20 @@ a:hover {
 .linkimage {
 	width: 100%;
 	max-width: 500px;
-	display: none;
+	opacity: 0;
 	position: fixed;
 	top: 50%;
 	left: 50%;
 	--t: translate(-50%, -50%);
 	--s: 10deg;
 	transform: var(--t);
-	animation: freakout .5s infinite;
+	/* animation: freakout .5s infinite; */
 	z-index: -10;
+	box-shadow: 0 0 1rem rgba(0,0,0,0.5);
+	transition: .05s;
 }
 a:hover + .linkimage {
-	display: block;
+	opacity: 1;
 }
 @keyframes freakout {
 	0%{transform: var(--t) skew(-10deg, -10deg)}
