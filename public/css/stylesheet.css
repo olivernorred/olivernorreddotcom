@@ -373,6 +373,7 @@ input:not(:placeholder-shown) + .inputlowerlabel, input:focus + .inputlowerlabel
 
 #content.contentforblogpost {
 	max-width: 650px;
+	margin: auto;
 }
 /* ^ I think this is actually good practice. I thought about adding another container, but it's only one box. */
 
