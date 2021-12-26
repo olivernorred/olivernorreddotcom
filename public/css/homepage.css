@@ -27,6 +27,9 @@ body {
 	font-style: italic;
 }
 #marqueetitle {
+	position: absolute;
+	top: 100px;
+	left: 0;
 	fill: white;
 	font-family: "Taters Fried";
 	pointer-events: none;
@@ -37,6 +40,12 @@ body {
 	max-width: 750px;
 	margin: auto;
 	padding: 0 .8rem;
+}
+
+#secondsection p:not(.caption) {
+	max-width: 400px;
+	margin: auto;
+	margin-top: 1rem;
 }
 
 #facewithspeech {
