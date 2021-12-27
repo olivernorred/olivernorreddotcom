@@ -30,10 +30,9 @@ body {
 	position: absolute;
 	top: 100px;
 	left: 0;
-	fill: white;
+	fill: black;
 	font-family: "Taters Fried";
 	pointer-events: none;
-	text-shadow: 1px 1px black, 2px 2px black, 3px 3px black, 4px 4px black, -1px -1px black, 1px -1px black, -1px 1px black;
 }
 
 #secondsection {
@@ -53,7 +52,7 @@ body {
 	grid-template-columns: 3fr 2fr;
 }
 #facedrawn {
-	animation: spin3d 3s ease-in-out infinite alternate
+	animation: wiggle .4s steps(2) infinite alternate;
 }
 @keyframes spin3d {
 	from{transform: perspective(600px) rotateY(-20deg);}
@@ -81,8 +80,8 @@ body {
 	animation: wiggle .2s steps(2) infinite alternate;
 }
 @keyframes wiggle {
-	from {transform: perspective(400px) rotateX(7deg) rotate(5deg)}
-	to   {transform: perspective(400px) rotateX(-14deg) rotate(-5deg)}
+	from {transform: rotate(5deg)}
+	to   {transform: rotate(-5deg)}
 }
 
 #backgroundwords {
