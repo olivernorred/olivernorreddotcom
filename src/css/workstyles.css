@@ -123,7 +123,7 @@ img, video {
 	margin: .5rem 0;
 }
 .portfolio h1, .portfolio h2 {
-	font-family: var(--headerfont);
+	font-family: degular;
 	margin: 1rem 0;
 	line-height: 1;
 }
