@@ -30,6 +30,10 @@
 	font-family: "Taters Baked";
 	src: url("/fonts/Taters0.2-Baked.otf");
 }
+@font-face {
+	font-family: 'Bizzarrini';
+	src: url('/fonts/Bizzarrini-V0_4-VF.ttf');
+}
 *{
 	margin: 0; padding: 0;
 	box-sizing: border-box;
@@ -69,7 +73,7 @@ body {
 		--white: rgb(255, 255, 255);
 	
 	--displayfont: degular-display, sans-serif;
-	--headerfont: degular, sans-serif;
+	--headerfont: "Bizzarrini", degular, sans-serif;
 	--smallheadingfont: degular-text, sans-serif;
 	--monofont: "DM Mono", monospace;
 	--bodyfont: "Literata", serif;
@@ -394,6 +398,7 @@ input:not(:placeholder-shown) + .inputlowerlabel, input:focus + .inputlowerlabel
 	margin: .5rem 0;
 	padding: 0;
 	font-family: var(--headerfont), var(--bodyfont), sans-serif;
+	font-variation-settings: 'wght' 300, 'opsz' 24;
 	font-size: 2rem;
 	font-weight: normal;
 	line-height: 1;
