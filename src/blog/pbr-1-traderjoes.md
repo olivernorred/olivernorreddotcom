@@ -1,5 +1,5 @@
 ---
-title: Trader Joe’s All Natural Salted Peanut Butter REVIEW
+title: Trader Joe’s Creamy Salted Peanut Butter REVIEW
 date: 2022-01-24
 ---
 
