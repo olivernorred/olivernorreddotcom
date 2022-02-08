@@ -4,6 +4,7 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
 <url>
@@ -19,7 +20,7 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://olivernorred.com/whatev/</loc>
+  <loc>https://olivernorred.com/music/</loc>
   <priority>0.80</priority>
 </url>
 <url>
@@ -28,6 +29,18 @@
 </url>
 <url>
   <loc>https://olivernorred.com/cookbook/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://olivernorred.com/blog/pbr-1-traderjoes/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://olivernorred.com/blog/meme-detox/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://olivernorred.com/blog/i-fixed-legit-marquees/</loc>
   <priority>0.64</priority>
 </url>
 <url>
@@ -103,11 +116,15 @@
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://olivernorred.com/work/schoolwork/</loc>
+  <loc>https://olivernorred.com/work/gsah/</loc>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://olivernorred.com/work/logosandbranding/</loc>
+  <loc>https://olivernorred.com/work/legit-marquees/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://olivernorred.com/work/sweetboards/</loc>
   <priority>0.64</priority>
 </url>
 <url>
@@ -115,11 +132,15 @@
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://olivernorred.com/work/seattleevictionmoratorium/</loc>
+  <loc>https://olivernorred.com/work/videos/</loc>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://olivernorred.com/work/skyrimlibrary/</loc>
+  <loc>https://olivernorred.com/work/cookbookcollab/</loc>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://olivernorred.com/music/hzdonut/</loc>
   <priority>0.64</priority>
 </url>
 <url>
@@ -152,6 +173,10 @@
 </url>
 <url>
   <loc>https://olivernorred.com/cookbook/jons-elk/</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://olivernorred.com/cookbook/logans-mongolian-beef/</loc>
   <priority>0.51</priority>
 </url>
 <url>
@@ -204,6 +229,10 @@
 </url>
 <url>
   <loc>https://olivernorred.com/cookbook/cherrys-chocolate-mousse/</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://olivernorred.com/cookbook/rhys-candied-pecans/</loc>
   <priority>0.51</priority>
 </url>
 <url>
