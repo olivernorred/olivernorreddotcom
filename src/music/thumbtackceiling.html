@@ -13,7 +13,8 @@ active: music
 		background-position: center;
 		background-attachment: fixed; */
 		--fgcolor: white;
-		--bgcolor: black;
+		--bgcolor: #002;
+		--fgtranslucent: rgb(255 255 255 / .7);
 		--acolor: #389aae;
 	}
 
@@ -25,17 +26,17 @@ active: music
 		width: 100%;
 		max-width: min(600px, 80vw);
 		margin: auto;
-		perspective: 500px;
+		perspective: 800px;
 		position: relative;
 	}
 	#covercontainer img {
-		animation: rollaround 4s ease-in-out infinite;
+		animation: rollaround 6s ease-in-out infinite;
 	}
 	#covercontainer #coverwordmark {
 		position: absolute;
 		top: 9%;
 		left: 0;
-		animation: rollaroundraised 4s ease-in-out infinite;
+		animation: rollaroundraised 6s ease-in-out infinite;
 	}
 	@keyframes rollaround {
 		from {transform: rotateX(-8deg) rotateY(-8deg);}
