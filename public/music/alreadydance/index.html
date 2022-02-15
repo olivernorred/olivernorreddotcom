@@ -51,6 +51,9 @@
 		<main id="content" class="">
 			
 <style>
+	:root {
+		
+	}
 	@font-face {
 		font-family: 'Bizzarrini';
 		src: url('/fonts/Bizzarrini-V0_4-VF.ttf');
@@ -61,8 +64,35 @@
 		background-size: auto;
 		background-repeat: repeat;
 		--yellow: #EEB508;
-		background-color: var(--yellow);
-		--acolor: #000000dd;
+		--darknavy: #00000e;
+		--fgcolor: white;
+		--bgcolor: black;
+		--fgtranslucent: rgb(255 255 255 / .7);
+		
+		background-color: black;
+		--acolor: #6285a4;
+		
+		font-family: "Gooper Light";
+		overflow-x: hidden;
+	}
+	
+	#dancingloopcontainer {
+		position: sticky;
+		top: 0;
+		left: 0;
+		display: grid;
+		place-items: center;
+		height: 100vh;
+		width: 100%;
+		overflow-x: hidden;
+		z-index: -1000;
+	}
+	#dancingloop {
+		height: 100vh;
+		max-width: 100vw;
+	}
+	#dancingloopcontainer + #abstract {
+		margin-top: 90vh;
 	}
 
 	#alreadydancewordmark {
@@ -80,12 +110,10 @@
 		margin: auto;
 		margin-top: 1rem;
 		margin-bottom: .75rem;
-		background: white;
+		background: black;
 		padding: .5rem;
 		padding-bottom: .25rem;
-		border: 2px solid black;
-		border-radius: var(--mainradius);
-		box-shadow: 1px 1px black, 2px 2px black, 3px 3px black, 4px 4px black, 5px 5px black, 6px 6px black;
+		/* border: 2px solid var(--fgcolor); */
 	}
 	#streamingicons a {
 		display: block;
@@ -100,20 +128,18 @@
 
 	#abstract {
 		white-space: pre;
-		overflow: hidden;
+		overflow-x: hidden;
 		margin: 1rem auto;
+		padding: .5rem;
 		width: 100%;
-		max-width: 40ch;
-		/* color: var(--yellow); */
-		background: white;
-		/* text-shadow: -1px -1px black, 1px -1px black, 1px 1px black, -1px 1px black; */
-		font-family: degular-text, sans-serif;
+		max-width: 500px;
+		background: rgb(0 0 0 / .8);
+		color: white;
+		font-family: "Gooper", sans-serif;
 		font-weight: 400;
-		font-size: clamp(1rem, 3.5vw, 1.25rem);
-		border: 2px solid black;
-		border-radius: var(--mainradius);
-		box-shadow: 1px 1px black, 2px 2px black, 3px 3px black, 4px 4px black, 5px 5px black, 6px 6px black;
-		padding: .5rem .5rem .5rem .5rem;
+		font-size: clamp(.8rem, 1vw, 1rem);
+		line-height: 1.4;
+		border: 2px solid white;
 	}
 	#abstract strong {
 		font-weight: 700;
@@ -139,7 +165,9 @@
 </style>
 
 
-<img src="/images/music/alreadydancewordmark.png" alt="You Can Already Dance" id="alreadydancewordmark">
+<img src="/images/music/alreadydancewordmark.svg" alt="You Can Already Dance" id="alreadydancewordmark">
+
+<p style="text-align: center; font-size: 1rem; margin-top: 1rem;"><em>Produced by Oliver Norred.<br>Mastering by Cole Krueger.<br>Video work by Graham Godfrey.</em></p>
 
 <section id="streamingicons">
 	<a href="">
@@ -156,19 +184,51 @@
 	</a>
 </section>
 
-<!-- <section id="videolinks">
-	<p><em>VIDEOS</em></p>
-	<p><a href="https://www.youtube.com/watch?v=r5ChxcfyUJI">Warm-Up + Overture + To Be a Gosling &rarr;</a></p>
-	<p id="ginghamheightslink" class="bouncinglink"><a href="https://www.youtube.com/watch?v=CPGLytcDSlY">Gingham Heights &rarr;</a></p>
-	<p id="mfwltolink"><a href="https://www.youtube.com/watch?v=sSO-b5yZpco">Music Fans Will Like This One &rarr;</a></p>
-</section> -->
+<div id="dancingloopcontainer">
+	<video id="dancingloop" src="/images/music/OPTIMIZEDdancing2secondloop.mp4" nocontrols autoplay loop playsinline></video>
+</div>
+
 
 <section id="abstract"><em><strong>YOU CAN ALREADY DANCE.</strong></em>
-	<em>A RECORD ON CONFIDENCE.</em>
-		EARLY 2022.
-<!-- <strong>1. THESE PANTS</strong>
+<em>A RECORD ON CONFIDENCE.</em>
 
-[blues clues theme bass line]
+
+<strong>1. Everyone, listen to this!</strong>
+
+Everyone—
+Okay, yeah. Okay, yeah.
+Just, everyone, listen to this. Listen to this.
+
+<em>[wub]</em>
+AAAAAAAAAAAAAAAAAAAAAAAAAA
+<em>[wub]</em>
+AAAAAAAAAAAAAAAAAAAAAAAAAA
+<em>sorry,[wub] real quic—</em>
+AAAAAAAAAAAAAAAAAAAAAAAAAA
+<em>[wub]</em>
+AAAAAAAAAAAAAAAAAAAAAAAAAA
+<em>[wub]</em>
+AAAAAA
+              AAAAAAA
+AAAAAA
+              AAAAAAA
+<em>[snare
+    snare
+snare]</em>
+<em>[wub]</em>
+AAAAAAAAAAAAAAAAAAAAA<em>[snare snare snare]</em>
+<em>[wub]</em>
+AAAAAAAAAAAAAAAAAAAAA<em>[snare snare snare]</em>
+<em>[wub]</em>
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAaaaaaaooooooowowowvwovwo
+
+
+<strong>2. These Pants</strong>
+
+<em>[blues clues theme bass line]</em>
+
+<em>[various percussive sounds]</em>
 
 IIIIIIIII’mm convinced you care about my style.
 
@@ -178,7 +238,7 @@ So won’t you pleeeeeeeeeease notice me?
 I’ll sit such that my shoes
 are there for you to see!
 
-[warbly intermelody]
+<em>[warbly intermelody]</em>
 
 IIIIIIIII’m invisible to you, my friend.
 But I’ll draw your eyyyyyyes
@@ -188,15 +248,15 @@ So won’t you pleeeeeeeeeeeeease notice me?
 I’ll sit such that these pants
 are there for you to see!
 
-[warbly intermelody]
+<em>[warbly intermelody]</em>
 
-[wah wah bass]
+<em>[wah wah bass]</em>
 
-[funner drum loop]
+<em>[funner drum loop]</em>
 
 These pants strangle my thighs
 I hope they’ll catch your eyes
-I know that it’s deadly, deadly 
+I know that it’s deadly (deadly!) 
 to demand attention via fashion
 but I hope these drawers draw your gaze
 to me, to me, to me, to me!
@@ -209,66 +269,41 @@ oh dear, cryin out
 to make contact with your contacts
 just a word, a word.
 
-[piano outro]
+<em>[piano outro]</em>
+<em>[synth chord]</em>
 
 
-<strong>2. PRETENDING TO USE THE BATHROOM</strong>
+<strong>3. Be Still, I’ll Stay</strong>
 
-[hi-hat intro]
-
-ooooooo-waaaaah-
-ooooooo-waaaaah-
-ooooooo-waaaaah-
-ooooooo-waaabadabadoobadaboo
-
-[bass and synth go "sicko mode"]
-
-aaaaa-aaa
-ooooo
-aaa-aaa oooo
-oooo
-aa-a-a-a
-[beep beep] oo
-aaaaaa-ooo
-aaa-ooo
-[bass fill]
-oooo
-aaa-oo
-
-[drum outro]
-
-
-<strong>3. DELUSIONS AT 3 IN THE MORNING</strong>
-
-[breathing]
+<em>[breathing]</em>
 
 Sing me a lullaby
-to make me sure that you’re here tonight.
+to make me sure that you’re here toni ght.
 You’re here tonight.
 You’re here tonight.
 I’m here tonight,
-with you, with you, with you,
-I’ll stay.
+with you, with you, with yo u,
+I’ll sta y.
 
 Sing me the warbler’s song.
-I know our wait till morning’s long.
+I know our wai t till morning’s long.
 Lay patiently.
-Still here I’ll be.
-Still here I’ll be,
-be still, be still, be still,
-I’ll stay.
+Still here I’ll b e.
+Still he re I’ll be,
+be still, be still, b e still,
+I’ll sta y.
 
 Promise me you won’t fly away.
 I can’t sleep. I just hope you’ll say,
-"Be still, I’ll stay.
-Be still, I’ll stay.
+"Be stil l, I’ll stay.
+Be still, I’ll sta y.
 Be still, I’ll stay
-with you tonight."
+with you to n i g h t."
 
-[far away organ shakily moves closer]
+<em>[organ shakily teleports closer]</em>
 
 
-<strong>4. YOU CAN ALREADY DANCE</strong>
+<strong>4. You Can Already Dance</strong>
 
 Pretend you’ve got nothing to prove!
 You’ve got some limbs to move.
@@ -280,11 +315,12 @@ Might shut your eyes; don’t glance.
 Just have a blast and shake your pants!
 You! Can! Al! Rea! Dy! Dance!
 
-[kick kick kick snare]
+<em>[kick kick kick snare]</em>
 
-[square wave solo]
+<em>[square wave solo]</em>
 
-[bridge bass line, claps]
+<em>[bridge bass line, claps]</em>
+
 You can already dance
 better than anybody could possibly teach you to!
 You can already dance
@@ -300,16 +336,16 @@ of dancing like yourself alone!
 There’s no one else, you’ve shown.
 
 You have to give yourself a chance!
-Might shut your eyes; don’t glance.
+Might close your eyes; don’t glance.
 Just have a blast and shake your pants.
 You! Can! Al! Rea! Dy! DAAAAAAAAAA-
 
-[kick kick kick snare]
+<em>[kick kick kick snare]</em>
 
 
-<strong>5. FRIEND COLLECTOR, YOU ARE LOVED</strong>
+<strong>5. For the Friend Collector</strong>
 
-[snare snare]
+<em>[snare snare]</em>
 
 Friend-collecting, number-taking kid:
 What gives? What gives?
@@ -329,16 +365,15 @@ from a group of precious people
 is a necessary evil.
 
 Old friends heed your beck and call,
-and all you’ve shown through your withdrawal
+but all you’ve shown through your withdrawal
 is maybe they’d be better off
-if you were never friends at all.
-
+if you were never close at all.
 
 Know that even when someone’s unkind,
-you’ll find the time.
+you’ll find the time
 
 to think of all the sources of sunshine.
-Keep them in mind:
+Keep them in mind.
 
 Y o u  a r e  l o v e d
            (Y o u  a r e  l o v e d)
@@ -351,7 +386,10 @@ Y o u  a r e  l o v e d
 
 Y o u  a r e  l o v e d
            (Y o u  a r e  l o v e d)
-Loved! Loved!
+
+Y o u  a r e  l o v e d
+           (Y o u  a r e  l o v e d)
+L o v e d !  L o v e d !
 
 Y o u  a r e  l o v e d
            (Y o u  a r e  l o v e d)
@@ -359,19 +397,23 @@ Y o u  a r e  l o v e d
 Y o u  a r e  l o v e d
            (Y o u  a r e  l o v e d)
 
-L L O O V V E E D D --></section>
+L L O O V V E E D D</section>
+
+
+<script src="/js/scrollvideo.js"></script>
+
 			
 		</main>
 	
 		<footer id="footer">
-			<a href="mailto:norredoliver@gmail.com">email</a> (norredoliver@gmail.com),
+			<a href="mailto:norredoliver@gmail.com">email</a> (norredoliver@gmail.com)
 			<br>
-			<a href="https://olivernorred.com/OliverNorred-Resume.pdf">resume</a>,
-			<br>
-			<a href="https://github.com/olivernorred">github</a>
-			<!-- <a href="https://www.instagram.com/olivernorred/">instagram</a><br> -->
-			<!-- <a href="https://twitter.com/olivernorred">twitter</a><br> -->
-			<!-- <a href="https://www.youtube.com/c/OliverNorred">youtube</a> -->
+			<!-- <a href="https://olivernorred.com/OliverNorred-Resume.pdf">resume</a>,
+			<br> -->
+			<a href="https://github.com/olivernorred">github</a><br>
+			<a href="https://www.instagram.com/olivernorred/">instagram</a><br>
+			<a href="https://twitter.com/olivernorred">twitter</a><br>
+			<a href="https://www.youtube.com/c/OliverNorred">youtube</a>
 		</footer>
 	</div><script src="/js/darkmode.js"></script>
 
