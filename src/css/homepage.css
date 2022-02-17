@@ -16,6 +16,46 @@ body {
 	max-width: 100%;
 	margin: auto;
 }
+#linedrawingcanvas {
+	position: absolute;
+	top: 0; left: 0;
+	pointer-events: none;
+	z-index: -1000;
+}
+
+#introduction {
+	max-width: 500px;
+	margin: 3rem auto;
+}
+.introductionmarquee {
+	font-family: var(--displayfont);
+}
+#introduction h1 {
+	text-align: center;
+	font-family: var(--smallheadingfont);
+	font-size: 2rem;
+	font-weight: bold;
+	margin-top: .25rem;
+}
+#introduction .categorylink {
+	color: white;
+	padding: .5rem;
+}
+.categorylink a {
+	color: white;
+	font-style: italic;
+	text-decoration-color: white;
+}
+#introduction .categorylink:nth-child(3n) {
+	background: var(--yellow);
+}
+#introduction .categorylink:nth-child(3n+1) {
+	background: var(--red);
+}
+#introduction .categorylink:nth-child(3n+2) {
+	background: var(--blue);
+}
+
 #abouttext {
 	background: var(--bgcolor);
 	padding: .5rem;

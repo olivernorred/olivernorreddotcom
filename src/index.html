@@ -7,6 +7,108 @@ active: index
 
 
 <script src="/js/swaplogo.js"></script>
+
+
+<section id="introduction">
+	<svg class="legit-marquee introductionmarquee" viewBox="0 90 450 71"
+
+		content="olivernorred.com&nbsp;&nbsp;"
+		contentrepeat="2"
+		speed="-1"
+		textsize="31"
+
+		pathd="m-29.66498,127.33333c96,-2 98,17 170,17c72,0 74,-23 138,-21c64,2 72,28 114,25c42,-3 77,-21 136.66498,-30.33333"
+		
+		>
+	</svg>
+	<script src="/js/legitmarquees.js"></script>
+	<h1><a href="/blog/" id="introbloglink">blog</a></h1>
+	<h1><a href="/work/" id="introdesignlink">design</a></h1>
+	<h1><a href="/music/" id="intromusiclink">music</a></h1>
+</section>
+
+
+<script>
+	const canvas = document.createElement('canvas')
+	canvas.setAttribute("width", window.innerWidth);
+	canvas.setAttribute("height", window.innerHeight);
+	canvas.id = "linedrawingcanvas"
+	document.body.appendChild(canvas);
+
+	const ctx = canvas.getContext('2d')
+	
+	const introbloglink = document.querySelector("#introbloglink")
+	const introdesignlink = document.querySelector("#introdesignlink")
+	const intromusiclink = document.querySelector("#intromusiclink")
+	const coords = {
+		blog: {
+			x: getBoundingBox(document.querySelector('.blognav')).x,
+			y: getBoundingBox(document.querySelector('.blognav')).y
+		},
+		design: {
+			x: getBoundingBox(document.querySelector('.desnav')).x,
+			y: getBoundingBox(document.querySelector('.desnav')).y
+		},
+		music: {
+			x: getBoundingBox(document.querySelector('.musnav')).x,
+			y: getBoundingBox(document.querySelector('.musnav')).y
+		}
+	}
+
+	ctx.lineWidth = 4;
+	ctx.strokeStyle = "#f06"
+	function draw() {
+		introbloglink.addEventListener('mousemove', (e)=>{
+			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
+			ctx.beginPath();
+			ctx.moveTo(e.clientX, e.clientY)
+			ctx.lineTo(coords.blog.x, coords.blog.y)
+			ctx.stroke()
+		})
+		introdesignlink.addEventListener('mousemove', (e)=>{
+			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
+			ctx.beginPath();
+			ctx.moveTo(e.clientX, e.clientY)
+			ctx.lineTo(coords.design.x, coords.design.y)
+			ctx.stroke()
+		})
+		intromusiclink.addEventListener('mousemove', (e)=>{
+			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
+			ctx.beginPath();
+			ctx.moveTo(e.clientX, e.clientY)
+			ctx.lineTo(coords.music.x, coords.music.y)
+			ctx.stroke()
+		})
+		introbloglink.addEventListener('mouseout', (e)=>{
+			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
+		})
+		introdesignlink.addEventListener('mouseout', (e)=>{
+			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
+		})
+		intromusiclink.addEventListener('mouseout', (e)=>{
+			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
+		})
+		
+		requestAnimationFrame(draw);
+	}
+	draw()
+	
+	function getBoundingBox (element) {
+		const box = element.getBoundingClientRect()
+		const ret = { }
+
+		// Loops through all DomRect properties.
+		// Cannot spread because they're not enumerable.
+		for (const prop in box) {
+			ret[prop] = box[prop]
+		}
+
+		ret.x = (box.left + box.right) / 2
+		ret.y = (box.bottom)
+
+		return ret
+	}
+</script>
 <!-- <section id="firstsection">
 	<svg id="marqueetitle" class="legit-marquee" viewBox="0 90 450 71"
 
@@ -24,7 +126,7 @@ active: index
 
 </section> -->
 
-<section id="secondsection">
+<!-- <section id="secondsection">
 	<div id="facewithspeech">
 		<img id="facedrawn" src="/images/drawn/face.png" alt="My face, drawn.">
 		<div id="speechbox">
@@ -46,7 +148,7 @@ active: index
 		<p class="caption" style="margin-top: 0rem; text-align: center; background: white;">This is me!</p>
 	</div>
 	<p style="background: white;">I’m Oliver! I write a <a href="/blog/">blog</a>, I make <a href="/music/">music</a> and <a href="https://youtube.com/c/OliverNorred">videos</a>, and I <nw><a href="/work/">study design</a>!</nw></p>
-</section>
+</section> -->
 
 
 
