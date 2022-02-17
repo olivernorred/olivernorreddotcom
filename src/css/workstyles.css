@@ -74,6 +74,7 @@ video {
 	}
 	.workitem .cardsplit > * {
 		width: 100%;
+		margin-top: .5rem;
 	}
 }
 
@@ -83,8 +84,8 @@ video {
 	border-radius: var(--mainradius);
 }
 .workitem h1 {
-	font-family: degular;
-	font-weight: 700;
+	font-family: var(--headerfont);
+	font-weight: bold;
 	font-size: 1.6rem;
 	line-height: 1;
 	margin: 0;
@@ -109,6 +110,7 @@ img, video {
 
 .portfolio {
 	--smallwidth: 500px;
+	padding: 0 .5rem;
 }
 .portfolio p {
 	max-width: var(--smallwidth);
@@ -123,7 +125,7 @@ img, video {
 	margin: .5rem 0;
 }
 .portfolio h1, .portfolio h2 {
-	font-family: degular;
+	font-family: var(--headerfont);
 	margin: 1rem 0;
 	line-height: 1;
 }

@@ -15,12 +15,17 @@
 }
 @font-face {
 	font-family: "Literata";
-	src: url("/fonts/Literata-VariableFont_opsz\,wght.ttf");
+	src: url("/fonts/LiterataTT-CaptionRegular.woff2");
 }
 @font-face {
 	font-family: "Literata";
 	font-style: italic;
-	src: url("/fonts/Literata-Italic-VariableFont_opsz\,wght.ttf");
+	src: url("/fonts/LiterataTT-CaptionItalic.woff2");
+}
+@font-face {
+	font-family: "Literata";
+	font-weight: bold;
+	src: url("/fonts/LiterataTT-CaptionBold.woff2");
 }
 @font-face {
 	font-family: "Taters Fried";
@@ -68,6 +73,11 @@
 	font-style: italic;
 	src: url('/fonts/Gooper7-BoldItalic.woff2');
 }
+@font-face {
+	font-family: 'Gooper Super';
+	src: url('/fonts/Gooper7-Super.woff2');
+}
+
 *{
 	margin: 0; padding: 0;
 	box-sizing: border-box;
@@ -106,9 +116,9 @@ body {
 		--blue: rgb(45, 167, 212);   
 		--white: rgb(255, 255, 255);
 	
-	--displayfont: degular-display, sans-serif;
-	--headerfont: "Bizzarrini", degular, sans-serif;
-	--smallheadingfont: degular-text, sans-serif;
+	--displayfont: "Gooper Light", sans-serif;
+	--headerfont: "Gooper Light", degular, sans-serif;
+	--smallheadingfont: "Gooper", sans-serif;
 	--monofont: "DM Mono", monospace;
 	--bodyfont: "Literata", serif;
 
@@ -203,7 +213,7 @@ em {
 	gap: .5rem;
 	margin: auto;
 	padding: 0;
-	font-family: "Taters Fried", sans-serif;
+	font-family: "Gooper", sans-serif;
 	text-align: center;
 	font-size: 1rem;
 	line-height: 1;
@@ -230,13 +240,11 @@ em {
 	100% {transform: rotateY(0deg)}
 }
 .sublinks * {
-	letter-spacing: -.06em;
 	align-self: end;
 }
 .sublinks .active {
 	color: var(--fgcolor);
-	font-family: "Taters Baked";
-	font-size: 1.1em;
+	font-family: "Gooper Super";
 	text-decoration: underline;
 	letter-spacing: normal;
 }

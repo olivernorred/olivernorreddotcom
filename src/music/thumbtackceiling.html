@@ -16,27 +16,33 @@ active: music
 		--bgcolor: #002;
 		--fgtranslucent: rgb(255 255 255 / .7);
 		--acolor: #389aae;
+		--xangle: 0deg;
+		--yangle: 0deg;
 	}
 
 	#content {
 		min-height: 80vh;
+		perspective: 800px;
 	}
 	
 	#covercontainer {
+		pointer-events: none;
 		width: 100%;
 		max-width: min(600px, 80vw);
 		margin: auto;
-		perspective: 800px;
 		position: relative;
+		perspective: 800px;
 	}
 	#covercontainer img {
-		animation: rollaround 6s ease-in-out infinite;
+		/* animation: rollaround 6s ease-in-out infinite; */
+		transform: rotateX(var(--xangle)) rotateY(var(--yangle));
 	}
 	#covercontainer #coverwordmark {
 		position: absolute;
 		top: 9%;
 		left: 0;
-		animation: rollaroundraised 6s ease-in-out infinite;
+		transform: rotateX(var(--xangle)) rotateY(var(--yangle)) translateZ(100px);
+		/* animation: rollaroundraised 6s ease-in-out infinite; */
 	}
 	@keyframes rollaround {
 		from {transform: rotateX(-8deg) rotateY(-8deg);}
@@ -60,7 +66,6 @@ active: music
 		margin: auto;
 		margin-top: 1rem;
 		margin-bottom: .75rem;
-		background: black;
 		padding: .5rem;
 		padding-bottom: .25rem;
 		/* border: 2px solid var(--fgcolor); */
@@ -82,8 +87,13 @@ active: music
 		margin: 1rem auto;
 		padding: .5rem;
 		font-family: "Literata";
-		font-variation-settings: 'wght' 400;
-		line-height: 1.2;
+		line-height: 1.4;
+		transform: rotateX(var(--xangle)) rotateY(var(--yangle)) translateZ(-100px);
+	}
+	#streamingicons {
+		transform: rotateX(var(--xangle)) rotateY(var(--yangle)) translateZ(150px);
+		z-index: 1;
+		position: relative; /* for z index */
 	}
 	#abstract p, #abstract ol {
 		font-variation-settings: 'opsz' 8;
@@ -101,7 +111,6 @@ active: music
 	}
 	li {
 		margin-left: 1rem;
-		margin-top: .25rem;
 		font-variation-settings: 'wght' 700;
 		font-style: italic;
 	}
@@ -134,7 +143,7 @@ active: music
 </section>
 
 <section id="abstract">
-	<p>Thumbtack Ceiling<br> is an ambient project<br> by<br> Cole Krueger and<br> Oliver Norred.</p>
+	<p><em>Thumbtack Ceiling</em><br> is an ambient project<br> by<br> Cole Krueger and<br> Oliver Norred.</p>
 	<ol>
 		<li>A Muddled Moment</li>
 		<li>Siren Siren</li>
@@ -145,3 +154,5 @@ active: music
 		<li>A Lucid Moment</li>
 	</ol>
 </section>
+
+<script src="/js/mouseangle.js"></script>
