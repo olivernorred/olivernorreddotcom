@@ -61,12 +61,23 @@ active: music
 	}
 
 	.showlink {
+		position: relative;
 		display: block;
 		margin-top: 1rem;
 		border-radius: 1rem;
 	}
 	.showlink img {
 		border-radius: var(--mainradius);
+	}
+
+	.youtubelabel {
+		position: absolute;
+		top: 40%; left: 50%;
+		transform: translate(-50%, -50%);
+		padding: .1rem .5rem;
+		color: white;
+		background: rgb(0 0 0 / .5);
+		font-style: italic;
 	}
 	
 </style>
@@ -85,10 +96,12 @@ active: music
 	<a class="showlink" href="https://youtu.be/G78vipBZdoc">
 		<img src="/images/music/cornbread/sandlotthumbnail.png" alt="All of Our Cornbread at the Ice Box">
 		<p class="caption">Our first show was at the Sandlot, a nascent house show venue in Seattle’s U District.</p>
+		<p class="youtubelabel">on YouTube</p>
 	</a>
 	<a class="showlink" href="https://youtu.be/34rh7DfDh3U?t=11482">
 		<img src="/images/music/cornbread/aprilhuskyjamthumbnail.png" alt="All of Our Cornbread at the April Husky Jam">
 		<p class="caption">We played at the April 2022 Husky Jam Spring Thing. Husky Jam is a student-run and self-funded organization at the UW. Pretty awesome!</p>
+		<p class="youtubelabel">on YouTube</p>
 	</a>
 </section>
 
