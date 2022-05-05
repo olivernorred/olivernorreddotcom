@@ -1,0 +1,95 @@
+---
+layout: base.html
+title: All of Our Cornbread \
+active: music
+---
+
+
+<style>
+	body {
+		--fgcolor: black;
+		--bgcolor: var(--cream);
+		--fgtranslucent: rgb(255 255 255 / .7);
+		--acolor: var(--blue);
+	}
+
+	#content {
+		font-family: var(--bodyfont);
+	}
+
+	#cornbreadlogo {
+		max-width: 1000px;
+		margin: 1rem auto;
+	}
+	#abstract {
+		max-width: 500px;
+		margin: 1rem auto;
+		line-height: 1.3;
+		font-size: 1rem;
+	}
+	#abstract h2, #abstract h1 {
+		font-size: 1.25rem;
+		text-align: center;
+	}
+	#abstract h1 {
+		margin-top: 1.5rem;
+		font-family: 'Gooper';
+		font-weight: bold;
+	}
+	p.caption {
+		font-size: .8rem;
+		color: black;
+		margin-top: .25rem;
+	}
+	#bandphotos {
+		position: relative;
+		padding-bottom: 100%;
+	}
+	#bandphotos img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+	#bandphoto {
+		animation: wiggle 1s steps(2) infinite;
+		margin-top: 1rem;
+	}
+	@keyframes wiggle {
+		from {transform: rotate(-2deg);}
+		to {transform: rotate(4deg);}
+	}
+
+	.showlink {
+		display: block;
+		margin-top: 1rem;
+		border-radius: 1rem;
+	}
+	.showlink img {
+		border-radius: var(--mainradius);
+	}
+	
+</style>
+
+
+<div id="cornbreadlogo">
+	<img src="/images/music/cornbread/allofourcornbreadlogo.svg" alt="All of Our Cornbread">
+</div>
+
+<section id="abstract">
+	<h1>Oliver Norred songs hit the stage!</h1>
+	<img id="bandphoto" src="/images/music/cornbread/bandphoto/wongphoto_full.jpg" alt="">
+	<p class="caption">Photo by Peter Wong (@ptr_wng on instagram)</p>
+	<br>
+	<h1>Videos</h1>
+	<a class="showlink" href="https://youtu.be/G78vipBZdoc">
+		<img src="/images/music/cornbread/sandlotthumbnail.png" alt="All of Our Cornbread at the Ice Box">
+		<p class="caption">Our first show was at the Sandlot, a nascent house show venue in Seattle’s U District.</p>
+	</a>
+	<a class="showlink" href="https://youtu.be/34rh7DfDh3U?t=11482">
+		<img src="/images/music/cornbread/aprilhuskyjamthumbnail.png" alt="All of Our Cornbread at the April Husky Jam">
+		<p class="caption">We played at the April 2022 Husky Jam Spring Thing. Husky Jam is a student-run and self-funded organization at the UW. Pretty awesome!</p>
+	</a>
+</section>
+
+<script src="/js/mouseangle.js"></script>
