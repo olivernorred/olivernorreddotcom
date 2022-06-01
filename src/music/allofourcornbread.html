@@ -64,15 +64,26 @@ active: music
 		position: relative;
 		display: block;
 		margin-top: 1rem;
-		border-radius: 1rem;
 	}
 	.showlink img {
-		border-radius: var(--mainradius);
+		box-shadow: 0 0 5px black;
 	}
 
+	.videotitle {
+		position: absolute;
+		top: 35%; left: 50%;
+		transform: translate(-50%, -50%);
+		width: 90%;
+		color: white;
+		font-family: 'Taters Baked';
+		font-size: 1.5rem;
+		text-align: center;
+		text-shadow: 2px 2px black;
+	}
+	
 	.youtubelabel {
 		position: absolute;
-		top: 40%; left: 50%;
+		top: 45%; left: 50%;
 		transform: translate(-50%, -50%);
 		padding: .1rem .5rem;
 		color: white;
@@ -94,14 +105,23 @@ active: music
 	<p class="caption">Photo by Peter Wong (@ptr_wng on instagram)</p>
 	<br>
 	<h1>Videos</h1>
+
+	<a class="showlink" href="https://www.youtube.com/watch?v=k-7cmlGqvPs&list=PLaTxdYwGEOqCfEjM77CJbYT-LT0wv_kCi&index=1&ab_channel=OliverNorred">
+		<img src="/images/music/cornbread/basementthumbnail.png" alt="All of Our Cornbread session from the basement">
+		<p class="caption">We recorded these demos with five of our members before our first show.</p>
+		<p class="videotitle">Session from the basement</p>
+		<p class="youtubelabel">on YouTube</p>
+	</a>
 	<a class="showlink" href="https://youtu.be/G78vipBZdoc">
 		<img src="/images/music/cornbread/sandlotthumbnail.png" alt="All of Our Cornbread at the Ice Box">
 		<p class="caption">Our first show was at the Sandlot, a nascent house show venue in Seattle’s U District.</p>
+		<p class="videotitle">The Sandlot</p>
 		<p class="youtubelabel">on YouTube</p>
 	</a>
 	<a class="showlink" href="https://youtu.be/34rh7DfDh3U?t=11482">
 		<img src="/images/music/cornbread/aprilhuskyjamthumbnail.png" alt="All of Our Cornbread at the April Husky Jam">
 		<p class="caption">We played at the April 2022 Husky Jam Spring Thing. Husky Jam is a student-run and self-funded organization at the UW. Pretty awesome!</p>
+		<p class="videotitle">Husky Jam Spring Thing</p>
 		<p class="youtubelabel">on YouTube</p>
 	</a>
 </section>
