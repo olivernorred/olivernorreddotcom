@@ -54,9 +54,10 @@
 <style>
 	body {
 		--fgcolor: black;
-		--bgcolor: var(--cream);
+		--bgcolor: white;
 		--fgtranslucent: rgb(255 255 255 / .7);
 		--acolor: var(--blue);
+		--cornbreadyellow: #f0b708;
 	}
 
 	#content {
@@ -68,22 +69,32 @@
 		margin: 1rem auto;
 	}
 	#abstract {
-		max-width: 500px;
+		max-width: 750px;
 		margin: 1rem auto;
 		line-height: 1.3;
 		font-size: 1rem;
 	}
 	#abstract h2, #abstract h1 {
-		font-size: 1.25rem;
+		font-size: 2rem;
 		text-align: center;
 	}
 	#abstract h1 {
-		margin-top: 1.5rem;
+		width: fit-content;
+		margin: auto;
+		margin-top: 2rem;
+		padding: .4rem;
+		background-color: var(--cornbreadyellow);
+		color: white;
+		box-shadow: 2px 2px black;
+		transform: rotate(1deg);
 		font-family: 'Gooper';
 		font-weight: bold;
 	}
+	#abstract h1:nth-of-type(even) {
+		transform: rotate(-1deg);
+	}
 	p.caption {
-		font-size: .8rem;
+		font-size: 1rem;
 		color: black;
 		margin-top: .25rem;
 	}
@@ -109,7 +120,7 @@
 	.showlink {
 		position: relative;
 		display: block;
-		margin-top: 1rem;
+		margin-top: 2rem;
 	}
 	.showlink img {
 		box-shadow: 0 0 5px black;
@@ -117,19 +128,19 @@
 
 	.videotitle {
 		position: absolute;
-		top: 35%; left: 50%;
+		top: 37%; left: 50%;
 		transform: translate(-50%, -50%);
 		width: 90%;
 		color: white;
 		font-family: 'Taters Baked';
-		font-size: 1.5rem;
+		font-size: clamp(1.5rem, 5vw, 2.5rem);
 		text-align: center;
 		text-shadow: 2px 2px black;
 	}
 	
 	.youtubelabel {
 		position: absolute;
-		top: 45%; left: 50%;
+		top: 48%; left: 50%;
 		transform: translate(-50%, -50%);
 		padding: .1rem .5rem;
 		color: white;
