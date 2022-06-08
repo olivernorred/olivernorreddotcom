@@ -87,24 +87,41 @@
 	const introbloglink = document.querySelector("#introbloglink")
 	const introdesignlink = document.querySelector("#introdesignlink")
 	const intromusiclink = document.querySelector("#intromusiclink")
+	const blognav = document.querySelector('.blognav')
+	const desnav = document.querySelector('.desnav')
+	const musnav = document.querySelector('.musnav')
 	const coords = {
 		blog: {
-			x: getBoundingBox(document.querySelector('.blognav')).x,
-			y: getBoundingBox(document.querySelector('.blognav')).y
+			x: getBoundingBox(blognav).x,
+			y: getBoundingBox(blognav).y
 		},
 		design: {
-			x: getBoundingBox(document.querySelector('.desnav')).x,
-			y: getBoundingBox(document.querySelector('.desnav')).y
+			x: getBoundingBox(desnav).x,
+			y: getBoundingBox(desnav).y
 		},
 		music: {
-			x: getBoundingBox(document.querySelector('.musnav')).x,
-			y: getBoundingBox(document.querySelector('.musnav')).y
+			x: getBoundingBox(musnav).x,
+			y: getBoundingBox(musnav).y
+		},
+		blogbottom: {
+			x: getBoundingBox(introbloglink).x,
+			y: getBoundingBox(introbloglink).y
+		},
+		designbottom: {
+			x: getBoundingBox(introdesignlink).x,
+			y: getBoundingBox(introdesignlink).y
+		},
+		musicbottom: {
+			x: getBoundingBox(intromusiclink).x,
+			y: getBoundingBox(intromusiclink).y
 		}
 	}
 
 	ctx.lineWidth = 4;
 	ctx.strokeStyle = "#f06"
 	function draw() {
+
+		//BOTTOM LINKS CHECKING MOUSE
 		introbloglink.addEventListener('mousemove', (e)=>{
 			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
 			ctx.beginPath();
@@ -133,6 +150,38 @@
 			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
 		})
 		intromusiclink.addEventListener('mouseout', (e)=>{
+			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
+		})
+
+		// TOP LINKS DOING SIMILAR THING
+		blognav.addEventListener('mousemove', (e)=>{
+			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
+			ctx.beginPath();
+			ctx.moveTo(e.clientX, e.clientY)
+			ctx.lineTo(coords.blogbottom.x, coords.blogbottom.y-40)
+			ctx.stroke()
+		})
+		desnav.addEventListener('mousemove', (e)=>{
+			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
+			ctx.beginPath();
+			ctx.moveTo(e.clientX, e.clientY)
+			ctx.lineTo(coords.designbottom.x, coords.designbottom.y-40)
+			ctx.stroke()
+		})
+		musnav.addEventListener('mousemove', (e)=>{
+			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
+			ctx.beginPath();
+			ctx.moveTo(e.clientX, e.clientY)
+			ctx.lineTo(coords.musicbottom.x, coords.musicbottom.y-40)
+			ctx.stroke()
+		})
+		blognav.addEventListener('mouseout', (e)=>{
+			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
+		})
+		desnav.addEventListener('mouseout', (e)=>{
+			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
+		})
+		musnav.addEventListener('mouseout', (e)=>{
 			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
 		})
 		
