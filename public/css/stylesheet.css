@@ -627,7 +627,8 @@ body.darkmode #commentform textarea, body.darkmode #commentform input[type="text
 }
 .comment .commentername {
 	font-family: "Literata", serif;
-	font-variation-settings: "wght" 700;
+	font-style: italic;
+	font-weight: bold;
 	margin: 0;
 }
 .comment .commentdate {

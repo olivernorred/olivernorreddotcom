@@ -51,6 +51,27 @@
 		<main id="content" class="">
 			
 <style>
+	#streamingicons {
+		display: flex;
+		gap: 1rem;
+		max-width: clamp(200px, 28vw, 300px);
+		margin: auto;
+		margin-top: 1rem;
+		margin-bottom: .75rem;
+		padding: .5rem;
+		padding-bottom: .25rem;
+		/* border: 2px solid var(--fgcolor); */
+	}
+	#streamingicons a {
+		display: block;
+		flex: 1;
+		padding: 2px;
+		transition: transform .1s;
+	}
+	#streamingicons a:hover {
+		transform: translate(0, -3px);
+	}
+
 	#musicwriting {
 		margin: auto;
 		max-width: 450px;
@@ -118,6 +139,22 @@
 </style>
 
 <article id="musicwriting">
+
+	<section id="streamingicons">
+		<a href="https://open.spotify.com/artist/6RkQVm3jOYvucrvNtcNlAx">
+			<img src="/images/music/icons/spotify.svg" alt="You Can Already Dance on Spotify">
+		</a>
+		<a href="https://music.apple.com/us/artist/oliver-norred/1435281983">
+			<img src="/images/music/icons/applemusiccolor.svg" alt="You Can Already Dance on Apple Music">
+		</a>
+		<a href="https://www.youtube.com/c/olivernorred">
+			<img src="/images/music/icons/youtube.svg" alt="You Can Already Dance on YouTube Music">
+		</a>
+		<a href="https://olivernorred.bandcamp.com/">
+			<img src="/images/music/icons/bandcampcolor.svg" alt="You Can Already Dance on Bandcamp">
+		</a>
+	</section>
+
 	<h1 class="albumslisttitle">LIVE BAND</h1>
 	<section id="livebandlink">
 		<a href="/music/allofourcornbread/"><img src="/images/music/cornbread/allofourcornbreadlogo.svg" alt="All of Our Cornbread"></a>
