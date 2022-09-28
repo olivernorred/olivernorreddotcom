@@ -1,11 +1,11 @@
 ---
 title: Playing a free, outdoor show
-date: 2022-09-25
+date: 2022-09-28
 ---
 
 # Playing a free, outdoor show
 
-## Oliver Norred, 25 September 2022
+## Oliver Norred, 28 September 2022
 
 Dear readers,
 
