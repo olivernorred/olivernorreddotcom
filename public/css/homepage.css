@@ -17,6 +17,7 @@ body {
 	margin: auto;
 }
 #linedrawingcanvas {
+	display: none;
 	position: absolute;
 	top: 0; left: 0;
 	pointer-events: none;
@@ -26,20 +27,53 @@ body {
 #introduction {
 	max-width: 500px;
 	margin: 3rem auto;
+	padding: 0 .5rem;
 }
 .introductionmarquee {
 	font-family: var(--displayfont);
 }
+p.introductionbodytext:not(:first-child) {
+	margin: 1rem 0;
+	font-family: "Bizzarrini", serif;
+	font-variation-settings: 'opsz' 12;
+	font-size: 1.2rem;
+	line-height: 1.2;
+	/* text-align: center; */
+}
 #introduction h1 {
-	text-align: center;
+	text-align: left;
 	font-family: var(--smallheadingfont);
-	font-size: 2rem;
+	font-size: 1.7rem;
 	font-weight: bold;
 	margin-top: .25rem;
 }
+#introduction p {
+}
 #introduction .categorylink {
 	color: white;
-	padding: .5rem;
+}
+#moreaboutme {
+	margin-top: 2rem;
+	padding: 1rem;
+	background-image: url('/images/homepage/parchmentbg.jpg');
+	background-size: 100% 100%;
+}
+#moreaboutme * {
+	font-family: 'Times New Roman', Times, serif;
+	line-height: 1;
+	margin: .3rem 0;
+	text-shadow: 2px 2px 2px gray ;
+}
+#moreaboutme h1 {
+	color: red;
+	font-size: 2rem;
+	letter-spacing: -.05em;
+}
+#moreaboutme p {
+	color: yellow;
+}
+#moreaboutme p a {
+	color: white;
 }
 .categorylink a {
 	color: white;

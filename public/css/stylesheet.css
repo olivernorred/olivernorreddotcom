@@ -1,275 +1,291 @@
 @import url("https://use.typekit.net/tes7zlb.css");
 @font-face {
-	font-family: "DM Mono";
-	src: url("/fonts/DMMono-Regular.ttf");
+    font-family: "DM Mono";
+    src: url("/fonts/DMMono-Regular.ttf");
 }
 @font-face {
-	font-family: "DM Mono";
-	font-style: italic;
-	src: url("/fonts/DMMono-Italic.ttf");
+    font-family: "DM Mono";
+    font-style: italic;
+    src: url("/fonts/DMMono-Italic.ttf");
 }
 @font-face {
-	font-family: "DM Mono";
-	font-weight: bold;
-	src: url("/fonts/DMMono-Medium.ttf");
+    font-family: "DM Mono";
+    font-weight: bold;
+    src: url("/fonts/DMMono-Medium.ttf");
 }
 @font-face {
-	font-family: "Literata";
-	src: url("/fonts/LiterataTT-CaptionRegular.woff2");
+    font-family: "Literata";
+    src: url("/fonts/LiterataTT-CaptionRegular.woff2");
 }
 @font-face {
-	font-family: "Literata";
-	font-style: italic;
-	src: url("/fonts/LiterataTT-CaptionItalic.woff2");
+    font-family: "Literata";
+    font-style: italic;
+    src: url("/fonts/LiterataTT-CaptionItalic.woff2");
 }
 @font-face {
-	font-family: "Literata";
-	font-weight: bold;
-	src: url("/fonts/LiterataTT-CaptionBold.woff2");
+    font-family: "Literata";
+    font-weight: bold;
+    src: url("/fonts/LiterataTT-CaptionBold.woff2");
 }
 @font-face {
-	font-family: "Taters Fried";
-	src: url("/fonts/Taters0.2-Fried.otf");
+    font-family: "Taters Fried";
+    src: url("/fonts/Taters0.2-Fried.otf");
 }
 @font-face {
-	font-family: "Taters Baked";
-	src: url("/fonts/Taters0.2-Baked.otf");
+    font-family: "Taters Baked";
+    src: url("/fonts/Taters0.2-Baked.otf");
 }
 @font-face {
-	font-family: 'Bizzarrini';
-	src: url('/fonts/Bizzarrini-V0_4-VF.ttf');
+    font-family: "Bizzarrini";
+    src: url("/fonts/Bizzarrini-V0_4-VF.ttf");
 }
 @font-face {
-	font-family: 'Gooper Light';
-	src: url('/fonts/Gooper7-Light.woff2');
+    font-family: "Gooper Light";
+    src: url("/fonts/Gooper7-Light.woff2");
 }
 @font-face {
-	font-family: 'Gooper Light';
-	font-weight: bold;
-	src: url('/fonts/Gooper7-Regular.woff2');
+    font-family: "Gooper Light";
+    font-weight: bold;
+    src: url("/fonts/Gooper7-Regular.woff2");
 }
 @font-face {
-	font-family: 'Gooper Light';
-	font-style: italic;
-	src: url('/fonts/Gooper7-LightItalic.woff2');
+    font-family: "Gooper Light";
+    font-style: italic;
+    src: url("/fonts/Gooper7-LightItalic.woff2");
 }
 @font-face {
-	font-family: 'Gooper';
-	src: url('/fonts/Gooper7-Regular.woff2');
+    font-family: "Gooper";
+    src: url("/fonts/Gooper7-Regular.woff2");
 }
 @font-face {
-	font-family: 'Gooper';
-	font-weight: bold;
-	src: url('/fonts/Gooper7-Bold.woff2');
+    font-family: "Gooper";
+    font-weight: bold;
+    src: url("/fonts/Gooper7-Bold.woff2");
 }
 @font-face {
-	font-family: 'Gooper';
-	font-style: italic;
-	src: url('/fonts/Gooper7-RegularItalic.woff2');
+    font-family: "Gooper";
+    font-style: italic;
+    src: url("/fonts/Gooper7-RegularItalic.woff2");
 }
 @font-face {
-	font-family: 'Gooper';
-	font-weight: bold;
-	font-style: italic;
-	src: url('/fonts/Gooper7-BoldItalic.woff2');
+    font-family: "Gooper";
+    font-weight: bold;
+    font-style: italic;
+    src: url("/fonts/Gooper7-BoldItalic.woff2");
 }
 @font-face {
-	font-family: 'Gooper Super';
-	src: url('/fonts/Gooper7-Super.woff2');
+    font-family: "Gooper Super";
+    src: url("/fonts/Gooper7-Super.woff2");
 }
 
-*{
-	margin: 0; padding: 0;
-	box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 :root {
-	font-size: 18px;
+    font-size: 18px;
 }
-::-webkit-scrollbar{
-	width: .5rem;
+::-webkit-scrollbar {
+    width: 0.5rem;
 }
 ::-webkit-scrollbar-track {
-	background: var(--bgcolor);
+    background: var(--bgcolor);
 }
 ::-webkit-scrollbar-thumb {
-	background: var(--fgcolor);
+    background: var(--fgcolor);
 }
 ::-webkit-scrollbar-thumb:hover {
-	background: var(--fgtranslucent);
+    background: var(--fgtranslucent);
 }
 
 body {
-	--fgcolor: #000;
-	--bgcolor: #fff;
-	--acolor: #00b;
-	--altbgcolor: #c8f1ff;
-	--fgtranslucent: rgba(0,0,0,0.7);
-	--mildfgcolor: #505050;
-	--translucent: rgba(0,0,0,0.1);
-	--bgimage: ;
+    --fgcolor: #000;
+    --bgcolor: #fff;
+    --acolor: #00b;
+    --altbgcolor: #c8f1ff;
+    --fgtranslucent: rgba(0, 0, 0, 0.7);
+    --mildfgcolor: #505050;
+    --translucent: rgba(0, 0, 0, 0.1);
+    --bgimage: ;
 
-	/* cool colors */
-		--darkblue: rgb(13, 6, 40);
-		--cream: rgb(255, 241, 208); 
-		--yellow: rgb(220, 170, 0);  
-		--red: rgb(214, 40, 57);     
-		--blue: rgb(45, 167, 212);   
-		--white: rgb(255, 255, 255);
-	
-	--displayfont: "Gooper Light", sans-serif;
-	--headerfont: "Gooper Light", degular, sans-serif;
-	--smallheadingfont: "Gooper", sans-serif;
-	--monofont: "DM Mono", monospace;
-	--bodyfont: "Literata", serif;
+    /* cool colors */
+    --darkblue: rgb(13, 6, 40);
+    --cream: rgb(255, 241, 208);
+    --yellow: rgb(220, 170, 0);
+    --red: rgb(214, 40, 57);
+    --blue: rgb(45, 167, 212);
+    --white: rgb(255, 255, 255);
 
-	--bigwidth: 1000px;
-	--mainradius: .25rem;
+    --displayfont: "Gooper Light", sans-serif;
+    --headerfont: "Gooper Light", degular, sans-serif;
+    --smallheadingfont: "Gooper", sans-serif;
+    --monofont: "DM Mono", monospace;
+    --bodyfont: "Literata", serif;
 
-	margin: 0;
-	color: var(--fgcolor);
-	background-color: var(--bgcolor);
-	/* background-image: url('/images/homepage/organicborders.svg'); */
-	background-size: 100%;
-	background-repeat: no-repeat;
-	background-position: top;
+    --bigwidth: 1000px;
+    --mainradius: 0.25rem;
 
-	font-family: var(--monofont), monospace;
+    margin: 0;
+    color: var(--fgcolor);
+    background-color: var(--bgcolor);
+    /* background-image: url('/images/homepage/organicborders.svg'); */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+
+    font-family: var(--monofont), monospace;
 }
 body.darkmode {
-	--fgcolor: #fff;
-	--bgcolor: #000;
-	--acolor: #b1d8ff;
-	--altbgcolor: #003d52;
-	--fgtranslucent: rgba(255,255,255,0.7);
-	--mildfgcolor: #b0b0b0;
-	--translucent: rgba(255,255,255,0.2);
-	--bgimage: url("");
+    --fgcolor: #fff;
+    --bgcolor: #000;
+    --acolor: #b1d8ff;
+    --altbgcolor: #003d52;
+    --fgtranslucent: rgba(255, 255, 255, 0.7);
+    --mildfgcolor: #b0b0b0;
+    --translucent: rgba(255, 255, 255, 0.2);
+    --bgimage: url("");
 }
-
 
 /* General text rules */
 
 img {
-	max-width: 100%;
+    max-width: 100%;
 }
 
 a {
-	margin: -.1rem -.3rem;
-	padding: .1rem .3rem;
-	color: var(--acolor);
-	text-decoration: none;
+    /* margin: -0.1rem -0.3rem;
+    padding: 0.1rem 0.3rem; */
+    color: var(--acolor);
+    text-decoration: none;
 }
 a:hover {
-	text-decoration: underline;
-	text-decoration-color: var(--fgcolor);
+    text-decoration: underline;
+    text-decoration-color: var(--fgcolor);
 }
 a:active {
-	position: relative;
-	top: 1px;
+    position: relative;
+    top: 1px;
 }
 
 a.linkdisabled {
-	opacity: .2;
-	pointer-events: none;
+    opacity: 0.2;
+    pointer-events: none;
 }
 
 nw {
-	white-space: nowrap;
+    white-space: nowrap;
 }
 
-h1, h2, h3, h4, h5, h6, p, ol, ul {
-	font-weight: normal;
-	margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    font-weight: normal;
+    margin: 0;
 }
 em {
-	font-style: italic;
+    font-style: italic;
+}
+sup {
+	font-size: .8em;
+	vertical-align: super;
+}
+sub {
+	font-size: .8em;
+	vertical-align: sub;
 }
 
 #container {
-	margin: 0;
+    margin: 0;
 }
 #skip-link {
-	position: absolute;
-	top: -4rem;
-	z-index: 100;
+    position: absolute;
+    top: -4rem;
+    z-index: 100;
 }
 #skip-link:focus {
-	top: 0;
+    top: 0;
 }
-
-
-
-
-
-
 
 /* HEADER */
 
 #header {
-	display: block;
-	margin: 0 auto;
-	margin-bottom: 0rem;
-	padding: 1rem 0;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0rem;
+    padding: 1rem 0;
 }
 .sitemap {
-	display: grid;
-	grid-template-columns: 1fr;
-	place-items: center;
-	gap: .5rem;
-	margin: auto;
-	padding: 0;
-	font-family: "Gooper", sans-serif;
-	text-align: center;
-	font-size: 1rem;
-	line-height: 1;
-	
-	
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 0.5rem;
+    margin: auto;
+    padding: 0;
+    font-family: "Gooper", sans-serif;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1;
 }
 .sublinks {
-	grid-row: 2;
-	place-self: center;
-	display: grid;
-	grid-template-columns: 1fr min-content 1fr min-content 1fr;
-	gap: .25rem;
-	width: min-content;
-	padding-top: .25rem;
-	font-size: 1.5rem;
-
-
+    grid-row: 2;
+    place-self: center;
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr min-content 1fr;
+    gap: 0.25rem;
+    width: min-content;
+    padding-top: 0.25rem;
+    font-size: 1.5rem;
 }
 @keyframes skewsublinks {
-	0%   {transform: rotateY(0deg)}
-	25%  {transform: rotateY(50deg)}
-	50%  {transform: rotateY(0deg)}
-	75%  {transform: rotateY(-50deg)}
-	100% {transform: rotateY(0deg)}
+    0% {
+        transform: rotateY(0deg);
+    }
+    25% {
+        transform: rotateY(50deg);
+    }
+    50% {
+        transform: rotateY(0deg);
+    }
+    75% {
+        transform: rotateY(-50deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
 }
 .sublinks * {
-	align-self: end;
+    align-self: end;
 }
 .sublinks .active {
-	color: var(--fgcolor);
-	font-family: "Gooper Super";
-	text-decoration: underline;
-	letter-spacing: normal;
+    color: var(--fgcolor);
+    font-family: "Gooper Super";
+    text-decoration: underline;
+    letter-spacing: normal;
 }
 .sitemap::-webkit-scrollbar {
-	width: .25rem;
-	height: .25rem;
+    width: 0.25rem;
+    height: 0.25rem;
 }
 #indexlinkcontainer {
-	margin: auto;
+    margin: auto;
 }
 #o-vector-logo {
-	padding-right: 1px;
-	width: 100%;
-	width: 3rem;
+    padding-right: 1px;
+    width: 100%;
+    width: 3rem;
 }
 #o-vector-logo.index-O path {
-	fill: var(--fgcolor);
+    fill: var(--fgcolor);
 }
 a #o-vector-logo path {
-	fill: var(--acolor);
+    fill: var(--acolor);
 }
 
 /* #o-vector-logo.blog-O path {
@@ -283,189 +299,176 @@ a #o-vector-logo path {
 } */
 
 body.darkmode canvas {
-	filter: invert(100%);
+    filter: invert(100%);
 }
 
 #darkmodecontainer {
-	/* REMOVE DARKMODE CHECKBOX */
-	display: none;
+    /* REMOVE DARKMODE CHECKBOX */
+    display: none;
 
-	position: absolute;
-	top: 10px;
-	right: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 #darkmodecontainer label {
-	color: var(--fgtranslucent);
+    color: var(--fgtranslucent);
 }
 input[type="checkbox"] {
-	width: 1rem;
-	height: 1rem;
-	transform: translate(0, .2rem);
+    width: 1rem;
+    height: 1rem;
+    transform: translate(0, 0.2rem);
 }
-
-
-
-
-
-
-
-
-
-
 
 /* content ------------------------------------------------------------------------------------------------------------------*/
 #content {
-	margin: auto .5rem;
-	margin-top: 1.5rem;
+    margin: auto 0.5rem;
+    margin-top: 1.5rem;
 }
 
 p:not(:first-child) {
-	margin-top: .5rem;
-	line-height: 1.5;
+    margin-top: 0.5rem;
+    line-height: 1.5;
 }
-
-
-
-
 
 /* blog post links */
 #postlinkscontainer {
-	position: relative;
-	max-width: 400px;
-	margin: auto;
-	transition: transform .1s, box-shadow .1s;
+    position: relative;
+    max-width: 400px;
+    margin: auto;
+    transition: transform 0.1s, box-shadow 0.1s;
 }
 #postlinkscontainer div {
-	position: relative;
-	height: min-content;
-	margin: 0;
-	padding: .1rem .7rem 1rem .7rem;
-	border: 1px solid var(--fgcolor);
-	border-radius: var(--mainradius);
-	overflow: hidden;
-	background-color: var(--bgcolor);
-	font-family: var(--bodyfont), serif;
-	transition: transform .1s, box-shadow .1s;
+    position: relative;
+    height: min-content;
+    margin: 0;
+    padding: 0.1rem 0.7rem 1rem 0.7rem;
+    border: 1px solid var(--fgcolor);
+    border-radius: var(--mainradius);
+    overflow: hidden;
+    background-color: var(--bgcolor);
+    font-family: var(--bodyfont), serif;
+    transition: transform 0.1s, box-shadow 0.1s;
 }
 
 #postlinkscontainer div:first-child {
-	max-width: none;
+    max-width: none;
 }
 #postlinkscontainer::before {
-	content: "\2726new!\2726  ";
-	position: absolute;
-	top: -.5rem; left: -.2rem;
-	background: linear-gradient( to bottom, transparent, var(--bgcolor), transparent);
-	z-index: 1000;
-	padding: 0 .2rem;
-	color: var(--fgcolor);
-	font-family: var(--monofont), monospace;
-	font-style: normal;
-	font-size: 1rem;
-	vertical-align: super;
-	transition: transform .1s;
-	display: none;
+    content: "\2726new!\2726  ";
+    position: absolute;
+    top: -0.5rem;
+    left: -0.2rem;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--bgcolor),
+        transparent
+    );
+    z-index: 1000;
+    padding: 0 0.2rem;
+    color: var(--fgcolor);
+    font-family: var(--monofont), monospace;
+    font-style: normal;
+    font-size: 1rem;
+    vertical-align: super;
+    transition: transform 0.1s;
+    display: none;
 }
 
 #postlinkscontainer div:hover {
-	transform: translate(.333rem, 0);
+    transform: translate(0.333rem, 0);
 }
 #postlinkscontainer div:hover ~ div {
-	transform: translate(0, .333rem);
+    transform: translate(0, 0.333rem);
 }
 #postlinkscontainer div:not(:first-child) {
-	margin-top: -.666rem;
+    margin-top: -0.666rem;
 }
 #postlinkscontainer div:last-child {
-	padding-bottom: .1rem;
-	border-radius: var(--mainradius);
-	border-bottom: 1px solid;
+    padding-bottom: 0.1rem;
+    border-radius: var(--mainradius);
+    border-bottom: 1px solid;
 }
 
 #postlinkscontainer.searched div {
-	max-width: 533px;
+    max-width: 533px;
 }
 
 #postlinkscontainer h1 {
-	font-size: 1.6rem;
+    font-size: 1.6rem;
 }
 
-
-
-input[type="text"], #richtext {
-	width: 16rem;
-	border-width: 0 0 2px 0;
-	border-style: solid;
-	border-radius: 0;
-	border-color: var(--fgcolor);
-	outline: none;
-	color: var(--fgcolor);
-	background: none;
+input[type="text"],
+#richtext {
+    width: 16rem;
+    border-width: 0 0 2px 0;
+    border-style: solid;
+    border-radius: 0;
+    border-color: var(--fgcolor);
+    outline: none;
+    color: var(--fgcolor);
+    background: none;
 }
 
 .inputlowerlabel {
-	display: block;
-	opacity: .5;
-	transform-origin: left;
-	transform: translate(0,-1.3rem);
-	pointer-events: none;
-	transition: transform .15s, opacity .15s;
+    display: block;
+    opacity: 0.5;
+    transform-origin: left;
+    transform: translate(0, -1.3rem);
+    pointer-events: none;
+    transition: transform 0.15s, opacity 0.15s;
 }
-input:not(:placeholder-shown) + .inputlowerlabel, input:focus + .inputlowerlabel {
-	opacity: 1;
-	transform: translate(0,0) scale(.7, .7);
+input:not(:placeholder-shown) + .inputlowerlabel,
+input:focus + .inputlowerlabel {
+    opacity: 1;
+    transform: translate(0, 0) scale(0.7, 0.7);
 }
-
-
-
-
 
 /* BLOGPOSTS */
 
 #content.contentforblogpost {
-	max-width: 650px;
-	margin: auto;
-	padding: 0 .5rem;
+    max-width: 650px;
+    margin: auto;
+    padding: 0 0.5rem;
 }
 /* ^ I think this is actually good practice. I thought about adding another container, but it's only one box. */
 
 .blogpost {
-	margin: 1rem auto;
-	padding: .5rem .7rem;
-	border: 1px solid var(--fgcolor);
-	border-radius: var(--mainradius);
-	font-family: var(--bodyfont), sans-serif;
-	font-variant-numeric: oldstyle-nums;
-	font-variation-settings: "wght" 400, "opsz" 10;
-	line-height: 1.5;
-	background-color: var(--bgcolor);
+    margin: 1rem auto;
+    padding: 0.5rem 0.7rem;
+    border: 1px solid var(--fgcolor);
+    border-radius: var(--mainradius);
+    font-family: var(--bodyfont), sans-serif;
+    font-variant-numeric: oldstyle-nums;
+    font-variation-settings: "wght" 400, "opsz" 10;
+    line-height: 1.5;
+    background-color: var(--bgcolor);
 }
-
 
 .blogpost h1 {
-	margin: .5rem 0;
-	padding: 0;
-	font-family: var(--headerfont), var(--bodyfont), sans-serif;
-	font-variation-settings: 'wght' 300, 'opsz' 24;
-	font-size: 2rem;
-	font-weight: normal;
-	line-height: 1.1;
+    margin: 0.5rem 0;
+    padding: 0;
+    font-family: var(--headerfont), var(--bodyfont), sans-serif;
+    font-variation-settings: "wght" 300, "opsz" 24;
+    font-size: 2rem;
+    font-weight: normal;
+    line-height: 1.1;
 }
 .blogpost h1:focus:not(:focus-visible) {
-	outline: none;
+    outline: none;
 }
 .blogpost:not(.griditem) h1 {
-	margin-top: 0;
+    margin-top: 0;
 }
 
 .blogpost h2 {
-	padding: 0;
-	color: var(--fgtranslucent);
-	/* font-family: "Bizzarrini"; */
-	/* font-variation-settings: 'opsz' 12, 'wght' 400; */
-	font-style: italic;
-	font-weight: normal;
-	font-size: 1rem;
+    padding: 0;
+    color: var(--fgtranslucent);
+    /* font-family: "Bizzarrini"; */
+    /* font-variation-settings: 'opsz' 12, 'wght' 400; */
+    font-style: italic;
+    font-weight: normal;
+    font-size: 1rem;
 }
 
 /** TAGS */
@@ -485,236 +488,227 @@ input:not(:placeholder-shown) + .inputlowerlabel, input:focus + .inputlowerlabel
 } */
 
 .blogpost h3 {
-
 }
 
 p {
-	font-variation-settings: "opsz" 10;
+    font-variation-settings: "opsz" 10;
 }
 p strong {
-	font-weight: normal;
-	font-variation-settings: "opsz" 10, "wght" 700;
+    font-weight: normal;
+    font-variation-settings: "opsz" 10, "wght" 700;
 }
 
 p.caption {
-	font-style: italic;
-	margin-top: -1rem;
-	color: var(--fgtranslucent);
+    font-style: italic;
+    margin-top: -1rem;
+    color: var(--fgtranslucent);
 }
 p.caption::before {
-	content: "\2191     ";
+    content: "\2191     ";
 }
 
 .blogpost blockquote {
-	position: relative;
-	margin: 1rem 0;
-	padding: .5rem 1rem;
-	border-radius: .5rem;
-	background: var(--translucent);
+    position: relative;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background: var(--translucent);
 }
-.blogpost img{
-	display: block;
-	width: 100%;
-	margin: 1.5rem auto;
-	font-style: italic;
+.blogpost img {
+    display: block;
+    width: 100%;
+    margin: 1.5rem auto;
+    font-style: italic;
 }
 .blogpost p:last-child img {
-	margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .smallcaps {
-	font-variant-caps: small-caps;
+    font-variant-caps: small-caps;
 }
 code {
-	font-family: var(--monofont), monospace;
+    font-family: var(--monofont), monospace;
 }
 
 .footnotes {
-	position: relative;
-	margin: 2rem 1rem 0 1rem;
-	padding: 1rem;
-	font-size: .75rem;
+    position: relative;
+    margin: 2rem 1rem 0 1rem;
+    padding: 1rem;
+    font-size: 0.75rem;
 }
 .footnotes::before {
-	content: "";
-	position: absolute;
-	left: 0; top: 0;
-	width: 33%;
-	height: 1px;
-	border-top: 1px solid var(--fgcolor);
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 33%;
+    height: 1px;
+    border-top: 1px solid var(--fgcolor);
 }
 .footnotes li {
-	padding: .5rem;
+    padding: 0.5rem;
 }
 .footnotes li:target {
-	background: var(--altbgcolor);
-	animation: fadeBackgroundOut 1.5s .5s linear forwards;
+    background: var(--altbgcolor);
+    animation: fadeBackgroundOut 1.5s 0.5s linear forwards;
 }
 @keyframes fadeBackgroundOut {
-	to{background:none;}
+    to {
+        background: none;
+    }
 }
 
 /* COMMENTS */
 
 #commentform {
-	display: block;
-	max-width: 500px;
-	margin-top: 4rem;
-	font-variation-settings: "opsz" 10;
+    display: block;
+    max-width: 500px;
+    margin-top: 4rem;
+    font-variation-settings: "opsz" 10;
 }
-#commentform textarea, #commentform input[type="text"] {
-	width: 100%;
-	margin: .25rem 0;
-	padding: .4rem .25rem;
-	border: 1px solid var(--translucent);
-	border-radius: var(--mainradius);
-	resize: vertical;
-	color: var(--fgcolor);
-	background: var(--bgcolor);
-	box-shadow: 2px 2px 4px var(--translucent) inset;
-	font-family: "Literata", serif;
+#commentform textarea,
+#commentform input[type="text"] {
+    width: 100%;
+    margin: 0.25rem 0;
+    padding: 0.4rem 0.25rem;
+    border: 1px solid var(--translucent);
+    border-radius: var(--mainradius);
+    resize: vertical;
+    color: var(--fgcolor);
+    background: var(--bgcolor);
+    box-shadow: 2px 2px 4px var(--translucent) inset;
+    font-family: "Literata", serif;
 }
-body.darkmode #commentform textarea, body.darkmode #commentform input[type="text"] {
-	box-shadow: -2px -2px 4px var(--translucent) inset;
+body.darkmode #commentform textarea,
+body.darkmode #commentform input[type="text"] {
+    box-shadow: -2px -2px 4px var(--translucent) inset;
 }
 #commentform textarea {
-	line-height: 1.3;
+    line-height: 1.3;
 }
 #commentform textarea:focus-visible {
-	outline: none;
+    outline: none;
 }
 #commentform label {
-	display: block;
-	/* margin: .25rem 0; */
+    display: block;
+    /* margin: .25rem 0; */
 }
 
 #commentform input[type="submit"] {
-	position: relative; top:0; left:0;
-	display: block;
-	width: 100%;
-	padding: .5rem 1rem;
-	border: 1px solid var(--translucent);
-	border-radius: var(--mainradius);
-	outline: none;
-	font-family: var(--monofont);
-	font-size: 1rem;
-	font-weight: normal;
-	color: var(--fgcolor);
-	background: var(--bgcolor);
-	box-shadow: 2px 2px var(--fgcolor);
-	transition: .05s;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--translucent);
+    border-radius: var(--mainradius);
+    outline: none;
+    font-family: var(--monofont);
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--fgcolor);
+    background: var(--bgcolor);
+    box-shadow: 2px 2px var(--fgcolor);
+    transition: 0.05s;
 }
 #commentform input[type="submit"]:active {
-	top: 2px; left: 2px;
-	box-shadow: 0 0 var(--fgcolor);
+    top: 2px;
+    left: 2px;
+    box-shadow: 0 0 var(--fgcolor);
 }
 
 /* comment section */
 #commentsection {
-	width: 100%;
-	margin: 2rem 0;
+    width: 100%;
+    margin: 2rem 0;
 }
 #commentsection .comment {
-	max-width: 500px;
-	margin: 1rem 0;
-	padding: .5rem;
-	border: 1px solid var(--translucent);
-	border-radius: var(--mainradius);
+    max-width: 500px;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border: 1px solid var(--translucent);
+    border-radius: var(--mainradius);
 }
 .comment .commentinfo {
-	display: flex;
-	flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 .comment .commentername {
-	font-family: "Literata", serif;
-	font-style: italic;
-	font-weight: bold;
-	margin: 0;
+    font-family: "Literata", serif;
+    font-style: italic;
+    font-weight: bold;
+    margin: 0;
 }
 .comment .commentdate {
-	width: fit-content;
-	margin: .3rem 0 0 auto;
-	opacity: .8;
-	font-size: .75rem;
+    width: fit-content;
+    margin: 0.3rem 0 0 auto;
+    opacity: 0.8;
+    font-size: 0.75rem;
 }
 .comment .commentcontent {
-	font-family: "Literata", serif;
-	margin: .25rem 0;
+    font-family: "Literata", serif;
+    margin: 0.25rem 0;
 }
-
-
 
 .special-christmas-mode-indicator {
-	font-style: italic;
+    font-style: italic;
 }
 .special-christmas-mode-indicator span {
-	color: green;
+    color: green;
 }
 .special-christmas-mode-indicator span:nth-child(even) {
-	color: red;
+    color: red;
 }
-
-
-
 
 .project {
-	padding: 1rem;
-	border: 1px solid var(--fgcolor);
-	border-radius: var(--mainradius);
-	background: var(--altbgcolor);
+    padding: 1rem;
+    border: 1px solid var(--fgcolor);
+    border-radius: var(--mainradius);
+    background: var(--altbgcolor);
 }
 .codeblock {
-	font-family: var(--monofont), monospace;
+    font-family: var(--monofont), monospace;
 }
 .project canvas {
-	display: block;
-	width: 75%;
-	margin: auto;
-	background: white;
+    display: block;
+    width: 75%;
+    margin: auto;
+    background: white;
 }
 
-
 #footer {
-	width: min-content;
-	max-width: var(--bigwidth);
-	margin: 1rem auto;
-	margin-top: 4rem;
-	font-size: 1rem;
-	background: var(--bgcolor);
-	padding: .5rem;
-	border-radius: var(--mainradius);
+    width: min-content;
+    max-width: var(--bigwidth);
+    margin: 1rem auto;
+    margin-top: 4rem;
+    font-size: 1rem;
+    background: var(--bgcolor);
+    padding: 0.5rem;
+    border-radius: var(--mainradius);
+    text-align: center;
 }
 
 .blogheadernote {
-	width: fit-content;
-	margin: .5rem 0;
+    width: fit-content;
+    margin: 0.5rem 0;
 }
-
-
-
-
-
-
-
-
-
-
 
 /* BREAKPOINTS ----------------------------------------------------------------------------------------------- */
 @media only screen and (min-width: 1036px) {
-	#darkmodecontainer {
-		position: absolute;
-		top: 10px;
-		right: 10px;
-	}
+    #darkmodecontainer {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
 }
 
 @media only screen and (max-width: 1036px) {
-	img {
-		border: none;
-	}
-	#darkmodecontainer {
-		margin-top: -.5rem;
-	}
+    img {
+        border: none;
+    }
+    #darkmodecontainer {
+        margin-top: -0.5rem;
+    }
 }
-

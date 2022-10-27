@@ -67,11 +67,23 @@
 		pathd="m-29.66498,127.33333c96,-2 98,17 170,17c72,0 74,-23 138,-21c64,2 72,28 114,25c42,-3 77,-21 136.66498,-30.33333"
 		
 		>
+	<p class="introductionbodytext">is my <span style="font-family: 'DM Mono'; letter-spacing: 2px; text-shadow: -4px 8px 2px rgb(0 0 50 / 0.5)">eponymous URL</span>. This website comprises <span style="font-family: 'Times New Roman'; font-style: italic; font-weight: bold;font-size: 1.15em; letter-spacing: -3px">&nbsp; three &nbsp;&nbsp; important &nbsp;&nbsp; elements &nbsp;</span> of my online presence:</p>
 	</svg>
 	<script src="/js/legitmarquees.js"></script>
-	<h1><a href="/blog/" id="introbloglink">blog</a></h1>
-	<h1><a href="/work/" id="introdesignlink">design</a></h1>
-	<h1><a href="/music/" id="intromusiclink">music</a></h1>
+	<h1>my <a href="/blog/" id="introbloglink">blog</a>,</h1>
+	<h1>my <a href="/work/" id="introdesignlink">design</a> work,</h1>
+	<h1>and my <a href="/music/" id="intromusiclink">music</a>.</h1>
+	<p class="introductionbodytext">Use the <span id="topbartooltip" style="position: relative; border-bottom: 1px dotted black; cursor: help; font-family: 'Times New Roman'; font-weight: bold; font-size: 1.1em; letter-spacing: -2px; z-index: 0;">top bar<sup>?</sup></span> to navigate between the three categories, if you must!</p>
+
+	<div id="moreaboutme">
+		<h1 style="font-family: Times New Roman;">More about me</h1>
+		<p>
+			<img src="/images/homepage/dogpiano.gif" alt="An animated gif of a cartoon dog playing a piano">
+			<img src="/images/homepage/dogpiano.gif" alt="An animated gif of a cartoon dog playing a piano" style="transform: scale(-1,1);">
+		</p>
+		<p>I’m a <a href="/design/">designer</a> and <a href="/music/">musician</a> from Seattle. I love food. I have a <a href="/music/allofourcornbread/">band called All of Our Cornbread</a>.</p>
+		<p>I’m on <a href="https://www.instagram.com/olivernorred/">Instagram</a>, <a href="https://www.youtube.com/c/OliverNorred">YouTube</a>, <a href="https://twitter.com/olivernorred">Twitter</a>, and <a href="https://github.com/olivernorred">GitHub</a>. <a href="mailto:norredoliver@gmail.com">Email</a>, too. Links in the footer &darr;</p>
+	</div>
 </section>
 
 
@@ -119,6 +131,7 @@
 
 	ctx.lineWidth = 4;
 	ctx.strokeStyle = "#f06"
+	ctx.lineCap = "round";
 	function draw() {
 
 		//BOTTOM LINKS CHECKING MOUSE
@@ -187,8 +200,78 @@
 		
 		requestAnimationFrame(draw);
 	}
-	draw()
+	// draw()
+
+
+
+	// Top bar tooltip animation activation
+	const tooltip = document.querySelector("#topbartooltip")
+	coords.tooltip = {
+		x: getBoundingBox(tooltip).x,
+		y: getBoundingBox(tooltip).y
+	}
+	document.querySelector("#topbartooltip").addEventListener('click', (e)=>{
+		console.log("tooltip clicked" + e)
+		tooltip.relativexposition = 0
+		tooltip.relativeyposition = 0
+		animateTooltipUpward(0)
+
+	})
+	let cycle = 0
+	function animateTooltipUpward(){
+		let oscillstartx = 0
+		let oscillstarty = 0
+		let stepcount = 49
+
+		let sublinksborderopacity = 0
+		if (cycle < stepcount) {
+			tooltip.relativexposition += ((coords.design.x-10) - coords.tooltip.x)/stepcount
+			tooltip.relativeyposition += (coords.design.y - coords.tooltip.y)/50
+			tooltip.style.left = tooltip.relativexposition + "px"
+			tooltip.style.top = tooltip.relativeyposition + "px"
 	
+			cycle++
+			requestAnimationFrame(animateTooltipUpward)
+		}
+
+		else if (cycle === stepcount) {
+			oscillstartx = tooltip.relativexposition
+			oscillstarty = tooltip.relativeyposition
+			cycle++
+			requestAnimationFrame(animateTooltipUpward)
+		}
+
+
+		else if (cycle < 90) {
+			sublinksborderopacity+=0.1
+			document.querySelector(".sublinks").style.boxShadow = `0 0 4px 4px rgb(0 0 187 / ${sublinksborderopacity})`;
+			
+
+			// let a = (coords.music.x - coords.blog.x)
+			// console.log("oscillating?")
+			// tooltip.relativexposition = -a*Math.cos(0.05*(cycle - stepcount)) + a
+			// console.log(cycle, tooltip.relativexposition - coords.blog.x)
+			// tooltip.style.left = tooltip.relativexposition + "px"
+			// tooltip.style.top = tooltip.relativeyposition + "px"
+
+			cycle++
+			requestAnimationFrame(animateTooltipUpward)
+		}
+		else if (cycle < 100) {
+			document.querySelector(".sublinks").style.boxShadow = "0 0 4px 4px rgb(0 0 187 / 0)";
+			cycle++
+			requestAnimationFrame(animateTooltipUpward)
+		}
+		else {
+			// tooltip.relativexposition = 0
+			// tooltip.relativeyposition = 0
+			tooltip.style.left = tooltip.relativexposition + "px"
+			tooltip.style.top = tooltip.relativeyposition + "px"
+			cycle = 0
+		}
+	}
+
+		
 	function getBoundingBox (element) {
 		const box = element.getBoundingClientRect()
 		const ret = { }
