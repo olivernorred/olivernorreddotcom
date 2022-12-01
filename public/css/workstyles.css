@@ -20,7 +20,7 @@ body {
 
 #content {
 	font-family: "Literata", serif;
-	max-width: 1200px;
+	max-width: 1000px;
 	margin-top: 0;
 	margin: auto;
 }
@@ -62,9 +62,9 @@ video {
 	justify-content: left;
 	gap: 1rem;
 }
-	.workitem:nth-of-type(even) .cardsplit {
+	/* .workitem:nth-of-type(even) .cardsplit {
 		flex-direction: row-reverse;
-	}
+	} */
 .workitem .cardsplit > * {
 	width: 50%;
 }
@@ -80,7 +80,7 @@ video {
 
 .workitem img, .workitem svg {
 	display: block;
-	border: 1px solid var(--fgcolor);
+	/* border: 1px solid var(--fgcolor); */
 	border-radius: var(--mainradius);
 }
 .workitem h1 {

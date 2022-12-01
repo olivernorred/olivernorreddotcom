@@ -1,6 +1,5 @@
 ---
 title: Sweet Boards by Montana
-tags: workitems
 description: "A Shopify website for a small Oregon-based candy board business"
 coverimage: "/images/work/sweetboards/coverimage.png"
 date: 2020-01-03
