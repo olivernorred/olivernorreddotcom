@@ -165,19 +165,6 @@ active: music
 	</svg>
 	<script>
 		const FRAMES = [
-			"Computer Time",
-			"Computer Tim",
-			"Computer Ti",
-			"Computer T",
-			"Computer ",
-			"Computer",
-			"Compute",
-			"Comput",
-			"Compu",
-			"Comp",
-			"Com",
-			"Co",
-			"C",
 			"",
 			"C",
 			"Co",
@@ -191,7 +178,20 @@ active: music
 			"Computer T",
 			"Computer Ti",
 			"Computer Tim",
-			"Computer Time"
+			"Computer Time",
+			"Computer Time",
+			"Computer Tim",
+			"Computer Ti",
+			"Computer T",
+			"Computer ",
+			"Computer",
+			"Compute",
+			"Comput",
+			"Compu",
+			"Comp",
+			"Com",
+			"Co",
+			"C"
 		]
 		function moveCursor() {
 			let textwidth = document.querySelector("#typingtext").getBBox().width
@@ -207,12 +207,16 @@ active: music
 			moveCursor();
 
 			let duration;
-			if(currtext === "Computer Time" || currtext === "") {
-				duration = 1000;
+			if(currtext === "Computer Time") {
+				duration = 1500;
+				document.querySelector("#cursor").setAttribute("style", "animation: blink steps(1) .5s infinite;");
+			}
+			else if (currtext === "") {
+				duration = 500;
 				document.querySelector("#cursor").setAttribute("style", "animation: blink steps(1) .5s infinite;");
 			}
 			else {
-				duration = 250;
+				duration = 150;
 				document.querySelector("#cursor").style.animation = "none"
 			}
 			setTimeout(advanceFrame, duration);
