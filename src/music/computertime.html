@@ -1,6 +1,6 @@
 ---
 layout: base.html
-title: You Can Already Dance \
+title: Computer Time \
 active: music
 ---
 
@@ -12,38 +12,44 @@ active: music
 		font-family: 'Bizzarrini';
 		src: url('/fonts/Bizzarrini-V0_4-VF.ttf');
 	}
+	@font-face {
+		font-family: "Apple Garamond";
+		src: url("/fonts/AppleGaramond.ttf");
+	}
 	
 	body {
 		--yellow: #EEB508;
 		--darknavy: #00000e;
-		--fgcolor: white;
-		--bgcolor: black;
+		--fgcolor: black;
+		--bgcolor: white;
 		--fgtranslucent: rgb(255 255 255 / .7);
 		
-		background: black;
-		--acolor: #6285a4;
+		background-image: url("/images/music/computertime/computertimegrainbg.png");
+		background-size: cover;
+		background-attachment: fixed;
+		--acolor: blue;
 		
 		font-family: "Gooper Light";
 		overflow-x: hidden;
+
+		animation: swapbg 1s linear infinite;
+	}
+
+	@keyframes swapbg {
+		from {background-image: url("/images/music/computertime/computertimegrainbg.png");}
+		
+		50% {background-image: url("/images/music/computertime/computertimegrainbg2.png");}
 	}
 	
-	#dancingloopcontainer {
-		position: sticky;
-		top: 0;
-		left: 0;
-		display: grid;
-		place-items: center;
-		height: 100vh;
-		width: 100%;
-		overflow-x: hidden;
-		z-index: -1000;
-	}
-	#dancingloop {
-		height: 100vh;
-		max-width: 100vw;
-	}
-	#dancingloopcontainer + #abstract {
-		margin-top: 90vh;
+
+	#whitepagecontainer {
+		max-width: 800px;
+		margin: auto;
+		padding: 1rem;
+		background: white;
+		box-shadow: 0 0 10px rgba(0,0,0,0.5);
+		aspect-ratio: 8.5 / 11;
+		font-family: "Times New Roman";
 	}
 
 	#alreadydancewordmark {
@@ -57,11 +63,10 @@ active: music
 	#streamingicons {
 		display: flex;
 		gap: 1rem;
-		max-width: clamp(200px, 28vw, 300px);
+		max-width: clamp(300px, 28vw, 300px);
 		margin: auto;
 		margin-top: 1rem;
 		margin-bottom: .75rem;
-		background: black;
 		padding: .5rem;
 		padding-bottom: .25rem;
 		/* border: 2px solid var(--fgcolor); */
@@ -78,22 +83,29 @@ active: music
 
 
 	#abstract {
-		white-space: pre;
-		overflow-x: hidden;
 		margin: 1rem auto;
-		padding: .5rem;
+		padding: 0;
 		width: 100%;
-		max-width: 500px;
-		background: rgb(0 0 0 / .8);
-		color: white;
-		font-family: "Gooper", sans-serif;
 		font-weight: 400;
-		font-size: clamp(.8rem, 1vw, 1rem);
-		line-height: 1.4;
+		font-size: 1rem;
+		line-height: 1;
 		border: 2px solid white;
+	}
+	#abstract p, #abstract ol {
+		line-height: 1;
+		margin-top: 1rem;
+	}
+	#abstract h1 {
+		margin-top: 2rem;
+		font-style: italic;
+		font-weight: bold;
+		text-decoration: underline;
 	}
 	#abstract strong {
 		font-weight: 700;
+	}
+	#abstract p a {
+		text-decoration: underline;
 	}
 	#videolinks, #lyricstext {
 		width: 52ch;
@@ -116,238 +128,157 @@ active: music
 </style>
 
 
-<img src="/images/music/alreadydancewordmark.svg" alt="You Can Already Dance" id="alreadydancewordmark">
+<div id="whitepagecontainer">
 
-<p style="text-align: center; font-size: 1rem; margin-top: 1rem;"><em>Produced by Oliver Norred.<br>Mastering by Cole Krueger.<br>Video work by Graham Godfrey.</em></p>
 
-<section id="streamingicons">
-	<a href="https://open.spotify.com/album/5iGjXGuwSN1okUZWCJJcB0">
-		<img src="/images/music/icons/spotify.svg" alt="You Can Already Dance on Spotify">
-	</a>
-	<a href="https://music.apple.com/us/album/you-can-already-dance-ep/1610368621?app=music">
-		<img src="/images/music/icons/applemusiccolor.svg" alt="You Can Already Dance on Apple Music">
-	</a>
-	<a href="https://music.youtube.com/browse/MPREb_IX3wCfbvXYd">
-		<img src="/images/music/icons/youtubemusic.svg" alt="You Can Already Dance on YouTube Music">
-	</a>
-	<a href="https://olivernorred.bandcamp.com/album/you-can-already-dance">
-		<img src="/images/music/icons/bandcampcolor.svg" alt="You Can Already Dance on Bandcamp">
-	</a>
-</section>
+	<svg version="1.1" baseProfile="tiny" id="svg-root"
+		width="100%" viewBox="40 0 950 300"
+		xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
-<div id="dancingloopcontainer">
-	<video id="dancingloop" src="/images/music/OPTIMIZEDdancing2secondloop.mp4" nocontrols autoplay loop playsinline></video>
+		<image width="1000" height="300" xlink:href="/images/music/computertime/full_cursor.png">
+			<animate attributeName="xlink:href" 
+			values="
+			/images/music/computertime/full_cursor.png;
+			/images/music/computertime/full_cursor.png;
+			/images/music/computertime/full_nocursor.png;
+			/images/music/computertime/full_nocursor.png;
+			/images/music/computertime/full_cursor.png;
+			/images/music/computertime/full_cursor.png;
+			/images/music/computertime/full_nocursor.png;
+			/images/music/computertime/full_nocursor.png;
+			/images/music/computertime/full_cursor.png;
+			/images/music/computertime/full_cursor.png;
+			/images/music/computertime/full_nocursor.png;
+			/images/music/computertime/full_nocursor.png;
+			/images/music/computertime/full_cursor.png;
+			/images/music/computertime/full_cursor.png;
+			/images/music/computertime/12.png;
+			/images/music/computertime/11.png;
+			/images/music/computertime/10.png;
+			/images/music/computertime/9.png;
+			/images/music/computertime/8.png;
+			/images/music/computertime/7.png;
+			/images/music/computertime/6.png;
+			/images/music/computertime/5.png;
+			/images/music/computertime/4.png;
+			/images/music/computertime/3.png;
+			/images/music/computertime/2.png;
+			/images/music/computertime/1.png;
+			/images/music/computertime/blank_cursor.png;
+			/images/music/computertime/blank_cursor.png;
+			/images/music/computertime/blank_nocursor.png;
+			/images/music/computertime/blank_nocursor.png;
+			/images/music/computertime/blank_cursor.png;
+			/images/music/computertime/blank_cursor.png;
+			/images/music/computertime/blank_nocursor.png;
+			/images/music/computertime/blank_nocursor.png;
+			/images/music/computertime/blank_cursor.png;
+			/images/music/computertime/blank_cursor.png;
+			/images/music/computertime/blank_nocursor.png;
+			/images/music/computertime/blank_nocursor.png;
+			/images/music/computertime/blank_cursor.png;
+			/images/music/computertime/blank_cursor.png;
+			/images/music/computertime/1.png;
+			/images/music/computertime/2.png;
+			/images/music/computertime/3.png;
+			/images/music/computertime/4.png;
+			/images/music/computertime/5.png;
+			/images/music/computertime/6.png;
+			/images/music/computertime/7.png;
+			/images/music/computertime/8.png;
+			/images/music/computertime/9.png;
+			/images/music/computertime/10.png;
+			/images/music/computertime/11.png;
+			/images/music/computertime/12.png;
+			/images/music/computertime/full_cursor.png;
+			/images/music/computertime/full_cursor.png;
+			/images/music/computertime/full_nocursor.png;
+			/images/music/computertime/full_nocursor.png;
+			/images/music/computertime/full_cursor.png;
+			/images/music/computertime/full_cursor.png;
+			/images/music/computertime/full_nocursor.png;
+			/images/music/computertime/full_nocursor.png;
+			/images/music/computertime/full_cursor.png;
+			/images/music/computertime/full_cursor.png;
+			/images/music/computertime/full_nocursor.png;
+			/images/music/computertime/full_nocursor.png;
+			/images/music/computertime/full_cursor.png;
+			/images/music/computertime/full_cursor.png;
+			"
+			begin="0s" repeatCount="indefinite" dur="5s"/>
+		</image>
+
+	</svg>
+
+	<section id="streamingicons">
+		<a href="">
+			<img src="/images/music/icons/spotify.svg" alt="You Can Already Dance on Spotify">
+		</a>
+		<a href="">
+			<img src="/images/music/icons/applemusiccolor.svg" alt="You Can Already Dance on Apple Music">
+		</a>
+		<a href="">
+			<img src="/images/music/icons/youtubemusic.svg" alt="You Can Already Dance on YouTube Music">
+		</a>
+		<a href="https://olivernorred.bandcamp.com/album/computer-time">
+			<img src="/images/music/icons/bandcampcolor.svg" alt="You Can Already Dance on Bandcamp">
+		</a>
+	</section>
+
+
+	<section id="abstract">
+		<p><em>The first single ever</em> from <a href="/music/allofourcornbread/">All of Our Cornbread!</a></p>
+		<ol>
+			<li>Oliver Norred &ndash; vocals, keyboards, production</li>
+			<li>Wyatt Markgraf &ndash; guitar</li>
+			<li>Carlos Alvarez &ndash; trumpet</li>
+			<li>Ava Lim &ndash; saxophone</li>
+			<li>Riley Huston &ndash; voice</li>
+		</ol>
+
+		<h1>Lyrics</h1>
+		<p>
+			block the windows to the trees and flowers
+			this os has got far more power
+			stay awake till ungodly hours
+			stay awake till ungodly hours
+			
+			block the windows to the trees and flowers
+			this os has got far more power
+			stay awake till ungodly hours
+			stay awake till ungodly hours
+		</p>
+
+		<p>
+			on the computer i can play my videos
+			behind the screen i can be so mean
+			on the computer i can play my videos
+			i can dictate how i'm seen
+		</p>
+
+		<p>
+			fuck the food you put off in the fridge
+			consume the content
+			fuck the bathroom, fuck the bathroom
+			shit in the content
+			
+			fuck the food you put off in the fridge
+			consume the content
+			fuck the bathroom, fuck the bathroom
+			shit out the content
+		</p>
+			
+		<p>
+			on the computer i can play my videos
+			behind the screen i can be so mean
+			on the computer i can play my videos
+			i can dictate how i'm seen
+			
+			on the computer i can play my videos
+			behind the screen i can be so mean
+			on the computer i can play my videos
+			i can dictate how i'm seen
+		</p>
+	</section>
+
 </div>
-
-
-<section id="abstract"><em><strong>YOU CAN ALREADY DANCE.</strong></em>
-
-
-<strong>1. Everyone, listen to this!</strong>
-
-Everyone—
-Okay, yeah. Okay, yeah.
-Just, everyone, listen to this. Listen to this.
-
-<em>[wub]</em>
-AAAAAAAAAAAAAAAAAAAAAAAAAA
-<em>[wub]</em>
-AAAAAAAAAAAAAAAAAAAAAAAAAA
-<em>sorry,[wub] real quic—</em>
-AAAAAAAAAAAAAAAAAAAAAAAAAA
-<em>[wub]</em>
-AAAAAAAAAAAAAAAAAAAAAAAAAA
-<em>[wub]</em>
-AAAAAA
-              AAAAAAA
-AAAAAA
-              AAAAAAA
-<em>[snare
-    snare
-snare]</em>
-<em>[wub]</em>
-AAAAAAAAAAAAAAAAAAAAA<em>[snare snare snare]</em>
-<em>[wub]</em>
-AAAAAAAAAAAAAAAAAAAAA<em>[snare snare snare]</em>
-<em>[wub]</em>
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAaaaaaaooooooowowowvwovwo
-
-
-<strong>2. These Pants</strong>
-
-<em>[blues clues theme bass line]</em>
-
-<em>[various percussive sounds]</em>
-
-IIIIIIIII’mm convinced you care about my style.
-
-I tryyyyy to win you over; it’s worth my while.
-
-So won’t you pleeeeeeeeeease notice me?
-I’ll sit such that my shoes
-are there for you to see!
-
-<em>[warbly intermelody]</em>
-
-IIIIIIIII’m invisible to you, my friend.
-But I’ll draw your eyyyyyyes
-to these old pants my neighbor lent.
-
-So won’t you pleeeeeeeeeeeeease notice me?
-I’ll sit such that these pants
-are there for you to see!
-
-<em>[warbly intermelody]</em>
-
-<em>[wah wah bass]</em>
-
-<em>[funner drum loop]</em>
-
-These pants strangle my thighs
-I hope they’ll catch your eyes
-I know that it’s deadly (deadly!) 
-to demand attention via fashion
-but I hope these drawers draw your gaze
-to me, to me, to me, to me!
-
-These pants weigh on my hips
-tunnel vision till my legs buckle
-all I see are youurrr lips
-smile, turn, make me look fear in the mouth
-oh dear, cryin out
-to make contact with your contacts
-just a word, a word.
-
-<em>[piano outro]</em>
-<em>[synth chord]</em>
-
-
-<strong>3. Be Still, I’ll Stay</strong>
-
-<em>[breathing]</em>
-
-Sing me a lullaby
-to make me sure that you’re here toni ght.
-You’re here tonight.
-You’re here tonight.
-I’m here tonight,
-with you, with you, with yo u,
-I’ll sta y.
-
-Sing me the warbler’s song.
-I know our wai t till morning’s long.
-Lay patiently.
-Still here I’ll b e.
-Still he re I’ll be,
-be still, be still, b e still,
-I’ll sta y.
-
-Promise me you won’t fly away.
-I can’t sleep. I just hope you’ll say,
-"Be stil l, I’ll stay.
-Be still, I’ll sta y.
-Be still, I’ll stay
-with you to n i g h t."
-
-<em>[organ shakily teleports closer]</em>
-
-
-<strong>4. You Can Already Dance</strong>
-
-Pretend you’ve got nothing to prove!
-You’ve got some limbs to move.
-I see you’ve bought a pair of shoes.
-Those soles will come in use.
-
-You have to give yourself a chance!
-Might shut your eyes; don’t glance.
-Just have a blast and shake your pants!
-You! Can! Al! Rea! Dy! Dance!
-
-<em>[kick kick kick snare]</em>
-
-<em>[square wave solo]</em>
-
-<em>[bridge bass line, claps]</em>
-
-You can already dance
-better than anybody could possibly teach you to!
-You can already dance
-better than anybody could possibly teach you to!
-You can already dance
-better than anybody could possibly teach you to!
-You can already dance
-better than anybody could!
-
-It is a style unto your own;
-go on and claim your throne
-of dancing like yourself alone!
-There’s no one else, you’ve shown.
-
-You have to give yourself a chance!
-Might close your eyes; don’t glance.
-Just have a blast and shake your pants.
-You! Can! Al! Rea! Dy! DAAAAAAAAAA-
-
-<em>[kick kick kick snare]</em>
-
-
-<strong>5. For the Friend Collector</strong>
-
-<em>[snare snare]</em>
-
-Friend-collecting, number-taking kid:
-What gives? What gives?
-
-Call em; they’ll agree to let you in.
-New friends! You win!
-
-Obviously you’ve got people too
-They’ll do. They’ll do.
-
-But you proclaim you want something new.
-Why now? Why you?
-
-You’re so desperate for approval,
-you accept that your removal
-from a group of precious people
-is a necessary evil.
-
-Old friends heed your beck and call,
-but all you’ve shown through your withdrawal
-is maybe they’d be better off
-if you were never close at all.
-
-Know that even when someone’s unkind,
-you’ll find the time
-
-to think of all the sources of sunshine.
-Keep them in mind.
-
-Y o u  a r e  l o v e d
-           (Y o u  a r e  l o v e d)
-
-Y o u  a r e  l o v e d
-           (Y o u  a r e  l o v e d)
-
-Y o u  a r e  l o v e d
-           (Y o u  a r e  l o v e d)
-
-Y o u  a r e  l o v e d
-           (Y o u  a r e  l o v e d)
-
-Y o u  a r e  l o v e d
-           (Y o u  a r e  l o v e d)
-L o v e d !  L o v e d !
-
-Y o u  a r e  l o v e d
-           (Y o u  a r e  l o v e d)
-
-Y o u  a r e  l o v e d
-           (Y o u  a r e  l o v e d)
-
-L L O O V V E E D D</section>
-
-
-<script src="/js/scrollvideo.js"></script>
