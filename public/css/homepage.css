@@ -4,6 +4,7 @@
 }
 
 
+
 body {
 	overflow-x: hidden;
 
@@ -30,7 +31,8 @@ body {
 	padding: 0 .5rem;
 }
 .introductionmarquee {
-	font-family: var(--displayfont);
+	font-family: var(--smallheadingfont);
+	font-weight: bold;
 }
 p.introductionbodytext:not(:first-child) {
 	margin: 1rem 0;
