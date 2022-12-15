@@ -11,6 +11,8 @@ body {
 	--workblue: #def3fd;
 	--workpurple: #f0defd;
 
+	--headerfont: "Bizzarrini Text";
+
 	background-image: none;
 	background-attachment: fixed;
 	background-size: cover;
@@ -112,29 +114,33 @@ img, video {
 	--smallwidth: 500px;
 	padding: 0 .5rem;
 }
+
+
+
 .portfolio p {
 	max-width: var(--smallwidth);
-	margin-top: 1.5rem;
+	margin: auto;
+	margin-top: 1rem;
 }
 .portfolio p.caption {
-	max-width: 100%;
 	margin-top: .5rem;
 }
 .portfolio h1, .portfolio h2, .portfolio blockquote {
-	max-width: var(--smallwidth);
+	/* max-width: var(--smallwidth); */
 	margin: .5rem 0;
 }
 .portfolio h1, .portfolio h2 {
 	font-family: var(--headerfont);
 	margin: 1rem 0;
 	line-height: 1;
+	text-align: center;
 }
 .portfolio h1 {
 	font-size: 2rem;
 }
 .portfolio h2 {
 	font-size: 1.5rem;
-	margin-top: 1.5rem;
+	margin-top: 2rem;
 }
 .portfolio blockquote {
 	line-height: 1.5;
@@ -145,7 +151,7 @@ img, video {
 
 .portfolio img, .portfolio svg, .portfolio iframe, .portfolio video {
 	display: block;
-	margin-top: 2rem;
+	margin-top: 1.5rem;
 	max-width: 100%;
 }
 
@@ -184,4 +190,19 @@ img, video {
 	height: 1px;
 	margin: 6rem 0;
 	width: 100%;
+}
+
+.portfolio table {
+	width: var(--smallwidth);
+	margin: 1rem auto;
+	background: #f0f0f0;
+	border: 2px solid var(--translucent);
+}
+.portfolio table td {
+	line-height: 1.2;
+	padding: .25rem;
+	border-bottom: 2px solid var(--translucent);
+}
+.portfolio table td:first-of-type {
+	font-style: italic;
 }

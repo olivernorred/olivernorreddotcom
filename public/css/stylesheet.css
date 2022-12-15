@@ -40,6 +40,24 @@
     src: url("/fonts/Bizzarrini-V0_4-VF.ttf");
 }
 @font-face {
+	font-family: "Bizzarrini Headline";
+	src: url("/fonts/BizzarriniV0_5-HeadlineRegular.woff2")
+}
+@font-face {
+	font-family: "Bizzarrini Headline";
+	font-weight: bold;
+	src: url("/fonts/BizzarriniV0_5-HeadlineBold.woff2")
+}
+@font-face {
+	font-family: "Bizzarrini Text";
+	src: url("/fonts/BizzarriniV0_5-TextRegular.woff2")
+}
+@font-face {
+	font-family: "Bizzarrini Text";
+	font-weight: bold;
+	src: url("/fonts/BizzarriniV0_5-TextBold.woff2")
+}
+@font-face {
     font-family: "Gooper Light";
     src: url("/fonts/Gooper7-Light.woff2");
 }
