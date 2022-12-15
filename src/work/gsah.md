@@ -3,7 +3,7 @@ title: UW Graduate Students of Art History Website and Logo
 tags: workitems
 description: "A WordPress website and blog for the Graduate Students of Art History, specifically their reading group, *Dismantling The Canon*"
 coverimage: "/images/work/gsah/gsahcover.PNG"
-date: 2020-01-03
+date: 2020-01-04
 ---
 <style>
 	img {

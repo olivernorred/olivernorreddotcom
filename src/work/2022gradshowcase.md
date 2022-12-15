@@ -3,7 +3,7 @@ title: 2022 Grad Showcase Site for UW School of Art
 tags: workitems
 description: "Website for the 2022 UW School of Art+Art History+Design’s 2022 graduate showcase."
 coverimage: "/images/work/2022gradshow/2022gradshow-cover.png"
-date: 2020-01-01
+date: 2020-01-02
 ---
 <style>
 	img {
