@@ -79,15 +79,7 @@
 
 <h1>legit-marquees</h1>
 
-<div id="herocontainer">
-	<svg viewbox="-20 -20 530 340" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-		<defs>
-			<pattern id="img1" patternUnits="userSpaceOnUse" width="600" height="400">
-			  	<image href="/images/nicephotos/IMG-7161-Original.jpg" x="0" y="0" width="600" height="400"/>
-			</pattern>
-		</defs>
-		<path d="m31.67,169.35c-2.39,-105.67 82.33,-141.35 200.1,-141.35c117.77,0 230.89,4.35 230.89,109.82c0,105.47 -105.84,139.18 -203.66,139.18c-97.81,0 -224.95,-1.97 -227.34,-107.65z" fill="url(#img1)" id="svg_1"/>
-	</svg>
+
 	<svg class="legit-marquee gooper" viewBox="-20 -20 530 340"
 		content="legit-marquees is a web component for making stuff like this!"
 		contentrepeat="1"
@@ -96,16 +88,22 @@
 		pathd="m31.67,169.35c-2.39,-105.67 82.33,-141.35 200.1,-141.35c117.77,0 230.89,4.35 230.89,109.82c0,105.47 -105.84,139.18 -203.66,139.18c-97.81,0 -224.95,-1.97 -227.34,-107.65z"
 	
 		>
-	
-		
+		<g>
+			<defs>
+				<pattern id="img1" patternUnits="userSpaceOnUse" width="600" height="400">
+					<image href="/images/nicephotos/IMG-7161-Original.jpg" x="0" y="0" width="600" height="400"/>
+				</pattern>
+				<clipPath id="insideblob">
+					<use xlink:href="#svg_1"/>
+				</clipPath>
+			</defs>
+			<path d="m31.67,169.35c-2.39,-105.67 82.33,-141.35 200.1,-141.35c117.77,0 230.89,4.35 230.89,109.82c0,105.47 -105.84,139.18 -203.66,139.18c-97.81,0 -224.95,-1.97 -227.34,-107.65z" fill="var(--yellow)" stroke="white" stroke-width="30" clip-path="url(#insideblob)" id="svg_1" str/>
+		</g>
 	</svg>
 	
-</div>
 
 
-
-
-<p>An open-source web component for generating moving, highlightable, screen-reader-friendly text path animations</p>
+<h2>An open-source web component for generating stylable, screen-reader-friendly text path animations</h2>
 
 <p>You should <a href="https://github.com/olivernorred/legit-marquees">check out the GitHub repository</a> and <a href="https://www.youtube.com/watch?v=QDCzGm-SVc8">watch the video tutorial</a>!</p>
 
