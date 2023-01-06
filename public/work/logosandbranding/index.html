@@ -83,6 +83,22 @@ filter: invert(100%);
 <br>
 <p><a href="/work/" style="font-family: var(--monofont); font-weight: bold;">&larr; more from my portfolio</a></p>
 </div>
+
+<script>
+
+document.querySelectorAll("video:not([controls])").forEach(element => {
+	element.addEventListener('click', ()=>{
+		if (element.paused) {
+			element.play();
+			element.classList.remove("pausedvideo");
+		} else {
+			element.pause();
+			element.classList.add("pausedvideo");
+		}
+	})
+});
+
+</script>
 			
 		</main>
 	

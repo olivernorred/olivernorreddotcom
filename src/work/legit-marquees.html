@@ -13,7 +13,49 @@ date: 2020-01-05
 <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
 
+<style>
+	#herocontainer {
+		position: relative;
+		font-family: "Hobeaux";
+		width: 100%;
+		aspect-ratio: 550 / 360;
+	}
+	#herocontainer svg {
+		position: absolute;
+	}
+	.legit-marquee.gooper{
+		font-family: "Gooper";
+		font-weight: bold;
+	}
+</style>
+
 <h1>legit-marquees</h1>
+
+<div id="herocontainer">
+	<svg viewbox="-20 -20 530 340" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+		<defs>
+			<pattern id="img1" patternUnits="userSpaceOnUse" width="600" height="400">
+			  	<image href="/images/nicephotos/IMG-7161-Original.jpg" x="0" y="0" width="600" height="400"/>
+			</pattern>
+		</defs>
+		<path d="m31.67,169.35c-2.39,-105.67 82.33,-141.35 200.1,-141.35c117.77,0 230.89,4.35 230.89,109.82c0,105.47 -105.84,139.18 -203.66,139.18c-97.81,0 -224.95,-1.97 -227.34,-107.65z" fill="url(#img1)" id="svg_1"/>
+	</svg>
+	<svg class="legit-marquee gooper" viewBox="-20 -20 530 340"
+		content="legit-marquees is a web component for making stuff like this!"
+		contentrepeat="1"
+		speed="1"
+		textsize="36"
+		pathd="m31.67,169.35c-2.39,-105.67 82.33,-141.35 200.1,-141.35c117.77,0 230.89,4.35 230.89,109.82c0,105.47 -105.84,139.18 -203.66,139.18c-97.81,0 -224.95,-1.97 -227.34,-107.65z"
+	
+		>
+	
+		
+	</svg>
+	
+</div>
+
+
+
 
 <p>An open-source web component for generating moving, highlightable, screen-reader-friendly text path animations</p>
 
