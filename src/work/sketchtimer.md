@@ -47,16 +47,16 @@ Your browser does not support the video tag.
 
 I was inspired by the theme of this app to design micro-interactions using pen and paper. All the animations are drawn frame by frame on paper.
 
-## 2 frame hand-drawn animations
+## Animations indicate interactability
 
 <video autoplay loop style="aspect-ratio: 1080 / 1080;">
 <source src="/images/work/sketchtimer/shaking_buttons_micro.webm" type="video/webm">
 Your browser does not support the video tag.
 </video>
 
-<p class="caption">Every button has a subtle two-frame tilting animation to indicate that it is interactible.</p>
+<p class="caption">Every button has a subtle two-frame tilting animation to indicate that it is interactable.</p>
 
-## Countdowns
+## Animated countdown
 
 <video autoplay loop style="aspect-ratio: 1920 / 1080">
 <source src="/images/work/sketchtimer/countdown_micro.webm" type="video/webm">
