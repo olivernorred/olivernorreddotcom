@@ -31,7 +31,7 @@ active: index
 	<h1>my <a href="/blog/" id="introbloglink">blog</a>,</h1>
 	<h1>my <a href="/work/" id="introdesignlink">design</a> work,</h1>
 	<h1>and my <a href="/music/" id="intromusiclink">music</a>.</h1>
-	<p class="introductionbodytext">Use the <span id="topbartooltip" style="position: relative; border-bottom: 1px dotted black; cursor: help; font-family: 'Times New Roman'; font-style: italic; font-weight: bold; font-size: 1.1em; letter-spacing: -1px; z-index: 0;">top bar<sup>?</sup></span> to navigate between the three categories, if you must!</p>
+	<p class="introductionbodytext">Use the <span id="topbartooltip" style="position: relative; border-bottom: 1px dotted black; cursor: help; font-family: 'Times New Roman'; font-style: italic; font-weight: bold; font-size: 1.1em; letter-spacing: -1px; z-index: 0;">navigation bar<sup>?</sup></span> to navigate between the three categories, if you must!</p>
 
 	<div id="moreaboutme">
 		<h1 style="font-family: Times New Roman;">More about me</h1>
@@ -39,196 +39,34 @@ active: index
 			<img src="/images/homepage/dogpiano.gif" alt="An animated gif of a cartoon dog playing a piano">
 			<img src="/images/homepage/dogpiano.gif" alt="An animated gif of a cartoon dog playing a piano" style="transform: scale(-1,1);">
 		</p>
-		<p>I’m a <a href="/design/">designer</a> and <a href="/music/">musician</a> from Seattle. I love food. I have a <a href="/music/allofourcornbread/">band called All of Our Cornbread</a>.</p>
+		<p>I’m a <a href="/work/">designer</a> and <a href="/music/">musician</a> from Seattle. I have a <a href="/music/allofourcornbread/">band called All of Our Cornbread</a>.</p>
 		<p>I’m on <a href="https://www.instagram.com/olivernorred/">Instagram</a>, <a href="https://www.youtube.com/c/OliverNorred">YouTube</a>, <a href="https://twitter.com/olivernorred">Twitter</a>, and <a href="https://github.com/olivernorred">GitHub</a>. <a href="mailto:norredoliver@gmail.com">Email</a>, too. Links in the footer &darr;</p>
 	</div>
 </section>
 
 
-<script>
-	const canvas = document.createElement('canvas')
-	canvas.setAttribute("width", window.innerWidth);
-	canvas.setAttribute("height", window.innerHeight);
-	canvas.id = "linedrawingcanvas"
-	document.body.appendChild(canvas);
-
-	const ctx = canvas.getContext('2d')
-	
-	const introbloglink = document.querySelector("#introbloglink")
-	const introdesignlink = document.querySelector("#introdesignlink")
-	const intromusiclink = document.querySelector("#intromusiclink")
-	const blognav = document.querySelector('.blognav')
-	const desnav = document.querySelector('.desnav')
-	const musnav = document.querySelector('.musnav')
-	const coords = {
-		blog: {
-			x: getBoundingBox(blognav).x,
-			y: getBoundingBox(blognav).y
-		},
-		design: {
-			x: getBoundingBox(desnav).x,
-			y: getBoundingBox(desnav).y
-		},
-		music: {
-			x: getBoundingBox(musnav).x,
-			y: getBoundingBox(musnav).y
-		},
-		blogbottom: {
-			x: getBoundingBox(introbloglink).x,
-			y: getBoundingBox(introbloglink).y
-		},
-		designbottom: {
-			x: getBoundingBox(introdesignlink).x,
-			y: getBoundingBox(introdesignlink).y
-		},
-		musicbottom: {
-			x: getBoundingBox(intromusiclink).x,
-			y: getBoundingBox(intromusiclink).y
-		}
-	}
-
-	ctx.lineWidth = 4;
-	ctx.strokeStyle = "#f06"
-	ctx.lineCap = "round";
-	function draw() {
-
-		//BOTTOM LINKS CHECKING MOUSE
-		introbloglink.addEventListener('mousemove', (e)=>{
-			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
-			ctx.beginPath();
-			ctx.moveTo(e.clientX, e.clientY)
-			ctx.lineTo(coords.blog.x, coords.blog.y)
-			ctx.stroke()
-		})
-		introdesignlink.addEventListener('mousemove', (e)=>{
-			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
-			ctx.beginPath();
-			ctx.moveTo(e.clientX, e.clientY)
-			ctx.lineTo(coords.design.x, coords.design.y)
-			ctx.stroke()
-		})
-		intromusiclink.addEventListener('mousemove', (e)=>{
-			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
-			ctx.beginPath();
-			ctx.moveTo(e.clientX, e.clientY)
-			ctx.lineTo(coords.music.x, coords.music.y)
-			ctx.stroke()
-		})
-		introbloglink.addEventListener('mouseout', (e)=>{
-			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
-		})
-		introdesignlink.addEventListener('mouseout', (e)=>{
-			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
-		})
-		intromusiclink.addEventListener('mouseout', (e)=>{
-			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
-		})
-
-		// TOP LINKS DOING SIMILAR THING
-		blognav.addEventListener('mousemove', (e)=>{
-			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
-			ctx.beginPath();
-			ctx.moveTo(e.clientX, e.clientY)
-			ctx.lineTo(coords.blogbottom.x, coords.blogbottom.y-40)
-			ctx.stroke()
-		})
-		desnav.addEventListener('mousemove', (e)=>{
-			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
-			ctx.beginPath();
-			ctx.moveTo(e.clientX, e.clientY)
-			ctx.lineTo(coords.designbottom.x, coords.designbottom.y-40)
-			ctx.stroke()
-		})
-		musnav.addEventListener('mousemove', (e)=>{
-			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
-			ctx.beginPath();
-			ctx.moveTo(e.clientX, e.clientY)
-			ctx.lineTo(coords.musicbottom.x, coords.musicbottom.y-40)
-			ctx.stroke()
-		})
-		blognav.addEventListener('mouseout', (e)=>{
-			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
-		})
-		desnav.addEventListener('mouseout', (e)=>{
-			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
-		})
-		musnav.addEventListener('mouseout', (e)=>{
-			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
-		})
-		
-		requestAnimationFrame(draw);
-	}
-	// draw()
-
-
+<script>	
+	const header = document.querySelector("#header")
 
 	// Top bar tooltip animation activation
 	const tooltip = document.querySelector("#topbartooltip")
-	coords.tooltip = {
-		x: getBoundingBox(tooltip).x,
-		y: getBoundingBox(tooltip).y
-	}
+
 	document.querySelector("#topbartooltip").addEventListener('click', (e)=>{
-		console.log("tooltip clicked" + e)
-		tooltip.relativexposition = 0
-		tooltip.relativeyposition = 0
-		animateTooltipUpward(0)
+		tooltip.innerHTML = (tooltip.innerHTML == "navigation bar<sup>^</sup>") ? "navigation bar<sup>?</sup>" : "navigation bar<sup>^</sup>"
+		const posDifference = {	x: getBoundingBox(header).x - getBoundingBox(tooltip).x,
+								y: getBoundingBox(header).y - getBoundingBox(tooltip).y}
+		const margin = -18
+		gsap.to(
+			tooltip, {
+				top: posDifference.y - margin, left: posDifference.x,
+				duration: 2,
+				onComplete: ()=>{
+					gsap.to(".sublinks", {outline: "5px double var(--acolor)"})
+				}
+			}
+		)
 
 	})
-	let cycle = 0
-	function animateTooltipUpward(){
-		let oscillstartx = 0
-		let oscillstarty = 0
-		let stepcount = 49
-
-		let sublinksborderopacity = 0
-		if (cycle < stepcount) {
-			tooltip.relativexposition += ((coords.design.x-10) - coords.tooltip.x)/stepcount
-			tooltip.relativeyposition += (coords.design.y - coords.tooltip.y)/50
-			tooltip.style.left = tooltip.relativexposition + "px"
-			tooltip.style.top = tooltip.relativeyposition + "px"
-	
-			cycle++
-			requestAnimationFrame(animateTooltipUpward)
-		}
-
-		else if (cycle === stepcount) {
-			oscillstartx = tooltip.relativexposition
-			oscillstarty = tooltip.relativeyposition
-			cycle++
-			requestAnimationFrame(animateTooltipUpward)
-		}
-
-
-		else if (cycle < 90) {
-			sublinksborderopacity+=0.1
-			document.querySelector(".sublinks").style.boxShadow = `0 0 4px 4px rgb(0 0 187 / ${sublinksborderopacity})`;
-			
-
-			// let a = (coords.music.x - coords.blog.x)
-			// console.log("oscillating?")
-			// tooltip.relativexposition = -a*Math.cos(0.05*(cycle - stepcount)) + a
-			// console.log(cycle, tooltip.relativexposition - coords.blog.x)
-			// tooltip.style.left = tooltip.relativexposition + "px"
-			// tooltip.style.top = tooltip.relativeyposition + "px"
-
-			cycle++
-			requestAnimationFrame(animateTooltipUpward)
-		}
-		else if (cycle < 100) {
-			document.querySelector(".sublinks").style.boxShadow = "0 0 4px 4px rgb(0 0 187 / 0)";
-			cycle++
-			requestAnimationFrame(animateTooltipUpward)
-		}
-		else {
-			// tooltip.relativexposition = 0
-			// tooltip.relativeyposition = 0
-			tooltip.style.left = tooltip.relativexposition + "px"
-			tooltip.style.top = tooltip.relativeyposition + "px"
-			cycle = 0
-		}
-	}
-
 		
 	function getBoundingBox (element) {
 		const box = element.getBoundingClientRect()
@@ -246,76 +84,3 @@ active: index
 		return ret
 	}
 </script>
-<!-- <section id="firstsection">
-	<svg id="marqueetitle" class="legit-marquee" viewBox="0 90 450 71"
-
-		content="olivernorred.com&nbsp;&nbsp;"
-		contentrepeat="2"
-		speed="-1"
-		textsize="28.7"
-
-		pathd="m-29.66498,127.33333c96,-2 98,17 170,17c72,0 74,-23 138,-21c64,2 72,28 114,25c42,-3 77,-21 136.66498,-30.33333"
-		
-		>
-	</svg>
-	<script src="/js/legitmarquees.js"></script>
-
-
-</section> -->
-
-<!-- <section id="secondsection">
-	<div id="facewithspeech">
-		<img id="facedrawn" src="/images/drawn/face.png" alt="My face, drawn.">
-		<div id="speechbox">
-			<img src="/images/drawn/speech box.png" alt="">
-			<svg viewbox='0 0 1458 1468'>
-				<text text-anchor="start" font-family="times new roman" font-size="190" stroke-width="0" id="svg_1" y="490" x="170" stroke="#000" fill="var(--blue)" style="user-select: none">i love web sites!</text>
-				<text text-anchor="start" font-family="times new roman" font-size="190" stroke-width="0" id="svg_1" y="510" x="190" stroke="#000" fill="var(--red)" style="user-select: none">i love web sites!</text>
-				<text text-anchor="start" font-family="times new roman" font-size="190" stroke-width="0" id="svg_1" y="500" x="180" stroke="#000" fill="black">i love web sites!</text>
-
-				<text text-anchor="start" font-family="times new roman" font-size="190" stroke-width="0" id="svg_1" y="690" x="370" stroke="#000" fill="var(--blue)" style="user-select: none">i write a blog!</text>
-				<text text-anchor="start" font-family="times new roman" font-size="190" stroke-width="0" id="svg_1" y="710" x="390" stroke="#000" fill="var(--red)" style="user-select: none">i write a blog!</text>
-				<text text-anchor="start" font-family="times new roman" font-size="190" stroke-width="0" id="svg_1" y="700" x="380" stroke="#000" fill="black">i write a blog!</text>
-
-				<text text-anchor="start" font-family="times new roman" font-size="190" stroke-width="0" id="svg_1" y="890" x="170" stroke="#000" fill="var(--blue)" style="user-select: none">i make music!</text>
-				<text text-anchor="start" font-family="times new roman" font-size="190" stroke-width="0" id="svg_1" y="910" x="190" stroke="#000" fill="var(--red)" style="user-select: none">i make music!</text>
-				<text text-anchor="start" font-family="times new roman" font-size="190" stroke-width="0" id="svg_1" y="900" x="180" stroke="#000" fill="black">i make music!</text>
-			</svg>
-		</div>
-		<p class="caption" style="margin-top: 0rem; text-align: center; background: white;">This is me!</p>
-	</div>
-	<p style="background: white;">I’m Oliver! I write a <a href="/blog/">blog</a>, I make <a href="/music/">music</a> and <a href="https://youtube.com/c/OliverNorred">videos</a>, and I <nw><a href="/work/">study design</a>!</nw></p>
-</section> -->
-
-
-
-<!-- <script src="/js/stargenerator.js"></script> -->
-<script src="/js/parallax.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-	<!-- <p id="abouttext">
-		I study <a href="https://art.washington.edu/design/interaction-design-bdes">Interaction Design at the University of Washington</a>. -->
-			<!-- <img src="/images/artschoolscreenshot.jpg" class="linkimage"> <br>
-		I write <a href="/blog/">a blog</a>.
-			<img src="/images/blogscreenshot.PNG" class="linkimage"> <br>
-		I keep <a href="/work/">a portfolio of design work</a>.
-			<img src="/images/workscreenshot.PNG" class="linkimage"> <br>
-		I make <a href="/hzdonut/"">music</a>!
-			<img src="/images/music/hzdonutalbumcover@1000.jpg" class="linkimage"> <br>
-		I’m on <a href="https://instagram.com/olivernorred">Instagram</a>,
-			<img src="/images/instagramscreenshot.PNG" class="linkimage">
-		<a href="https://twitter.com/olivernorred">Twitter</a>,
-			<img src="/images/twitterscreenshot.PNG" class="linkimage">
-		<a href="https://github.com/olivernorred">GitHub</a>, and
-			<img src="/images/githubscreenshot.PNG" class="linkimage">
-		<a href="https://www.youtube.com/c/OliverNorred/">YouTube</a>.
-			<img src="/images/youtubescreenshot.PNG" class="linkimage"></p> -->
