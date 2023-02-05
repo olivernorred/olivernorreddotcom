@@ -7,11 +7,10 @@ active: music
 
 <style>
 	body {
-		--fgcolor: black;
+		--fgcolor: var(--darkblue);
 		--bgcolor: white;
 		--fgtranslucent: rgb(255 255 255 / .7);
-		--acolor: var(--blue);
-		--cornbreadyellow: #f0b708;
+		--cornbreadyellow: #e7b940;
 	}
 
 	#content {
@@ -19,27 +18,24 @@ active: music
 	}
 
 	#cornbreadlogo {
-		max-width: 1000px;
+		max-width: 450px;
 		margin: 1rem auto;
+		animation: wiggle 1s steps(2) infinite;
 	}
 	#abstract {
-		max-width: 750px;
+		max-width: 450px;
 		margin: 1rem auto;
 		line-height: 1.3;
 		font-size: 1rem;
 	}
 	#abstract h2, #abstract h1 {
-		font-size: 2rem;
+		font-size: 1.5rem;
 		text-align: center;
 	}
 	#abstract h1 {
-		width: fit-content;
 		margin: auto;
 		margin-top: 2rem;
-		padding: .4rem;
-		background-color: var(--cornbreadyellow);
-		color: white;
-		box-shadow: 2px 2px black;
+		padding: .1rem;
 		transform: rotate(1deg);
 		font-family: 'Gooper';
 		font-weight: bold;
@@ -47,6 +43,16 @@ active: music
 	#abstract h1:nth-of-type(even) {
 		transform: rotate(-1deg);
 	}
+	.album {
+		margin-top: 1rem;
+		max-width: 300px;
+	}
+	.album img {
+		display: block;
+		margin: 0;
+		border: 1px solid black;
+	}
+
 	p.caption {
 		font-size: 1rem;
 		color: black;
@@ -72,58 +78,28 @@ active: music
 	}
 
 	.showlink {
-		position: relative;
+		/* position: relative; */
 		display: block;
 		margin-top: 2rem;
 	}
 	.showlink img {
 		box-shadow: 0 0 5px black;
 	}
-
+	.showlink .vidthumbnail {
+		position: relative;
+	}
 	.videotitle {
 		position: absolute;
-		top: 37%; left: 50%;
+		top: 50%; left: 50%;
 		transform: translate(-50%, -50%);
 		width: 90%;
 		color: white;
 		font-family: 'Taters Baked';
-		font-size: clamp(1.5rem, 5vw, 2.5rem);
+		/* font-size: clamp(1.5rem, 6cqw, 2.5rem); */
+		font-size: 2rem;
+		line-height: 1.1;
 		text-align: center;
-		text-shadow: 2px 2px black;
-	}
-	
-	.youtubelabel {
-		position: absolute;
-		top: 48%; left: 50%;
-		transform: translate(-50%, -50%);
-		padding: .1rem .5rem;
-		color: white;
-		background: rgb(0 0 0 / .5);
-		font-style: italic;
-		text-decoration: underline;
-	}
-
-	#wigglinlink {
-		margin: 1rem 0;
-		padding: 0.5rem 0.5rem;
-		background: var(--blue);
-		color: white;
-		font-family: 'Gooper';
-		font-size: 1rem;
-		line-height: 0.95;
-	}
-	#wigglinlink p {
-		text-align: center;
-		font-size: 1.2rem;
-	}
-	#wigglinlink a {
-		color: white;
-		text-decoration: underline;
-		text-decoration-color: white;
-	}
-	#wigglinlink a:hover {
-		color: lime;
-		text-shadow: 2px 2px white;
+		text-shadow: -2px -2px var(--darkblue), 2px -2px var(--darkblue), 2px 2px var(--darkblue), -2px 2px var(--darkblue);
 	}
 	
 </style>
@@ -134,39 +110,44 @@ active: music
 </div>
 
 <section id="abstract">
-	<h1>Oliver Norred songs hit the stage!</h1>
-	<div id="wigglinlink">
-		<h2>[video]</h2>
-		<p><a href="https://youtu.be/l6Tio5-9jIE">All of Our Cornbread at the Wigglin' Flea Market [concert film]</a></p>
-	</div>
-	<img id="bandphoto" src="/images/music/cornbread/bandphoto/wongphoto_full.jpg" alt="">
+	<!-- <img id="bandphoto" src="/images/music/cornbread/bandphoto/wongphoto_full.jpg" alt="">
 	<p class="caption">Photo by Peter Wong (@ptr_wng on instagram)</p>
-	<br>
+	<br> -->
+	<h1>Songs</h1>
+	<a href="/music/computertime"><div class="album">
+		<img src="/images/music/covers/computertime_cover.png" alt="The album cover for the Computer Time single by All of Our Cornbread">
+		<p>Computer Time (single)</p>
+	</div></a>
+
 	<h1>Videos</h1>
 
 	<a class="showlink" href="https://youtu.be/l6Tio5-9jIE">
-		<img src="/images/music/cornbread/wigglinthumbnail.jpg" alt="All of Our Cornbread session live from the Wigglin' Flea Market">
+		<div class="vidthumbnail">
+			<img src="/images/music/cornbread/wigglinthumbnail.jpg" alt="All of Our Cornbread session live from the Wigglin' Flea Market">
+			<div class="videotitle">The Wigglin’ Flea Market</div>
+		</div>
 		<p class="caption">We played a cool show at the Wigglin' Flea Market in October 2022.</p>
-		<p class="videotitle">Live at the Wigglin’ Flea Market</p>
-		<p class="youtubelabel">on YouTube</p>
 	</a>
 	<a class="showlink" href="https://www.youtube.com/watch?v=k-7cmlGqvPs&list=PLaTxdYwGEOqCfEjM77CJbYT-LT0wv_kCi&index=1&ab_channel=OliverNorred">
-		<img src="/images/music/cornbread/basementthumbnail.png" alt="All of Our Cornbread session from the basement">
+		<div class="vidthumbnail">
+			<img src="/images/music/cornbread/basementthumbnail.png" alt="All of Our Cornbread session from the basement">
+			<div class="videotitle">Session from the basement</div>
+		</div>
 		<p class="caption">We recorded these demos with five of our members before our first show.</p>
-		<p class="videotitle">Session from the basement</p>
-		<p class="youtubelabel">on YouTube</p>
 	</a>
 	<a class="showlink" href="https://youtu.be/G78vipBZdoc">
-		<img src="/images/music/cornbread/sandlotthumbnail.png" alt="All of Our Cornbread at the Ice Box">
+		<div class="vidthumbnail">
+			<img src="/images/music/cornbread/sandlotthumbnail.png" alt="All of Our Cornbread at the Ice Box">
+			<div class="videotitle">The Sandlot</div>
+		</div>
 		<p class="caption">Our first show was at the Sandlot, a nascent house show venue in Seattle’s U District.</p>
-		<p class="videotitle">The Sandlot</p>
-		<p class="youtubelabel">on YouTube</p>
 	</a>
 	<a class="showlink" href="https://youtu.be/34rh7DfDh3U?t=11482">
-		<img src="/images/music/cornbread/aprilhuskyjamthumbnail.png" alt="All of Our Cornbread at the April Husky Jam">
+		<div class="vidthumbnail">
+			<img src="/images/music/cornbread/aprilhuskyjamthumbnail.png" alt="All of Our Cornbread at the April Husky Jam">
+			<div class="videotitle">Husky Jam Spring Thing</div>
+		</div>
 		<p class="caption">We played at the April 2022 Husky Jam Spring Thing. Husky Jam is a student-run and self-funded organization at the UW. Pretty awesome!</p>
-		<p class="videotitle">Husky Jam Spring Thing</p>
-		<p class="youtubelabel">on YouTube</p>
 	</a>
 </section>
 
