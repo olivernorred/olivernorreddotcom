@@ -28,6 +28,12 @@
     src: url("/fonts/LiterataTT-CaptionBold.woff2");
 }
 @font-face {
+    font-family: "Literata";
+    font-weight: bold;
+	font-style: italic;
+    src: url("/fonts/LiterataTT-CaptionBoldItalic.woff2");
+}
+@font-face {
     font-family: "Taters Fried";
     src: url("/fonts/Taters0.2-Fried.otf");
 }
@@ -124,7 +130,7 @@ body {
     --altbgcolor: #c8f1ff;
     --fgtranslucent: rgba(0, 0, 0, 0.7);
     --mildfgcolor: #505050;
-    --translucent: rgba(0, 0, 0, 0.1);
+    --translucent: rgba(0, 0, 0, 0.05);
     --bgimage: ;
 
     /* cool colors */
@@ -365,7 +371,7 @@ p:not(:first-child) {
     overflow: hidden;
     background-color: var(--bgcolor);
     font-family: var(--bodyfont), serif;
-    transition: transform 0.1s, box-shadow 0.1s;
+    transition: transform 0.05s, box-shadow 0.1s;
 }
 
 #postlinkscontainer div:first-child {
@@ -458,7 +464,6 @@ input:focus + .inputlowerlabel {
     border-radius: var(--mainradius);
     font-family: var(--bodyfont), sans-serif;
     font-variant-numeric: oldstyle-nums;
-    font-variation-settings: "wght" 400, "opsz" 10;
     line-height: 1.5;
     background-color: var(--bgcolor);
 }
@@ -467,7 +472,6 @@ input:focus + .inputlowerlabel {
     margin: 0.5rem 0;
     padding: 0;
     font-family: var(--headerfont), var(--bodyfont), sans-serif;
-    font-variation-settings: "wght" 300, "opsz" 24;
     font-size: 2rem;
     font-weight: normal;
     line-height: 1.1;
@@ -483,7 +487,6 @@ input:focus + .inputlowerlabel {
     padding: 0;
     color: var(--fgtranslucent);
     /* font-family: "Bizzarrini"; */
-    /* font-variation-settings: 'opsz' 12, 'wght' 400; */
     font-style: italic;
     font-weight: normal;
     font-size: 1rem;
@@ -505,15 +508,8 @@ input:focus + .inputlowerlabel {
 	opacity: .8;
 } */
 
-.blogpost h3 {
-}
-
-p {
-    font-variation-settings: "opsz" 10;
-}
 p strong {
-    font-weight: normal;
-    font-variation-settings: "opsz" 10, "wght" 700;
+    font-weight: bold;
 }
 
 p.caption {
@@ -529,7 +525,8 @@ p.caption::before {
     position: relative;
     margin: 1rem 0;
     padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
+	border-left: 2px solid var(--fgtranslucent);
+    border-radius: 0 0.5rem 0.5rem 0;
     background: var(--translucent);
 }
 .blogpost img {
@@ -583,7 +580,6 @@ code {
     display: block;
     max-width: 500px;
     margin-top: 4rem;
-    font-variation-settings: "opsz" 10;
 }
 #commentform textarea,
 #commentform input[type="text"] {

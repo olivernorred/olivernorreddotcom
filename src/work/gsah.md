@@ -6,7 +6,7 @@ coverimage: "/images/work/gsah/gsahcover.PNG"
 date: 2020-01-04
 ---
 <style>
-	img {
+	img.hasborder {
 		border: 1px dashed black;
 		padding: .3rem;
 	}
@@ -14,9 +14,9 @@ date: 2020-01-04
 
 # UW Graduate Students of Art History website and logo
 
-<p><a href="http://depts.washington.edu/gsah/">VIEW SITE &rarr;</a></p>
+<p><a class="visitsitelink" href="http://depts.washington.edu/gsah/">View site &rarr;</a></p>
 
-<img src="/images/work/gsah/gsahcover.PNG" alt="The GSAH homepage features an introduction beside paintings from outside the Western Canon">
+<img class="hasborder" src="/images/work/gsah/gsahcover.PNG" alt="The GSAH homepage features an introduction beside paintings from outside the Western Canon">
 
 <p class="caption">The GSAH homepage features an introduction beside paintings from outside the Western Canon.</p>
 
@@ -28,13 +28,13 @@ I designed and built the website and blog, including a wordmark and logo, for th
 
 The logo must be formal&mdash;GSAH is an academic organization. It also had to convey a modernity and poise that a progressive reading group like *Dismantling the Canon* evokes. To achieve that combination, I use Pangram Pangram’s *Right Grotesk*, a skinnier sans serif with striking inktraps and just enough traditionality.
 
-<img src="/images/work/gsah/headerscreenshot.PNG" alt="The website navigation includes links to the ">
+<img class="hasborder" src="/images/work/gsah/headerscreenshot.PNG" alt="The website navigation includes links to the ">
 
 <p class="caption">The website’s navigation</p>
 
 The navigation menu makes only stylistic changes to the default WordPress theme’s: pure black and white, and use of the logo font, *Right Grotesk*. There are enough items to warrant multiple screen width collapses: multiple rows when on a screen as wide as a tablet, and eventually an expandable hamburger menu on the narrowest screens.
 
-<img src="/images/work/gsah/blogpostscreenshot.PNG" alt="A blog post screenshot">
+<img class="hasborder" src="/images/work/gsah/blogpostscreenshot.PNG" alt="A blog post screenshot">
 
 <p class="caption">Blog posts use a narrow column width for ease of reading.</p>
 

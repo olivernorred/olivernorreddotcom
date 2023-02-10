@@ -8,7 +8,7 @@ date: 2021-03-22
 
 ## Oliver Norred, 22 March 2021
 
-A family of rats is giving away its home on Craigslist. “You haul,” reads the listing. They’ve kindly moved out by the time I pick it up with my dad and [Riley](https://rileysamuelhuston.com), and they even left a housewarming gift:
+A family of rats is giving away its home on Craigslist. “You haul,” reads the listing. They’ve kindly moved out by the time I pick it up with my dad and [Riley](https://rileyhuston.xyz), and they even left a housewarming gift:
 
 ![A rats’ nest underneath the keybed](/images/nicephotos/ratsnest.png)
 <p class="caption">I think there’s money in here—how generous!</p>

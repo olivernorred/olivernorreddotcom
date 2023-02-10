@@ -11,7 +11,7 @@ body {
 	--workblue: #def3fd;
 	--workpurple: #f0defd;
 
-	--headerfont: "Bizzarrini Text";
+	--headerfont: "Gooper";
 
 	background-image: none;
 	background-attachment: fixed;
@@ -52,6 +52,7 @@ video {
 }
 .workitem a:first-child {
 	position: absolute;
+	z-index: 1000;
 	top: 0;
 	left: 0;
 	width:  100%;
@@ -59,17 +60,13 @@ video {
 }
 .workitem .cardsplit {
 	width: 100%;
-	display: flex;
-	align-items: center;
+	display: grid;
+	grid-template-columns: 3fr 2fr;
 	justify-content: left;
+	align-items: center;
 	gap: 1rem;
 }
-	/* .workitem:nth-of-type(even) .cardsplit {
-		flex-direction: row-reverse;
-	} */
-.workitem .cardsplit > * {
-	width: 50%;
-}
+
 @media (max-width: 575px) {
 	.workitem .cardsplit {
 		display: block;
@@ -84,7 +81,29 @@ video {
 	display: block;
 	/* border: 1px solid var(--fgcolor); */
 	border-radius: var(--mainradius);
+	transition: .05s;
 }
+.workitem .subcard {
+}
+
+	.workitem:hover img, .workitem:hover svg {
+		transform: translate(-.5rem, -.5rem);
+		box-shadow: .5rem .5rem var(--fgcolor) 
+		
+	}
+	.workitem:hover .subcard {
+		animation: push .5s steps(1) infinite;
+		/* transform: translate(.5rem, 0); */
+	}
+	@keyframes push {
+		from {
+			transform: rotate(-1deg);
+		}
+		50%{
+			transform: rotate(1deg);
+		}
+	}
+
 .workitem h1 {
 	font-family: var(--headerfont);
 	font-weight: bold;
@@ -93,6 +112,7 @@ video {
 	margin: 0;
 }
 .workitem p {
+	margin-top: 1rem;
 	line-height: 1.3;
 }
 
@@ -103,7 +123,7 @@ video {
 
 div.workitemcontent {
 	margin: auto;
-	max-width: 750px;
+	max-width: 600px;
 }
 
 img, video {
@@ -126,22 +146,26 @@ img, video {
 	margin-top: .5rem;
 }
 .portfolio h1, .portfolio h2, .portfolio blockquote {
-	/* max-width: var(--smallwidth); */
-	margin: .5rem 0;
+	max-width: var(--smallwidth);
 }
 .portfolio h1, .portfolio h2 {
 	font-family: var(--headerfont);
-	margin: 1rem 0;
-	line-height: 1;
-	text-align: center;
+	margin: 1rem auto;
+	margin-bottom: 0;
 }
 .portfolio h1 {
 	font-size: 2rem;
+	font-weight: bold;
+	line-height: 1.1;
 }
 .portfolio h2 {
 	font-size: 1.5rem;
 	margin-top: 2rem;
+	line-height: 1.2;
 }
+	.portfolio h1 + h2 {
+		margin-top: 0.5rem;
+	}
 .portfolio blockquote {
 	line-height: 1.5;
 	padding-left: .5rem;
@@ -151,6 +175,7 @@ img, video {
 
 .portfolio img, .portfolio svg, .portfolio iframe, .portfolio video {
 	display: block;
+	margin: auto;
 	margin-top: 1.5rem;
 	max-width: 100%;
 }
@@ -188,6 +213,32 @@ img, video {
 }
 .portfolio .browsermockup img {
 	margin: -1.15rem 0;
+}
+
+.portfolio .visitsitelink {
+	position: relative;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	margin: 2rem 0;
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--fgcolor);
+	border-radius: var(--mainradius);
+	outline: none;
+	font-family: var(--monofont);
+	font-size: 1rem;
+	font-weight: normal;
+	text-align: center;
+	color: var(--fgcolor);
+	background: var(--bgcolor);
+	box-shadow: 2px 2px var(--fgcolor);
+	transition: 0;
+}
+.portfolio .visitsitelink:active {
+	top: 2px;
+	left: 2px;
+	box-shadow: 0 0 var(--fgcolor);
 }
 
 .portfolio hr {

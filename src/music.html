@@ -56,7 +56,7 @@ active: music
 		font-size: 1rem;
 		font-family: "Literata";
 		font-style: italic;
-		font-variation-settings: 'opsz' 10, 'wght' 700;
+		font-weight: bold;
 	}
 
 	section.album {
@@ -76,9 +76,15 @@ active: music
 		top: 45%;
 		right: -15px;
 	} */
-	p.albumcover {
+	/* Hovering on albums */
+	.album a > img {
+		display: block;
 		margin: 0;
 	}
+		.album a:hover > img {
+			transform: translate(0, -.25rem) rotate(1deg);
+			box-shadow: .25rem .25rem var(--fgtranslucent);
+		}
 	p.albumlabel {
 		margin-top: .25rem;
 		font-size: 1rem;
@@ -127,25 +133,19 @@ active: music
 	<section class="year">
 		<section class="album">
 			<a href="/music/computertime/">
-				<p class="albumcover">
-					<img src="/images/music/covers/computertime_cover.png" alt="Computer Time">
-				</p>
+				<img src="/images/music/covers/computertime_cover.png" alt="Computer Time">
 				<p class="albumlabel"><em>Computer Time (single)</em><br>December 2, 2022</p>
 			</a>
 		</section>
 		<section class="album">
 			<a href="/music/alreadydance/">
-				<p class="albumcover">
-					<img src="/images/music/covers/alreadydance_cover.jpg" alt="You Can Already Dance">
-				</p>
+				<img src="/images/music/covers/alreadydance_cover.jpg" alt="You Can Already Dance">
 				<p class="albumlabel"><em>You Can Already Dance</em><br>March 18, 2022</p>
 			</a>
 		</section>
 		<section class="album">
 			<a href="/music/thumbtackceiling/">
-				<p class="albumcover">
-					<img src="/images/music/covers/thumbtackceiling_cover.jpg" alt="Thumbtack Ceiling">
-				</p>
+				<img src="/images/music/covers/thumbtackceiling_cover.jpg" alt="Thumbtack Ceiling">
 				<p class="albumlabel"><em>Thumbtack Ceiling</em> (with Cole Krueger)<br>February 25, 2022</p>
 			</a>
 		</section>
@@ -155,7 +155,7 @@ active: music
 	<section class="year">
 		<section class="album">
 			<a href="/music/hzdonut/">
-				<p class="albumcover"><img src="/images/music/covers/hzdonut_cover.jpg" alt="Hz Donut"></p>
+				<img src="/images/music/covers/hzdonut_cover.jpg" alt="Hz Donut">
 				<p class="albumlabel"><em>Hz Donut</em><br>June 25, 2021</p>
 			</a>
 		</section>

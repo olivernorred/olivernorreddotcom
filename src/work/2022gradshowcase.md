@@ -6,7 +6,7 @@ coverimage: "/images/work/2022gradshow/2022gradshow-cover.png"
 date: 2020-01-02
 ---
 <style>
-	img {
+	img.hasborder {
 		border: 1px dashed black;
 		padding: .3rem;
 	}
@@ -16,7 +16,7 @@ date: 2020-01-02
 
 ## for UW School of Art+Art History+Design
 
-*[View site &rarr;](https://2022.uwsoaahdgradshow.com/)*
+<p><a class="visitsitelink" href="https://2022.uwsoaahdgradshow.com/">View site &rarr;</a></p>
 
 <img src="/images/work/2022gradshow/widePROMO_2022gradshowcase.jpg">
 
@@ -26,11 +26,11 @@ Like many UW websites, this site uses WordPress, so the development side involve
 
 I designed the digital grainy identity with the idea that this was a digital recreation of a real-life event. The light blue link-highlight color came from the tones on the main hero image.
 
-<img src="/images/work/2022gradshow/graduateselection.png" alt="selecting a grad student’s work to view">
+<img class="hasborder" src="/images/work/2022gradshow/graduateselection.png" alt="selecting a grad student’s work to view">
 
 <p class="caption">Selecting a grad student’s work to view</p>
 
-<img src="/images/work/2022gradshow/graduatepage.png" alt="a grad student’s page">
+<img class="hasborder" src="/images/work/2022gradshow/graduatepage.png" alt="a grad student’s page">
 
 <p class="caption">Each graduate’s page has photos of their work on the right and information about their project and experience on the left</p>
 

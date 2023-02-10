@@ -56,8 +56,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 strong {
-	font-weight: normal;
-	font-variation-settings: "opsz" 10, "wght" 700;
+	font-weight: bold;
 }
 
 .recipe a, #recipe-header a {

@@ -49,7 +49,7 @@ I was inspired by the theme of this app to design micro-interactions using pen a
 
 ## Animations indicate interactability
 
-<video autoplay loop style="aspect-ratio: 1080 / 1080;">
+<video autoplay muted loop style="aspect-ratio: 1080 / 1080;">
 <source src="/images/work/sketchtimer/shaking_buttons_micro.webm" type="video/webm">
 Your browser does not support the video tag.
 </video>
@@ -58,7 +58,7 @@ Your browser does not support the video tag.
 
 ## Animated countdown
 
-<video autoplay loop style="aspect-ratio: 1920 / 1080">
+<video autoplay muted loop style="aspect-ratio: 1920 / 1080">
 <source src="/images/work/sketchtimer/countdown_micro.webm" type="video/webm">
 Your browser does not support the video tag.
 </video>

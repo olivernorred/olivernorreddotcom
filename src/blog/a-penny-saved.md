@@ -20,7 +20,7 @@ There was a hole in Aseprite’s scheme, though: despite being a paid software, 
 
 <blockquote>
 
-**To compile Aseprite you will need:**
+<p><strong>To compile Aseprite you will need:</strong></p>
 
 <ul>
 
@@ -32,7 +32,7 @@ There was a hole in Aseprite’s scheme, though: despite being a paid software, 
 
 </ul>
 
-Windows dependencies:
+<p><strong>Windows dependencies:</strong></p>
 
 <ul>
 

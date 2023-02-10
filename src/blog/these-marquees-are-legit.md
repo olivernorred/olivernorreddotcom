@@ -23,7 +23,7 @@ I sort of see the web going more retro right now and for the next year or so. Iâ
 
 
 
-<svg class="legit-marquee" viewBox="-80 -80 1170 760" content="LEGIT." contentrepeat="15" speed="2" textsize="80" pathd="M0,308.472C0,42.37449-21.97408,2.88935,297.72748,2.88935,756.65714,2.88935,1000-47.62774,1000,273.8001c0,281.209,14.092,325.62847-315,325.62847C12.2623,599.42857,0,652.97177,0,308.472Z">
+<svg class="legit-marquee" viewBox="-80 -80 1170 760" content="LEGIT." contentrepeat="5" speed="2" textsize="80" pathd="M0,308.472C0,42.37449-21.97408,2.88935,297.72748,2.88935,756.65714,2.88935,1000-47.62774,1000,273.8001c0,281.209,14.092,325.62847-315,325.62847C12.2623,599.42857,0,652.97177,0,308.472Z">
 </svg>
 
 <style>

@@ -90,13 +90,16 @@
 		transform: rotate(-1deg);
 	}
 	.album {
+		margin: auto;
 		margin-top: 1rem;
 		max-width: 300px;
 	}
 	.album img {
 		display: block;
 		margin: 0;
-		border: 1px solid black;
+	}
+	.album p {
+		margin: 0;
 	}
 
 	p.caption {
@@ -129,7 +132,9 @@
 		margin-top: 2rem;
 	}
 	.showlink img {
-		box-shadow: 0 0 5px black;
+		border: 1px solid var(--fgcolor);
+		border-radius: var(--mainradius);
+		box-shadow: 2px 2px black;
 	}
 	.showlink .vidthumbnail {
 		position: relative;
@@ -162,7 +167,8 @@
 	<h1>Songs</h1>
 	<a href="/music/computertime"><div class="album">
 		<img src="/images/music/covers/computertime_cover.png" alt="The album cover for the Computer Time single by All of Our Cornbread">
-		<p>Computer Time (single)</p>
+		<p><em>Computer Time</em> (single)</p>
+		<p>December 2, 2022</p>
 	</div></a>
 
 	<h1>Videos</h1>
