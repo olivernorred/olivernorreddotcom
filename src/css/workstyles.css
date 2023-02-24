@@ -182,7 +182,7 @@ img, video {
 
 .portfolio audio {
 	display: block;
-	margin: auto;
+	margin: 1rem auto;
 	text-align: center;
 }
 

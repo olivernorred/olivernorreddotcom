@@ -12,7 +12,6 @@ date: 2020-01-03
 	}
 	audio {
 		display: block;
-		margin: auto;
 		width: 50%;
 	}
 	video {
@@ -50,7 +49,7 @@ I was inspired by the theme of this app to design micro-interactions using pen a
 ## Animations indicate interactability
 
 <video autoplay muted loop style="aspect-ratio: 1080 / 1080;">
-<source src="/images/work/sketchtimer/shaking_buttons_micro.webm" type="video/webm">
+<source src="/images/work/sketchtimer/shaking_buttons_micro.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
@@ -58,8 +57,8 @@ Your browser does not support the video tag.
 
 ## Animated countdown
 
-<video autoplay muted loop style="aspect-ratio: 1920 / 1080">
-<source src="/images/work/sketchtimer/countdown_micro.webm" type="video/webm">
+<video autoplay muted loop style="aspect-ratio: 1080 / 1080">
+<source src="/images/work/sketchtimer/countdown_micro.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
