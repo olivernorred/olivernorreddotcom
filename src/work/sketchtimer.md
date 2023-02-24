@@ -24,10 +24,6 @@ date: 2020-01-03
 		top: 50%; left: 50%;
 		transform: translate(-50%, -50%);
 	}
-	/* .pausedvideo {
-		opacity: 0.5;
-		border: 10px solid red;
-	} */
 </style>
 
 # Quick Sketch
