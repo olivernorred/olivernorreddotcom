@@ -4,13 +4,13 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Shop \  Oliver Norred</title>
+	<title>Oliver Norred</title>
 	<meta name="description" content="Website of Oliver Norred: Fine, fine... I'm a web guy, and I have a personal site. Yeesh!">
 
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@olivernorred">
 	<meta name="twitter:creator" content="@olivernorred">
-	<meta name="twitter:title" content="Shop \  Oliver Norred">
+	<meta name="twitter:title" content="Oliver Norred">
 	<meta name="twitter:description" content="Website of Oliver Norred: Fine, fine... I'm a web guy, and I have a personal site. Yeesh!">
 	<meta name="twitter:image" content="https://olivernorred.com/images/social-image.png">
 
@@ -28,7 +28,7 @@
 				<div class="sublinks">
 					<span><a href="/blog/" class="blognav">blog</a></span> <span>/</span>
 					<span><a href="/work/" class="desnav">design</a></span> <span>/</span>
-					<span><a href="/music/" class="musnav">music</a></span>
+					<span><a href="/music/" class=" active musnav">music</a></span>
 				</div>
 
 				<div id="indexlinkcontainer" style="max-width: 200px;">
@@ -50,42 +50,86 @@
 	
 		<main id="content" class="">
 			
+<script>
+	document.title = "Trash Crate \\ Shop \\ Oliver Norred"
+</script>
+
+<link rel="preconnect" href="https://app.snipcart.com">
+<link rel="preconnect" href="https://cdn.snipcart.com">
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.css" />
+<link rel="stylesheet" href="/css/snipcartcustom.css">
+
 <link rel="stylesheet" href="/css/shop.css">
 
-<section id="shopshelf">
+<div id="backtoshop">
+	<a href="/shop/">&larr; back to shop</a>
+</div>
+		
+<article class="itemlisting">
 
-	
-	<a href="/shop/hz-donut-short-sleeve/">
-		<article class="shopitem">
-					
-					<img src="/images/shop/tee.jpg" id="item-bigimage"></img>
-			<h1 class="shopitemname">Hz Donut short sleeve</h1>
-			<p class="shopitemprice">$24</p>
-		</article>
-	</a>
-	
-	<a href="/shop/all-of-our-cornbread-short-sleeve/">
-		<article class="shopitem">
-					
-					<img src="/images/shop/tee.jpg" id="item-bigimage"></img>
-			<h1 class="shopitemname">All of Our Cornbread short sleeve</h1>
-			<p class="shopitemprice">$20</p>
-		</article>
-	</a>
-	
-	<a href="/shop/trash-crate/">
-		<article class="shopitem">
-					
-					<img src="/images/shop/tee.jpg" id="item-bigimage"></img>
-			<h1 class="shopitemname">Trash Crate</h1>
-			<p class="shopitemprice">$20</p>
-		</article>
-	</a>
-	
+	<div class="itemimage">
+		<img src="/images/shop/tee.jpg" id="item-bigimage" alt="">
+		<div class="itemgallery">
+				<button class="gallerybutton" data-srcsend="/images/shop/tee.jpg">
+					<img src="/images/shop/tee.jpg"></img>
+				</button>
+				<button class="gallerybutton" data-srcsend="/images/shop/teeinverted.jpg">
+					<img src="/images/shop/teeinverted.jpg"></img>
+				</button>
+				<button class="gallerybutton" data-srcsend="/images/shop/teecontrast.jpg">
+					<img src="/images/shop/teecontrast.jpg"></img>
+				</button>
+		</div>
+		<script>
+			// SWAP MAIN IMAGE
+			const gallerybtns = document.querySelectorAll(".gallerybutton")
+			gallerybtns[0].classList.add('showing')
+			gallerybtns.forEach(btn => {
+				btn.addEventListener("click", ()=>{
+					document.querySelector('#item-bigimage').src=btn.getAttribute('data-srcsend')
+					gallerybtns.forEach(b => {
+						b.classList.remove('showing')
+					})
+					btn.classList.add('showing')
+				})
+			})
+		</script>
+	</div>
+	<section class="iteminfo">
+		<h1 class="itemname">Trash Crate</h1>
+		<p class="itemdescription">Monthly random assortment of trash that I produce! In a cute little box!</p>
 
-</section>
+		
 
-<script src="/js/password.js"></script>
+		<div id="price-and-button">
+			<button class="snipcart-add-item checkout-button"
+				data-item-id="trash-crate"
+				data-item-price="20"
+				data-item-url="/shop/trash-crate"
+				data-item-description="Monthly random assortment of trash that I produce! In a cute little box!"
+				data-item-image="/images/shop/tee.jpg"
+				data-item-name="Trash Crate"
+				data-item-custom1-name="Size"
+				data-item-custom1-options="S|M|L|XL"
+				data-item-max-quantity="1"
+				data-item-stackable="never">
+				add to basket :)
+			</button>
+			<h2 class="itemprice">$20</h2>
+
+		</div>
+
+	</section>
+</article>
+
+
+
+<script async src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></script>
+<div id="snipcart" data-api-key="MjBhODQzNGEtODhmMC00MTUxLWI0ZDAtNmU3ZTZjMTJiYTk2NjM3NjYzMjA1MDM5NDAwNTcz" hidden></div>
+
+
+
+
 			
 		</main>
 	

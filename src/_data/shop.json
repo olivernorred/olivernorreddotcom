@@ -5,5 +5,19 @@
 		"price": 24,
 		"images": ["/images/shop/tee.jpg", "/images/shop/teeinverted.jpg", "/images/shop/teecontrast.jpg"],
 		"description": "Screen printed by *yours truly* on a Gildan Heavy Cotton t-shirt. If you wear this shirt, you get instant swag. I mean SAUCE. DRIP. VIBES."
+	},
+	{
+		"id": "all-of-our-cornbread-short-sleeve",
+		"name": "All of Our Cornbread short sleeve",
+		"price": 20,
+		"images": ["/images/shop/tee.jpg", "/images/shop/teeinverted.jpg", "/images/shop/teecontrast.jpg"],
+		"description": "Screen printed by us on a Gildan Heavy Cotton t-shirt."
+	},
+	{
+		"id": "trash-crate",
+		"name": "Trash Crate",
+		"price": 20,
+		"images": ["/images/shop/tee.jpg", "/images/shop/teeinverted.jpg", "/images/shop/teecontrast.jpg"],
+		"description": "Monthly random assortment of trash that I produce! In a cute little box!"
 	}
 ]
