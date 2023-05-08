@@ -47,7 +47,7 @@ svg {
 #canvas {
 	border: 3px double black;
 	width: 100%;
-	cursor: url('cursors/pen tool.svg'), crosshair;
+	cursor: url('/legitmarqueemaker/cursors/pen tool.svg'), crosshair;
 }
 
 #displaycontainer>* {
