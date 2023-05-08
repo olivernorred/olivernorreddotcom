@@ -14,6 +14,9 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('./src/whatev')
 	eleventyConfig.addWatchTarget('./src/whatev')
 	
+	eleventyConfig.addPassthroughCopy('./src/legitmarqueemaker')
+	eleventyConfig.addWatchTarget('./src/legitmarqueemaker')
+	
 	eleventyConfig.addPassthroughCopy('./src/OliverNorred-Resume.pdf')
 	eleventyConfig.addWatchTarget('./src/OliverNorred-Resume.pdf')
 	

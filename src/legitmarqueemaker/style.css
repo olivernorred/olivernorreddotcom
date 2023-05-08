@@ -1,0 +1,309 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 18px;
+	font-family: 'DM Mono';
+}
+
+body {
+	padding: 1rem;
+	--yellow: #d4ac39;
+}
+
+#maincontainer {
+	max-width: 100%;
+	margin: .5rem auto;
+	width: 600px;
+
+}
+
+#betalabel {
+	margin-left: .25rem;
+	margin-bottom: .25rem;
+	padding: .25rem;
+	border-radius: .25rem;
+
+	background: #999;
+	color: white;
+	width: fit-content;
+	transform: rotate(-2deg);
+}
+
+#displaycontainer {
+	position: relative;
+	width: 300px;
+	height: 150px;
+}
+
+svg {
+	/* border: 1px dashed red; */
+	width: 100%;
+}
+
+#canvas {
+	border: 3px double black;
+	width: 100%;
+	cursor: url('cursors/pen tool.svg'), crosshair;
+}
+
+#displaycontainer>* {
+	position: absolute;
+}
+
+#displaycontainer>*:not(:first-child) {
+	pointer-events: none;
+}
+
+
+#canvasanddimensions {
+	grid-template-columns: auto 1fr;
+	place-items: bottom;
+}
+#dimensionscontainer {
+	place-self: bottom;
+	display: flex;
+	/* align-items: flex-end; */
+	justify-content: end;
+	flex-direction: row;
+	padding-top: 5px;
+}
+.dimensioninput {
+	width: 6ch;
+	box-sizing: content-box;
+	border: none;
+	--border-thickness: 2px;
+	border-style: solid;
+}
+.dimensioninput:is(:active, :focus-visible) {
+	outline: none;
+	display: block;
+	--border-thickness: 4px;
+}
+#widthinput {
+	cursor: ew-resize;
+	border-color: black;
+	border-width: var(--border-thickness) 0;
+	margin-top: calc(-1 * var(--border-thickness));
+}
+#heightinput {
+	cursor: ns-resize;
+	border-color: black;
+	border-width: 0 var(--border-thickness);
+	margin-right: calc(-1 * var(--border-thickness));
+}
+
+input {
+	font-size: 18px;
+	font-family: 'DM Mono', monospace;
+	/* font-weight: ; */
+}
+#contentinputcontainer ~ * {
+	margin-top: 1rem;
+}
+#contentinput, #fontinput {
+	width: 500px;
+	padding: .25rem;
+	margin-top: 1rem;
+	border-color: black;
+	border-style: solid;
+	--border-thickness: 1px;
+	border-width: var(--border-thickness);
+	border-radius: 4px;
+	transition: outline .05s;
+}
+#contentinput {
+	font-size: 1.25rem;
+}
+#fontinput {
+	margin-top: 0rem;
+	font-size: 0.9rem;
+}
+:is(#contentinput, #fontinput):hover {
+	outline: 1px solid black;
+	/* --border-thickness: 4px; */
+}
+:is(#contentinput, #fontinput):is(:active, :focus-visible) {
+	outline: 3px solid #d4ac39;
+	/* --border-thickness: 4px; */
+}
+.numberinput {
+	cursor: grab;
+	/* width: 10ch; */
+	text-align: center;
+}
+
+#textsizeinput {
+	width: 6ch;
+	padding: .25rem;
+	--border-thickness: 1px;
+	outline: none;
+	border-color: black;
+	border-style: solid;
+	border-width: 0 0 var(--border-thickness) 0;
+	margin-bottom: calc(-1.5*var(--border-thickness));
+}
+#textsizeinput:hover {
+	--border-thickness: 2px;
+}
+#textsizeinput:focus-visible {
+	--border-thickness: 2px;
+	border-color: var(--yellow);
+}
+
+
+/* custom range input from generator */
+input[type=range] {
+	-webkit-appearance: none;
+	margin: .5rem 0;
+	width: 100%;
+	--background-color: #aaa;
+	--slow-color-saturated: hsl(45, 64%, 90%);
+	--slow-color: hsl(45, 0%, 90%);
+	--cursor-type: grab;
+}
+
+input[type=range]:focus {
+	outline: none;
+	--background-color: var(--yellow);
+	--slow-color: var(--slow-color-saturated);
+}
+input[type=range]:active {
+	--cursor-type: grabbing;
+	--background-color: var(--yellow);
+	--slow-color: var(--slow-color-saturated);
+}
+input[type=range]:hover {
+	/* --background-color: linear-gradient(to right, var(--yellow), #aaa, var(--yellow)) */
+	/* --background-color: var(--yellow); */
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 16px;
+	cursor: var(--cursor-type);
+	animate: 0.2s;
+	box-shadow: 0px 0px 0px #000000;
+	background: var(--background-color);
+	background: linear-gradient(to right, var(--background-color), var(--slow-color), var(--background-color));
+	border-radius: 4px;
+	border: 0px solid #000000;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	box-shadow: 0px 0px 1px #00000000;
+	border: 2px solid #000000;
+	height: 32px;
+	width: 16px;
+	border-radius: 4px;
+	background: var(--background-color);
+	cursor: var(--cursor-type);
+	-webkit-appearance: none;
+	margin-top: -9px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+	background: var(--background-color);
+	background: linear-gradient(to right, var(--background-color), var(--slow-color), var(--background-color));
+}
+
+input[type=range]::-moz-range-track {
+	width: 100%;
+	height: 16px;
+	cursor: var(--cursor-type);
+	animate: 0.2s;
+	box-shadow: 0px 0px 0px #000000;
+	background: var(--background-color);
+	background: linear-gradient(to right, var(--background-color), var(--slow-color), var(--background-color));
+	border-radius: 4px;
+	border: 0px solid #000000;
+}
+
+input[type=range]::-moz-range-thumb {
+	box-shadow: 0px 0px 1px #00000000;
+	border: 2px solid #000000;
+	height: 32px;
+	width: 16px;
+	border-radius: 4px;
+	background: var(--background-color);
+	cursor: var(--cursor-type);
+}
+
+input[type=range]::-ms-track {
+	width: 100%;
+	height: 16px;
+	cursor: var(--cursor-type);
+	animate: 0.2s;
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+	background: var(--background-color);
+	background: linear-gradient(to right, var(--background-color), var(--slow-color), var(--background-color));
+	border: 0px solid #000000;
+	border-radius: 8px;
+	box-shadow: 0px 0px 0px #000000;
+}
+
+input[type=range]::-ms-fill-upper {
+	background: var(--background-color);
+	background: linear-gradient(to right, var(--background-color), var(--slow-color), var(--background-color));
+	border: 0px solid #000000;
+	border-radius: 8px;
+	box-shadow: 0px 0px 0px #000000;
+}
+
+input[type=range]::-ms-thumb {
+	box-shadow: 0px 0px 1px #00000000;
+	border: 2px solid #000000;
+	height: 32px;
+	width: 16px;
+	border-radius: 4px;
+	background: var(--background-color);
+	cursor: var(--cursor-type);
+}
+
+input[type=range]:focus::-ms-fill-lower {
+	background: var(--background-color);
+}
+
+input[type=range]:focus::-ms-fill-upper {
+	background: var(--background-color);
+}
+
+
+#snippetcontainer {
+	position: relative;
+}
+#codesnippet {
+	margin-top: 1rem;
+	padding: .7rem;
+	border: 1px solid black;
+	border-radius: 0.25rem;
+	background: var(--slow-color);
+	width: 100%;
+	min-height: 200px;
+	white-space: pre-wrap;
+}
+#copybutton {
+	position: absolute;
+	top: 1.5rem;
+	right: 10px;
+	margin: 0;
+	padding: .25rem;
+	font-size: 1rem;
+
+	background: white;
+	border: 1px solid black;
+	box-shadow: 2px 2px black;
+}
+#copybutton:active {
+	transform: translate(2px, 2px);
+	box-shadow: 0px 0px black;
+}
+

@@ -1,0 +1,147 @@
+---
+title: Audience-Controlled Video Art
+tags: workitems
+description: "Video art controlled in part by the audience via analog readings."
+coverimage: "/images/work/videos/coverimage.png"
+date: 2020-01-06
+---
+<style>
+	img {
+		border: 1px dashed black;
+		padding: .3rem;
+	}
+	canvas {
+		display: block;
+		width: 100%;
+	}
+</style>
+
+<h1>Audience-Controlled Video Art</h1>
+
+<h2>Watervowel</h2>
+<div id="sketchcontainer"></div>
+
+<script>
+
+
+let bgVid;
+let fgVid;
+
+
+const path = "/images/work/controllablevideo/";
+//String[] fileNames = {"i", "e", "eeh", "eh", "aa", "aah", "ahh", "awh", "aww", "aoh", "oah", "o", "ou", "u"};
+//String[] fileNames = {"i", "eeh",  "aa",  "ahh",  "aww",  "oah",  "ou", "u"};
+const fileNames = ["i", "e", "eh", "aa","ahh", "awh", "aoh","o",  "u"];
+let players = new Array(fileNames.length);
+
+let vidFrames = new Array();
+
+let byteValue = 0;
+let byteValueMapped = 0;
+let currentAudio = 0;
+let lastAudio = 0;
+let slider;
+
+function preload() {
+	for(let i = 0; i < 152; i++) {
+		vidFrames[i] = loadImage(path + "tiffv2/frame108" + ('000' + i).slice(-3) + ".tif")
+	}
+	bgVid = createVideo(path + "lower quality bg vid.mp4", vidLoad);
+	// fgVid = createVideo(path + "masked out head white @240.mp4", vidLoad);
+}
+
+function setup() {
+	let canvasDiv = document.getElementById('sketchcontainer');
+	let width = canvasDiv.offsetWidth;
+	let height = canvasDiv.offsetWidth*1080/1920;
+	let sketchCanvas = createCanvas(width,height);
+
+	sketchCanvas.parent("sketchcontainer");
+	sketchCanvas.id('myCanvas');
+	frameRate(30);
+  
+  
+	slider = createSlider(0, 255, 0, 1);
+	slider.position(0, 0);
+}
+
+let vidPlaying = false;
+
+let shiftVolTime = 200;
+let vidPosition = 0.0;
+let showingFgVid = true;
+let baseVolume = 0;
+let currentFrame = 0;
+
+function draw() {
+	background(255, 255, 50);
+	byteValueMapped = map(slider.value(), 0, 256, 0, players.length-1);
+	//   currentAudio = floor(map(byteValue, 0, 256, 0, players.length-1));
+
+	vidPosition = map(slider.value(), 0, 256, 0, fgVid.duration());
+	currentVidFrame = floor(map(slider.value(), 0, 256, 0, 128));
+	// fgVid.time(vidPosition);
+
+
+
+	// follow an upside down parabola of gain, around what mapped byte value there is.
+	for(let i = 0; i < players.length; i++) {
+	players[i].volume(constrain(-pow(byteValueMapped - i, 2), 0, 1));
+	}
+
+
+	//   text(byteValue, 100, 100);
+
+
+	// bird scenes
+
+	if ((bgVid.time() > 32 && bgVid.time() < 45) ||
+		(bgVid.time() > 57 && bgVid.time() < 70)) {
+	showingFgVid = false;
+	baseVolume = -30;
+	}
+	else {
+	showingFgVid = true;
+	baseVolume = -10;
+	}
+
+	// draw Movie images
+	blendMode(BLEND);
+	image(bgVid, 0, 0, width, height);
+	if(showingFgVid) {
+		blendMode(DARKEST);
+		image(vidFrames[currentVidFrame], width*0.65, -height*0.03, (480/1920)*width, (480/1080)*height);
+	}
+  
+}
+
+
+// void serialEvent(Serial port) {
+//   byteValue = port.read();
+// }
+
+function vidLoad() {
+	bgVid.hide();
+	// fgVid.hide();
+	bgVid.volume(1);
+	// fgVid.volume(0);
+}
+
+function mouseClicked() {
+	if(!vidPlaying) {
+		bgVid.loop();
+		// fgVid.loop();
+		// print(fgVid.duration());
+
+		for(let i = 0; i < players.length; i++) {
+			players[i].loop();
+			players[i].volume(0.8);
+			console.log("playing" + players[i])
+		}
+		
+		vidPlaying = true;
+	}
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
