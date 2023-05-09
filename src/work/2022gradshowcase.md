@@ -1,9 +1,9 @@
 ---
 title: 2022 Grad Showcase Site for UW School of Art
 tags: workitems
-description: "Website for the 2022 UW School of Art+Art History+Design’s 2022 graduate showcase."
+description: "Website for the 2022 UW School of Art + Art History + Design’s 2022 graduate showcase."
 coverimage: "/images/work/2022gradshow/2022gradshow-cover.png"
-date: 2020-01-02
+date: 2020-01-04
 ---
 <style>
 	img.hasborder {
@@ -18,7 +18,7 @@ date: 2020-01-02
 
 <p><a class="visitsitelink" href="https://2022.uwsoaahdgradshow.com/">View site &rarr;</a></p>
 
-<img src="/images/work/2022gradshow/widePROMO_2022gradshowcase.jpg">
+<img src="/images/work/2022gradshow/PROMO_2022 grad showcase.jpg">
 
 I designed and developed the website for the UW SOA+AH+D graduate showcase with a goal to preserve the event as well as possible.
 

@@ -3,7 +3,7 @@ title: "Field Study: Older Visual Artists"
 tags: workitems
 description: "A ten-week-long research and ideation process about how to support older visual artists."
 coverimage: "/images/work/fieldstudyassets/judith-studio-square.png"
-date: 2020-01-01
+date: 2020-01-02
 ---
 
 
@@ -14,7 +14,7 @@ date: 2020-01-01
 | Timeline | 10 weeks |
 | Role | Interviewer, designer, bookmaker. |
 | Team | Four students. |
-| Topics | design research, publication design
+| Topics | design research, publication design |
 
 
 <img src="/images/work/fieldstudyassets/workbook_cover.jpg" alt="The cover of our field study workbook, with the title 'Designing for Older Artists'">
@@ -49,14 +49,8 @@ The final deliverable was a string-bound book that detailed our research, ideati
 This is a design workbook, meaning these ideas are not fully developed. The purpose is to inspire other designers who may want to explore this design space.
 
 <img src="/images/work/fieldstudyassets/workbookspread_cropped-3.jpg" alt="a page of our design field study workbook">
-<img src="/images/work/fieldstudyassets/workbookspread_cropped-13.jpg" alt="a page of our design field study workbook">
 <img src="/images/work/fieldstudyassets/workbookspread_cropped-15.jpg" alt="a page of our design field study workbook">
-<img src="/images/work/fieldstudyassets/workbookspread_cropped-21.jpg" alt="a page of our design field study workbook">
-<img src="/images/work/fieldstudyassets/workbookspread_cropped-22.jpg" alt="a page of our design field study workbook">
-<img src="/images/work/fieldstudyassets/workbookspread_cropped-23.jpg" alt="a page of our design field study workbook">
 <img src="/images/work/fieldstudyassets/workbookspread_cropped-24.jpg" alt="a page of our design field study workbook">
-<img src="/images/work/fieldstudyassets/workbookspread_cropped-25.jpg" alt="a page of our design field study workbook">
-<img src="/images/work/fieldstudyassets/workbookspread_cropped-26.jpg" alt="a page of our design field study workbook">
 
 <img src="/images/work/fieldstudyassets/workbook-process.png" alt="A photo of me in the process of using a makeshift sewing needle to saddle-stitch the sheets together for the workbook">
 
