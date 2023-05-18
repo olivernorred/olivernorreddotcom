@@ -19,45 +19,49 @@
 	<div id="maincontainer">
 		<div id="homelink" style=""><a href="/">&larr; olivernorred.com</a></div>
 		<div id="betalabel">legit marquee maker beta! (v0.1)</div>
-		<div id="canvasanddimensions">
-			<div id="displaycontainer">
-				<canvas id="canvas" resize></canvas>
-				<div id="svgcontainer" style="display:none;"></div>
-				<svg class="legit-marquee" id="legitmarqueedisplay" viewBox="0 0 200 100" content="Make your own legit-marquee!" contentrepeat="1" speed="2" textsize="40" pathd="">
-				</svg>
-			</div>
-			<div id="dimensionscontainer">
-				<div>
-					<!-- <label for="widthinput">width</label> -->
-					<input class="numberinput dimensioninput" type="number" name="width" id="widthinput" value="600" min="0" max="10000">
+		<div id="two-col-grid">
+			<div id="canvasanddimensions">
+				<div id="displaycontainer">
+					<canvas id="canvas" resize></canvas>
+					<div id="svgcontainer" style="display:none;"></div>
+					<svg class="legit-marquee" id="legitmarqueedisplay" viewBox="0 0 200 100" content="Make your own legit-marquee!" contentrepeat="1" speed="2" textsize="40" pathd="">
+					</svg>
 				</div>
-				<p>&nbsp;&times;&nbsp;</p>
-				<div>
-					<!-- <label for="heightinput"></label> -->
-					<input class="numberinput dimensioninput" type="number" name="height" id="heightinput" value="300" min="0" max="10000">
+				<div id="dimensionscontainer">
+					<div>
+						<!-- <label for="widthinput">width</label> -->
+						<input class="numberinput dimensioninput" type="number" name="width" id="widthinput" value="600" min="0" max="10000">
+					</div>
+					<p>&nbsp;&times;&nbsp;</p>
+					<div>
+						<!-- <label for="heightinput"></label> -->
+						<input class="numberinput dimensioninput" type="number" name="height" id="heightinput" value="300" min="0" max="10000">
+					</div>
 				</div>
 			</div>
-		</div>
-		<div id="controlscontainer">
-			<div id="contentinputcontainer">
-				<!-- <label for="contentinput">Content</label> -->
-				<input type="text" name="content" id="contentinput" value="Make your own legit-marquee!">
+			<div id="rightcolumn">
+				<div id="controlscontainer">
+					<div id="contentinputcontainer">
+						<!-- <label for="contentinput">Content</label> -->
+						<input type="text" name="content" id="contentinput" value="Make your own legit-marquee!">
+					</div>
+					<div>
+						<input type="text" name="fontinput" id="fontinput" value="Times New Roman">
+					</div>
+					<div>
+						<label for="textsizeinput">Text size: </label>
+						<input type="number" name="textsizeinput" id="textsizeinput" value="40">
+					</div>
+					<div>
+						<label for="speedinput">Speed: <span id="speeddisplay">1</span></label>
+						<input type="range" name="speedinput" class="rangeinput" min="-20" max="20" id="speedinput" value="1" step="0.1">
+					</div>
+				</div>
+				<div id="snippetcontainer">
+					<textarea id="codesnippet" contenteditable="false"></textarea>
+					<button id="copybutton">copy</button>
+				</div>
 			</div>
-			<div>
-				<input type="text" name="fontinput" id="fontinput" value="Times New Roman">
-			</div>
-			<div>
-				<label for="textsizeinput">Text size: </label>
-				<input type="number" name="textsizeinput" id="textsizeinput" value="40">
-			</div>
-			<div>
-				<label for="speedinput">Speed: <span id="speeddisplay">1</span></label>
-				<input type="range" name="speedinput" class="rangeinput" min="-20" max="20" id="speedinput" value="1" step="0.1">
-			</div>
-		</div>
-		<div id="snippetcontainer">
-			<textarea id="codesnippet" contenteditable="false"></textarea>
-			<button id="copybutton">copy</button>
 		</div>
 	</div>
 	

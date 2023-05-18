@@ -16,7 +16,7 @@ body {
 
 #maincontainer {
 	max-width: 100%;
-	margin: .5rem auto;
+	margin: .5rem;
 	width: 600px;
 
 }
@@ -60,6 +60,12 @@ svg {
 	pointer-events: none;
 }
 
+#two-col-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: 100%;
+	gap: 1rem;
+}
 
 #canvasanddimensions {
 	grid-template-columns: auto 1fr;
@@ -109,7 +115,7 @@ input {
 #contentinput, #fontinput {
 	width: 500px;
 	padding: .25rem;
-	margin-top: 1rem;
+	margin-top: 0;
 	border-color: black;
 	border-style: solid;
 	--border-thickness: 1px;
