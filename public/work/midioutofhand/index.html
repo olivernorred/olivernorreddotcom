@@ -4,14 +4,14 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Work \  Oliver Norred</title>
-	<meta name="description" content="Website of Oliver Norred: Fine, fine... I'm a web guy, and I have a personal site. Yeesh!">
+	<title>IN PROGRESS: MIDI Out of Hand \ Work \ Oliver Norred</title>
+	<meta name="description" content="A hyper-local social network for use in third places">
 
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@olivernorred">
 	<meta name="twitter:creator" content="@olivernorred">
-	<meta name="twitter:title" content="Work \  Oliver Norred">
-	<meta name="twitter:description" content="Website of Oliver Norred: Fine, fine... I'm a web guy, and I have a personal site. Yeesh!">
+	<meta name="twitter:title" content="IN PROGRESS: MIDI Out of Hand \ Work \ Oliver Norred">
+	<meta name="twitter:description" content="A hyper-local social network for use in third places">
 	<meta name="twitter:image" content="https://olivernorred.com/images/social-image.png">
 
 	<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
@@ -48,90 +48,41 @@
 			</div>
 		</header>
 	
-		<main id="content" class="portfolioindexcontent">
-			<link rel="stylesheet" href="/css/workstyles.css"><section class="workitem">
-<p><a href="/work/midioutofhand/"></a></p>
-<div class="cardsplit">
-<img src="/images/work/steep/steep-cover.png">
-<div class="subcard">
-<h1>IN PROGRESS: MIDI Out of Hand</h1>
-<p>A hyper-local social network for use in third places</p>
-</div>
-</div>
-</section><section class="workitem">
-<p><a href="/work/steep/"></a></p>
-<div class="cardsplit">
-<img src="/images/work/steep/steep-cover.png">
-<div class="subcard">
-<h1>steep: app design</h1>
-<p>A hyper-local social network for use in third places</p>
-</div>
-</div>
-</section><section class="workitem">
-<p><a href="/work/fieldstudy-oldervisualartists/"></a></p>
-<div class="cardsplit">
-<img src="/images/work/fieldstudyassets/judith-studio-square.png">
-<div class="subcard">
-<h1>Field Study: Older Visual Artists</h1>
-<p>A ten-week-long research and ideation process about how to support older visual artists.</p>
-</div>
-</div>
-</section><!-- Cookbook link -->
-<!-- 
-<section class="workitem">
-<p><a href="/cookbook/"></a>
-<img src="/images/work/cookbookcollab/cookbook_cover.png"></p>
-<div class="subcard">
-<h1>Cookbook Collab</h1>
-<p>A mini-site for recipes beloved to my friends and family</p>
-</div>
-</section> --><section class="workitem">
-<p><a href="/work/legit-marquees/"></a></p>
-<div class="cardsplit">
-<img src="/images/work/legit-marquees/legit-marquees_cover.gif">
-<div class="subcard">
-<h1>legit-marquees</h1>
-<p>A web component for generating stylable, screen-readable text that moves along a path</p>
-</div>
-</div>
-</section><section class="workitem">
-<p><a href="/work/sketchtimer/"></a></p>
-<div class="cardsplit">
-<img src="/images/work/sketchtimer/sketchtimer-cover.png">
-<div class="subcard">
-<h1>Quick Sketch Timer App</h1>
-<p>A prototype for a timer app for practicing sketching. Every line was hand-drawn.</p>
-</div>
-</div>
-</section><section class="workitem">
-<p><a href="/work/2022gradshowcase/"></a></p>
-<div class="cardsplit">
-<img src="/images/work/2022gradshow/2022gradshow-cover.png">
-<div class="subcard">
-<h1>2022 Grad Showcase Site for UW School of Art</h1>
-<p>Website for the 2022 UW School of Art + Art History + Design’s 2022 graduate showcase.</p>
-</div>
-</div>
-</section><section class="workitem">
-<p><a href="/work/gsah/"></a></p>
-<div class="cardsplit">
-<img src="/images/work/gsah/gsahcover.PNG">
-<div class="subcard">
-<h1>UW Graduate Students of Art History Website and Logo</h1>
-<p>A WordPress website and blog for the Graduate Students of Art History, specifically their reading group, <em>Dismantling The Canon</em></p>
-</div>
-</div>
-</section><section class="workitem">
-<p><a href="/work/videos/"></a></p>
-<div class="cardsplit">
-<img src="/images/work/videos/coverimage.png">
-<div class="subcard">
-<h1>Videos!</h1>
-<p>Video work</p>
-</div>
-</div>
-</section>
+		<main id="content" class="portfolio">
+			
+<link rel="stylesheet" href="/css/workstyles.css">
+<div class="workitemcontent">
 
+<style>
+	img.hasborder {
+		border: 1px dashed black;
+		padding: .3rem;
+	}
+</style>
+<h1>In progress: MIDI Out of Hand</h1>
+<h2>A way more expressive MIDI controller</h2>
+
+
+<br>
+<br>
+<p><a href="/work/" style="font-family: var(--monofont); font-weight: bold;">&larr; more from my portfolio</a></p>
+</div>
+
+<script>
+
+document.querySelectorAll("video:not([controls])").forEach(element => {
+	element.addEventListener('click', ()=>{
+		if (element.paused) {
+			element.play();
+			element.classList.remove("pausedvideo");
+		} else {
+			element.pause();
+			element.classList.add("pausedvideo");
+		}
+	})
+});
+
+</script>
 			
 		</main>
 	
@@ -146,7 +97,7 @@
 			<a href="https://www.youtube.com/c/OliverNorred">youtube</a><br>
 			<a rel="me" href="https://pnw.zone/@olivernorred">mastodon</a>
 		</footer>
-	</div><script src="/js/stickyscroll.js"></script><script src="/js/darkmode.js"></script>
+	</div><script src="/js/darkmode.js"></script>
 
 
 <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
