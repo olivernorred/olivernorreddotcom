@@ -1,7 +1,7 @@
 ---
 title: "IN PROGRESS: MIDI Out of Hand"
 tags: workitems
-description: "A hyper-local social network for use in third places"
+description: "A way more expressive MIDI controller"
 coverimage: "/images/work/midioutofhand/1.jpg"
 date: 1990-01-01
 ---
