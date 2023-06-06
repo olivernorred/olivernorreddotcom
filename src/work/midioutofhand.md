@@ -22,7 +22,7 @@ MIDI Out of Hand is a MIDI controller that reads big, expressive movements by th
 
 <img src="/images/work/midioutofhand/2.jpg">
 
-MIDI Out of Hand attempts to expand the kinetic vocabulary of electronic instruments. Pursuing this opened the final instrument to be played in novel ways, like by more than one person at a time.
+MIDI Out of Hand attempts to expand the kinetic vocabulary of electronic instruments. This pursuit opened the final instrument to be played in novel ways, like by multiple people at a time.
 
 <img src="/images/work/midioutofhand/4.jpg">
 
