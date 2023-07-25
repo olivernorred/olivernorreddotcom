@@ -142,17 +142,23 @@
 		max-width: 100%;
 	}
 	.bouncinglink {
-		animation: floatlink .5s infinite;
+		& a {
+			background: yellow;
+			text-decoration: underline;
+		}
+		animation: floatlink .66s infinite;
 	}
 	@keyframes floatlink {
 		0% {transform: translate(0,0px);}
 		25% {transform: translate(-1.5px, 0px)}
-		50% {transform: translate(-3px, 0px)}
-		75% {transform: translate(3px, 0px);}
+		50% {transform: translate(-2px, 0px)}
+		90% {transform: translate(2px, 0px);}
 	}
 </style>
 
 <article id="musicwriting">
+	<p class="bouncinglink"><a href="https://youtu.be/l6Tio5-9jIE">Sunset Tavern August 7th Tickets! &rarr;</a></p>
+
 	<section id="streamingicons">
 		<a href="https://open.spotify.com/artist/6RkQVm3jOYvucrvNtcNlAx">
 			<img src="/images/music/icons/spotify.svg" alt="You Can Already Dance on Spotify">
