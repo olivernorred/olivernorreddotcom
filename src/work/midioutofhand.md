@@ -18,6 +18,13 @@ date: 1990-01-01
 
 <img src="/images/work/midioutofhand/1.jpg">
 
+| | |
+|---|---|
+| Timeline | 11 weeks |
+| Role | Research, interaction design, construction, programming, sound design |
+| Team | Solo (special thanks to <a href="https://rileyhuston.xyz">Riley Huston</a> for the 3D printing help) |
+| Topics | physical interfaces, playful interactions |
+
 MIDI Out of Hand is a MIDI controller that reads big, expressive movements by the player or players. To activate a note, a player presses a footswitch. The sound can be modified by pulling either of the retractable cords from the upper part of the instrument: by default, the left cord controls the filter cutoff, and the right cord controls the pitch shift, but they can be mapped to any parameter in a DAW.
 
 <img src="/images/work/midioutofhand/2.jpg">
