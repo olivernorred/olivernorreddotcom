@@ -34,3 +34,5 @@ MIDI Out of Hand attempts to expand the kinetic vocabulary of electronic instrum
 <img src="/images/work/midioutofhand/4.jpg">
 
 This project also prompted a process for instrument prototyping. In a workshop, participants pretended to “play” nearby large objects—like a recycling bin, a paper cutter, and a ladder—as though they were instruments. We used a keyboard to produce sounds that roughly mirror the movements they were making, and determined what movement-sound combinations were most interesting and realistic.
+
+<iframe style="aspect-ratio: 1920 / 1080" width="1920" src="https://www.youtube.com/embed/qh9EHj_c6Oo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
