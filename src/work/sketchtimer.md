@@ -3,7 +3,7 @@ title: Quick Sketch Timer App
 tags: workitems
 description: "A prototype for a timer app for practicing sketching. Every line was hand-drawn."
 coverimage: "/images/work/sketchtimer/sketchtimer-cover.png"
-date: 2020-01-03
+date: 2020-01-06
 ---
 <style>
 	img {
