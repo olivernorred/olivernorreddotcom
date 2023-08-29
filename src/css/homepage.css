@@ -75,7 +75,7 @@ p.introductionbodytext:not(:first-child) {
 	color: yellow;
 }
 #moreaboutme p a {
-	color: white;
+	color: blue;
 }
 .categorylink a {
 	color: white;
