@@ -106,19 +106,30 @@
 	#streamingicons a:hover {
 		transform: translate(0, -3px);
 	}
+	#streamingicons a.disabled {
+		pointer-events: none;
+		opacity: .5;
+		filter: grayscale(100%)
+	}
 
 	#lowerstuffcontainer {
 		max-width: 800px;
 		margin: auto;
 		margin-top: 5rem;
-		padding: 1rem 4rem;
-		background: var(--fgcolor);
-		color: var(--bgcolor);
-		box-shadow: 0 0 66px 20px white;
-		aspect-ratio: 8.5 / 11;
+		padding: 1rem 1rem;
+		border: 1px solid var(--fgcolor);
+		color: var(--fgcolor);
+	}
+	#covercontainer img {
+		animation: rock 1s steps(1) infinite;
+	}
+	@keyframes rock {
+		from{transform: rotate(-1deg);}
+		50% {transform: rotate(2deg);}
 	}
 	#abstract {
-		margin: 1rem auto;
+		margin: auto;
+		margin-top: 2rem;
 		padding: 0;
 		width: 100%;
 		
@@ -170,77 +181,98 @@
 	<script type="text/javascript" src="/js/helpingfoods.js"></script>
 
 	<section id="streamingicons">
-		<a href="https://open.spotify.com/track/586CFEdKUh8mKswD4Qx4Od">
-			<img src="/images/music/icons/spotify.svg" alt="You Can Already Dance on Spotify">
+		<a href="" class="disabled">
+			<img src="/images/music/icons/spotify.svg" alt="Helping on Spotify">
 		</a>
-		<a href="https://music.apple.com/us/album/computer-time/1656063984?i=1656063987&app=music">
-			<img src="/images/music/icons/applemusiccolor.svg" alt="You Can Already Dance on Apple Music">
+		<a href="" class="disabled">
+			<img src="/images/music/icons/applemusiccolor.svg" alt="Helping on Apple Music">
 		</a>
-		<a href="">
-			<img src="/images/music/icons/youtubemusic.svg" alt="You Can Already Dance on YouTube Music">
+		<a href="" class="disabled">
+			<img src="/images/music/icons/youtubemusic.svg" alt="Helping on YouTube Music">
 		</a>
-		<a href="https://olivernorred.bandcamp.com/album/computer-time">
-			<img src="/images/music/icons/bandcampcolor.svg" alt="You Can Already Dance on Bandcamp">
+		<a href="https://olivernorred.bandcamp.com/track/helping">
+			<img src="/images/music/icons/bandcampcolor.svg" alt="Helping on Bandcamp">
 		</a>
 	</section>
+	<p style="text-align: center; font-style: italic">releases on streaming services September 22nd!</p>
+
+	<div id="covercontainer">
+		<img src="/images/music/covers/helping_cover.jpg" alt="The album cover for Helping by All of Our Cornbread">
+	</div>
 
 
 	<section id="abstract">
-		<p><em>The first single ever</em> from <a href="/music/allofourcornbread/">All of Our Cornbread!</a></p>
+		<p>The second single from <a href="/music/allofourcornbread/">All of Our Cornbread!</a></p>
 		<ol>
 			<li>Oliver Norred &ndash; vocals, keyboards, production</li>
+			<li>Aaron Greisen &ndash; bass</li>
+			<li>Gavin Wright &ndash; drums</li>
 			<li>Wyatt Markgraf &ndash; guitar</li>
+			<li>Ava Lim &ndash; saxophone (solo)</li>
 			<li>Carlos Alvarez &ndash; trumpet</li>
-			<li>Ava Lim &ndash; saxophone</li>
-			<li>Riley Huston &ndash; voice</li>
+			<li>Andrew Buckingham &ndash; trumpet</li>
+			<li>Kai Brozovich &ndash; compositional assistance</li>
 		</ol>
 
 		<h1>Lyrics</h1>
 		<p>
-			block the windows to the trees and flowers
-			this os has got far more power
-			stay awake till ungodly hours
-			stay awake till ungodly hours
-			
-			block the windows to the trees and flowers
-			this os has got far more power
-			stay awake till ungodly hours
-			stay awake till ungodly hours
+			God damn, mashed potatoes are a hug for my mouth<br>
+			And I'm not hungry but I'll throw em straight down<br>
+			It's better than feeling the contemptible words that you wrote.
 		</p>
-
+		
 		<p>
-			on the computer i can play my videos
-			behind the screen i can be so mean
-			on the computer i can play my videos
-			i can dictate how i'm seen
+			God damn, mashed potatoes are a hug for my mouth<br>
+			So I'll just eat here trying to figure it out,<br>
+			Why you won't acknowledge the lump that you put in my throat.
 		</p>
-
+		
 		<p>
-			fuck the food you put off in the fridge
-			consume the content
-			fuck the bathroom fuck the bathroom
-			shit in the content
-			
-			fuck the food you put off in the fridge
-			consume the content
-			fuck the bathroom fuck the bathroom
-			shit out the content
+			Please! Can I take another helping?<br>
+			I mean, I could use some helping<br>
+			My stomach missed its cue
 		</p>
-
+		
 		<p>
-			cast your loved ones to the dark and go nearer the lights that do not matter
+			Please! Can I take another plate?<br>
+			Because I'm not thinking straight<br>
+			I need a helping to get me through
 		</p>
-			
+		
 		<p>
-			on the computer i can play my videos
-			behind the screen i can be so mean
-			on the computer i can play my videos
-			i can dictate how i'm seen
-			
-			on the computer i can play my videos
-			behind the screen i can be so mean
-			on the computer i can play my videos
-			i can dictate how i'm seen
+			Oh man, this peanut butter's got me choked up<br>
+			And now my eyes are filling up with water so much<br>
+			I'm sure it's not related to the shit that you shared with your friends.
+		</p>
+		
+		<p>
+			Oh man, this peanut butter's got me filled up<br>
+			I need another spoonful I mean I can still touch<br>
+			The memory of my inbox a minute after you clicked send
+		</p>
+		
+		<p>
+			Please! Can I take another helping?<br>
+			I mean, I could use some helping<br>
+			My stomach missed its cue 
+		</p>
+		
+		<p>
+			Please! Can I take another plate?<br>
+			Because I'm not thinking straight<br>
+			I need a helping to get me through
+		</p>
+		
+		<p>
+			Please! Can I take another helping?<br>
+			I mean, I could use some helping<br>
+			My stomach missed its cue
+		</p>
+		
+		<p>
+			Please! Can I take another plate?<br>
+			Because I'm not thinking straight<br>
+			I need a helping to get me through
 		</p>
 	</section>
 
