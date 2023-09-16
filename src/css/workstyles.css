@@ -285,4 +285,5 @@ img, video {
 }
 .portfolio table td:first-of-type {
 	font-style: italic;
+	padding-right: 1rem;
 }
