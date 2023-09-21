@@ -40,7 +40,7 @@ The UW Farm grows and sells produce, but one of its most important exports is ed
 <p>Four signs, three with liftable flaps, were installed at the UW Farm’s Center for Urban Horticulture location. There are two entrance signs, one sign explaining where the UW Farm sends its produce, and one sign about the UW Farm’s vermicomposting facility.</p>
 
 
-<img src="/images/work/uwfarm/vermicompost.jpg" alt="The 'Where Does UW Farm Food go?' sign">
+<img src="/images/work/uwfarm/wherefoodgoes.jpg" alt="The 'Where Does UW Farm Food go?' sign">
 <p class="caption">This sign answers the most-asked question from newcomers: “Where does UW Farm food go?”</p>
 
 <img src="/images/work/uwfarm/westentrance_side.jpg" alt="The west entrance sign">
