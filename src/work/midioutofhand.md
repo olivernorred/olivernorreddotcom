@@ -4,6 +4,7 @@ tags: workitems
 description: "A way more expressive MIDI controller"
 coverimage: "/images/work/midioutofhand/1.jpg"
 date: 1990-01-01
+topics: design, development, audio
 ---
 <style>
 	img.hasborder {

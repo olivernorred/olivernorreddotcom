@@ -4,6 +4,7 @@ tags: workitems
 description: "A ten-week-long research and ideation process about how to support older visual artists."
 coverimage: "/images/work/fieldstudyassets/judith-studio-square.png"
 date: 2020-01-02
+topics: design
 ---
 
 

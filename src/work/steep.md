@@ -4,6 +4,7 @@ tags: workitems
 description: "A hyper-local social network for use in third places"
 coverimage: "/images/work/steep/steep-cover.png"
 date: 2020-01-01
+topics: design
 ---
 <style>
 	img.hasborder {

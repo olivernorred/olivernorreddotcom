@@ -4,6 +4,7 @@ tags: workitems
 description: "Interactive signage for UW's student-run farm and learning laboratory."
 coverimage: "/images/work/uwfarm/eastentrance_people.jpg"
 date: 1991-01-01
+topics: design
 ---
 <style>
 	img.hasborder {

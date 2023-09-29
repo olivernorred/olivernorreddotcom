@@ -3,6 +3,7 @@ title: Logos and Branding
 description: "Graphics work I&rsquo;ve done for others"
 coverimage: "/images/work/logos/withsmall_redsmall.png"
 date: 2020-01-02
+topics: design
 ---
 
 <h1>A wordmark and logo for the Graduate Students of Art History at UW</h1>

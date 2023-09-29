@@ -26,9 +26,11 @@
 
 			<nav class="sitemap">
 				<div class="sublinks">
-					<span><a href="/blog/" class="blognav">blog</a></span> <span>/</span>
-					<span><a href="/work/" class="desnav">design</a></span> <span>/</span>
+					<span><a href="/work/" class="desnav">des+dev</a></span>
+					<span>/</span>
 					<span><a href="/music/" class=" active musnav">music</a></span>
+					<span>/</span>
+					<span><a href="/blog/" class="blognav">blog</a></span>
 				</div>
 
 				<div id="indexlinkcontainer" style="max-width: 200px;">
@@ -69,15 +71,20 @@
 	
 	body {
 		--yellow: #EEB508;
+		--cornbread: #f6dc64;
 		--darknavy: #00000e;
-		--fgcolor: white;
-		--bgcolor: black;
+		--fgcolor: black;
+		--bgcolor: white;
 		--fgtranslucent: rgb(255 255 255 / .7);
 	
 		--acolor: var(--blue);
 		
 		font-family: "Gooper Light";
 		overflow-x: hidden;
+		background-image: url('/images/redginghambackground-01.png');
+		background-repeat: repeat;
+		background-size: auto;
+		background-attachment: fixed;
 	}
 
 	@media only screen and (max-width: 600px) {
@@ -85,7 +92,16 @@
 			padding: 1rem;
 		}
 	}
-
+	#lowerstuffcontainer {
+		max-width: 800px;
+		margin: auto;
+		margin-top: 5rem;
+		padding: 1rem 1rem;
+		background-color: var(--cornbread);
+		border: .75rem ridge var(--bgcolor);
+		border-radius: .5rem;
+		color: var(--fgcolor);
+	}
 	#streamingicons {
 		display: flex;
 		gap: 1rem;
@@ -112,16 +128,9 @@
 		filter: grayscale(100%)
 	}
 
-	#lowerstuffcontainer {
-		max-width: 800px;
-		margin: auto;
-		margin-top: 5rem;
-		padding: 1rem 1rem;
-		border: 1px solid var(--fgcolor);
-		color: var(--fgcolor);
-	}
+	
 	#covercontainer img {
-		animation: rock 1s steps(1) infinite;
+		animation: rock 2s steps(1) infinite;
 	}
 	@keyframes rock {
 		from{transform: rotate(-1deg);}
@@ -178,102 +187,29 @@
 
 
 	
-	<script type="text/javascript" src="/js/helpingfoods.js"></script>
 
 	<section id="streamingicons">
-		<a href="https://open.spotify.com/track/1qx1Zp0K54l7MgXBOtPDHv">
+		<a class="disabled" href="">
 			<img src="/images/music/icons/spotify.svg" alt="Helping on Spotify">
 		</a>
-		<a href="https://music.apple.com/us/album/helping/1707027437?i=1707027443&app=music">
+		<a class="disabled" href="">
 			<img src="/images/music/icons/applemusiccolor.svg" alt="Helping on Apple Music">
 		</a>
-		<a href="https://music.youtube.com/watch?v=cbDPR_nJSGU">
+		<a class="disabled" href="">
 			<img src="/images/music/icons/youtubemusic.svg" alt="Helping on YouTube Music">
 		</a>
-		<a href="https://olivernorred.bandcamp.com/track/helping">
+		<a class="disabled" href="">
 			<img src="/images/music/icons/bandcampcolor.svg" alt="Helping on Bandcamp">
 		</a>
 	</section>
-	<p style="text-align: center; font-style: italic">releases on streaming services September 22nd!</p>
 
 	<div id="covercontainer">
-		<img src="/images/music/covers/helping_cover.jpg" alt="The album cover for Helping by All of Our Cornbread">
+		<img src="/images/music/covers/welikeitwhenweplayourtunes_cover.jpg" alt="The album cover for Helping by All of Our Cornbread">
 	</div>
 
 
 	<section id="abstract">
-		<p>The second single from <a href="/music/allofourcornbread/">All of Our Cornbread!</a></p>
-		<ol>
-			<li>Oliver Norred &ndash; vocals, keyboards, production</li>
-			<li>Aaron Greisen &ndash; bass</li>
-			<li>Gavin Wright &ndash; drums</li>
-			<li>Wyatt Markgraf &ndash; guitar</li>
-			<li>Ava Lim &ndash; saxophone (solo)</li>
-			<li>Carlos Alvarez &ndash; trumpet</li>
-			<li>Andrew Buckingham &ndash; trumpet</li>
-			<li>Kai Brozovich &ndash; compositional assistance</li>
-		</ol>
-
-		<h1>Lyrics</h1>
-		<p>
-			God damn, mashed potatoes are a hug for my mouth<br>
-			And I'm not hungry but I'll throw em straight down<br>
-			It's better than feeling the contemptible words that you wrote.
-		</p>
-		
-		<p>
-			God damn, mashed potatoes are a hug for my mouth<br>
-			So I'll just eat here trying to figure it out,<br>
-			Why you won't acknowledge the lump that you put in my throat.
-		</p>
-		
-		<p>
-			Please! Can I take another helping?<br>
-			I mean, I could use some helping<br>
-			My stomach missed its cue
-		</p>
-		
-		<p>
-			Please! Can I take another plate?<br>
-			Because I'm not thinking straight<br>
-			I need a helping to get me through
-		</p>
-		
-		<p>
-			Oh man, this peanut butter's got me choked up<br>
-			And now my eyes are filling up with water so much<br>
-			I'm sure it's not related to the shit that you shared with your friends.
-		</p>
-		
-		<p>
-			Oh man, this peanut butter's got me filled up<br>
-			I need another spoonful I mean I can still touch<br>
-			The memory of my inbox a minute after you clicked send
-		</p>
-		
-		<p>
-			Please! Can I take another helping?<br>
-			I mean, I could use some helping<br>
-			My stomach missed its cue 
-		</p>
-		
-		<p>
-			Please! Can I take another plate?<br>
-			Because I'm not thinking straight<br>
-			I need a helping to get me through
-		</p>
-		
-		<p>
-			Please! Can I take another helping?<br>
-			I mean, I could use some helping<br>
-			My stomach missed its cue
-		</p>
-		
-		<p>
-			Please! Can I take another plate?<br>
-			Because I'm not thinking straight<br>
-			I need a helping to get me through
-		</p>
+		<h1>A playlist of songs that inspired me</h1>
 	</section>
 
 </div>
@@ -291,7 +227,11 @@
 			<a href="https://twitter.com/olivernorred">twitter</a><br>
 			<a href="https://www.youtube.com/c/OliverNorred">youtube</a><br>
 		</footer>
-	</div><script src="/js/darkmode.js"></script>
+	</div>
+	
+<!---->
+
+<script src="/js/darkmode.js"></script>
 
 
 <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>

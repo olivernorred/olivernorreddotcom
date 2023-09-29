@@ -3,6 +3,7 @@ title: Skyrim Library
 description: "A reading experience for hundreds of texts from Bethesda’s <i>Skyrim</i>"
 coverimage: "/images/work/skyirmlib/herbalistsguide.PNG"
 date: 2020-01-05
+topics: design, development
 ---
 <h1>A better way to read Skyrim books!</h1>
 <p><a href="https://skyrimbooksproj.web.app/">VIEW SITE &rarr;</a></p>

@@ -11,6 +11,10 @@ body {
 	--workblue: #def3fd;
 	--workpurple: #f0defd;
 
+	--translucentyellow: rgba(220, 170, 0, 0.2);
+	--translucentred: rgba(214, 40, 57, 0.2);
+	--translucentblue: rgba(45, 120, 250, 0.2);
+
 	--headerfont: "Gooper";
 
 	background-image: none;
@@ -37,8 +41,50 @@ video {
 #content.portfolioindexcontent {
 	position: relative;
 	padding: .5rem;
-	max-width: 600px;
+	max-width: 1000px;
 }
+#workitemscontainer {
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr;
+	width: 100%;
+	align-items: center;
+}
+#workitemscontainer > *:first-child {
+	align-self: right;
+}
+#workitemscontainer > *:last-child {
+	align-self: left;
+}
+
+
+
+#workitemscontainer .legit-marquee {
+	position: fixed;
+	margin: auto;
+	display: block;
+	/* left: 0; */
+	top: 0;
+	height: 100vh;
+	fill: var(--red);
+	animation: changeFillPrimaries 3s steps(1) infinite;
+}
+@keyframes changeFillPrimaries {
+	0%{fill: var(--red)}
+	33%{fill: var(--yellow)}
+	66%{fill: var(--blue)}
+}
+
+
+@media screen and (max-width: 650px) {
+	#workitemscontainer {
+		display: block;
+	}
+
+	#workitemscontainer .legit-marquee {
+		display: none;
+	}
+}
+
 
 
 
@@ -106,6 +152,7 @@ video {
 	}
 	.workitem:hover .subcard {
 		animation: push .5s steps(1) infinite;
+		transform-origin: 25% center ;
 		/* transform: translate(.5rem, 0); */
 	}
 	@keyframes push {
@@ -127,8 +174,49 @@ video {
 	margin: 0;
 }
 .workitem p {
-	margin-top: .5rem;
+	margin-top: .25rem;
 	line-height: 1.3;
+}
+.workitem p.description {
+	font-style: italic;
+}
+
+
+.workitem .topicslist {
+	margin-top: .25rem;
+	font-size: 0.75rem;
+	font-weight: bold;
+}
+.topictag {
+	margin: 0 3px;
+	padding: 2px 6px;
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: var(--mainradius);
+	display: inline-block;
+
+	&:nth-child(3n+1) {
+		transform: rotate(1deg);
+	}
+
+	&:nth-child(3n+2) {
+		transform: rotate(-2deg);
+	}
+
+	&:nth-child(3n+0) {
+		transform: rotate(-1deg);
+	}
+}
+
+.topictag.designtag {
+	background-color: var(--translucentred);
+}
+
+.topictag.developmenttag {
+	background-color: var(--translucentblue);
+}
+
+.topictag.audiotag {
+	background-color: var(--translucentyellow);
 }
 
 

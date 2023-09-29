@@ -26,9 +26,11 @@
 
 			<nav class="sitemap">
 				<div class="sublinks">
-					<span><a href="/blog/" class="{% if active == 'blog' %} active {% endif -%} blognav">blog</a></span> <span>/</span>
-					<span><a href="/work/" class="{% if active == 'work' %} active {% endif -%} desnav">design</a></span> <span>/</span>
+					<span><a href="/work/" class="{% if active == 'work' %} active {% endif -%} desnav">des+dev</a></span>
+					<span>/</span>
 					<span><a href="/music/" class="{% if active == 'music' %} active {% endif -%} musnav">music</a></span>
+					<span>/</span>
+					<span><a href="/blog/" class="{% if active == 'blog' %} active {% endif -%} blognav">blog</a></span>
 				</div>
 
 				<div id="indexlinkcontainer" style="max-width: 200px;">
@@ -90,9 +92,9 @@
 		</footer>
 	</div>
 	
-{%- if page.url == '/work/' -%}
+<!-- {%- if page.url == '/work/' -%}
 <script src="/js/stickyscroll.js"></script>
-{%- endif -%}
+{%- endif -%} -->
 
 <script src="/js/darkmode.js"></script>
 

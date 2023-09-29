@@ -1,0 +1,80 @@
+---
+layout: base.html
+title: Work \
+active: work
+designTag: true
+---
+
+<link rel="stylesheet" href="/css/workstyles.css">
+
+
+<div id="workitemscontainer">
+	<div>
+		<svg class="legit-marquee"
+			viewBox="0 0 100 500"
+			content="design &nbsp; development &nbsp; audio &nbsp; video &nbsp; websites &nbsp; "
+			pathd="m66.335,519.66646c-16,-28.44314 -33,-163.23888 -10,-258.46156c23,-95.22268 5,-239.91169 -8,-274.53812"
+			speed="1"
+			textsize="23.5"
+			style="font-family: 'Gooper';"></svg>
+	</div>
+
+	<div id="workitemslist">
+
+		{%- for item in collections.workitems -%}
+		<section class="workitem">
+
+			<a href="{{ item.url }}"></a>
+			<div class="cardsplit">
+				<img src="{{ item.data.coverimage }}">
+				<div class="subcard">
+
+					<h1> {{ item.data.title }}</h1>
+
+					<p class="description">{{item.data.description}}</p>
+					<p class="topicslist">{{item.data.topics}}</p>
+
+
+				</div>
+			</div>
+
+		</section>
+		{%- endfor -%}
+		<script>
+			document.querySelectorAll(".topicslist").forEach(el => {
+				let text = el.innerHTML.split(", ");
+				let joinedText = ""
+				text.forEach(topic => {
+					if (topic == "design") {
+						joinedText = joinedText + `<span class="topictag designtag">${topic}</span>`;
+					}
+					else if (topic == "audio") {
+						joinedText = joinedText + `<span class="topictag audiotag">${topic}</span>`;
+					}
+					else if (topic == "development") {
+						joinedText = joinedText + `<span class="topictag developmenttag">${topic}</span>`;
+					}
+					else {
+						joinedText = joinedText + `<span class="topictag neutraltag">${topic}</span>`;
+					}
+				});
+				// let joinedText = text.join("");
+				el.innerHTML = joinedText;
+			})
+		</script>
+
+	</div>
+
+	<div>
+		<svg class="legit-marquee"
+			viewBox="0 0 100 500"
+			content="design &nbsp; development &nbsp; audio &nbsp; video &nbsp; websites &nbsp; "
+			pathd="m66.335,-20.33332c-16,28.76334 -33,165.07655 -10,261.37121c23,96.29466 5,242.61251 -8,277.62875"
+			speed="1"
+			textsize="23.5"
+			style="font-family: 'Gooper';"></svg>
+	</div>
+
+
+</div>
+<script src="https://cdn.jsdelivr.net/gh/olivernorred/legit-marquees/legit-marquees.js"></script>

@@ -3,6 +3,7 @@ title: Generative Art
 description: "Experiments with p5.js"
 coverimage: "/images/work/generativeart/sprinkling.png"
 date: 2020-01-04
+topics: design
 ---
 
 # Beep boop, *Processing . . .*
