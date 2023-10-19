@@ -3,7 +3,7 @@ title: "MIDI Out of Hand"
 tags: workitems
 description: "A way more expressive MIDI controller"
 coverimage: "/images/work/midioutofhand/1.jpg"
-date: 1990-01-01
+date: 1972-01-01
 topics: design, development, audio
 ---
 <style>
@@ -22,9 +22,9 @@ topics: design, development, audio
 | | |
 |---|---|
 | Timeline | 11 weeks |
-| Role | Research, interaction design, construction, programming, sound design |
+| Role | Research, interaction design, fabrication, programming, sound design |
 | Team | Solo (special thanks to <a href="https://rileyhuston.xyz">Riley Huston</a> for the 3D printing help) |
-| Topics | physical interfaces, playful interactions |
+| Topics | physical interfaces, novel interactions, prototyping techniques |
 
 
 <iframe style="aspect-ratio: 1920 / 1080" width="1920" src="https://www.youtube.com/embed/sZtJgNn2nF8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
