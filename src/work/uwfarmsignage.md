@@ -55,10 +55,10 @@ The UW Farm grows and sells produce, but one of its most important exports is ed
 <p class="caption">“Here, guys, lift that 100-lb signpost while I take a photo!”</p>
 
 <p><img src="/images/work/uwfarm/process/2.jpg" alt="Two farm workers load steel signposts into a truck"></p>
-<p class="caption">No cement allowed on the organic farm, so we had to dig deep!</p>
+<p class="caption">No cement allowed on the organic farm, so we had to dig deep.</p>
 
 <p><img src="/images/work/uwfarm/process/3.jpg" alt="Two farm workers load steel signposts into a truck"></p>
-<p class="caption">Volunteers are crucial!</p>
+<p class="caption">Volunteers are crucial.</p>
 
 <p><img src="/images/work/uwfarm/process/4.jpg" alt="Two farm workers load steel signposts into a truck"></p>
-<p class="caption">I ended up laser-engraving the braille into acrylic and adhering it with 2-part epoxy; we’ll see how it holds up!</p>
+<p class="caption">I ended up laser-engraving the braille into acrylic and adhering it with 2-part epoxy; we’ll see how it holds up.</p>

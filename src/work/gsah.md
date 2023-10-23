@@ -1,9 +1,9 @@
 ---
 title: UW Graduate Students of Art History Website and Logo
 tags: workitems
-description: "A WordPress website and blog for the Graduate Students of Art History, specifically their reading group, *Dismantling The Canon*"
+description: "A WordPress website and blog for the Graduate Students of Art History, specifically their reading group, Dismantling The Canon"
 coverimage: "/images/work/gsah/gsahcover.PNG"
-date: 2020-01-04
+date: 1999-01-04
 topics: design, development
 ---
 <style>
@@ -17,9 +17,13 @@ topics: design, development
 
 <p><a class="visitsitelink" href="http://depts.washington.edu/gsah/">View site &rarr;</a></p>
 
-<img class="hasborder" src="/images/work/gsah/gsahcover.PNG" alt="The GSAH homepage features an introduction beside paintings from outside the Western Canon">
+<img src="/images/work/gsah/homepage_screenshot.png" alt="the website homepage" class="hasborder">
 
-<p class="caption">The GSAH homepage features an introduction beside paintings from outside the Western Canon.</p>
+<p class="caption">The GSAH homepage features an introduction beside paintings from outside the Western Canon. This site demanded many different page categories, so on screens where they fit, we were able to list them all.</p>
+
+<p><img src="/images/work/gsah/homepage_mobile.png" alt="the homepage on mobile"></p>
+
+<p class="caption">Whereas on screen sizes too small to fit the categories, we let an expanable menu work its magic.</p>
 
 I designed and built the website and blog, including a wordmark and logo, for the UW’s Graduate Students of Art History (GSAH). Specifically, they blog about talks given to and by their anti-racist reading group, *Dismantling the Canon*.
 

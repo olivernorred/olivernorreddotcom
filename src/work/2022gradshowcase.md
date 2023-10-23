@@ -3,7 +3,7 @@ title: 2022 Grad Showcase Site for UW School of Art
 tags: workitems
 description: "Website for the 2022 UW School of Art + Art History + Design’s 2022 graduate showcase."
 coverimage: "/images/work/2022gradshow/2022gradshow-cover.png"
-date: 2020-01-04
+date: 1973-02-01
 topics: design, development
 ---
 <style>
@@ -21,11 +21,11 @@ topics: design, development
 
 <img src="/images/work/2022gradshow/PROMO_2022 grad showcase.jpg">
 
-I designed and developed the website for the UW SOA+AH+D graduate showcase with a goal to preserve the event as well as possible.
+I designed and developed the website for the UW SOA+AH+D graduate showcase at the Henry Art Gallery with a goal to preserve the event as well as possible.
 
-Like many UW websites, this site uses WordPress, so the development side involved some minimal CSS and a lot of uploading. It also saved some time to have last year’s layout to look at.
+Like many UW websites, this site has a WordPress backend and CMS, so the development side involved some minimal CSS and *a lot* of organized uploading. It also saved some time to have last year’s layout to look at.
 
-I designed the digital grainy identity with the idea that this was a digital recreation of a real-life event. The light blue link-highlight color came from the tones on the main hero image.
+I designed the digital render identity from the idea that this website is a digital recreation of a real-life event. The light blue link-highlight color complements hues in the render.
 
 <img class="hasborder" src="/images/work/2022gradshow/graduateselection.png" alt="selecting a grad student’s work to view">
 
@@ -35,7 +35,10 @@ I designed the digital grainy identity with the idea that this was a digital rec
 
 <p class="caption">Each graduate’s page has photos of their work on the right and information about their project and experience on the left</p>
 
+<p><img src="/images/work/2022gradshow/profile_mobile.png" alt="mobile profile view" class="hasborder"></p>
+
+<p class="caption">On mobile, the two-column layout condenses into one.</p>
+
 <img src="/images/work/2022gradshow/22_favicon.png" alt="the website favicon" style="width: 100px">
 
 <p class="caption">The favicon has a black background for increased contrast at small sizes</p>
-
