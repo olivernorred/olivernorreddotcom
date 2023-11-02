@@ -87,7 +87,7 @@
 		background-image: url('/images/music/covers/welikeitwhenweplayourtunes_cover.jpg');
 		background-color: #eee;
 		background-position: center;
-		background-repeat: no-repeat;
+		background-repeat: repeat;
 		background-size: cover;
 		background-attachment: fixed;
 		--scroll-multiplier: 1;
@@ -99,7 +99,11 @@
 		}
 		body {
 			--scroll-multiplier: 0;
-			background-size: 250%;
+			background-size: auto;
+			background-image: url('/images/redginghambackground-02.png')
+		}
+		#coverimage {
+			display: block !important;
 		}
 	}
 	iframe {
@@ -115,6 +119,7 @@
 		margin-top: 4rem;
 		padding: 1rem 1rem;
 		background-color: #eee;
+		background: linear-gradient(to bottom, #eee, #fff, #eee, #fff, #eee, #fff, #eee, #fff, #eee, #fff, #eee, #fff, #eee, #fff, #eee, #fff, #eee, #fff, #eee, #fff, #eee, #fff);
 		border: .66rem ridge var(--bgcolor);
 		border-radius: .5rem;
 		color: var(--fgcolor);
@@ -123,8 +128,11 @@
 	}
 	#covercontainer {
 		max-width: 800px;
-		margin: 5rem auto;
+		margin: 2rem auto;
 		padding: 0 1rem;
+	}
+	#coverimage {
+		display: none;
 	}
 	#streamingicons {
 		display: flex;
@@ -245,7 +253,8 @@
 
 <div id="covercontainer">
 
-	<img src="/images/music/welikeit/welikeit_wordmark.svg" alt="We Like It When We Play Our Tunes" style="display: block; margin: auto;">
+	<img src="/images/music/welikeit/welikeit_wordmark.svg" alt="We Like It When We Play Our Tunes" style="display: block; margin: 2rem auto;">
+	<img id="coverimage" src="/images/music/covers/welikeitwhenweplayourtunes_cover.jpg" alt="">
 </div>
 
 
