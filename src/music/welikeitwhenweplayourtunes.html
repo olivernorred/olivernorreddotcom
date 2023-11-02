@@ -24,6 +24,7 @@ active: music
 	}
 	
 	body {
+		
 		--yellow: #EEB508;
 		--cornbread: #fffc84;
 		--darknavy: #00000e;
@@ -38,9 +39,10 @@ active: music
 		background-image: url('/images/music/covers/welikeitwhenweplayourtunes_cover.jpg');
 		background-color: #eee;
 		background-position: center;
-		background-repeat: repeat;
+		background-repeat: no-repeat;
 		background-size: cover;
 		background-attachment: fixed;
+		--scroll-multiplier: 1;
 	}
 
 	@media only screen and (max-width: 600px) {
@@ -48,7 +50,8 @@ active: music
 			padding: 1rem;
 		}
 		body {
-			background-size: auto 100%;
+			--scroll-multiplier: 0;
+			background-size: 250%;
 		}
 	}
 	iframe {
@@ -61,7 +64,7 @@ active: music
 		--acolor: #00b;
 		max-width: 575px;
 		margin: auto;
-		margin-top: 5rem;
+		margin-top: 4rem;
 		padding: 1rem 1rem;
 		background-color: #eee;
 		border: .66rem ridge var(--bgcolor);
@@ -72,7 +75,7 @@ active: music
 	}
 	#covercontainer {
 		max-width: 800px;
-		margin: auto;
+		margin: 5rem auto;
 		padding: 0 1rem;
 	}
 	#streamingicons {
@@ -326,17 +329,16 @@ We like it, we like it when we play our tunes
 	<section id="inspirations">
 		<h1 style="font-weight: bold; font-size: 1.25rem"><em>Inspirations for the album</em></h1>
 		<p>Good artists borrow, great artists steal, and we write a big blog post about where every song on our album steals from, mostly as an excuse to share some great music.</p>
-		<p>Click the blue markers below each track to hear which part to reference.</p>
 		<br>
 		<br>
 		<annotatedaudio audiotitle="Computer Time!" audioartist="All of Our Cornbread" audiosrc="/assets/albummp3s/Computer Time.mp3" annotationstart="1:14" annotationend="1:28">
 		</annotatedaudio>
 
-		<p>Computer Time! was probably attempting to do a Louis Cole thing. There’s a video I love (below &darr;) of Louis Cole, Sam Wilkes, and Jacob Mann with some other guests in France playing “BUTTS TITS MONEY” at a jam/show thing. Sam Wilkes is really good at bass.</p>
+		<p>Computer Time! was probably an attempt to do a Louis Cole thing. There’s a video I love (below &darr;) of Louis Cole, Sam Wilkes, and Jacob Mann with some other guests in France playing “BUTTS TITS MONEY” at a jam/show thing. Sam Wilkes is really good at bass.</p>
 
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/hk6aipEzzEo?si=dsQ52977P97J4-E1&amp;start=39" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-		<p>And I took the horns melody straight from this Jacob Mann Big Band tune.</p>
+		<p>And I took the horns melody straight from this Jacob Mann Big Band tune:</p>
 
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/UG990N-JgKQ?si=6_98WWodBxWneKCa&amp;start=30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 		
@@ -404,7 +406,6 @@ We like it, we like it when we play our tunes
 		<p>We Like It When We Play Our Tunes is a direct tribute to Sun Ra’s “Springtime Again.” This song is so beautifully sloppy! It has this sort of “bad mix” sound that I <em>love</em> from the 60s that probably comes from being super rushed in the studio. No such thing as mixing at home back then. Ironically, I spent <em>more</em> time on the track trying to make it sound rushed.</p>
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/v6uPPgxj-h8?si=V3JiTEEl4Nk-aFzd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-		<p>Of course that’s not everything that inspired the album! But I think those are the most direct references.</p>
 	</section>
 
 
@@ -422,7 +423,7 @@ We like it, we like it when we play our tunes
 		return percent;
 	}
 	function setBackgroundPosition() {
-		b.style.backgroundPositionY = getScrollPercent() + "%"
+		b.style.backgroundPositionY = `calc(var(--scroll-multiplier) * ${getScrollPercent()}%)`
 
 	}
 	addEventListener('scroll', ()=>{
