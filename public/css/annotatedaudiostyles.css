@@ -1,0 +1,136 @@
+root {
+	font-size: 16px;
+}
+
+body {
+	
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bold;
+	background: #def;
+}
+
+#main {
+	max-width: 801px;
+	margin: 1rem auto;
+	padding: 1rem;
+}
+
+audio {
+	display: block;
+	margin: auto;
+	width: 100%
+}
+.audio-container {
+	display: block;
+	width: 100%;
+	margin: 0;
+}
+.audio-controls {
+	--progress-bar-height: 12px;
+	--play-button-size: max(30px, 48px, var(--progress-bar-height));  /* min height 30 px */
+	--annotation-height: 32px;
+	--background-color: white;
+	--foreground-color: #000;
+	--accent-color: #0af;
+
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	gap: 0 6px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.audio-controls > li {
+	/* height: max(var(--play-button-size, --progress-bar-height)); */
+}
+
+.audio-controls button.playpause {
+	display: grid;
+	place-items: center;
+	background: var(--background-color);
+	border: 1px solid var(--foreground-color);
+	box-shadow: 1px 1px var(--foreground-color);
+	border-radius: 3px;
+	padding: 0;
+	font-size: 28px;
+	width: var(--play-button-size);
+	height: var(--play-button-size);
+	&:focus {
+		outline: none;
+		transform: translate(-1px, -1px);
+		box-shadow: 2px 2px var(--foreground-color);
+	}
+	&:active {
+		transform: translate(1px, 1px);
+		box-shadow: 0px 0px var(--foreground-color);
+	}
+	& svg {
+		width: 100%;
+		max-width: 36px;
+		height: auto;
+		margin: 0;padding: 0;
+		fill: var(--foreground-color);
+	}
+}
+.audio-annotation-svg {
+	grid-column-start: 2;
+	width: 100%;
+	height: var(--annotation-height);
+	/* calculate position to be halfway-up the larger height, then halfway down the smaller height, with 4px of space */
+	margin-top: 
+		calc( -0.5 * max(var(--play-button-size), var(--progress-bar-height))
+		+ 0.5 * min(var(--play-button-size), var(--progress-bar-height))
+		+ 4px);
+}
+.annotation-group {
+	fill: var(--accent-color);
+	opacity: 0.5;
+	cursor: pointer;
+	&:hover {
+		opacity: 1;
+	}
+}
+
+
+
+.progress-bar-list-item {
+	display: grid;
+	place-items: center;
+	height: max(var(--play-button-size), var(--progress-bar-height));
+
+	/* padding-top: calc(var(--play-button-size) - var(--progress-bar-height) - 4px) */
+}
+
+.progress-bar {
+	--progress-border-radius: 3px;
+	--progress-value-color: #00b;
+	width: 100%;
+	height: var(--progress-bar-height);
+	border: 1px solid var(--foreground-color);
+	border-radius: var(--progress-border-radius);
+	background: var(--background-color);
+	box-shadow: 1px 1px var(--foreground-color);
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+/* progress background */
+.progress-bar::-webkit-progress-bar {
+	background-color: var(--background-color);
+	border-radius: var(--progress-border-radius);
+}
+/* progress value (confusing naming chrome vs firefox) */
+.progress-bar::-moz-progress-bar {
+	background-color: var(--foreground-color);
+	border-radius: var(--progress-border-radius);
+}
+.progress-bar::-webkit-progress-value {
+	background-color: var(--foreground-color);
+	border-radius: var(--progress-border-radius);
+}
+
+.progress-timestamp {
+	margin: 0;
+	height: var(--play-button-size);
+	line-height: var(--play-button-size);
+}
