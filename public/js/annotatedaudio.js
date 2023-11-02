@@ -1,6 +1,7 @@
 // AUDIO CONTROLLERS
 
-const supportsAudio = !!document.createElement("audio").canPlayType('audio/mp3');
+// const supportsAudio = !!document.createElement("audio").canPlayType('audio/mp3');
+const supportsAudio = true;
 if (supportsAudio) {
 const playIconSVG = `<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M381.522-202.999q-32.087 20.261-65.109 3-33.022-17.261-33.022-55.349v-451.304q0-38.088 33.022-55.349 33.022-17.261 65.109 3L734.87-533.348q30.522 17.826 30.522 52.631 0 34.804-30.522 52.065L381.522-202.999Z"/></svg>`
 const pauseIconSVG = `<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M662.578-174.694q-48.191 0-81.428-33.132-33.237-33.131-33.237-81.826v-382.131q0-47.904 33.134-81.43 33.134-33.527 81.833-33.527h24q47.908 0 81.428 33.526 33.52 33.527 33.52 81.431v382.131q0 48.695-33.53 81.826-33.53 33.132-81.72 33.132h-24Zm-389.458 0q-47.908 0-81.428-33.132-33.52-33.131-33.52-81.826v-382.131q0-47.904 33.53-81.43 33.53-33.527 81.72-33.527h24q48.191 0 81.428 33.526 33.237 33.527 33.237 81.431v382.131q0 48.695-33.134 81.826-33.134 33.132-81.833 33.132h-24Z"/></svg>`
