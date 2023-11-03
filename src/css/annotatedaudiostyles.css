@@ -2,13 +2,6 @@ root {
 	font-size: 16px;
 }
 
-body {
-	
-	font-family: 'Courier New', Courier, monospace;
-	font-weight: bold;
-	background: #def;
-}
-
 #main {
 	max-width: 801px;
 	margin: 1rem auto;
@@ -21,9 +14,14 @@ audio {
 	width: 100%
 }
 .audio-container {
+	font-weight: bold;
+	font-family: 'DM Mono', monospace;
 	display: block;
 	width: 100%;
 	margin: 0;
+}
+.audio-container figcaption {
+	font-size: 1rem;
 }
 .audio-controls {
 	--progress-bar-height: 12px;
