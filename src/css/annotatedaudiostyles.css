@@ -38,9 +38,7 @@ audio {
 	margin: 0;
 	padding: 0;
 }
-.audio-controls > li {
-	/* height: max(var(--play-button-size, --progress-bar-height)); */
-}
+
 
 .audio-controls button.playpause {
 	display: grid;
