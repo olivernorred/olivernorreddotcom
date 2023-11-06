@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Records \  Oliver Norred</title>
+	<meta name="description" content="Website of Oliver Norred: Fine, fine... I'm a web guy, and I have a personal site. Yeesh!">
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@olivernorred">
+	<meta name="twitter:creator" content="@olivernorred">
+	<meta name="twitter:title" content="Records \  Oliver Norred">
+	<meta name="twitter:description" content="Website of Oliver Norred: Fine, fine... I'm a web guy, and I have a personal site. Yeesh!">
+	<meta name="twitter:image" content="https://olivernorred.com/images/social-image.png">
+
+	<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+
+
+	<link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/css/stylesheet.css">
+</head>
+<body>
+	<div id="container">
+		<header id="header">
+
+			<nav class="sitemap">
+				<div class="sublinks">
+					<span><a href="/work/" class="desnav">des+dev</a></span>
+					<span>/</span>
+					<span><a href="/music/" class=" active musnav">music</a></span>
+					<span>/</span>
+					<span><a href="/blog/" class="blognav">blog</a></span>
+				</div>
+
+				<div id="indexlinkcontainer" style="max-width: 200px;">
+					<a href="/"><svg id="o-vector-logo" class="mus-O" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
+						<title>Back to homepage</title>
+						<g> <path d="M987.82688,573.744c0,182.85992-71.4057,361.36189-464.604,402.334C134.0164,1016.634,40.07,936.10857,5.84825,640.75235-46.70639,187.17155,264.2,0,566.84079,0,805.062,0,987.82688,226.47788,987.82688,573.744Zm-325.556-7.54926c-20.32812-101.46682-54.62342-118.65684-119.76311-120.7882-45.28795-1.48182-93.93875-7.83105-128.5228,88.25763-34.65567,96.28772,20.32433,133.1874,96.65576,133.1874C626.48115,666.85153,677.56331,642.52613,662.27087,566.1947Z"/> </g>
+					</svg></a>
+				</div>
+
+				
+
+			</nav>
+
+			<div id="darkmodecontainer">
+				<label for="darkmode">dark</label>
+				<input type="checkbox" name="mode" id="darkmode" value="darkmode">
+			</div>
+		</header>
+	
+		<main id="content" class="">
+			
+<style>
+	#streamingicons {
+		display: flex;
+		gap: 1rem;
+		max-width: clamp(280px, 28vw, 300px);
+		margin: auto;
+		margin-top: 1rem;
+		margin-bottom: .75rem;
+		padding: .5rem;
+		padding-bottom: .25rem;
+	}
+	#streamingicons a {
+		display: block;
+		flex: 1;
+		padding: 2px;
+		transition: transform .1s;
+	}
+	#streamingicons a:hover {
+		transform: translate(0, -3px);
+	}
+
+	#musicwriting {
+		margin: auto;
+		max-width: 450px;
+	}
+	h1 {
+		font-family: "Gooper";
+		font-weight: 700;
+		font-size: 1.5rem;
+		margin-top: 2rem;
+	}
+	h1.albumslisttitle {
+		text-align: center;
+	}
+	#livebandlink {
+		margin: auto;
+		margin-top: 1rem;
+		width: 80%;
+		max-width: 200px;
+		padding: .5rem;
+		background: var(--cream);
+		border: 1px solid black;
+		border-radius: var(--mainradius);
+	}
+	#livebandlink:hover {
+		transform: translate(0, -.25rem) rotate(1deg);
+		box-shadow: .25rem .25rem var(--fgtranslucent);
+	}
+
+	section.year {
+		border-left: 1px solid var(--fgcolor);
+		padding: 0 0.5rem;
+	}
+	h2.yearlabel {
+		margin-top: 1.5rem;
+		margin-bottom: .5rem;
+		font-size: 1rem;
+		font-family: "Literata";
+		font-style: italic;
+		font-weight: bold;
+	}
+
+	section.album {
+		margin: 0;
+		position: relative;
+	}
+	section.album:not(:first-of-type) {
+		margin-top: 1.5rem;
+	}
+	.album a {
+		margin: 0; padding: 0;
+	}
+	/* .album a::before {
+		content: '\2190';
+		display: inline;
+		position: absolute;
+		top: 45%;
+		right: -15px;
+	} */
+	/* Hovering on albums */
+	.album a > img {
+		display: block;
+		margin: 0;
+	}
+		.album a:hover > img {
+			transform: translate(0, -.25rem) rotate(1deg);
+			box-shadow: .25rem .25rem var(--fgtranslucent);
+		}
+	p.albumlabel {
+		margin-top: .25rem;
+		font-size: 1rem;
+		font-family: "Literata";
+		font-variation-settings: 'opsz' 10, 'wght' 400;
+		line-height: 1.2;
+	}
+	p.albumcover img {
+		max-width: 100%;
+	}
+	.bouncinglink {
+		& a {
+			background: yellow;
+			text-decoration: underline;
+		}
+		animation: floatlink .66s infinite;
+	}
+	@keyframes floatlink {
+		0% {transform: translate(0,0px);}
+		25% {transform: translate(-1.5px, 0px)}
+		50% {transform: translate(-2px, 0px)}
+		90% {transform: translate(2px, 0px);}
+	}
+</style>
+
+<article id="musicwriting">
+	<p class="bouncinglink"><a href="/music/welikeitwhenweplayourtunes/">We Like It When We Play Our Tunes &rarr;</a></p>
+	<p><a href="https://www.youtube.com/watch?v=Nt9i6ik46To">Computer Time OFFFICIAL VIDEO &rarr;</a></p>
+	<!-- <p><a href="https://www.youtube.com/watch?v=HmlYX2lCYrg&ab_channel=OliverNorred">Helping Ableton Session Tour Video &rarr;</a></p> -->
+
+	<section id="streamingicons">
+		<a href="https://open.spotify.com/artist/6RkQVm3jOYvucrvNtcNlAx">
+			<img src="/images/music/icons/spotify.svg" alt="Oliver Norred on Spotify">
+		</a>
+		<a href="https://music.apple.com/us/artist/oliver-norred/1435281983">
+			<img src="/images/music/icons/applemusiccolor.svg" alt="Oliver Norred Apple Music">
+		</a>
+		<a href="https://www.youtube.com/c/olivernorred">
+			<img src="/images/music/icons/youtube.svg" alt="Oliver Norred on YouTube">
+		</a>
+		<a href="https://olivernorred.bandcamp.com/">
+			<img src="/images/music/icons/bandcampcolor.svg" alt="Oliver Norred on Bandcamp">
+		</a>
+	</section>
+
+	<!-- <h1 class="albumslisttitle">The band:</h1> -->
+	<!-- <p class="bouncinglink"><a href="https://youtu.be/l6Tio5-9jIE">All of Our Cornbread live at the Wigglin' Flea Market (concert film) &rarr;</a></p> -->
+	<section id="livebandlink">
+		<a href="/music/allofourcornbread/"><img src="/images/music/cornbread/allofourcornbreadlogo.svg" alt="All of Our Cornbread"></a>
+	</section>
+	<h1 class="albumslisttitle">Releases</h1>
+
+
+	<h2 class="yearlabel">2023</h2>
+
+	<section class="year">
+		<section class="album">
+			<a href="/music/welikeitwhenweplayourtunes">
+				<img src="/images/music/covers/welikeitwhenweplayourtunes_cover.jpg" alt="We Like It When We Play Our Tunes">
+				<p class="albumlabel"><em>We Like It When We Play Our Tunes</em><br>November 3rd, 2023</p>
+			</a>
+		</section>
+		<section class="album">
+			<a href="/music/helping">
+				<img src="/images/music/covers/helping_cover.jpg" alt="Helping">
+				<p class="albumlabel"><em>Helping (single)</em><br>September 22nd, 2023</p>
+			</a>
+		</section>
+	</section>
+	<h2 class="yearlabel">2022</h2>
+	<section class="year">
+		<section class="album">
+			<a href="/music/computertime/">
+				<img src="/images/music/covers/computertime_cover.png" alt="Computer Time">
+				<p class="albumlabel"><em>Computer Time (single)</em><br>December 2, 2022</p>
+			</a>
+		</section>
+		<section class="album">
+			<a href="/music/alreadydance/">
+				<img src="/images/music/covers/alreadydance_cover.jpg" alt="You Can Already Dance">
+				<p class="albumlabel"><em>You Can Already Dance</em><br>March 18, 2022</p>
+			</a>
+		</section>
+		<section class="album">
+			<a href="/music/thumbtackceiling/">
+				<img src="/images/music/covers/thumbtackceiling_cover.jpg" alt="Thumbtack Ceiling">
+				<p class="albumlabel"><em>Thumbtack Ceiling</em> (with Cole Krueger)<br>February 25, 2022</p>
+			</a>
+		</section>
+	</section>
+
+	<h2 class="yearlabel">2021</h2>
+	<section class="year">
+		<section class="album">
+			<a href="/music/hzdonut/">
+				<img src="/images/music/covers/hzdonut_cover.jpg" alt="Hz Donut">
+				<p class="albumlabel"><em>Hz Donut</em><br>June 25, 2021</p>
+			</a>
+		</section>
+	</section>
+	
+</article>
+
+			
+		</main>
+	
+		<footer id="footer">
+			<a href="mailto:olivernorred@gmail.com">email</a> (olivernorred@gmail.com)
+			<br>
+			<!-- <a href="https://olivernorred.com/OliverNorred-Resume.pdf">resume</a>,
+			<br> -->
+			<a href="https://github.com/olivernorred">github</a><br>
+			<a href="https://www.instagram.com/olivernorred/">instagram</a><br>
+			<a href="https://www.linkedin.com/in/olivernorred/">linkedin</a><br>
+			<a href="https://twitter.com/olivernorred">twitter</a><br>
+			<a href="https://www.youtube.com/c/OliverNorred">youtube</a><br>
+		</footer>
+	</div>
+	
+<!---->
+
+<script src="/js/darkmode.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+
+<script>
+	var firebaseConfig = {
+		apiKey: "AIzaSyBfK03Zp7K5uPYYH1j-5MXrqFh-Z_LGPq8",
+		authDomain: "sting-op.firebaseapp.com",
+		databaseURL: "https://sting-op.firebaseio.com",
+		projectId: "sting-op",
+		storageBucket: "sting-op.appspot.com",
+		messagingSenderId: "708679259146",
+		appId: "1:708679259146:web:4b0f72737332c6cc17bbf3",
+		measurementId: "G-5TGPV1683P"
+	};
+	// Initialize Firebase
+	firebase.initializeApp(firebaseConfig);
+	firebase.analytics();
+</script>
+
+
+	
+</body>
+</html>

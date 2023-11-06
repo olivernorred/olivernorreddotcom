@@ -1,0 +1,141 @@
+@font-face {
+	font-family: "Literata";
+	src: url("../fonts/Literata-VariableFont_opsz\,wght.ttf");
+}
+@font-face {
+	font-family: "Literata";
+	font-style: italic;
+	src: url("../fonts/Literata-Italic-VariableFont_opsz\,wght.ttf");
+}
+@font-face {
+	font-family: "Work Sans";
+	src: url("../fonts/WorkSans-VariableFont_wght.ttf");
+}
+@font-face {
+	font-family: "Work Sans";
+	font-style: italic;
+	src: url("../fonts/WorkSans-Italic-VariableFont_wght.ttf");
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 14px;
+
+}
+
+body {
+	font-family: "Work Sans", sans-serif;
+	--bgcolor: #fff;
+	background-color: var(--bgcolor);
+	font-variation-settings: 'wght' 400;
+	margin: 0 1rem;
+	/* 4b2e83,006bc9,3ab795,d36135,d90b79 */
+	--academiccolor: #4b2e83;
+	--employmentcolor: #006bc9;
+	--extracurricularcolor: #3ab795;
+	--personalcolor: #d36135;
+	--technicalskillscolor: #d90b79;
+}
+
+#container {
+	max-width: 500px;
+	margin: 2rem auto;
+}
+#header {
+	background: linear-gradient(var(--bgcolor) 50%, transparent);
+}
+.section {
+	border: 1px solid black;
+	border-width: 0;
+	padding: 1rem 0;
+	border-radius: .5rem;
+	box-sizing: content-box;
+	position: relative;
+}
+
+.section h2 {
+	text-align: center;
+	font-style: italic;
+	font-weight: normal;
+	font-variation-settings: "wght" 700;
+	font-size: 1rem;
+	color: var(--themecolor);
+	letter-spacing: 2px;
+	margin: 0;
+}
+
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.center {
+	text-align: center;
+	font-variation-settings: 'wght' 700;
+}
+.bold {
+	font-variation-settings: 'wght' 900;
+}
+.italic {
+	font-style: italic;
+}
+.big {
+	font-size: 2rem;
+	font-variation-settings: 'wght' 900;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+a.external {
+	color: navy;
+}
+a.external::after {
+	content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+	margin: 0 3px 0 5px;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+b {
+	font-weight: normal;
+	font-variation-settings: 'wght' 750;
+}
+
+#printbutton {
+	background: var(--bgcolor);
+	font-size: 1rem;
+	padding: 2px;
+	font-family: 'work sans';
+	margin: 1rem auto;
+	display: block;
+}
+
+@media (max-width: 500px) {
+	.section {
+		padding: .5rem;
+	}
+	:root {
+		font-size: 12px;
+	}
+	#printbutton {
+		display: none;
+	}
+}
+@media print {
+	#container {max-width: 5in; margin: auto;}
+	:root {
+		font-size: 9.5pt;
+	}
+	#printbutton {
+		display: none;
+	}
+}

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>You Can Already Dance \  Oliver Norred</title>
+	<meta name="description" content="Website of Oliver Norred: Fine, fine... I'm a web guy, and I have a personal site. Yeesh!">
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@olivernorred">
+	<meta name="twitter:creator" content="@olivernorred">
+	<meta name="twitter:title" content="You Can Already Dance \  Oliver Norred">
+	<meta name="twitter:description" content="Website of Oliver Norred: Fine, fine... I'm a web guy, and I have a personal site. Yeesh!">
+	<meta name="twitter:image" content="https://olivernorred.com/images/social-image.png">
+
+	<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+
+
+	<link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/css/stylesheet.css">
+</head>
+<body>
+	<div id="container">
+		<header id="header">
+
+			<nav class="sitemap">
+				<div class="sublinks">
+					<span><a href="/work/" class="desnav">des+dev</a></span>
+					<span>/</span>
+					<span><a href="/music/" class=" active musnav">music</a></span>
+					<span>/</span>
+					<span><a href="/blog/" class="blognav">blog</a></span>
+				</div>
+
+				<div id="indexlinkcontainer" style="max-width: 200px;">
+					<a href="/"><svg id="o-vector-logo" class="mus-O" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
+						<title>Back to homepage</title>
+						<g> <path d="M987.82688,573.744c0,182.85992-71.4057,361.36189-464.604,402.334C134.0164,1016.634,40.07,936.10857,5.84825,640.75235-46.70639,187.17155,264.2,0,566.84079,0,805.062,0,987.82688,226.47788,987.82688,573.744Zm-325.556-7.54926c-20.32812-101.46682-54.62342-118.65684-119.76311-120.7882-45.28795-1.48182-93.93875-7.83105-128.5228,88.25763-34.65567,96.28772,20.32433,133.1874,96.65576,133.1874C626.48115,666.85153,677.56331,642.52613,662.27087,566.1947Z"/> </g>
+					</svg></a>
+				</div>
+
+				
+
+			</nav>
+
+			<div id="darkmodecontainer">
+				<label for="darkmode">dark</label>
+				<input type="checkbox" name="mode" id="darkmode" value="darkmode">
+			</div>
+		</header>
+	
+		<main id="content" class="">
+			
+<style>
+	:root {
+		
+	}
+	@font-face {
+		font-family: 'Bizzarrini';
+		src: url('/fonts/Bizzarrini-V0_4-VF.ttf');
+	}
+	
+	body {
+		--yellow: #EEB508;
+		--darknavy: #00000e;
+		--fgcolor: white;
+		--bgcolor: black;
+		--fgtranslucent: rgb(255 255 255 / .7);
+		
+		background: black;
+		--acolor: #6285a4;
+		
+		font-family: "Gooper Light";
+		overflow-x: hidden;
+	}
+	
+	#dancingloopcontainer {
+		position: sticky;
+		top: 0;
+		left: 0;
+		display: grid;
+		place-items: center;
+		height: 100vh;
+		width: 100%;
+		overflow-x: hidden;
+		z-index: -1000;
+	}
+	#dancingloop {
+		height: 100vh;
+		max-width: 100vw;
+	}
+	#dancingloopcontainer + #abstract {
+		margin-top: 90vh;
+	}
+
+	#alreadydancewordmark {
+		width: 100%;
+		max-width: 52ch;
+		display: block;
+		margin: auto;
+	}
+	
+
+	#streamingicons {
+		display: flex;
+		gap: 1rem;
+		max-width: clamp(200px, 28vw, 300px);
+		margin: auto;
+		margin-top: 1rem;
+		margin-bottom: .75rem;
+		background: black;
+		padding: .5rem;
+		padding-bottom: .25rem;
+		/* border: 2px solid var(--fgcolor); */
+	}
+	#streamingicons a {
+		display: block;
+		flex: 1;
+		padding: 2px;
+		transition: transform .1s;
+	}
+	#streamingicons a:hover {
+		transform: translate(0, -3px);
+	}
+
+
+	#abstract {
+		white-space: pre;
+		overflow-x: hidden;
+		margin: 1rem auto;
+		padding: .5rem;
+		width: 100%;
+		max-width: 500px;
+		background: rgb(0 0 0 / .8);
+		color: white;
+		font-family: "Gooper", sans-serif;
+		font-weight: 400;
+		font-size: clamp(.8rem, 1vw, 1rem);
+		line-height: 1.4;
+		border: 2px solid white;
+	}
+	#abstract strong {
+		font-weight: 700;
+	}
+	#videolinks, #lyricstext {
+		width: 52ch;
+		margin: 1rem auto;
+		background: var(--bgcolor);
+		font-size: clamp(.5rem, 1vw, 1rem);
+	}
+	.bouncinglink {
+		animation: floatlink .5s infinite;
+	}
+	@keyframes floatlink {
+		0% {transform: translate(0,0px);}
+		25% {transform: translate(-1.5px, 0px)}
+		50% {transform: translate(-3px, 0px)}
+		75% {transform: translate(3px, 0px);}
+	}
+	#footer {
+		background: none;
+	}
+</style>
+
+
+<img src="/images/music/alreadydancewordmark.svg" alt="You Can Already Dance" id="alreadydancewordmark">
+
+<p style="text-align: center; font-size: 1rem; margin-top: 1rem;"><em>Produced by Oliver Norred.<br>Mastering by Cole Krueger.<br>Video work by Graham Godfrey.</em></p>
+
+<section id="streamingicons">
+	<a href="https://open.spotify.com/album/5iGjXGuwSN1okUZWCJJcB0">
+		<img src="/images/music/icons/spotify.svg" alt="You Can Already Dance on Spotify">
+	</a>
+	<a href="https://music.apple.com/us/album/you-can-already-dance-ep/1610368621?app=music">
+		<img src="/images/music/icons/applemusiccolor.svg" alt="You Can Already Dance on Apple Music">
+	</a>
+	<a href="https://music.youtube.com/browse/MPREb_IX3wCfbvXYd">
+		<img src="/images/music/icons/youtubemusic.svg" alt="You Can Already Dance on YouTube Music">
+	</a>
+	<a href="https://olivernorred.bandcamp.com/album/you-can-already-dance">
+		<img src="/images/music/icons/bandcampcolor.svg" alt="You Can Already Dance on Bandcamp">
+	</a>
+</section>
+
+<div id="dancingloopcontainer">
+	<video id="dancingloop" src="/images/music/OPTIMIZEDdancing2secondloop.mp4" nocontrols autoplay loop playsinline></video>
+</div>
+
+
+<section id="abstract"><em><strong>YOU CAN ALREADY DANCE.</strong></em>
+
+
+<strong>1. Everyone, listen to this!</strong>
+
+Everyone—
+Okay, yeah. Okay, yeah.
+Just, everyone, listen to this. Listen to this.
+
+<em>[wub]</em>
+AAAAAAAAAAAAAAAAAAAAAAAAAA
+<em>[wub]</em>
+AAAAAAAAAAAAAAAAAAAAAAAAAA
+<em>sorry,[wub] real quic—</em>
+AAAAAAAAAAAAAAAAAAAAAAAAAA
+<em>[wub]</em>
+AAAAAAAAAAAAAAAAAAAAAAAAAA
+<em>[wub]</em>
+AAAAAA
+              AAAAAAA
+AAAAAA
+              AAAAAAA
+<em>[snare
+    snare
+snare]</em>
+<em>[wub]</em>
+AAAAAAAAAAAAAAAAAAAAA<em>[snare snare snare]</em>
+<em>[wub]</em>
+AAAAAAAAAAAAAAAAAAAAA<em>[snare snare snare]</em>
+<em>[wub]</em>
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAaaaaaaooooooowowowvwovwo
+
+
+<strong>2. These Pants</strong>
+
+<em>[blues clues theme bass line]</em>
+
+<em>[various percussive sounds]</em>
+
+IIIIIIIII’mm convinced you care about my style.
+
+I tryyyyy to win you over; it’s worth my while.
+
+So won’t you pleeeeeeeeeease notice me?
+I’ll sit such that my shoes
+are there for you to see!
+
+<em>[warbly intermelody]</em>
+
+IIIIIIIII’m invisible to you, my friend.
+But I’ll draw your eyyyyyyes
+to these old pants my neighbor lent.
+
+So won’t you pleeeeeeeeeeeeease notice me?
+I’ll sit such that these pants
+are there for you to see!
+
+<em>[warbly intermelody]</em>
+
+<em>[wah wah bass]</em>
+
+<em>[funner drum loop]</em>
+
+These pants strangle my thighs
+I hope they’ll catch your eyes
+I know that it’s deadly (deadly!) 
+to demand attention via fashion
+but I hope these drawers draw your gaze
+to me, to me, to me, to me!
+
+These pants weigh on my hips
+tunnel vision till my legs buckle
+all I see are youurrr lips
+smile, turn, make me look fear in the mouth
+oh dear, cryin out
+to make contact with your contacts
+just a word, a word.
+
+<em>[piano outro]</em>
+<em>[synth chord]</em>
+
+
+<strong>3. Be Still, I’ll Stay</strong>
+
+<em>[breathing]</em>
+
+Sing me a lullaby
+to make me sure that you’re here toni ght.
+You’re here tonight.
+You’re here tonight.
+I’m here tonight,
+with you, with you, with yo u,
+I’ll sta y.
+
+Sing me the warbler’s song.
+I know our wai t till morning’s long.
+Lay patiently.
+Still here I’ll b e.
+Still he re I’ll be,
+be still, be still, b e still,
+I’ll sta y.
+
+Promise me you won’t fly away.
+I can’t sleep. I just hope you’ll say,
+"Be stil l, I’ll stay.
+Be still, I’ll sta y.
+Be still, I’ll stay
+with you to n i g h t."
+
+<em>[organ shakily teleports closer]</em>
+
+
+<strong>4. You Can Already Dance</strong>
+
+Pretend you’ve got nothing to prove!
+You’ve got some limbs to move.
+I see you’ve bought a pair of shoes.
+Those soles will come in use.
+
+You have to give yourself a chance!
+Might shut your eyes; don’t glance.
+Just have a blast and shake your pants!
+You! Can! Al! Rea! Dy! Dance!
+
+<em>[kick kick kick snare]</em>
+
+<em>[square wave solo]</em>
+
+<em>[bridge bass line, claps]</em>
+
+You can already dance
+better than anybody could possibly teach you to!
+You can already dance
+better than anybody could possibly teach you to!
+You can already dance
+better than anybody could possibly teach you to!
+You can already dance
+better than anybody could!
+
+It is a style unto your own;
+go on and claim your throne
+of dancing like yourself alone!
+There’s no one else, you’ve shown.
+
+You have to give yourself a chance!
+Might close your eyes; don’t glance.
+Just have a blast and shake your pants.
+You! Can! Al! Rea! Dy! DAAAAAAAAAA-
+
+<em>[kick kick kick snare]</em>
+
+
+<strong>5. For the Friend Collector</strong>
+
+<em>[snare snare]</em>
+
+Friend-collecting, number-taking kid:
+What gives? What gives?
+
+Call em; they’ll agree to let you in.
+New friends! You win!
+
+Obviously you’ve got people too
+They’ll do. They’ll do.
+
+But you proclaim you want something new.
+Why now? Why you?
+
+You’re so desperate for approval,
+you accept that your removal
+from a group of precious people
+is a necessary evil.
+
+Old friends heed your beck and call,
+but all you’ve shown through your withdrawal
+is maybe they’d be better off
+if you were never close at all.
+
+Know that even when someone’s unkind,
+you’ll find the time
+
+to think of all the sources of sunshine.
+Keep them in mind.
+
+Y o u  a r e  l o v e d
+           (Y o u  a r e  l o v e d)
+
+Y o u  a r e  l o v e d
+           (Y o u  a r e  l o v e d)
+
+Y o u  a r e  l o v e d
+           (Y o u  a r e  l o v e d)
+
+Y o u  a r e  l o v e d
+           (Y o u  a r e  l o v e d)
+
+Y o u  a r e  l o v e d
+           (Y o u  a r e  l o v e d)
+L o v e d !  L o v e d !
+
+Y o u  a r e  l o v e d
+           (Y o u  a r e  l o v e d)
+
+Y o u  a r e  l o v e d
+           (Y o u  a r e  l o v e d)
+
+L L O O V V E E D D</section>
+
+
+<script src="/js/scrollvideo.js"></script>
+
+			
+		</main>
+	
+		<footer id="footer">
+			<a href="mailto:olivernorred@gmail.com">email</a> (olivernorred@gmail.com)
+			<br>
+			<!-- <a href="https://olivernorred.com/OliverNorred-Resume.pdf">resume</a>,
+			<br> -->
+			<a href="https://github.com/olivernorred">github</a><br>
+			<a href="https://www.instagram.com/olivernorred/">instagram</a><br>
+			<a href="https://www.linkedin.com/in/olivernorred/">linkedin</a><br>
+			<a href="https://twitter.com/olivernorred">twitter</a><br>
+			<a href="https://www.youtube.com/c/OliverNorred">youtube</a><br>
+		</footer>
+	</div>
+	
+<!---->
+
+<script src="/js/darkmode.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+
+<script>
+	var firebaseConfig = {
+		apiKey: "AIzaSyBfK03Zp7K5uPYYH1j-5MXrqFh-Z_LGPq8",
+		authDomain: "sting-op.firebaseapp.com",
+		databaseURL: "https://sting-op.firebaseio.com",
+		projectId: "sting-op",
+		storageBucket: "sting-op.appspot.com",
+		messagingSenderId: "708679259146",
+		appId: "1:708679259146:web:4b0f72737332c6cc17bbf3",
+		measurementId: "G-5TGPV1683P"
+	};
+	// Initialize Firebase
+	firebase.initializeApp(firebaseConfig);
+	firebase.analytics();
+</script>
+
+
+	
+</body>
+</html>

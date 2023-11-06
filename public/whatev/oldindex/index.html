@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Oliver Norred</title>
+	<meta name="description" content="Website of Oliver Norred: Fine, fine... I'm a web guy, and I have a personal site. Yeesh!">
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@olivernorred">
+	<meta name="twitter:creator" content="@olivernorred">
+	<meta name="twitter:title" content="Oliver Norred">
+	<meta name="twitter:description" content="Website of Oliver Norred: Fine, fine... I'm a web guy, and I have a personal site. Yeesh!">
+	<meta name="twitter:image" content="https://olivernorred.com/images/social-image.png">
+
+	<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+
+
+	<link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/css/stylesheet.css">
+</head>
+<body>
+	<div id="container">
+		<header id="header">
+
+			<nav class="sitemap">
+				<div class="sublinks">
+					<span><a href="/work/" class="desnav">des+dev</a></span>
+					<span>/</span>
+					<span><a href="/music/" class="musnav">music</a></span>
+					<span>/</span>
+					<span><a href="/blog/" class="blognav">blog</a></span>
+				</div>
+
+				<div id="indexlinkcontainer" style="max-width: 200px;">
+					<a href="/"><svg id="o-vector-logo" class="mus-O" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
+						<title>Back to homepage</title>
+						<g> <path d="M987.82688,573.744c0,182.85992-71.4057,361.36189-464.604,402.334C134.0164,1016.634,40.07,936.10857,5.84825,640.75235-46.70639,187.17155,264.2,0,566.84079,0,805.062,0,987.82688,226.47788,987.82688,573.744Zm-325.556-7.54926c-20.32812-101.46682-54.62342-118.65684-119.76311-120.7882-45.28795-1.48182-93.93875-7.83105-128.5228,88.25763-34.65567,96.28772,20.32433,133.1874,96.65576,133.1874C626.48115,666.85153,677.56331,642.52613,662.27087,566.1947Z"/> </g>
+					</svg></a>
+				</div>
+
+				
+
+			</nav>
+
+			<div id="darkmodecontainer">
+				<label for="darkmode">dark</label>
+				<input type="checkbox" name="mode" id="darkmode" value="darkmode">
+			</div>
+		</header>
+	
+		<main id="content" class="">
+			
+<style>
+	body {
+		background-image: url("../images/ginghambackground-01.png");
+	}
+</style>
+
+
+<h1>I'm gonna put all the things i don't need but cant let go of here. It's like hoarding but for my website. Apologies.</h1>
+<div class="continuousshadow rippletext" offset="1200 720" style="pointer-events: none; font-family: 'literata'; font-size: 10vw; font-variation-settings: 'wght' 200; font-style: italic; width: fit-content; margin: auto;">Gingham Heights</div>
+<div style="font-size: 4rem; text-align: center;"><a href="wordsearch"><br>WORD SEARCH<br></a></div>
+<div style="font-size: 4rem; text-align: center;"><br>...</div>
+<div style="font-size: 4rem; text-align: center;"><a href="misc"><br>Miscellaneous<br></a></div>
+<!-- <script src="js/continuousshadow.js"></script> -->
+<script>
+	var ripplecontainer = document.querySelector(".rippletext");
+	var letters = ripplecontainer.innerHTML.split("");
+	ripplecontainer.innerHTML = "";
+	for (let i = 0; i < letters.length; i++) {
+		letters[i] = `<span id="${i}" style="animation: rippletext ease-in-out 4s ${-i*.5}s infinite">${letters[i]}</span>`;
+		ripplecontainer.innerHTML += letters[i];
+	}
+</script>
+<style>
+	@keyframes rippletext {
+		0%{font-variation-settings: 'wght' 600 ;}
+		50%{font-variation-settings: 'wght' 900 ;}
+		100%{font-variation-settings: 'wght' 600;}
+	}
+</style>
+
+<div>
+			<div id="worktitle">korW</div>
+			<style>
+			#worktitle {
+				font-family: var(--headerfont);
+				font-size: 8rem;
+				letter-spacing: 0rem;
+				/* white-space: pre; */
+				margin: auto;
+				margin-bottom: 1rem;
+				margin-top: -2rem;
+				pointer-events: none;
+
+				display: flex;
+				flex-direction: row-reverse;
+				width: fit-content;
+			}
+			#worktitle span {
+				display: inline-block;
+				animation: letterdance 0.66s steps(2) infinite alternate;
+				/* text-shadow: -4px -4px var(--bgcolor),
+					4px 4px var(--bgcolor),
+					4px -4px var(--bgcolor),
+					-4px 4px var(--bgcolor); */
+			}
+			#worktitle span:nth-child(even) {
+				/* z-index: 10; */
+				animation-direction: alternate-reverse;
+			}
+			@keyframes letterdance {
+				from {
+					transform: rotate(-10deg);
+				}
+				to {
+					transform: rotate(20deg);
+				}
+			}
+
+			@media (max-width: 516px) {
+				#worktitle {
+					font-size: 35vw;
+					letter-spacing: -2vw;
+				}
+			}
+		</style>
+</div>
+
+
+
+<svg id="text-container" xmlns="http://www.w3.org/2000/svg" viewBox="0 200 2000 550">
+	<path id="text-curve" d="M-.3 419.4s191 283.3 500 283.3 418.6-405.1 889.7-405.1S1999.7 495 1999.7 495" fill="none"/>
+	<text font-size="100" font-family="var(--headerfont)" font-weight="normal">
+		<textpath id="text-path" href="#text-curve" startOffset="300"><a href="photosoftype.html">type pictures type pictures type pictures</a></textpath>
+	</text>
+</svg>
+<div class="content">
+	<a class="enterlink" href="weirds.html">SICK SICK SICK SICK SICK SICK SICK SICK&nbsp;</a>
+	<a class="enterlink" href="weirds.html">SICK SICK SICK SICK SICK SICK SICK SICK&nbsp;</a>
+	<a class="enterlink" href="weirds.html">SICK SICK SICK SICK SICK SICK SICK SICK&nbsp;</a>
+</div>
+
+<style>
+	.enterlink {
+		font-size: 10rem;
+		white-space: nowrap;
+		display: inline-block;
+		animation: marquee 3s linear infinite;
+		font-family: var(--headerfont);
+		font-weight: 800;
+		font-style: italic;
+	}
+	.enterlink:nth-child(even) {
+		animation-direction: reverse;
+	}
+	.enterlink:nth-child(3n+2) {
+		color: var(--fgcolor);
+	}
+	.enterlink:nth-child(3n+1) {
+		color: var(--altbgcolor);
+	}
+	.enterlink:hover {
+		opacity: 1;
+		color: hotpink;
+	}
+	.enterlink:active {
+		text-transform: lowercase;
+	}
+	@keyframes marquee {
+		from{transform: translate(0,0)}
+		to{transform: translate(-25%, 0)}
+	}
+	.content {
+		overflow: hidden;
+		margin: auto;
+	}
+</style>
+
+			
+		</main>
+	
+		<footer id="footer">
+			<a href="mailto:olivernorred@gmail.com">email</a> (olivernorred@gmail.com)
+			<br>
+			<!-- <a href="https://olivernorred.com/OliverNorred-Resume.pdf">resume</a>,
+			<br> -->
+			<a href="https://github.com/olivernorred">github</a><br>
+			<a href="https://www.instagram.com/olivernorred/">instagram</a><br>
+			<a href="https://www.linkedin.com/in/olivernorred/">linkedin</a><br>
+			<a href="https://twitter.com/olivernorred">twitter</a><br>
+			<a href="https://www.youtube.com/c/OliverNorred">youtube</a><br>
+		</footer>
+	</div>
+	
+<!---->
+
+<script src="/js/darkmode.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+
+<script>
+	var firebaseConfig = {
+		apiKey: "AIzaSyBfK03Zp7K5uPYYH1j-5MXrqFh-Z_LGPq8",
+		authDomain: "sting-op.firebaseapp.com",
+		databaseURL: "https://sting-op.firebaseio.com",
+		projectId: "sting-op",
+		storageBucket: "sting-op.appspot.com",
+		messagingSenderId: "708679259146",
+		appId: "1:708679259146:web:4b0f72737332c6cc17bbf3",
+		measurementId: "G-5TGPV1683P"
+	};
+	// Initialize Firebase
+	firebase.initializeApp(firebaseConfig);
+	firebase.analytics();
+</script>
+
+
+	
+</body>
+</html>

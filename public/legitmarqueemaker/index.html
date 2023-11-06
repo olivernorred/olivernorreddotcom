@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="/legitmarqueemaker/style.css">
+
+	<script src="https://unpkg.com/p5@1.3.1/lib/p5.js"></script>
+    <script src="https://unpkg.com/p5.js-svg@1.0.7"></script>
+    <script src="https://unpkg.com/abcjs@6.0.0-beta.33/dist/abcjs-basic-min.js"></script>
+	<script src="/legitmarqueemaker/dependencies/paper-full.min.js"></script>
+
+	<title>Legit Marquee Editor</title>
+
+</head>
+<body>
+	<div id="maincontainer">
+		<div id="homelink" style=""><a href="/">&larr; olivernorred.com</a></div>
+		<div id="betalabel">legit marquee maker beta! (v0.1)</div>
+		<div id="two-col-grid">
+			<div id="canvasanddimensions">
+				<div id="displaycontainer">
+					<canvas id="canvas" resize></canvas>
+					<div id="svgcontainer" style="display:none;"></div>
+					<svg class="legit-marquee" id="legitmarqueedisplay" viewBox="0 0 200 100" content="Make your own legit-marquee!" contentrepeat="1" speed="2" textsize="40" pathd="">
+					</svg>
+				</div>
+				<div id="dimensionscontainer">
+					<div>
+						<!-- <label for="widthinput">width</label> -->
+						<input class="numberinput dimensioninput" type="number" name="width" id="widthinput" value="600" min="0" max="10000">
+					</div>
+					<p>&nbsp;&times;&nbsp;</p>
+					<div>
+						<!-- <label for="heightinput"></label> -->
+						<input class="numberinput dimensioninput" type="number" name="height" id="heightinput" value="300" min="0" max="10000">
+					</div>
+				</div>
+			</div>
+			<div id="rightcolumn">
+				<div id="controlscontainer">
+					<div id="contentinputcontainer">
+						<!-- <label for="contentinput">Content</label> -->
+						<input type="text" name="content" id="contentinput" value="Make your own legit-marquee!">
+					</div>
+					<div>
+						<input type="text" name="fontinput" id="fontinput" value="Times New Roman">
+					</div>
+					<div>
+						<label for="textsizeinput">Text size: </label>
+						<input type="number" name="textsizeinput" id="textsizeinput" value="40">
+					</div>
+					<div>
+						<label for="speedinput">Speed: <span id="speeddisplay">1</span></label>
+						<input type="range" name="speedinput" class="rangeinput" min="-20" max="20" id="speedinput" value="1" step="0.1">
+					</div>
+				</div>
+				<div id="snippetcontainer">
+					<textarea id="codesnippet" contenteditable="false"></textarea>
+					<button id="copybutton">copy</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+<script type="text/paperscript" canvas="canvas" src="/legitmarqueemaker/legit-marquee-editor-paperscript.js"></script>
+<script src="/legitmarqueemaker/legit-marquees-reloading.js"></script>
+<script src="/legitmarqueemaker/controls.js"></script>
+
+
+
+</html>
