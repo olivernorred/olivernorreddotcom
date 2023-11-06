@@ -42,10 +42,15 @@ active: music
 		margin: auto;
 		margin-top: 1rem;
 		width: 80%;
+		max-width: 200px;
 		padding: .5rem;
 		background: var(--cream);
 		border: 1px solid black;
 		border-radius: var(--mainradius);
+	}
+	#livebandlink:hover {
+		transform: translate(0, -.25rem) rotate(1deg);
+		box-shadow: .25rem .25rem var(--fgtranslucent);
 	}
 
 	section.year {
@@ -132,7 +137,7 @@ active: music
 		</a>
 	</section>
 
-	<h1 class="albumslisttitle">The band:</h1>
+	<!-- <h1 class="albumslisttitle">The band:</h1> -->
 	<!-- <p class="bouncinglink"><a href="https://youtu.be/l6Tio5-9jIE">All of Our Cornbread live at the Wigglin' Flea Market (concert film) &rarr;</a></p> -->
 	<section id="livebandlink">
 		<a href="/music/allofourcornbread/"><img src="/images/music/cornbread/allofourcornbreadlogo.svg" alt="All of Our Cornbread"></a>
