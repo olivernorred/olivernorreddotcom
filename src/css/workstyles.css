@@ -41,22 +41,8 @@ video {
 #content.portfolioindexcontent {
 	position: relative;
 	padding: .5rem;
-	max-width: 1000px;
+	max-width: 500px;
 }
-#workitemscontainer {
-	display: grid;
-	grid-template-columns: 1fr 3fr 1fr;
-	width: 100%;
-	align-items: center;
-}
-#workitemscontainer > *:first-child {
-	align-self: right;
-}
-#workitemscontainer > *:last-child {
-	align-self: left;
-}
-
-
 
 #workitemscontainer .legit-marquee {
 	position: fixed;
@@ -74,16 +60,6 @@ video {
 	66%{fill: var(--blue)}
 }
 
-
-@media screen and (max-width: 650px) {
-	#workitemscontainer {
-		display: block;
-	}
-
-	#workitemscontainer .legit-marquee {
-		display: none;
-	}
-}
 
 
 
@@ -151,8 +127,9 @@ video {
 		outline: 3px solid var(--acolor);
 	}
 	.workitem:hover .subcard {
-		animation: push .5s steps(1) infinite;
+		/* animation: push .5s steps(1) infinite; */
 		transform-origin: 25% center ;
+		transform: rotate(-1deg)
 		/* transform: translate(.5rem, 0); */
 	}
 	@keyframes push {
@@ -249,7 +226,7 @@ img, video {
 	margin-top: .5rem;
 }
 .portfolio h1, .portfolio h2, .portfolio blockquote {
-	/* max-width: var(--smallwidth); */
+	max-width: var(--smallwidth);
 }
 .portfolio h1, .portfolio h2 {
 	text-align: center;
