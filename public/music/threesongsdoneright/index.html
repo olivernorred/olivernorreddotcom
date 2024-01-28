@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Thumbtack Ceiling \  Oliver Norred</title>
+	<meta name="description" content="Website of Oliver Norred: Fine, fine... I'm a web guy, and I have a personal site. Yeesh!">
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@olivernorred">
+	<meta name="twitter:creator" content="@olivernorred">
+	<meta name="twitter:title" content="Thumbtack Ceiling \  Oliver Norred">
+	<meta name="twitter:description" content="Website of Oliver Norred: Fine, fine... I'm a web guy, and I have a personal site. Yeesh!">
+	<meta name="twitter:image" content="https://olivernorred.com/images/social-image.png">
+
+	<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+
+
+	<link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/css/stylesheet.css">
+</head>
+<body>
+	<div id="container">
+		<header id="header">
+
+			<nav class="sitemap">
+				<div class="sublinks">
+					<span><a href="/work/" class="desnav">work</a></span>
+					<span>/</span>
+					<span><a href="/music/" class=" active musnav">music</a></span>
+					<span>/</span>
+					<span><a href="/blog/" class="blognav">blog</a></span>
+				</div>
+
+				<div id="indexlinkcontainer" style="max-width: 200px;">
+					<a href="/"><svg id="o-vector-logo" class="mus-O" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
+						<title>Back to homepage</title>
+						<g> <path d="M987.82688,573.744c0,182.85992-71.4057,361.36189-464.604,402.334C134.0164,1016.634,40.07,936.10857,5.84825,640.75235-46.70639,187.17155,264.2,0,566.84079,0,805.062,0,987.82688,226.47788,987.82688,573.744Zm-325.556-7.54926c-20.32812-101.46682-54.62342-118.65684-119.76311-120.7882-45.28795-1.48182-93.93875-7.83105-128.5228,88.25763-34.65567,96.28772,20.32433,133.1874,96.65576,133.1874C626.48115,666.85153,677.56331,642.52613,662.27087,566.1947Z"/> </g>
+					</svg></a>
+				</div>
+
+				
+
+			</nav>
+
+			<div id="darkmodecontainer">
+				<label for="darkmode">dark</label>
+				<input type="checkbox" name="mode" id="darkmode" value="darkmode">
+			</div>
+		</header>
+	
+		<main id="content" class="">
+			
+
+<style>
+	@font-face {
+		font-family: 'Buffon';
+		src: url('/fonts/Buffon-Regular.otf');
+	}
+	@font-face {
+		font-family: 'Buffon Heavy';
+		src: url('/fonts/Buffon-Heavy.otf');
+	}
+	body {
+		/* background: url('/images/music/thumbtackceiling/full_background.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment: fixed; */
+		--fgcolor: black;
+		--bgcolor: white;
+		--fgtranslucent: rgb(255 255 255 / .7);
+		--acolor: blue;
+		--xangle: 0deg;
+		--yangle: 0deg;
+	}
+
+	#content {
+		min-height: 80vh;
+		perspective: 800px;
+	}
+	
+	#covercontainer {
+		pointer-events: none;
+		width: 100%;
+		max-width: min(600px, 80vw);
+		margin: auto;
+		position: relative;
+		perspective: 800px;
+	}
+	#covercontainer img {
+		/* animation: rollaround 6s ease-in-out infinite; */
+		transform: rotateX(var(--xangle)) rotateY(var(--yangle));
+	}
+	#covercontainer #coverwordmark {
+		position: absolute;
+		top: 9%;
+		left: 0;
+		transform: rotateX(var(--xangle)) rotateY(var(--yangle)) translateZ(100px);
+		/* animation: rollaroundraised 6s ease-in-out infinite; */
+	}
+	@keyframes rollaround {
+		from {transform: rotateX(-8deg) rotateY(-8deg);}
+		25% {transform: rotateX(8deg) rotateY(-8deg);}
+		50% {transform: rotateX(8deg) rotateY(8deg);}
+		75% {transform: rotateX(-8deg) rotateY(8deg);}
+		to {transform: rotateX(-8deg) rotateY(-8deg);}
+	}
+	@keyframes rollaroundraised {
+		from {transform: rotateX(-8deg) rotateY(-8deg) translateZ(100px);}
+		25% {transform: rotateX(8deg) rotateY(-8deg) translateZ(100px);}
+		50% {transform: rotateX(8deg) rotateY(8deg) translateZ(100px);}
+		75% {transform: rotateX(-8deg) rotateY(8deg) translateZ(100px);}
+		to {transform: rotateX(-8deg) rotateY(-8deg) translateZ(100px);}
+	}
+	
+	#streamingicons {
+		display: flex;
+		gap: 1rem;
+		max-width: clamp(200px, 28vw, 300px);
+		margin: auto;
+		margin-top: 1rem;
+		margin-bottom: .75rem;
+		padding: .5rem;
+		padding-bottom: .25rem;
+		/* border: 2px solid var(--fgcolor); */
+	}
+	#streamingicons a {
+		display: block;
+		flex: 1;
+		padding: 2px;
+		transition: transform .1s;
+	}
+	#streamingicons a:hover {
+		transform: translate(0, -3px);
+	}
+
+
+	#abstract {
+		width: 100%;
+		max-width: 600px;
+		margin: 1rem auto;
+		padding: .5rem;
+		font-family: "Literata";
+		line-height: 1;
+	}
+	#streamingicons {
+		z-index: 1;
+		position: relative; /* for z index */
+		width: 200px;
+	}
+	#abstract p, #abstract ol {
+		font-family: 'Buffon';
+		margin:0;
+		min-height: .75rem;
+		
+	}
+	#abstract h1 {
+		font-family: 'Buffon Heavy';
+		width: fit-content;
+		font-size: 1.3rem;
+		background: blue;
+		color: white;
+		margin-top: 1rem;
+	}
+
+	ol {
+		list-style-type: decimal;
+	}
+	::marker {
+		margin-left: 1rem;
+		padding-left: 1rem;
+		font-variation-settings: 'wght' 100;
+		font-style: normal;
+	}
+	li {
+		margin-left: 1rem;
+		font-variation-settings: 'wght' 700;
+		font-style: italic;
+	}
+
+
+	#footer {
+		background: none;
+	}
+</style>
+
+
+<div id="covercontainer">
+	<img src="/images/music/covers/threesongsdoneright_cover.jpg" alt="Three Songs Done Right album cover">
+</div>
+
+<section id="streamingicons">
+	<a href="https://open.spotify.com/album/33NDF2P88QgOiHWAiVLojH">
+		<img src="/images/music/icons/spotify.svg" alt="You Can Already Dance on Spotify">
+	</a>
+	<a href="https://music.apple.com/us/album/three-songs-done-right-ep/1727302214?app=music">
+		<img src="/images/music/icons/applemusiccolor.svg" alt="You Can Already Dance on Apple Music">
+	</a>
+	<a href="https://music.youtube.com/browse/MPREb_zvaRCzQEP2m">
+		<img src="/images/music/icons/youtubemusic.svg" alt="You Can Already Dance on YouTube Music">
+	</a>
+	<!-- <a href="">
+		<img src="/images/music/icons/bandcampcolor.svg" alt="You Can Already Dance on Bandcamp">
+	</a> -->
+</section>
+
+<section id="abstract">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/RhifPalOyGk?si=3lLt-0I7gPLPfI4x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	<h1>I Wanna Make Me Love Singing</h1>
+	<p>It's been a long time since I reveled in a rhyme</p>
+	<p>I'm sorry to confess</p>
+	<p>I wanna open my mind to the one-of-a-kind instrument we all posess (hey)</p>
+
+	<p></p>
+	<p>I wanna make me love singing</p>
+	<p>Till the bells in my head start ringing</p>
+	<p>I wanna make me love singing</p>
+	<p>Till the bells in my head start</p>
+	<p>doo be do be doo bee do</p>
+	<p></p>
+	<p>It's a fear of being heard</p>
+	<p>Lest you wrote the wrong words</p>
+	<p>To go with that beautiful song</p>
+	<p>It's a shame don't you think</p>
+	<p>To be right on the brink</p>
+	<p>Of gratitude for your tongue (hey)</p>
+	<p></p>
+	<p>I wanna make me love singing</p>
+	<p>Till the bells in my head start ringing</p>
+	<p>I wanna make me love singing</p>
+	<p>Till the bells in my head start</p>
+	<p>doo ba doo dn doo ba doo ba do ba doo ba do ba dooo..</p>
+
+	<h1>From Far Away</h1>
+	<p>Bullets into slivers</p>
+	<p>Earthquakes into shivers</p>
+	<p>The highway is a river</p>
+	<p>To me</p>
+
+	<p></p>
+
+	<p>Family is a phone call	</p>
+	<p>Classmates are nothing at all</p>
+	<p>My bedroom door is way too small to see</p>
+	<p></p>
+	<p>If I keep to myself today</p>
+	<p>Let my walls keep the world at bay</p>
+	<p>Things will be as they were always</p>
+	<p>From far away</p>
+
+	<p></p>
+	<p>Home is a longing</p>
+	<p>A partner is a thirst</p>
+	<p>Getting old is everything</p>
+	<p>And aging is the worst</p>
+	<p></p>
+	<p>Our friends are texts through stars as dots</p>
+	<p>Drawn on a paper sky</p>
+	<p>And youth is trifling, frightening, low</p>
+	<p>And something we desire</p>
+
+	<p>	</p>
+	<p>If I keep to myself today</p>
+	<p>Let my walls keep the world at bay</p>
+	<p>Things will be as they were always</p>
+	<p>From far away</p>
+
+	<h1>Song Four</h1>
+	<p>[guitar and shaker]</p>
+
+	<h1>Let's Put Something On</h1>
+	<p>Get out the crackers</p>
+	<p>Get out the cheese</p>
+	<p>Get out the peanut butter, oats and milk and raisins, whatever you please</p>
+
+	<p></p>
+	<p>Pull out the freezer drawers</p>
+	<p>Pull out the stops</p>
+	<p>Pull the rainy day card, sit inside along till your heart pops</p>
+	<p></p>
+	<p>We've been skinny forever, let's put something on</p>
+	<p>We've been lonely forever, let's put something on</p>
+	<p></p>
+	<p>Get out your records</p>
+	<p>Get out your seat</p>
+	<p>Get out your tappin shoes, your listless blues will evaporate with the beat</p>
+	<p>Put om the Steely Dan</p>
+	<p>Wonder the Steve</p>
+	<p>Move to the Pharoah Sanders, 'Retha Franklin, Rain Station, Big Thief</p>
+
+	<p></p>
+	<p>We've been skinny forever, let's put something on</p>
+	<p>We've been lonely forever, let's put something on</p>
+	<p>We've been skinny forever</p>
+	<p>We've been lonely forever</p>
+	<p>We've been wantin forever to put something on</p>
+
+
+
+</section>
+
+<!-- <script src="/js/mouseangle.js"></script> -->
+			
+		</main>
+	
+		<footer id="footer">
+			<a href="mailto:olivernorred@gmail.com">email</a> (olivernorred@gmail.com)
+			<br>
+			<!-- <a href="https://olivernorred.com/OliverNorred-Resume.pdf">resume</a>,
+			<br> -->
+			<a href="https://github.com/olivernorred">github</a><br>
+			<a href="https://www.instagram.com/olivernorred/">instagram</a><br>
+			<a href="https://www.linkedin.com/in/olivernorred/">linkedin</a><br>
+			<a href="https://twitter.com/olivernorred">twitter</a><br>
+			<a href="https://www.youtube.com/c/OliverNorred">youtube</a><br>
+		</footer>
+	</div>
+	
+<!---->
+
+<script src="/js/darkmode.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+
+<script>
+	var firebaseConfig = {
+		apiKey: "AIzaSyBfK03Zp7K5uPYYH1j-5MXrqFh-Z_LGPq8",
+		authDomain: "sting-op.firebaseapp.com",
+		databaseURL: "https://sting-op.firebaseio.com",
+		projectId: "sting-op",
+		storageBucket: "sting-op.appspot.com",
+		messagingSenderId: "708679259146",
+		appId: "1:708679259146:web:4b0f72737332c6cc17bbf3",
+		measurementId: "G-5TGPV1683P"
+	};
+	// Initialize Firebase
+	firebase.initializeApp(firebaseConfig);
+	firebase.analytics();
+</script>
+
+
+	
+</body>
+</html>

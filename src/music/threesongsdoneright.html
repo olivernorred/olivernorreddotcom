@@ -1,0 +1,256 @@
+---
+layout: base.html
+title: Thumbtack Ceiling \
+active: music
+---
+
+
+<style>
+	@font-face {
+		font-family: 'Buffon';
+		src: url('/fonts/Buffon-Regular.otf');
+	}
+	@font-face {
+		font-family: 'Buffon Heavy';
+		src: url('/fonts/Buffon-Heavy.otf');
+	}
+	body {
+		/* background: url('/images/music/thumbtackceiling/full_background.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment: fixed; */
+		--fgcolor: black;
+		--bgcolor: white;
+		--fgtranslucent: rgb(255 255 255 / .7);
+		--acolor: blue;
+		--xangle: 0deg;
+		--yangle: 0deg;
+	}
+
+	#content {
+		min-height: 80vh;
+		perspective: 800px;
+	}
+	
+	#covercontainer {
+		pointer-events: none;
+		width: 100%;
+		max-width: min(600px, 80vw);
+		margin: auto;
+		position: relative;
+		perspective: 800px;
+	}
+	#covercontainer img {
+		/* animation: rollaround 6s ease-in-out infinite; */
+		transform: rotateX(var(--xangle)) rotateY(var(--yangle));
+	}
+	#covercontainer #coverwordmark {
+		position: absolute;
+		top: 9%;
+		left: 0;
+		transform: rotateX(var(--xangle)) rotateY(var(--yangle)) translateZ(100px);
+		/* animation: rollaroundraised 6s ease-in-out infinite; */
+	}
+	@keyframes rollaround {
+		from {transform: rotateX(-8deg) rotateY(-8deg);}
+		25% {transform: rotateX(8deg) rotateY(-8deg);}
+		50% {transform: rotateX(8deg) rotateY(8deg);}
+		75% {transform: rotateX(-8deg) rotateY(8deg);}
+		to {transform: rotateX(-8deg) rotateY(-8deg);}
+	}
+	@keyframes rollaroundraised {
+		from {transform: rotateX(-8deg) rotateY(-8deg) translateZ(100px);}
+		25% {transform: rotateX(8deg) rotateY(-8deg) translateZ(100px);}
+		50% {transform: rotateX(8deg) rotateY(8deg) translateZ(100px);}
+		75% {transform: rotateX(-8deg) rotateY(8deg) translateZ(100px);}
+		to {transform: rotateX(-8deg) rotateY(-8deg) translateZ(100px);}
+	}
+	
+	#streamingicons {
+		display: flex;
+		gap: 1rem;
+		max-width: clamp(200px, 28vw, 300px);
+		margin: auto;
+		margin-top: 1rem;
+		margin-bottom: .75rem;
+		padding: .5rem;
+		padding-bottom: .25rem;
+		/* border: 2px solid var(--fgcolor); */
+	}
+	#streamingicons a {
+		display: block;
+		flex: 1;
+		padding: 2px;
+		transition: transform .1s;
+	}
+	#streamingicons a:hover {
+		transform: translate(0, -3px);
+	}
+
+
+	#abstract {
+		width: 100%;
+		max-width: 600px;
+		margin: 1rem auto;
+		padding: .5rem;
+		font-family: "Literata";
+		line-height: 1;
+	}
+	#streamingicons {
+		z-index: 1;
+		position: relative; /* for z index */
+		width: 200px;
+	}
+	#abstract p, #abstract ol {
+		font-family: 'Buffon';
+		margin:0;
+		min-height: .75rem;
+		
+	}
+	#abstract h1 {
+		font-family: 'Buffon Heavy';
+		width: fit-content;
+		font-size: 1.3rem;
+		background: blue;
+		color: white;
+		margin-top: 1rem;
+	}
+
+	ol {
+		list-style-type: decimal;
+	}
+	::marker {
+		margin-left: 1rem;
+		padding-left: 1rem;
+		font-variation-settings: 'wght' 100;
+		font-style: normal;
+	}
+	li {
+		margin-left: 1rem;
+		font-variation-settings: 'wght' 700;
+		font-style: italic;
+	}
+
+
+	#footer {
+		background: none;
+	}
+</style>
+
+
+<div id="covercontainer">
+	<img src="/images/music/covers/threesongsdoneright_cover.jpg" alt="Three Songs Done Right album cover">
+</div>
+
+<section id="streamingicons">
+	<a href="https://open.spotify.com/album/33NDF2P88QgOiHWAiVLojH">
+		<img src="/images/music/icons/spotify.svg" alt="You Can Already Dance on Spotify">
+	</a>
+	<a href="https://music.apple.com/us/album/three-songs-done-right-ep/1727302214?app=music">
+		<img src="/images/music/icons/applemusiccolor.svg" alt="You Can Already Dance on Apple Music">
+	</a>
+	<a href="https://music.youtube.com/browse/MPREb_zvaRCzQEP2m">
+		<img src="/images/music/icons/youtubemusic.svg" alt="You Can Already Dance on YouTube Music">
+	</a>
+	<!-- <a href="">
+		<img src="/images/music/icons/bandcampcolor.svg" alt="You Can Already Dance on Bandcamp">
+	</a> -->
+</section>
+
+<section id="abstract">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/RhifPalOyGk?si=3lLt-0I7gPLPfI4x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	<h1>I Wanna Make Me Love Singing</h1>
+	<p>It's been a long time since I reveled in a rhyme</p>
+	<p>I'm sorry to confess</p>
+	<p>I wanna open my mind to the one-of-a-kind instrument we all posess (hey)</p>
+
+	<p></p>
+	<p>I wanna make me love singing</p>
+	<p>Till the bells in my head start ringing</p>
+	<p>I wanna make me love singing</p>
+	<p>Till the bells in my head start</p>
+	<p>doo be do be doo bee do</p>
+	<p></p>
+	<p>It's a fear of being heard</p>
+	<p>Lest you wrote the wrong words</p>
+	<p>To go with that beautiful song</p>
+	<p>It's a shame don't you think</p>
+	<p>To be right on the brink</p>
+	<p>Of gratitude for your tongue (hey)</p>
+	<p></p>
+	<p>I wanna make me love singing</p>
+	<p>Till the bells in my head start ringing</p>
+	<p>I wanna make me love singing</p>
+	<p>Till the bells in my head start</p>
+	<p>doo ba doo dn doo ba doo ba do ba doo ba do ba dooo..</p>
+
+	<h1>From Far Away</h1>
+	<p>Bullets into slivers</p>
+	<p>Earthquakes into shivers</p>
+	<p>The highway is a river</p>
+	<p>To me</p>
+
+	<p></p>
+
+	<p>Family is a phone call	</p>
+	<p>Classmates are nothing at all</p>
+	<p>My bedroom door is way too small to see</p>
+	<p></p>
+	<p>If I keep to myself today</p>
+	<p>Let my walls keep the world at bay</p>
+	<p>Things will be as they were always</p>
+	<p>From far away</p>
+
+	<p></p>
+	<p>Home is a longing</p>
+	<p>A partner is a thirst</p>
+	<p>Getting old is everything</p>
+	<p>And aging is the worst</p>
+	<p></p>
+	<p>Our friends are texts through stars as dots</p>
+	<p>Drawn on a paper sky</p>
+	<p>And youth is trifling, frightening, low</p>
+	<p>And something we desire</p>
+
+	<p>	</p>
+	<p>If I keep to myself today</p>
+	<p>Let my walls keep the world at bay</p>
+	<p>Things will be as they were always</p>
+	<p>From far away</p>
+
+	<h1>Song Four</h1>
+	<p>[guitar and shaker]</p>
+
+	<h1>Let's Put Something On</h1>
+	<p>Get out the crackers</p>
+	<p>Get out the cheese</p>
+	<p>Get out the peanut butter, oats and milk and raisins, whatever you please</p>
+
+	<p></p>
+	<p>Pull out the freezer drawers</p>
+	<p>Pull out the stops</p>
+	<p>Pull the rainy day card, sit inside along till your heart pops</p>
+	<p></p>
+	<p>We've been skinny forever, let's put something on</p>
+	<p>We've been lonely forever, let's put something on</p>
+	<p></p>
+	<p>Get out your records</p>
+	<p>Get out your seat</p>
+	<p>Get out your tappin shoes, your listless blues will evaporate with the beat</p>
+	<p>Put om the Steely Dan</p>
+	<p>Wonder the Steve</p>
+	<p>Move to the Pharoah Sanders, 'Retha Franklin, Rain Station, Big Thief</p>
+
+	<p></p>
+	<p>We've been skinny forever, let's put something on</p>
+	<p>We've been lonely forever, let's put something on</p>
+	<p>We've been skinny forever</p>
+	<p>We've been lonely forever</p>
+	<p>We've been wantin forever to put something on</p>
+
+
+
+</section>
+
+<!-- <script src="/js/mouseangle.js"></script> -->
