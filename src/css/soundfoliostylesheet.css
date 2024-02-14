@@ -1,0 +1,78 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	padding: 1rem;
+	font-size: 16px;
+	background-color: rgba(0,0,100,0.025);
+}
+
+#main {
+	font-family: 'Times New Roman';
+	max-width: 550px;
+	margin: auto;
+
+}
+
+h1 {
+	font-size: 1rem;
+	font-weight: normal;
+	text-align: center;
+}
+h2 {
+	font-size: 1rem;
+	font-weight: normal;
+	display: inline-block;
+	margin-top: .5rem;
+}
+
+h3 {
+	font-weight: bold;
+	font-size: 1rem;
+	margin-top: 0.5rem; 
+}
+
+p {
+	margin-top: 1rem;
+}
+img {
+	display: block;
+	margin: 2rem 0;
+}
+
+a {
+	color: #00b;
+}
+audio {
+	width: 100%;
+}
+p.caption {
+	margin-top: 0;
+}
+
+.year {
+	margin-top: 2rem;
+	padding: .75rem;
+	background-color: white;
+	border-radius: var(--mainradius);
+}
+	.year:nth-of-type(1) {
+		--sectionbgcolor: rgba(255, 0, 0, 0.1);
+	}
+	.year:nth-of-type(2) {
+		--sectionbgcolor: rgba(0, 0, 255, 0.1);
+	}
+	.year:nth-of-type(3) {
+		--sectionbgcolor: rgba(255, 255, 0, 0.2);
+	}
+
+.yearimage {
+	float: right;
+}
+
+img {
+	max-width: 100%;
+}

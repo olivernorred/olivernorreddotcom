@@ -3,7 +3,7 @@ title: "Signage for the UW Farm"
 tags: workitems
 description: "Raising awareness for urban agriculture and food security at UW’s student-run farm and learning laboratory"
 coverimage: "/images/work/uwfarm/eastentrance_people.jpg"
-date: 1991-01-01
+date: 1973-01-01
 topics: design
 ---
 <style>
