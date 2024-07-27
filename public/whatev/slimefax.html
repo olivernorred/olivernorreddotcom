@@ -1,0 +1,61 @@
+---
+layout: base.html
+title: SLIME FAX
+active: slimefax
+description: A slime for slimers
+---
+<style>
+	@font-face {
+		font-family: 'Macabre';
+		src: url('/fonts/Macabre-Regular.otf');
+	}
+	#main {
+		max-width: 500px;
+		margin: auto;
+	}
+	#main * {
+		border-radius: 0 !important;
+	}
+	#main input:not([type="submit"]), #main textarea{
+		border: 1px solid black !important;
+		box-shadow: none !important;
+	}
+	#commentform, #commentername, #commentbox, #submit, #commentsection, #commentform textarea, #commentform input[type="text"],.comment .commentername, .comment .commentcontent  {
+		font-family: 'DM Mono', monospace;
+	}
+	#commentform {
+		margin-top: 1rem;
+	}
+	#commentbox {
+		height: 10rem; margin-bottom: 0 !important;
+	}
+	#commentername {
+		margin-bottom: 0 !important;
+	}
+	#main input[type="submit"] {
+		border: 2px solid black !important;
+		margin-bottom: 0 !important;
+		font-family: 'Macabre' !important;
+		font-size: 2rem !important;
+		color: #66b435 !important;
+	}
+</style>
+<body>
+	<div id="main">
+		<form onsubmit="postComment(); return false;" id="commentform">
+			<label for="commentername">NAME</label><input type="text" id="commentername" autocomplete="off">
+			<img src="/images/slime.gif" alt="Animation of slime dripping">
+			
+			<label for="commentbox">SLIME FAX MESSAGE</label>
+			<textarea name="commentbox" id="commentbox" cols="50" rows="4"></textarea>
+			<img src="/images/slime.gif" alt="Animation of slime dripping">
+			
+			<input type="submit" value="SEND SLIME FAX">
+			<img src="/images/slime.gif" alt="Animation of slime dripping" style="z-index: 1;">
+		</form>
+		
+		<br><br><br>
+		<h1>PAST FAXES</h1>
+		<div id="commentsection"></div>
+	</div>
+</body>
