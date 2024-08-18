@@ -26,6 +26,7 @@ const dbpath = 'slimefax/'
 
 // creating local comments object
 let commentsobject;
+let currID = null;
 
 // accessing database
 firebase.database().ref(dbpath).on('value', snapshot => {
@@ -42,6 +43,8 @@ firebase.database().ref(dbpath).on('value', snapshot => {
 
 
 function postComment() {
+	document.querySelector("#commentform").style = "display: none;"
+	document.querySelector("#thankyoumessage").style = "display: block;"
 	if (commentsobject === null) { currID = 0; }
 	else { currID = commentsobject.length }
 	let d = new Date()
@@ -56,6 +59,7 @@ function postComment() {
 	console.log(commentbox.value);
 
 	commentbox.value = "";
+
 }
 
 function updateComments() {
@@ -76,6 +80,7 @@ function updateComments() {
 	if (commentsobject.length === 0) {
 		commentsection.innerHTML = "there are no comments here . . . YET! 😎"
 	}
+	document.querySelector("#comment" + currID).style.background = "#d4ffd7"
 }
 
 
