@@ -9,6 +9,9 @@ description: A slime for slimers
 		font-family: 'Macabre';
 		src: url('/fonts/Macabre-Regular.otf');
 	}
+	body {
+		padding-top: 2rem;
+	}
 	#main {
 		max-width: 500px;
 		margin: auto;
@@ -20,14 +23,41 @@ description: A slime for slimers
 		border: 1px solid black !important;
 		box-shadow: none !important;
 	}
+	#header, #footer {
+		display: none;
+	}
+	#heading {
+		margin-top: 2rem;
+		font-family: 'Macabre';
+		text-align: center;
+		font-size: 4rem;
+	}
+	#sligmaticlogoimg {
+		display: block;
+		margin: auto;
+		width: 50%;
+		max-width: 250px;
+	}
+	#promptsection {
+		margin: 2rem 0;
+		padding: .25rem;
+		border-bottom: 5px double black;
+
+	}
 	#commentform, #commentername, #commentbox, #submit, #commentsection, #commentform textarea, #commentform input[type="text"],.comment .commentername, .comment .commentcontent  {
 		font-family: 'DM Mono', monospace;
+	}
+	label {
+		font-weight: bold;
 	}
 	#commentform {
 		margin-top: 1rem;
 	}
 	#commentbox {
 		height: 10rem; margin-bottom: 0 !important;
+	}
+	.commentcontent {
+		white-space: pre-wrap;
 	}
 	#commentername {
 		margin-bottom: 0 !important;
@@ -39,15 +69,26 @@ description: A slime for slimers
 		font-size: 2rem !important;
 		color: #66b435 !important;
 	}
+	#slimefaxfooter {
+		margin: 6rem auto;
+		padding: .25rem;
+		max-width: 500px;
+	}
 </style>
 <body>
 	<div id="main">
-		<img src="/images/sligmaticlogo.svg" alt="The Sligmatic Logo">
+		<img id="sligmaticlogoimg" src="/images/sligmaticlogo.svg" alt="The Sligmatic Logo">
+		<h1 id="heading">SLIME FAX DEMO</h1>
+		<div id="promptsection">
+			<p><b>YOUR PROMPT:</b></p>
+			<br>
+			<p id="scenariocontainer"></p>
+		</div>
 		<form onsubmit="postComment(); return false;" id="commentform">
-			<label for="commentername">NAME</label><input type="text" id="commentername" autocomplete="off">
+			<label for="commentername"><b>NAME</b></label><input type="text" id="commentername" autocomplete="off">
 			<img src="/images/slime.gif" alt="Animation of slime dripping">
 			
-			<label for="commentbox">SLIME FAX MESSAGE</label>
+			<label for="commentbox"><b>SLIME FAX MESSAGE</b></label>
 			<textarea name="commentbox" id="commentbox" cols="50" rows="4"></textarea>
 			<img src="/images/slime.gif" alt="Animation of slime dripping">
 			
@@ -55,8 +96,12 @@ description: A slime for slimers
 			<img src="/images/slime.gif" alt="Animation of slime dripping" style="z-index: 1;">
 		</form>
 		
+		
 		<br><br><br>
 		<h1>PAST FAXES</h1>
 		<div id="commentsection"></div>
 	</div>
+	<footer id="slimefaxfooter">
+		made by <a href="https://olivernorred.com">Oliver Norred</a> and <a href="https://rileyhuston.xyz">Riley Huston</a>
+	</footer>
 </body>
