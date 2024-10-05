@@ -1,0 +1,250 @@
+---
+layout: base.html
+title: Thumbtack Ceiling \
+active: music
+---
+
+
+<style>
+	@font-face {
+		font-family: 'Neue Montreal Light';
+		src: url('/fonts/NeueMontreal-Light.otf');
+	}
+	@font-face {
+		font-family: 'Neue Montreal Light';
+		font-style: italic;
+		src: url('/fonts/NeueMontreal-LightItalic.otf');
+	}
+	@font-face {
+		font-family: 'Neue Montreal Regular';
+		src: url('/fonts/NeueMontreal-Regular.otf');
+	}
+	@font-face {
+		font-family: 'Neue Montreal Regular';
+		font-style: italic;
+		src: url('/fonts/NeueMontreal-Italic.otf');
+	}
+	body {
+		/* background: url('/images/music/thumbtackceiling/full_background.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment: fixed; */
+		--fgcolor: white;
+		--bgcolor: #0b0706;
+		--fgtranslucent: rgb(255 255 255 / .7);
+		--acolor: #aaa;
+		--xangle: 0deg;
+		--yangle: 0deg;
+	}
+
+	#content {
+		min-height: 80vh;
+		perspective: 800px;
+	}
+	
+	#covercontainer {
+		pointer-events: none;
+		width: 100%;
+		max-width: min(600px, 80vw);
+		margin: auto;
+		position: relative;
+		perspective: 800px;
+	}
+	#covercontainer img {
+		/* animation: rollaround 6s ease-in-out infinite; */
+		transform: rotateX(var(--xangle)) rotateY(var(--yangle));
+	}
+	#covercontainer #coverwordmark {
+		position: absolute;
+		top: 9%;
+		left: 0;
+		transform: rotateX(var(--xangle)) rotateY(var(--yangle)) translateZ(100px);
+		/* animation: rollaroundraised 6s ease-in-out infinite; */
+	}
+	@keyframes rollaround {
+		from {transform: rotateX(-8deg) rotateY(-8deg);}
+		25% {transform: rotateX(8deg) rotateY(-8deg);}
+		50% {transform: rotateX(8deg) rotateY(8deg);}
+		75% {transform: rotateX(-8deg) rotateY(8deg);}
+		to {transform: rotateX(-8deg) rotateY(-8deg);}
+	}
+	@keyframes rollaroundraised {
+		from {transform: rotateX(-8deg) rotateY(-8deg) translateZ(100px);}
+		25% {transform: rotateX(8deg) rotateY(-8deg) translateZ(100px);}
+		50% {transform: rotateX(8deg) rotateY(8deg) translateZ(100px);}
+		75% {transform: rotateX(-8deg) rotateY(8deg) translateZ(100px);}
+		to {transform: rotateX(-8deg) rotateY(-8deg) translateZ(100px);}
+	}
+	
+	#streamingicons {
+		display: flex;
+		gap: 1rem;
+		max-width: clamp(200px, 28vw, 300px);
+		margin: auto;
+		margin-top: 1rem;
+		margin-bottom: .75rem;
+		padding: .5rem;
+		padding-bottom: .25rem;
+		/* border: 2px solid var(--fgcolor); */
+	}
+	#streamingicons a {
+		display: block;
+		flex: 1;
+		padding: 2px;
+		transition: transform .1s;
+	}
+	#streamingicons a:hover {
+		transform: translate(0, -3px);
+	}
+
+	#titlecontainer {
+		width: 100%;
+		max-width: 600px;
+		margin: 1rem auto;
+		padding: .5rem;
+		text-align: center;
+	}
+		#titlecontainer h1 {
+			font-family: 'Neue Montreal Light';
+			font-size: 2rem;
+		}
+		#titlecontainer h2 {
+			font-family: 'Neue Montreal';
+			font-style: italic;
+			font-size: 1rem;
+		}
+	#abstract {
+		width: 100%;
+		max-width: 600px;
+		margin: 1rem auto;
+		padding: .5rem;
+		font-family: "Literata";
+		line-height: 1;
+	}
+	#streamingicons {
+		z-index: 1;
+		position: relative; /* for z index */
+		width: 200px;
+	}
+	#abstract p, #abstract ol {
+		font-family: 'Neue Montreal Regular';
+		margin:0;
+		min-height: .75rem;
+		
+	}
+	#abstract h1 {
+		font-family: 'Neue Montreal Light';
+		font-weight: bold;
+		width: fit-content;
+		font-size: 1.3rem;
+		background: blue;
+		color: white;
+		margin-top: 1rem;
+	}
+
+	ol {
+		list-style-type: decimal;
+	}
+	::marker {
+		margin-left: 1rem;
+		padding-left: 1rem;
+		font-variation-settings: 'wght' 100;
+		font-style: normal;
+	}
+	li {
+		margin-left: 1rem;
+		font-variation-settings: 'wght' 700;
+		font-style: italic;
+	}
+
+	#covercontainer {
+		position: relative;
+	}
+		#covercontainer .floatinginstrument {
+			position: absolute;
+			top: 0;left: 0;
+			transform-origin: center;
+			animation-name: floatcoverupdown, floatcoverleftright;
+			animation-duration: 6s, 5s;
+			animation-timing-function: ease-in-out, ease-in-out;
+			animation-direction: normal, normal;
+			animation-iteration-count: infinite, infinite;
+		}
+		#floating1 {
+			animation-delay: -.2s, -.2s;
+		}
+		#floating2 {
+			animation-delay: -.4s, -.4s;
+		}
+		#floating3 {
+			animation-delay: -.6s, -.6s;
+		}
+		#floating4 {
+			animation-delay: -.8s, -.8s;
+		}
+		#floating5 {
+			animation-delay: -1.0s, -1.0s;
+		}
+		@keyframes floatcoverupdown {
+			0%  {top: -16px;}
+			50% {top: 16px}
+			100% {top: -16px}
+		}
+		@keyframes floatcoverleftright {
+			0%  {left: -8px;}
+			50% {left:  8px}
+			100% {left:  -8px}
+		}
+
+	#footer {
+		background: none;
+	}
+</style>
+
+<div id="titlecontainer">
+	<h2>Cole Krueger and Oliver Norred present</h2>
+	<h1>Scenes of Plectra and Mallets</h1>
+</div>
+
+<div id="covercontainer">
+	<img src="/images/music/scenesofplectraandmallets/coverbackground_real.png" alt="Scenes of Plectra and Mallets album cover">
+	<img class="floatinginstrument" id="floating1" src="/images/music/scenesofplectraandmallets/separated/1.png" alt="">
+	<img class="floatinginstrument" id="floating2" src="/images/music/scenesofplectraandmallets/separated/2.png" alt="">
+	<img class="floatinginstrument" id="floating3" src="/images/music/scenesofplectraandmallets/separated/3.png" alt="">
+	<img class="floatinginstrument" id="floating4" src="/images/music/scenesofplectraandmallets/separated/4.png" alt="">
+	<img class="floatinginstrument" id="floating5" src="/images/music/scenesofplectraandmallets/separated/5.png" alt="">
+</div>
+
+<section id="streamingicons">
+	<a href="https://open.spotify.com/album/3r0b7ao2CDkvzGmZVqhpLK">
+		<img src="/images/music/icons/spotify.svg" alt="Spotify logo">
+	</a>
+	<a href="https://geo.music.apple.com/us/album/_/1771860365?mt=1&app=music&ls=1&at=1000lHKX&ct=odesli_http&itscg=30200&itsct=odsl_m">
+		<img src="/images/music/icons/applemusiccolor.svg" alt="Apple Music logo">
+	</a>
+	<!-- <a href="https://music.youtube.com/browse/MPREb_zvaRCzQEP2m">
+		<img src="/images/music/icons/youtubemusic.svg" alt="YouTube Music logo">
+	</a> -->
+	<a href="https://olivernorred.bandcamp.com/album/scenes-of-plectra-and-mallets">
+		<img src="/images/music/icons/bandcampcolor.svg" alt="Bandcamp logo">
+	</a>
+</section>
+
+<section id="abstract">
+	
+	<p>Tracks</p>
+
+	<ol>
+		<li>Note</li>
+		<li>Scene I: Reverie Traveling</li>
+		<li>Woolgathering</li>
+		<li>Scene II: Sunbreak</li>
+		<li>Unsweetened Condensed Milk</li>
+		<li>Scene III: Almost Footpath</li>
+		<li>Scene IV: Like Exasperated Breaths Left to Sweeten with Time, the Small Solace of Realization</li>
+	</ol>
+
+</section>
+
+<!-- <script src="/js/mouseangle.js"></script> -->
