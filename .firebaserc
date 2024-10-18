@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "olivernorreddotcom"
-  }
+    "default": "sting-op",
+    "realtimedatabaseandfunctions": "sting-op"
+  },
+  "targets": {},
+  "etags": {}
 }
