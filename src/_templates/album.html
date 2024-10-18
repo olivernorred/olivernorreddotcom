@@ -1,0 +1,35 @@
+---
+layout: base.html
+titlecategory: \ Music \
+active: music
+---
+
+
+{{ content | safe }}
+
+
+<style>
+	#commentscontainer {
+		max-width: 500px;
+		margin: auto;
+		margin-top: 4rem;
+	}
+	#commentform {
+		margin-top: 1rem;
+	}
+</style>
+<div id="commentscontainer">
+	<div id="blurb" style="text-align: center;">
+		<p style="font-style: italic; text-decoration: underline;">ALBUM TALK</p>
+		<p style="font-size: 0.8rem; font-style: italic;">keep your comments class!</p>
+	</div>
+	<form onsubmit="postComment(); return false;" id="commentform">
+		<label for="commentername">name:</label><input type="text" id="commentername" autocomplete="off">
+		<label for="commentbox">comment:</label>
+		<textarea name="commentbox" id="commentbox" cols="50" rows="4"></textarea>
+		<input type="submit" value="post comment &darr;">
+	</form>
+	
+	<div id="commentsection"></div>
+</div>
+

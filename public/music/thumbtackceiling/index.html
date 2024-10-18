@@ -4,13 +4,13 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Thumbtack Ceiling \  Oliver Norred</title>
+	<title>Thumbtack Ceiling \ \ Music \ Oliver Norred</title>
 	<meta name="description" content="Website of Oliver Norred: Fine, fine... I'm a web guy, and I have a personal site. Yeesh!">
 
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@olivernorred">
 	<meta name="twitter:creator" content="@olivernorred">
-	<meta name="twitter:title" content="Thumbtack Ceiling \  Oliver Norred">
+	<meta name="twitter:title" content="Thumbtack Ceiling \ \ Music \ Oliver Norred">
 	<meta name="twitter:description" content="Website of Oliver Norred: Fine, fine... I'm a web guy, and I have a personal site. Yeesh!">
 	<meta name="twitter:image" content="https://olivernorred.com/images/social-image.png">
 
@@ -52,6 +52,8 @@
 	
 		<main id="content" class="">
 			
+
+
 
 <style>
 	body {
@@ -205,6 +207,34 @@
 </section>
 
 <script src="/js/mouseangle.js"></script>
+
+
+<style>
+	#commentscontainer {
+		max-width: 500px;
+		margin: auto;
+		margin-top: 4rem;
+	}
+	#commentform {
+		margin-top: 1rem;
+	}
+</style>
+<div id="commentscontainer">
+	<div id="blurb" style="text-align: center;">
+		<p style="font-style: italic; text-decoration: underline;">ALBUM TALK</p>
+		<p style="font-size: 0.8rem; font-style: italic;">keep your comments class!</p>
+	</div>
+	<form onsubmit="postComment(); return false;" id="commentform">
+		<label for="commentername">name:</label><input type="text" id="commentername" autocomplete="off">
+		<label for="commentbox">comment:</label>
+		<textarea name="commentbox" id="commentbox" cols="50" rows="4"></textarea>
+		<input type="submit" value="post comment &darr;">
+	</form>
+	
+	<div id="commentsection"></div>
+</div>
+
+
 			
 		</main>
 	
@@ -247,6 +277,8 @@
 </script>
 
 
+
+<script src="/js/albumcomments.js"></script>
 
 
 
