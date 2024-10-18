@@ -12,7 +12,7 @@
       "source": "functions",
       "codebase": "default",
       "ignore": [
-        "venv",
+        "node_modules",
         ".git",
         "firebase-debug.log",
         "firebase-debug.*.log",
@@ -22,6 +22,17 @@
     {
       "source": "realtimedatabasetriggers",
       "codebase": "realtimedatabasetriggers",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ]
+    },
+    {
+      "source": "functionsfunctions",
+      "codebase": "functions",
       "ignore": [
         "node_modules",
         ".git",

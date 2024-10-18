@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-	"build": "npx eleventy",
-	"serve": "npx eleventy --serve"
+    "build": "npx eleventy",
+    "serve": "npx eleventy --serve"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.15"
   }
 }
