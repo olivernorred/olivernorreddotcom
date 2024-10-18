@@ -644,6 +644,7 @@ body.darkmode #commentform input[type="text"] {
     padding: 0.5rem;
     border: 1px solid var(--fgcolor);
     border-radius: var(--mainradius);
+	background: var(--bgcolor);
 }
 .comment .commentinfo {
     display: flex;
