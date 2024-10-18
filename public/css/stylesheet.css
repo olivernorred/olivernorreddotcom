@@ -593,6 +593,7 @@ code {
     background: var(--bgcolor);
     /* box-shadow: 2px 2px 4px var(--fgcolor) inset; */
     font-family: "Literata", serif;
+	font-size: 16px; /* for mobile, it must be this big */
 }
 body.darkmode #commentform textarea,
 body.darkmode #commentform input[type="text"] {
