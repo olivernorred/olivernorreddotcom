@@ -1,6 +1,5 @@
 ---
 title: "steep: app design"
-tags: workitems
 description: "A hyper-local social network for use in third places"
 coverimage: "/images/work/steep/steep-cover.png"
 date: 1974-01-01
