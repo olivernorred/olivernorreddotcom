@@ -1,9 +1,9 @@
 ---
-title: Rhotic progression in live versions of Dancing Queen through the years
+title: Rhoticity in live versions of Dancing Queen through the years
 date: 2025-01-26
 ---
 
-# Rhotic progression in live versions of Dancing Queen through the years
+# Rhoticity in live versions of Dancing Queen through the years
 ## Oliver Norred, 26 January 2025
 
 Anni-Frid Lyngstad and Agnetha Fältskog recorded vocals for the studio version of [Dancing Queen](https://en.wikipedia.org/wiki/Dancing_Queen) in 1975.
