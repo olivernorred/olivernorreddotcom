@@ -7,6 +7,25 @@ active: blog
 
 <div class="blogheadernote"><a href="/blog/">&larr; back to the archives 🥬</a></div>
 
+<div class="nextpostlink">
+	{%- assign posturls = collections.posts | map: "url" | reverse %}
+	
+	{%- for post in collections.posts reversed %}
+		{%- if post.url == page.url %}
+			{%- assign next_i = forloop.index0 | plus: 1 %}
+			{%- assign prev_i = forloop.index0 | minus: 1 %}
+	
+			{%- if forloop.first == false %}
+				<a href="{{ posturls[prev_i] }}" style="float: left;">&larr; newer</a>
+			{%- endif %}
+	
+			{%- if forloop.last == false %}
+				<a href="{{ posturls[next_i] }}" style="float: right;">older &rarr;</a>
+			{%- endif %}
+	
+		{%- endif %}
+	{%- endfor %}
+	</div>
 
 <div class="blogpost">
 {{ content }}

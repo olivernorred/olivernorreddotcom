@@ -449,7 +449,9 @@ input:focus + .inputlowerlabel {
 }
 
 /* BLOGPOSTS */
-
+.nextpostlink {
+    margin-bottom: 1rem;
+}
 #content.contentforblogpost {
     max-width: 650px;
     margin: auto;
@@ -459,6 +461,7 @@ input:focus + .inputlowerlabel {
 
 .blogpost {
     margin: 1rem auto;
+    margin-top: 2rem;
     padding: 0.5rem 0.7rem;
     border: 1px solid var(--fgcolor);
     border-radius: var(--mainradius);
