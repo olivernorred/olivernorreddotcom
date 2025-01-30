@@ -46,10 +46,12 @@ description: I'm Oliver and this is my blog :)
 </div>
 
 {% for post in collections.posts reversed %}
+{% if post.data.draft != true %}
 <div class="griditem blogpost" id="{{ post.url }}">
 <h1><a href="{{ post.url }}">{{ post.data.title }}</a></h1>
 {% excerpt post %}
-</div>
+</div> 
+{% endif %}
 {% endfor %}
 
 

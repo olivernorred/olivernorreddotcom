@@ -1,8 +1,9 @@
 ---
-title: "Psychogeography on foot and psychogeography on a bike"
-date: 2025-01-29
+title: "Psychogeography on foot and psychogeography on a bicycle"
+date: 2025-01-30
+draft: true
 ---
 
-# Psychogeography on foot and psychogeography on a bike
-## Oliver Norred, 27 January 2025
+# Psychogeography on foot and psychogeography on a bicycle
+## Oliver Norred, 30 January 2025
 
