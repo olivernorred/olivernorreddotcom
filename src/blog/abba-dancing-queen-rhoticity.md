@@ -11,6 +11,7 @@ Anni-Frid Lyngstad and Agnetha Fältskog recorded vocals for the studio version 
 I was listening to that recording a few weeks ago, and I noticed that in the first chorus, when Lyngstad and Fältskog sing “you are the dancing queen,” the word “are” is pronounced in the non-rhotic, British Received Pronunciation way (“ah”), whereas in the second chorus it’s pronounced the rhotic, American way (“arr”). I dug a rabbit hole to see if I could find a trend.
 
 
+
 [Studio recording / music video (1974)](https://www.youtube.com/watch?v=xFrGuyw1V8s&ab_channel=AbbaVEVO).\
 First chorus NON-RHOTIC, second chorus RHOTIC.
 
