@@ -1,6 +1,7 @@
 ---
 title: Anniversary note 💕
 date: 2020-10-17
+draft: true
 ---
 
 # Anniversary note 💕
