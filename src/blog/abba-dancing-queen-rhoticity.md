@@ -21,8 +21,7 @@ RHOTIC first chorus NON-RHOTIC second chorus.
 [1979 in London](https://www.youtube.com/watch?v=9dEH9Ib3JZk&ab_channel=GigJunction).\
 NON-RHOTIC both choruses.
 
-[1979-80 tour of Europe and North America.](https://www.youtube.com/watch?v=k2bBTWvmN-8
-&ab_channel=AbbaVEVO).\
+[1979-80 tour of Europe and North America.](https://www.youtube.com/watch?v=k2bBTWvmN-8&ab_channel=AbbaVEVO).\
 Both choruses are NON-RHOTIC.
 
 Definitely a limited dataset here but it seems like the later shows skew toward non-rhoticity (“British” pronunciation).
