@@ -24,17 +24,18 @@ active: index
 	
 	<script src="https://cdn.jsdelivr.net/gh/olivernorred/legit-marquees/legit-marquees.js"></script>
 	
-	<p class="introductionbodytext">is my <span style="font-variation-settings: 'wght' 900; text-shadow: 2px 2px 2px rgb(0 0 50 / 0.4)">eponymous URL</span>. This website comprises <span style="font-family: 'Times New Roman'; font-style: italic; font-weight: bold;font-size: 1.15em; letter-spacing: -1px">three important elements</span> of my online presence:</p>
+	<p class="introductionbodytext">is my <span style="font-variation-settings: 'wght' 900; text-shadow: 2px 2px 2px rgb(0 0 50 / 0.4)">eponymous URL</span>.
+	<!-- This website comprises <span style="font-family: 'Times New Roman'; font-style: italic; font-weight: bold;font-size: 1.15em; letter-spacing: -1px">three important elements</span> of my online presence:</p> -->
 
 
 
-	<h1>my <a href="/music/" id="intromusiclink">music</a>,</h1>
+	<!-- <h1>my <a href="/music/" id="intromusiclink">music</a>,</h1>
 	<h1>my <a href="/work/" id="introdesignlink">design & dev work</a>,</h1>
 	<h1>and my <a href="/blog/" id="introbloglink">blog</a>.</h1>
-	<p class="introductionbodytext">Use the <span id="topbartooltip" style="position: relative; border-bottom: 1px dotted black; cursor: help; font-family: 'Times New Roman'; font-style: italic; font-weight: bold; font-size: 1.1em; letter-spacing: -1px; z-index: 0;">navigation bar<sup>?</sup></span> to navigate between the three categories, if you must!</p>
+	<p class="introductionbodytext">Use the <span id="topbartooltip" style="position: relative; border-bottom: 1px dotted black; cursor: help; font-family: 'Times New Roman'; font-style: italic; font-weight: bold; font-size: 1.1em; letter-spacing: -1px; z-index: 0;">navigation bar<sup>?</sup></span> to navigate between the three categories, if you must!</p> -->
 
 	<div id="moreaboutme">
-		<h1 style="font-family: Times New Roman;">More about me</h1>
+		<h1 style="font-family: Times New Roman;">about me</h1>
 		<p>
 			<img src="/images/homepage/dogpiano.gif" alt="An animated gif of a cartoon dog playing a piano">
 			<img src="/images/homepage/dogpiano.gif" alt="An animated gif of a cartoon dog playing a piano" style="transform: scale(-1,1);">
@@ -44,6 +45,204 @@ active: index
 		<p>I’m on <a href="https://www.instagram.com/olivernorred/">Instagram</a>, <a href="https://www.youtube.com/c/OliverNorred">YouTube</a>, <a href="https://twitter.com/olivernorred">Twitter</a>, and <a href="https://github.com/olivernorred">GitHub</a>. <a href="mailto:norredoliver@gmail.com">Email</a>, too. Links in the footer &darr;</p>
 	</div>
 </section>
+
+<style>
+	#streamingicons {
+		display: flex;
+		gap: 1rem;
+		max-width: clamp(280px, 28vw, 300px);
+		margin: auto;
+		margin-top: 1rem;
+		margin-bottom: .75rem;
+		padding: .5rem;
+		padding-bottom: .25rem;
+	}
+	#streamingicons a {
+		display: block;
+		flex: 1;
+		padding: 2px;
+		transition: transform .1s;
+	}
+	#streamingicons a:hover {
+		transform: translate(0, -3px);
+	}
+	#streamingicons a img {
+		width: 100%;
+	}
+
+	#musicwriting {
+		margin: auto;
+		max-width: 450px;
+	}
+	h1 {
+		font-family: "Gooper";
+		font-weight: 700;
+		font-size: 1.5rem;
+		margin-top: 2rem;
+	}
+	h1.albumslisttitle {
+		text-align: center;
+	}
+	#livebandlink {
+		margin: auto;
+		margin-top: 1rem;
+		width: 80%;
+		max-width: 200px;
+		padding: .5rem;
+		background: var(--cream);
+		border: 1px solid black;
+		border-radius: var(--mainradius);
+	}
+	#livebandlink:hover {
+		transform: translate(0, -.25rem) rotate(1deg);
+		box-shadow: .25rem .25rem var(--fgtranslucent);
+	}
+
+	section.year {
+		border-left: 1px solid var(--fgcolor);
+		padding: 0 0.5rem;
+	}
+	h2.yearlabel {
+		margin-top: 1.5rem;
+		margin-bottom: .5rem;
+		font-size: 1rem;
+		font-family: "Literata";
+		font-style: italic;
+		font-weight: bold;
+	}
+
+	section.album {
+		margin: 0;
+		position: relative;
+	}
+	section.album:not(:first-of-type) {
+		margin-top: 1.5rem;
+	}
+	.album a {
+		margin: 0; padding: 0;
+	}
+	/* .album a::before {
+		content: '\2190';
+		display: inline;
+		position: absolute;
+		top: 45%;
+		right: -15px;
+	} */
+	/* Hovering on albums */
+	.album a > img {
+		display: block;
+		margin: 0;
+	}
+		.album a:hover > img {
+			transform: translate(0, -.25rem) rotate(1deg);
+			box-shadow: .25rem .25rem var(--fgtranslucent);
+		}
+	p.albumlabel {
+		margin-top: .25rem;
+		font-size: 1rem;
+		font-family: "Literata";
+		font-variation-settings: 'opsz' 10, 'wght' 400;
+		line-height: 1.2;
+	}
+	p.albumcover img {
+		max-width: 100%;
+	}
+	.bouncinglink {
+		& a {
+			background: yellow;
+			text-decoration: underline;
+		}
+		animation: floatlink .66s linear infinite;
+	}
+	@keyframes floatlink {
+		0% {transform: translate(0,0px);}
+		25% {transform: translate(-1.5px, 0px)}
+		50% {transform: translate(-2px, 0px)}
+		90% {transform: translate(2px, 0px);}
+	}
+</style>
+
+<article id="musicwriting">
+	<br>
+	<p class="bouncinglink" style="text-align: center;"><a href="https://olivernorred.substack.com/"><b>Sign up to get email updates! &#8599;</b></a></p>
+
+	<p><a href="https://youtu.be/aw6IqsmWbBA">concert film from the sunset tavern show in may &rarr;</a></p>
+	<section id="streamingicons">
+		<a href="https://open.spotify.com/artist/2ZXFIARN4dqNEjq4pQSmY2">
+			<img src="/images/music/icons/spotify.svg" alt="Oliver Norred on Spotify">
+		</a>
+		<a href="https://music.apple.com/us/artist/all-of-our-cornbread/1656063986">
+			<img src="/images/music/icons/applemusiccolor.svg" alt="Oliver Norred Apple Music">
+		</a>
+		<a href="https://www.youtube.com/c/olivernorred">
+			<img src="/images/music/icons/youtube.svg" alt="Oliver Norred on YouTube">
+		</a>
+		<a href="https://olivernorred.bandcamp.com/">
+			<img src="/images/music/icons/bandcampcolor.svg" alt="Oliver Norred on Bandcamp">
+		</a>
+	</section>
+
+	<!-- <h1 class="albumslisttitle">The band:</h1> -->
+	<!-- <p class="bouncinglink"><a href="https://youtu.be/l6Tio5-9jIE">All of Our Cornbread live at the Wigglin' Flea Market (concert film) &rarr;</a></p> -->
+	<section id="livebandlink">
+		<a href="/music/allofourcornbread/"><img src="/images/music/cornbread/allofourcornbreadlogo.svg" alt="All of Our Cornbread"></a>
+	</section>
+	<h1 class="albumslisttitle">Releases</h1>
+
+
+	<h2 class="yearlabel">2024</h2>
+	<section class="year">
+		<section class="album">
+			<a href="/music/scenesofplectraandmallets">
+				<img src="/images/music/covers/scenesofplectra_cover.jpg" alt="Three Songs Done Right">
+				<p class="albumlabel"><em>Scenes of Plectra and Mallets</em> (with Cole Krueger)<br>September 14, 2024</p>
+			</a>
+		</section>
+		<section class="album">
+			<a href="/music/threesongsdoneright">
+				<img src="/images/music/covers/threesongsdoneright_cover.jpg" alt="Three Songs Done Right">
+				<p class="albumlabel"><em>Three Songs Done Right</em> (with Cole Krueger)<br>January 27th, 2024</p>
+			</a>
+		</section>
+	</section>
+	
+	<h2 class="yearlabel">2023</h2>
+
+	<section class="year">
+		<section class="album">
+			<a href="/music/welikeitwhenweplayourtunes">
+				<img src="/images/music/covers/welikeitwhenweplayourtunes_cover.jpg" alt="We Like It When We Play Our Tunes">
+				<p class="albumlabel"><em>We Like It When We Play Our Tunes</em><br>November 3rd, 2023</p>
+			</a>
+		</section>
+	</section>
+	<h2 class="yearlabel">2022</h2>
+	<section class="year">
+		<section class="album">
+			<a href="/music/alreadydance/">
+				<img src="/images/music/covers/alreadydance_cover.jpg" alt="You Can Already Dance">
+				<p class="albumlabel"><em>You Can Already Dance</em><br>March 18, 2022</p>
+			</a>
+		</section>
+		<section class="album">
+			<a href="/music/thumbtackceiling/">
+				<img src="/images/music/covers/thumbtackceiling_cover.jpg" alt="Thumbtack Ceiling">
+				<p class="albumlabel"><em>Thumbtack Ceiling</em> (with Cole Krueger)<br>February 25, 2022</p>
+			</a>
+		</section>
+	</section>
+
+	<h2 class="yearlabel">2021</h2>
+	<section class="year">
+		<section class="album">
+			<a href="/music/hzdonut/">
+				<img src="/images/music/covers/hzdonut_cover.jpg" alt="Hz Donut">
+				<p class="albumlabel"><em>Hz Donut</em><br>June 25, 2021</p>
+			</a>
+		</section>
+	</section>
+	
+</article>
 
 
 <script>	
